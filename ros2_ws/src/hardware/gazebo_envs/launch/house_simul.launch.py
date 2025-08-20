@@ -22,6 +22,7 @@ def generate_launch_description():
     
     robot_state_publisher_params = [{'robot_description': robot_description_content}]
     gz_bridge_params_path = os.path.join(gazebo_envs_pkg_path, 'config', 'gz_bridge.yaml')
+    rviz_config_file = os.path.join(gazebo_envs_pkg_path, 'config', 'simple_house.rviz')
 
     return LaunchDescription([
         # SetEnvironmentVariable(
@@ -66,5 +67,12 @@ def generate_launch_description():
                 f'config_file:={gz_bridge_params_path}'
             ],
             output='screen'
+        ),
+        Node(
+            package='rviz2',
+            executable='rviz2',
+            name='rviz2',
+            output='screen',
+            arguments=['-d', rviz_config_file],
         )
     ])
