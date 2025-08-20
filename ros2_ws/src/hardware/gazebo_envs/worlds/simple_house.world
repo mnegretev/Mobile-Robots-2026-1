@@ -25,7 +25,7 @@
     <plugin filename="gz-sim-imu-system"
             name="gz::sim::systems::Imu">
     </plugin>
-    
+   
     <scene>
       <ambient>0.4 0.4 0.4 1</ambient>
       <background>0.7 0.7 0.7 1</background>
@@ -47,8 +47,8 @@
           <surface>
             <friction>
               <ode>
-                <mu>0.0</mu>
-                <mu2>0.0</mu2>
+                <mu>100</mu>
+                <mu2>50</mu2>
               </ode>
             </friction>
           </surface>
@@ -134,27 +134,27 @@
       <pose>-8.270940 1.916650 0.036650 0 -0 0</pose>
     </model>
 
-    <!-- <model name='Carpet_01_001'> -->
-    <!--   <static>true</static> -->
-    <!--   <include> -->
-    <!--     <uri>model://aws_robomaker_residential_Carpet_01</uri> -->
-    <!--   </include> -->
-    <!--   <pose>0.785050 -1.106647 0.001106 0 -0 0</pose> -->
-    <!-- </model> -->
-    <!-- <model name='Carpet_01_002'> -->
-    <!--   <static>true</static> -->
-    <!--   <include> -->
-    <!--     <uri>model://aws_robomaker_residential_Carpet_01</uri> -->
-    <!--   </include> -->
-    <!--   <pose>2.854050 3.45 0.000585 0 -0 0</pose> -->
-    <!-- </model> -->
-    <!-- <model name='CoffeeTable_01_001'> -->
-    <!--   <static>true</static> -->
-    <!--   <include> -->
-    <!--     <uri>model://aws_robomaker_residential_CoffeeTable_01</uri> -->
-    <!--   </include> -->
-    <!--   <pose>1.512301 -1.733438 0.041983 0.000000 0.000000 0.01000</pose> -->
-    <!-- </model> -->
+    <model name='Carpet_01_001'>
+      <static>true</static>
+      <include>
+        <uri>model://aws_robomaker_residential_Carpet_01</uri>
+      </include>
+      <pose>0.785050 -1.106647 0.001106 0 -0 0</pose>
+    </model>
+    <model name='Carpet_01_002'>
+      <static>true</static>
+      <include>
+        <uri>model://aws_robomaker_residential_Carpet_01</uri>
+      </include>
+      <pose>2.854050 3.45 0.000585 0 -0 0</pose>
+    </model>
+    <model name='CoffeeTable_01_001'>
+      <static>true</static>
+      <include>
+        <uri>model://aws_robomaker_residential_CoffeeTable_01</uri>
+      </include>
+      <pose>1.512301 -1.733438 0.041983 0.000000 0.000000 0.01000</pose>
+    </model>
     <!-- <model name='CookingBench_01_001'> -->
     <!--   <include> -->
     <!--     <uri>model://aws_robomaker_residential_CookingBench_01</uri> -->
@@ -164,13 +164,13 @@
     <!-- </model> -->
     
    
-    <!-- <model name='KitchenTable_01_001'> -->
-    <!--   <static>true</static> -->
-    <!--   <include> -->
-    <!--     <uri>model://aws_robomaker_residential_KitchenTable_01</uri> -->
-    <!--   </include> -->
-    <!--   <pose>6.55269 0.951173 -0.000006 0 -0 -1.564130</pose> -->
-    <!-- </model> -->
+    <model name='KitchenTable_01_001'>
+      <static>true</static>
+      <include>
+        <uri>model://aws_robomaker_residential_KitchenTable_01</uri>
+      </include>
+      <pose>6.55269 0.951173 -0.000006 0 -0 -1.564130</pose>
+    </model>
     <!-- <model name='ReadingDesk_01_001'> -->
     <!--   <static>true</static> -->
     <!--   <include> -->
@@ -347,21 +347,21 @@
     <!--   <pose>0.615509 -5.105954 -0.011049 0 -0 1.5700</pose> -->
       
     <!-- </model> -->
-    <!-- <model name='RoomWall_01_001'> -->
-    <!--   <static>true</static> -->
-    <!--   <include> -->
-    <!--     <uri>model://aws_robomaker_residential_RoomWall_01</uri> -->
-    <!--   </include> -->
-    <!--   <pose>-6.097550 -1.496180 0.028124 0 -0 0</pose> -->
-    <!-- </model> -->
+    <model name='RoomWall_01_001'>
+      <static>true</static>
+      <include>
+        <uri>model://aws_robomaker_residential_RoomWall_01</uri>
+      </include>
+      <pose>-6.097550 -1.496180 0.028124 0 -0 0</pose>
+    </model>
     
-    <!-- <model name='FloorB_01_001'> -->
-    <!--   <static>true</static> -->
-    <!--   <include> -->
-    <!--     <uri>model://aws_robomaker_residential_FloorB_01</uri> -->
-    <!--   </include> -->
-    <!--   <pose>0 0 0 0 -0 0</pose> -->
-    <!-- </model> -->
+    <model name='FloorB_01_001'>
+      <static>true</static>
+      <include>
+        <uri>model://aws_robomaker_residential_FloorB_01</uri>
+      </include>
+      <pose>0 0 0.001 0 -0 0</pose>
+    </model>
     
     <!-- <model name='Wardrobe_01_001'> -->
     <!--   <static>true</static> -->

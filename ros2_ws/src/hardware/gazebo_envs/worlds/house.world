@@ -1,101 +1,101 @@
 <?xml version="1.0"?>
 <sdf version="1.6">
-    <world name='default'>
-        <plugin
-          filename="gz-sim-physics-system"
-          name="gz::sim::systems::Physics">
-        </plugin>
-        <plugin
-            filename="gz-sim-user-commands-system"
-            name="gz::sim::systems::UserCommands">
-        </plugin>
-        <plugin
-            filename="gz-sim-scene-broadcaster-system"
-            name="gz::sim::systems::SceneBroadcaster">
-        </plugin>
-
-        <!-- Plugin for handling sensors like the LIDAR -->
-        <plugin
-          filename="gz-sim-sensors-system"
-          name="gz::sim::systems::Sensors">
-          <render_engine>ogre2</render_engine>
-        </plugin>
-
-        <!-- Plugin for IMU -->
-        <plugin filename="gz-sim-imu-system"
-          name="gz::sim::systems::Imu">
-        </plugin>
-
-        <scene>
-            <ambient>0.4 0.4 0.4 1</ambient>
-            <background>0.7 0.7 0.7 1</background>
-            <shadows>false</shadows>
-            <grid>false</grid>
-            <origin_visual>false</origin_visual>
-        </scene>
-
-        <model name="ground_plane">
-            <static>true</static>
-            <link name="link">
-              <collision name="collision">
-                <geometry>
-                  <plane>
-                    <normal>0 0 1</normal>
-                    <size>100 100</size>
-                  </plane>
-                </geometry>
-                <surface>
-                  <friction>
-                    <ode>
-                      <mu>0.0</mu>
-                      <mu2>0.0</mu2>
-                    </ode>
-                  </friction>
-                </surface>
-              </collision>
-              <visual name="visual">
-                <geometry>
-                  <plane>
-                    <normal>0 0 1</normal>
-                    <size>100 100</size>
-                  </plane>
-                </geometry>
-                <material>
-                  <ambient>0.8 0.8 0.8 1</ambient>
-                  <diffuse>0.8 0.8 0.8 1</diffuse>
-                  <specular>0.8 0.8 0.8 1</specular>
-                </material>
-              </visual>
-            </link>
-          </model>
-
-        <model name='HouseWallB_01_001'>
-            <static>true</static>
-            <include>
-                <uri>model://aws_robomaker_residential_HouseWallB_01</uri>
-            </include>
-            <pose>0 0 0 0 -0 0</pose>
-        </model>
-
-        <model
-            name='AirconditionerA_01_001'>
-            <static>true</static>
-            <include>
-                <uri>model://aws_robomaker_residential_AirconditionerA_01</uri>
-            </include>
-            <pose>-9.199410 2.411230 2.084544 0 -0 0</pose>
-        </model>
-
-        <model
-            name='AirconditionerB_01_001'>
-            <static>true</static>
-            <include>
-                <uri>model://aws_robomaker_residential_AirconditionerB_01</uri>
-            </include>
-            <pose>-2.004656 -5.226610 0.003485 0 -0 0</pose>
-        </model>
-        <model
-            name='Ball_01_001'>
+  <world name='default'>
+    <plugin
+        filename="gz-sim-physics-system"
+        name="gz::sim::systems::Physics">
+    </plugin>
+    <plugin
+        filename="gz-sim-user-commands-system"
+        name="gz::sim::systems::UserCommands">
+    </plugin>
+    <plugin
+        filename="gz-sim-scene-broadcaster-system"
+        name="gz::sim::systems::SceneBroadcaster">
+    </plugin>
+    
+    <!-- Plugin for handling sensors like the LIDAR -->
+    <plugin
+        filename="gz-sim-sensors-system"
+        name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    
+    <!-- Plugin for IMU -->
+    <plugin filename="gz-sim-imu-system"
+            name="gz::sim::systems::Imu">
+    </plugin>
+    
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>false</shadows>
+      <grid>false</grid>
+      <origin_visual>false</origin_visual>
+    </scene>
+    
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>0.0</mu>
+                <mu2>0.0</mu2>
+              </ode>
+            </friction>
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+    
+    <model name='HouseWallB_01_001'>
+      <static>true</static>
+      <include>
+        <uri>model://aws_robomaker_residential_HouseWallB_01</uri>
+      </include>
+      <pose>0 0 0 0 -0 0</pose>
+    </model>
+    
+    <model
+        name='AirconditionerA_01_001'>
+      <static>true</static>
+      <include>
+        <uri>model://aws_robomaker_residential_AirconditionerA_01</uri>
+      </include>
+      <pose>-9.199410 2.411230 2.084544 0 -0 0</pose>
+    </model>
+    
+    <model
+        name='AirconditionerB_01_001'>
+      <static>true</static>
+      <include>
+        <uri>model://aws_robomaker_residential_AirconditionerB_01</uri>
+      </include>
+      <pose>-2.004656 -5.226610 0.003485 0 -0 0</pose>
+    </model>
+    <model
+        name='Ball_01_001'>
             <static>true</static>
             <include>
                 <uri>model://aws_robomaker_residential_Ball_01</uri>
