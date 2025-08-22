@@ -17,6 +17,8 @@
   <xacro:arg name="report_type" default="normal"/>
 
   <xacro:arg name="ros2_control_plugin" default="uf_robot_hardware/UFRobotSystemHardware"/>
+  <!-- <xacro:arg name="ros2_control_plugin" default="gz_ros2_control/GazeboSimSystem"/> -->
+  <!-- <xacro:arg name="ros2_control_plugin" default="gazebo_ros2_control/GazeboSystem"/> -->
   <xacro:arg name="ros2_control_params" default=""/>
 
   <xacro:arg name="add_realsense_d435i" default="false"/>

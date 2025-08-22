@@ -18,17 +18,16 @@ def generate_launch_description():
     description_pkg_path  = get_package_share_directory('justina_description')
     xacro_file_path = os.path.join(description_pkg_path, 'urdf','justina.xacro')
     robot_description_content = xacro.process_file(xacro_file_path).toxml()
-    xarm_descrip_pkg_path = get_package_share_directory('xarm_description')
-    
+       
     robot_state_publisher_params = [{'robot_description': robot_description_content}]
     gz_bridge_params_path = os.path.join(gazebo_envs_pkg_path, 'config', 'gz_bridge.yaml')
     rviz_config_file = os.path.join(gazebo_envs_pkg_path, 'config', 'simple_house.rviz')
 
+    xarm_descrip_pkg_path = get_package_share_directory('xarm_description')
+    xarm_controller_pkg_path = get_package_share_directory('xarm_controller')
+    xarm_controller_file = PathJoinSubstitution([xarm_controller_pkg_path, 'config', 'xarm6_controllers.yaml'])
+
     return LaunchDescription([
-        # SetEnvironmentVariable(
-        #     'GZ_SIM_RESOURCE_PATH',
-        #     PathJoinSubstitution([gazebo_envs_pkg_path, 'models'])
-        # ),
         SetEnvironmentVariable(
             'GZ_SIM_RESOURCE_PATH',
             os.path.join(gazebo_envs_pkg_path, 'models') + ":" + os.path.join(xarm_descrip_pkg_path, "..")
