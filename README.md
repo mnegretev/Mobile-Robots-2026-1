@@ -4,6 +4,5 @@ Software para el curso "Robots Móviles" de la Facultad de Ingeniería, UNAM, 20
 # Installation
 
 * Install ROS Jazzy Jalisco: https://docs.ros.org/en/jazzy/Installation.html
-* Install Gazebo sudo apt install ros-jazzy-ros-gz
-* sudo apt install ros-jazzy-gz-ros2-control
-* sudo apt install ros-jazzy-moveit
+* Install Gazebo
+* sudo apt install ros-jazzy-ros-gz ros-jazzy-gz-ros2-control ros-jazzy-moveit ros-jazzy-control-toolbox ros-jazzy-slam-toolbox
