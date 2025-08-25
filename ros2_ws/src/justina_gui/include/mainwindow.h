@@ -29,6 +29,30 @@ public slots:
     void btnTurnRightPressed();
     void btnTurnRightReleased();
 
+    void navBtnCalcPath_pressed();
+    void navBtnExecPath_pressed();
+
+    void armSbAnglesValueChanged(double d);
+    void armSbGripperValueChanged(double d);
+    void armTxtArticularGoalReturnPressed();
+    void armTxtCartesianGoalReturnPressed();
+    void armBtnXpPressed();
+    void armBtnXmPressed();
+    void armBtnYpPressed();
+    void armBtnYmPressed();
+    void armBtnZpPressed();
+    void armBtnZmPressed();
+    void armBtnRollpPressed();
+    void armBtnRollmPressed();
+    void armBtnPitchpPressed();
+    void armBtnPitchmPressed();
+    void armBtnYawpPressed();
+    void armBtnYawmPressed();
+    void arm_get_IK_and_update_ui(std::vector<double> cartesian);
+
+    void spgTxtSayReturnPressed();
+    void sprTxtFakeRecogReturnPressed();
+
 private:
     Ui::MainWindow *ui;
     RclComm *commNode;

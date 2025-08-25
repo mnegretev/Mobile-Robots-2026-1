@@ -68,6 +68,11 @@ def generate_launch_description():
             output='screen'
         ),
         Node(
+            name='justina_gui',
+            package='justina_gui',
+            executable='justina_gui_node'
+        ),
+        Node(
             package='rviz2',
             executable='rviz2',
             name='rviz2',

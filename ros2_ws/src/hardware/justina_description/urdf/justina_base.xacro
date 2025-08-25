@@ -44,7 +44,7 @@
     <xacro:property name="max_linear_acceleration" value="10"/>
 
     <!-- Links -->
-
+    <link name="base_footprint"/>
     <!-- Body Link -->
     <link name="body_link">
         <visual>
@@ -164,20 +164,25 @@
       </inertial>
    </link>
 
-    <!-- Joints -->
+   <!-- Joints -->
+   <joint name="base_to_body" type="fixed">
+     <origin xyz="0 0 ${body_height/2}" rpy="0 0 0"/>
+     <parent link="base_footprint"/>
+     <child link="body_link"/>
+   </joint>
 
-    <!-- Left Wheel Joint -->
-    <joint name="left_wheel_joint" type="continuous">
-        <origin xyz="${wheel_offset} ${wheel_separation/2} ${-wheel_radius/2 - wheel_offset_z}" rpy="0 0 0"/>
-        <parent link="body_link"/>
-        <child link="left_wheel_link"/>
-        <axis xyz="0 1 0"/>
-        <limit effort="100" velocity="10.0"/>
-        <dynamics damping="0.1" friction="0.1"/>
-    </joint>
-
-    <!-- Right Wheel Joint -->
-    <joint name="right_wheel_joint" type="continuous">
+   <!-- Left Wheel Joint -->
+   <joint name="left_wheel_joint" type="continuous">
+     <origin xyz="${wheel_offset} ${wheel_separation/2} ${-wheel_radius/2 - wheel_offset_z}" rpy="0 0 0"/>
+     <parent link="body_link"/>
+     <child link="left_wheel_link"/>
+     <axis xyz="0 1 0"/>
+     <limit effort="100" velocity="10.0"/>
+     <dynamics damping="0.1" friction="0.1"/>
+   </joint>
+   
+   <!-- Right Wheel Joint -->
+   <joint name="right_wheel_joint" type="continuous">
         <origin xyz="${wheel_offset} ${-wheel_separation/2} ${-wheel_radius/2 - wheel_offset_z}" rpy="0 0 0"/>
         <parent link="body_link"/>
         <child link="right_wheel_link"/>
@@ -228,22 +233,25 @@
 
     <!-- Gazebo Plugins -->
     <gazebo>
-        <plugin filename="gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
-            <right_joint>right_wheel_joint</right_joint>
-            <left_joint>left_wheel_joint</left_joint>
-            <wheel_separation>${wheel_separation}</wheel_separation>
-            <wheel_radius>${wheel_radius}</wheel_radius>
-            <max_linear_acceleration>${max_linear_acceleration}</max_linear_acceleration>
-            <odom_publish_frequency>100</odom_publish_frequency>
-            <topic>cmd_vel</topic>
-            <odom_topic>odom</odom_topic>
-        </plugin>
-
-        <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
-            <topic>joint_states</topic>
-            <joint_name>right_wheel_joint</joint_name>
-            <joint_name>left_wheel_joint</joint_name>
-        </plugin>
+      <plugin filename="gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
+        <right_joint>right_wheel_joint</right_joint>
+        <left_joint>left_wheel_joint</left_joint>
+        <wheel_separation>${wheel_separation}</wheel_separation>
+        <wheel_radius>${wheel_radius}</wheel_radius>
+        <max_linear_acceleration>${max_linear_acceleration}</max_linear_acceleration>
+        <odom_publish_frequency>20</odom_publish_frequency>
+        <topic>cmd_vel</topic>
+        <tf_topic>tf</tf_topic>
+        <frame_id>/odom</frame_id>
+        <child_frame_id>/base_footprint</child_frame_id>
+        <odom_topic>odom</odom_topic>
+      </plugin>
+      
+      <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
+        <topic>joint_states</topic>
+        <joint_name>right_wheel_joint</joint_name>
+        <joint_name>left_wheel_joint</joint_name>
+      </plugin>
     </gazebo>
 
     <gazebo reference="laser_link">
