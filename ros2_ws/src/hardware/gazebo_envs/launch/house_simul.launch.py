@@ -9,6 +9,7 @@ import xacro
 import os
 
 def generate_launch_description():
+    config_files_pkg_path= get_package_share_directory('config_files')
     ros_gz_sim_pkg_path  = get_package_share_directory('ros_gz_sim')
     gazebo_envs_pkg_path = get_package_share_directory('gazebo_envs')
     gz_sim_launch_path   = PathJoinSubstitution([ros_gz_sim_pkg_path, 'launch', 'gz_sim.launch.py'])
@@ -21,7 +22,7 @@ def generate_launch_description():
        
     robot_state_publisher_params = [{'robot_description': robot_description_content}]
     gz_bridge_params_path = os.path.join(gazebo_envs_pkg_path, 'config', 'gz_bridge.yaml')
-    rviz_config_file = os.path.join(gazebo_envs_pkg_path, 'config', 'simple_house.rviz')
+    rviz_config_file = os.path.join(config_files_pkg_path, 'rviz', 'simple_house.rviz')
 
     xarm_descrip_pkg_path = get_package_share_directory('xarm_description')
     xarm_controller_pkg_path = get_package_share_directory('xarm_controller')
@@ -45,7 +46,7 @@ def generate_launch_description():
                 'world':'default',
                 'topic':'/robot_description',
                 'entity_name': 'justina',
-                'x': '-4.0',
+                'x': '-3.5',
                 'y': '0.0',
                 'z': '1.0',
                 'Y': '1.5708'

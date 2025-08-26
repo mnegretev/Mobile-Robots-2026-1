@@ -44,7 +44,7 @@
     <xacro:property name="max_linear_acceleration" value="10"/>
 
     <!-- Links -->
-    <link name="base_footprint"/>
+    <link name="base_link"/>
     <!-- Body Link -->
     <link name="body_link">
         <visual>
@@ -167,7 +167,7 @@
    <!-- Joints -->
    <joint name="base_to_body" type="fixed">
      <origin xyz="0 0 ${body_height/2}" rpy="0 0 0"/>
-     <parent link="base_footprint"/>
+     <parent link="base_link"/>
      <child link="body_link"/>
    </joint>
 
@@ -243,7 +243,7 @@
         <topic>cmd_vel</topic>
         <tf_topic>tf</tf_topic>
         <frame_id>/odom</frame_id>
-        <child_frame_id>/base_footprint</child_frame_id>
+        <child_frame_id>/base_link</child_frame_id>
         <odom_topic>odom</odom_topic>
       </plugin>
       
@@ -277,7 +277,7 @@
            <noise>
              <type>gaussian</type>
              <mean>0.0</mean>
-             <stddev>0.03</stddev>
+             <stddev>0.02</stddev>
            </noise>
          </lidar>
       </sensor>

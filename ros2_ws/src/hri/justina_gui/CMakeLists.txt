@@ -23,6 +23,8 @@ file(GLOB PRO_SOURCE_DIR RELATIVE ${CMAKE_SOURCE_DIR} FOLLOW_SYMLINKS src/*.cpp)
 file(GLOB PRO_UI_DIR RELATIVE ${CMAKE_SOURCE_DIR} FOLLOW_SYMLINKS ui/*.ui)
 file(GLOB PRO_INCLUDE_DIR RELATIVE ${CMAKE_SOURCE_DIR} FOLLOW_SYMLINKS include/*.h *.hpp)
 file(GLOB PRO_RESOURCE_DIR RELATIVE ${CMAKE_SOURCE_DIR} FOLLOW_SYMLINKS resource/*.qrc)
+file(GLOB QT_RESOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} resources/resource.qrc) 
+qt5_add_resources(QT_RESOURCES_CPP ${QT_RESOURCES})
 
 include_directories(
   include
@@ -43,7 +45,8 @@ add_executable(justina_gui_node
   ${PRO_INCLUDE_DIR}
   ${PRO_UI_DIR}
   ${PRO_RESOURCE_DIR}
-  ${QT_UI_HPP} # UI的文件应该不需要添加在这里
+  ${QT_RESOURCES_CPP}
+  ${QT_UI_HPP} 
   ${QT_MOC_HPP}
   ${QT_RESOUCE_HPP}
 )

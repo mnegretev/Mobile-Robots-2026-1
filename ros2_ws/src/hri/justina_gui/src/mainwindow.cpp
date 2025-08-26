@@ -5,6 +5,16 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QIcon icoFwd(":/images/btnUp");
+    QIcon icoBwd(":/images/btnDown");
+    QIcon icoLeft(":/images/btnLeft");
+    QIcon icoRight(":/images/btnRight");
+    QIcon icoTurnLeft(":/images/btnTurnLeft");
+    QIcon icoTurnRight(":/images/btnTurnRight");
+    ui->btnFwd->setIcon(icoFwd);
+    ui->btnBwd->setIcon(icoBwd);
+    ui->btnTurnLeft->setIcon(icoTurnLeft);
+    ui->btnTurnRight->setIcon(icoTurnRight);
     //ui->plainTextEdit->setPlainText("hello");
     this->commNode = new RclComm();
     QObject::connect(ui->btnFwd, SIGNAL(pressed()), this, SLOT(btnFwdPressed()));
