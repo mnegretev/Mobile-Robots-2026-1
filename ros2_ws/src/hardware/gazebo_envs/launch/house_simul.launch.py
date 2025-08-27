@@ -1,6 +1,6 @@
 from launch import LaunchDescription
 from launch_ros.actions import Node
-from launch.actions import SetEnvironmentVariable, IncludeLaunchDescription
+from launch.actions import SetEnvironmentVariable, IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import PathJoinSubstitution
 from launch_ros.substitutions import FindPackageShare
@@ -23,6 +23,7 @@ def generate_launch_description():
     robot_state_publisher_params = [{'robot_description': robot_description_content}]
     gz_bridge_params_path = os.path.join(gazebo_envs_pkg_path, 'config', 'gz_bridge.yaml')
     rviz_config_file = os.path.join(config_files_pkg_path, 'rviz', 'simple_house.rviz')
+    map_config_file = os.path.join(config_files_pkg_path, 'navigation', 'simple_house.yaml')
 
     xarm_descrip_pkg_path = get_package_share_directory('xarm_description')
     xarm_controller_pkg_path = get_package_share_directory('xarm_controller')
@@ -77,7 +78,33 @@ def generate_launch_description():
             package='rviz2',
             executable='rviz2',
             name='rviz2',
-            output='screen',
             arguments=['-d', rviz_config_file],
+        ),
+        
+        Node(
+            package='nav2_map_server',
+            executable='map_server',
+            name='map_server',
+            output='screen',
+            parameters=[{'yaml_filename':map_config_file}]
+        ),
+        Node(
+            package='nav2_amcl',
+            executable='amcl',
+            name='amcl',
+            output='screen',
+            parameters=[{'base_frame_id':'base_link'}, {'set_initial_pose':True}]
+        ),
+        TimerAction(
+            period=5.0,
+            actions=[
+                Node(
+                    package='nav2_util',
+                    executable='lifecycle_bringup',
+                    name='lifecycle_bringup',
+                    output='screen',
+                    arguments=['map_server', 'amcl']
+                )
+            ]
         )
     ])
