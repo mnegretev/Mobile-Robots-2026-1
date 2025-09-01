@@ -1,0 +1,3 @@
+[console_scripts]
+path_follower = simple_move.path_follower:main
+ros_basics = simple_move.ros_basics:main

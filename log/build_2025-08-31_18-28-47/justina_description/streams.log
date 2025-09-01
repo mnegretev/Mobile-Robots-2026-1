@@ -1,0 +1,23 @@
+[0.019s] Invoking command in '/home/axel/Mobile-Robots-2026-1/build/justina_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/axel/Mobile-Robots-2026-1/build/justina_description -- -j12 -l12
+[0.317s] Invoked command in '/home/axel/Mobile-Robots-2026-1/build/justina_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/axel/Mobile-Robots-2026-1/build/justina_description -- -j12 -l12
+[0.318s] Invoking command in '/home/axel/Mobile-Robots-2026-1/build/justina_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/axel/Mobile-Robots-2026-1/build/justina_description
+[0.351s] -- Install configuration: ""
+[0.351s] -- Up-to-date: /home/axel/Mobile-Robots-2026-1/install/justina_description/share/justina_description/urdf
+[0.351s] -- Up-to-date: /home/axel/Mobile-Robots-2026-1/install/justina_description/share/justina_description/urdf/justina.xacro
+[0.351s] -- Up-to-date: /home/axel/Mobile-Robots-2026-1/install/justina_description/share/justina_description/urdf/justina_base.xacro
+[0.351s] -- Up-to-date: /home/axel/Mobile-Robots-2026-1/install/justina_description/share/ament_index/resource_index/package_run_dependencies/justina_description
+[0.351s] -- Up-to-date: /home/axel/Mobile-Robots-2026-1/install/justina_description/share/ament_index/resource_index/parent_prefix_path/justina_description
+[0.351s] -- Up-to-date: /home/axel/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/ament_prefix_path.sh
+[0.351s] -- Up-to-date: /home/axel/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/ament_prefix_path.dsv
+[0.352s] -- Up-to-date: /home/axel/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/path.sh
+[0.352s] -- Up-to-date: /home/axel/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/path.dsv
+[0.352s] -- Up-to-date: /home/axel/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.bash
+[0.352s] -- Up-to-date: /home/axel/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.sh
+[0.352s] -- Up-to-date: /home/axel/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.zsh
+[0.352s] -- Up-to-date: /home/axel/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.dsv
+[0.352s] -- Installing: /home/axel/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.dsv
+[0.355s] -- Up-to-date: /home/axel/Mobile-Robots-2026-1/install/justina_description/share/ament_index/resource_index/packages/justina_description
+[0.355s] -- Up-to-date: /home/axel/Mobile-Robots-2026-1/install/justina_description/share/justina_description/cmake/justina_descriptionConfig.cmake
+[0.355s] -- Up-to-date: /home/axel/Mobile-Robots-2026-1/install/justina_description/share/justina_description/cmake/justina_descriptionConfig-version.cmake
+[0.355s] -- Up-to-date: /home/axel/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.xml
+[0.488s] Invoked command in '/home/axel/Mobile-Robots-2026-1/build/justina_description' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/axel/Mobile-Robots-2026-1/build/justina_description

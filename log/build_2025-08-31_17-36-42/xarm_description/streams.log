@@ -1,0 +1,32 @@
+[0.015s] Invoking command in '/home/axel/Mobile-Robots-2026-1/build/xarm_description': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/axel/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_description -DCMAKE_INSTALL_PREFIX=/home/axel/Mobile-Robots-2026-1/install/xarm_description
+[0.169s] -- The C compiler identification is GNU 13.3.0
+[0.170s] -- The CXX compiler identification is GNU 13.3.0
+[0.170s] -- Detecting C compiler ABI info
+[0.200s] -- Detecting C compiler ABI info - done
+[0.212s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.212s] -- Detecting C compile features
+[0.212s] -- Detecting C compile features - done
+[0.219s] -- Detecting CXX compiler ABI info
+[0.298s] -- Detecting CXX compiler ABI info - done
+[0.305s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.305s] -- Detecting CXX compile features
+[0.305s] -- Detecting CXX compile features - done
+[0.312s] [31mCMake Error at CMakeLists.txt:19 (find_package):
+[0.312s]   By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+[0.312s]   has asked CMake to find a package configuration file provided by
+[0.312s]   "ament_cmake", but CMake did not find one.
+[0.312s] 
+[0.312s]   Could not find a package configuration file provided by "ament_cmake" with
+[0.312s]   any of the following names:
+[0.312s] 
+[0.313s]     ament_cmakeConfig.cmake
+[0.313s]     ament_cmake-config.cmake
+[0.313s] 
+[0.313s]   Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+[0.313s]   "ament_cmake_DIR" to a directory containing one of the above files.  If
+[0.313s]   "ament_cmake" provides a separate development package or SDK, be sure it
+[0.313s]   has been installed.
+[0.313s] 
+[0.314s] [0m
+[0.314s] -- Configuring incomplete, errors occurred!
+[0.323s] Invoked command in '/home/axel/Mobile-Robots-2026-1/build/xarm_description' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/axel/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_description -DCMAKE_INSTALL_PREFIX=/home/axel/Mobile-Robots-2026-1/install/xarm_description

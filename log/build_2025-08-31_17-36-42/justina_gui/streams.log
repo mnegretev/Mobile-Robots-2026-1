@@ -1,0 +1,26 @@
+[0.014s] Invoking command in '/home/axel/Mobile-Robots-2026-1/build/justina_gui': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/axel/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui -DCMAKE_INSTALL_PREFIX=/home/axel/Mobile-Robots-2026-1/install/justina_gui
+[0.166s] -- The CXX compiler identification is GNU 13.3.0
+[0.167s] -- Detecting CXX compiler ABI info
+[0.168s] -- Detecting CXX compiler ABI info - done
+[0.175s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.175s] -- Detecting CXX compile features
+[0.176s] -- Detecting CXX compile features - done
+[0.186s] [31mCMake Error at CMakeLists.txt:15 (find_package):
+[0.186s]   By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project
+[0.186s]   has asked CMake to find a package configuration file provided by
+[0.186s]   "ament_cmake", but CMake did not find one.
+[0.186s] 
+[0.186s]   Could not find a package configuration file provided by "ament_cmake" with
+[0.186s]   any of the following names:
+[0.186s] 
+[0.186s]     ament_cmakeConfig.cmake
+[0.186s]     ament_cmake-config.cmake
+[0.186s] 
+[0.186s]   Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set
+[0.186s]   "ament_cmake_DIR" to a directory containing one of the above files.  If
+[0.187s]   "ament_cmake" provides a separate development package or SDK, be sure it
+[0.187s]   has been installed.
+[0.187s] 
+[0.187s] [0m
+[0.187s] -- Configuring incomplete, errors occurred!
+[0.311s] Invoked command in '/home/axel/Mobile-Robots-2026-1/build/justina_gui' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/axel/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui -DCMAKE_INSTALL_PREFIX=/home/axel/Mobile-Robots-2026-1/install/justina_gui

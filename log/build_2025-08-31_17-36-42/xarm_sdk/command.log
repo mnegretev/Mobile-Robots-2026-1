@@ -1,0 +1,2 @@
+Invoking command in '/home/axel/Mobile-Robots-2026-1/build/xarm_sdk': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/axel/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_sdk -DCMAKE_INSTALL_PREFIX=/home/axel/Mobile-Robots-2026-1/install/xarm_sdk
+Invoked command in '/home/axel/Mobile-Robots-2026-1/build/xarm_sdk' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/axel/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_sdk -DCMAKE_INSTALL_PREFIX=/home/axel/Mobile-Robots-2026-1/install/xarm_sdk
