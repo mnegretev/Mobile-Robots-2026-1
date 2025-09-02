@@ -1,9 +1,0 @@
-/home/christian-pineda/Mobile-Robots-2026-1/build/config_files/CMakeFiles/uninstall.dir
-/home/christian-pineda/Mobile-Robots-2026-1/build/config_files/CMakeFiles/config_files_uninstall.dir
-/home/christian-pineda/Mobile-Robots-2026-1/build/config_files/CMakeFiles/test.dir
-/home/christian-pineda/Mobile-Robots-2026-1/build/config_files/CMakeFiles/edit_cache.dir
-/home/christian-pineda/Mobile-Robots-2026-1/build/config_files/CMakeFiles/rebuild_cache.dir
-/home/christian-pineda/Mobile-Robots-2026-1/build/config_files/CMakeFiles/list_install_components.dir
-/home/christian-pineda/Mobile-Robots-2026-1/build/config_files/CMakeFiles/install.dir
-/home/christian-pineda/Mobile-Robots-2026-1/build/config_files/CMakeFiles/install/local.dir
-/home/christian-pineda/Mobile-Robots-2026-1/build/config_files/CMakeFiles/install/strip.dir
