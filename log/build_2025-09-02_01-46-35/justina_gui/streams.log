@@ -1,0 +1,84 @@
+[0.039s] Invoking command in '/home/christian-pineda/Mobile-Robots-2026-1/build/justina_gui': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui -DCMAKE_INSTALL_PREFIX=/home/christian-pineda/Mobile-Robots-2026-1/install/justina_gui
+[0.436s] -- The CXX compiler identification is GNU 13.3.0
+[0.593s] -- Detecting CXX compiler ABI info
+[1.213s] -- Detecting CXX compiler ABI info - done
+[1.291s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.296s] -- Detecting CXX compile features
+[1.296s] -- Detecting CXX compile features - done
+[1.313s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.054s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.673s] -- Found rclcpp: 28.1.11 (/opt/ros/jazzy/share/rclcpp/cmake)
+[2.965s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[3.075s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[3.207s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.344s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.891s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[3.917s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[4.750s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[5.028s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[5.360s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[6.363s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[6.468s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[6.581s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[6.889s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[7.501s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[7.513s] -- Configured cppcheck include dirs: /home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui/include
+[7.513s] -- Configured cppcheck exclude dirs and/or files: 
+[7.523s] -- Added test 'lint_cmake' to check CMake code style
+[7.532s] -- Added test 'uncrustify' to check C / C++ code style
+[7.533s] -- Configured uncrustify additional arguments: 
+[7.534s] -- Added test 'xmllint' to check XML markup files
+[7.539s] -- Configuring done (7.5s)
+[8.306s] -- Generating done (0.5s)
+[8.330s] -- Build files have been written to: /home/christian-pineda/Mobile-Robots-2026-1/build/justina_gui
+[8.352s] Invoked command in '/home/christian-pineda/Mobile-Robots-2026-1/build/justina_gui' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui -DCMAKE_INSTALL_PREFIX=/home/christian-pineda/Mobile-Robots-2026-1/install/justina_gui
+[8.353s] Invoking command in '/home/christian-pineda/Mobile-Robots-2026-1/build/justina_gui': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christian-pineda/Mobile-Robots-2026-1/build/justina_gui -- -j4 -l4
+[8.570s] [  0%] Built target justina_gui_node_autogen_timestamp_deps
+[8.643s] [  7%] [34m[1mAutomatic MOC for target justina_gui_node[0m
+[8.779s] [  7%] Built target justina_gui_node_autogen
+[8.851s] [ 14%] [34m[1mGenerating include/moc_mainwindow.cpp[0m
+[8.859s] [ 21%] [34m[1mGenerating ui_mainwindow.h[0m
+[8.864s] [ 35%] [34m[1mGenerating include/moc_rclcomm.cpp[0m
+[8.869s] [ 35%] [34m[1mGenerating qrc_resource.cpp[0m
+[9.681s] [ 42%] [32mBuilding CXX object CMakeFiles/justina_gui_node.dir/src/justina_gui_node.cpp.o[0m
+[9.698s] [ 50%] [32mBuilding CXX object CMakeFiles/justina_gui_node.dir/justina_gui_node_autogen/mocs_compilation.cpp.o[0m
+[9.738s] [ 57%] [32mBuilding CXX object CMakeFiles/justina_gui_node.dir/src/mainwindow.cpp.o[0m
+[9.757s] [ 64%] [32mBuilding CXX object CMakeFiles/justina_gui_node.dir/src/rclcomm.cpp.o[0m
+[9.988s] [ 71%] [32mBuilding CXX object CMakeFiles/justina_gui_node.dir/qrc_resource.cpp.o[0m
+[10.917s] [ 78%] [32mBuilding CXX object CMakeFiles/justina_gui_node.dir/include/moc_mainwindow.cpp.o[0m
+[25.493s] [01m[K/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::[01;32m[KarmSbAnglesValueChanged[m[K(double)[m[K’:
+[25.493s] [01m[K/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui/src/mainwindow.cpp:92:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kd[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[25.493s]    92 | void MainWindow::armSbAnglesValueChanged([01;35m[Kdouble d[m[K)
+[25.493s]       |                                          [01;35m[K~~~~~~~^[m[K
+[25.493s] [01m[K/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::[01;32m[KarmSbGripperValueChanged[m[K(double)[m[K’:
+[25.494s] [01m[K/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui/src/mainwindow.cpp:96:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kd[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[25.494s]    96 | void MainWindow::armSbGripperValueChanged([01;35m[Kdouble d[m[K)
+[25.494s]       |                                           [01;35m[K~~~~~~~^[m[K
+[25.494s] [01m[K/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::[01;32m[Karm_get_IK_and_update_ui[m[K(std::vector<double, std::allocator<double> >)[m[K’:
+[25.494s] [01m[K/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui/src/mainwindow.cpp:156:63:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcartesian[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[25.494s]   156 | void MainWindow::arm_get_IK_and_update_ui([01;35m[Kstd::vector<double> cartesian[m[K)
+[25.494s]       |                                           [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K
+[40.454s] [ 85%] [32mBuilding CXX object CMakeFiles/justina_gui_node.dir/include/moc_rclcomm.cpp.o[0m
+[47.087s] [ 92%] [32m[1mLinking CXX executable justina_gui_node[0m
+[60.870s] [100%] Built target justina_gui_node
+[60.893s] Invoked command in '/home/christian-pineda/Mobile-Robots-2026-1/build/justina_gui' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christian-pineda/Mobile-Robots-2026-1/build/justina_gui -- -j4 -l4
+[60.894s] Invoking command in '/home/christian-pineda/Mobile-Robots-2026-1/build/justina_gui': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christian-pineda/Mobile-Robots-2026-1/build/justina_gui
+[60.908s] -- Install configuration: ""
+[60.909s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_gui/lib/justina_gui/justina_gui_node
+[60.914s] -- Set non-toolchain portion of runtime path of "/home/christian-pineda/Mobile-Robots-2026-1/install/justina_gui/lib/justina_gui/justina_gui_node" to ""
+[60.915s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_gui/share/ament_index/resource_index/package_run_dependencies/justina_gui
+[60.916s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_gui/share/ament_index/resource_index/parent_prefix_path/justina_gui
+[60.916s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/ament_prefix_path.sh
+[60.916s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/ament_prefix_path.dsv
+[60.916s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/path.sh
+[60.917s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/path.dsv
+[60.917s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.bash
+[60.917s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.sh
+[60.918s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.zsh
+[60.918s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.dsv
+[60.918s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.dsv
+[60.918s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_gui/share/ament_index/resource_index/packages/justina_gui
+[60.919s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/cmake/justina_guiConfig.cmake
+[60.919s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/cmake/justina_guiConfig-version.cmake
+[60.919s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.xml
+[60.922s] Invoked command in '/home/christian-pineda/Mobile-Robots-2026-1/build/justina_gui' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christian-pineda/Mobile-Robots-2026-1/build/justina_gui

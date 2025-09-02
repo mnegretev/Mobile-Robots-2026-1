@@ -1,0 +1,45 @@
+[0.030s] Invoking command in '/home/christian-pineda/Mobile-Robots-2026-1/build/justina_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/src/hardware/justina_description -DCMAKE_INSTALL_PREFIX=/home/christian-pineda/Mobile-Robots-2026-1/install/justina_description
+[0.253s] -- The C compiler identification is GNU 13.3.0
+[0.493s] -- The CXX compiler identification is GNU 13.3.0
+[0.569s] -- Detecting C compiler ABI info
+[0.938s] -- Detecting C compiler ABI info - done
+[0.996s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.997s] -- Detecting C compile features
+[1.000s] -- Detecting C compile features - done
+[1.039s] -- Detecting CXX compiler ABI info
+[1.457s] -- Detecting CXX compiler ABI info - done
+[1.551s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.551s] -- Detecting CXX compile features
+[1.553s] -- Detecting CXX compile features - done
+[1.571s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.267s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.822s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[3.596s] -- Added test 'lint_cmake' to check CMake code style
+[3.631s] -- Added test 'xmllint' to check XML markup files
+[3.651s] -- Configuring done (3.6s)
+[3.679s] -- Generating done (0.0s)
+[3.697s] -- Build files have been written to: /home/christian-pineda/Mobile-Robots-2026-1/build/justina_description
+[3.734s] Invoked command in '/home/christian-pineda/Mobile-Robots-2026-1/build/justina_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/src/hardware/justina_description -DCMAKE_INSTALL_PREFIX=/home/christian-pineda/Mobile-Robots-2026-1/install/justina_description
+[3.744s] Invoking command in '/home/christian-pineda/Mobile-Robots-2026-1/build/justina_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christian-pineda/Mobile-Robots-2026-1/build/justina_description -- -j4 -l4
+[4.065s] Invoked command in '/home/christian-pineda/Mobile-Robots-2026-1/build/justina_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christian-pineda/Mobile-Robots-2026-1/build/justina_description -- -j4 -l4
+[4.068s] Invoking command in '/home/christian-pineda/Mobile-Robots-2026-1/build/justina_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christian-pineda/Mobile-Robots-2026-1/build/justina_description
+[4.168s] -- Install configuration: ""
+[4.173s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_description/share/justina_description/urdf
+[4.174s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_description/share/justina_description/urdf/justina.xacro
+[4.174s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_description/share/justina_description/urdf/justina_base.xacro
+[4.175s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_description/share/ament_index/resource_index/package_run_dependencies/justina_description
+[4.175s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_description/share/ament_index/resource_index/parent_prefix_path/justina_description
+[4.182s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/ament_prefix_path.sh
+[4.184s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/ament_prefix_path.dsv
+[4.186s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/path.sh
+[4.187s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/path.dsv
+[4.188s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.bash
+[4.188s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.sh
+[4.189s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.zsh
+[4.195s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.dsv
+[4.198s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.dsv
+[4.199s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_description/share/ament_index/resource_index/packages/justina_description
+[4.199s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_description/share/justina_description/cmake/justina_descriptionConfig.cmake
+[4.200s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_description/share/justina_description/cmake/justina_descriptionConfig-version.cmake
+[4.204s] -- Installing: /home/christian-pineda/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.xml
+[4.217s] Invoked command in '/home/christian-pineda/Mobile-Robots-2026-1/build/justina_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/christian-pineda/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christian-pineda/Mobile-Robots-2026-1/build/justina_description
