@@ -1,4 +1,0 @@
-Invoking command in '/home/axel/Mobile-Robots-2026-1/build/config_files': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/axel/Mobile-Robots-2026-1/build/config_files -- -j12 -l12
-Invoked command in '/home/axel/Mobile-Robots-2026-1/build/config_files' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/axel/Mobile-Robots-2026-1/build/config_files -- -j12 -l12
-Invoking command in '/home/axel/Mobile-Robots-2026-1/build/config_files': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/axel/Mobile-Robots-2026-1/build/config_files
-Invoked command in '/home/axel/Mobile-Robots-2026-1/build/config_files' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/axel/Mobile-Robots-2026-1/build/config_files

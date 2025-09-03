@@ -1,2 +1,0 @@
-Invoking command in '/home/axel/Mobile-Robots-2026-1/build/gazebo_envs': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/axel/Mobile-Robots-2026-1/ros2_ws/src/hardware/gazebo_envs -DCMAKE_INSTALL_PREFIX=/home/axel/Mobile-Robots-2026-1/install/gazebo_envs
-Invoked command in '/home/axel/Mobile-Robots-2026-1/build/gazebo_envs' returned '1': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/axel/Mobile-Robots-2026-1/ros2_ws/src/hardware/gazebo_envs -DCMAKE_INSTALL_PREFIX=/home/axel/Mobile-Robots-2026-1/install/gazebo_envs

@@ -1,4 +1,0 @@
-Invoking command in '/home/axel/Mobile-Robots-2026-1/build/xarm_sdk': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/axel/Mobile-Robots-2026-1/build/xarm_sdk -- -j12 -l12
-Invoked command in '/home/axel/Mobile-Robots-2026-1/build/xarm_sdk' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/axel/Mobile-Robots-2026-1/build/xarm_sdk -- -j12 -l12
-Invoking command in '/home/axel/Mobile-Robots-2026-1/build/xarm_sdk': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/axel/Mobile-Robots-2026-1/build/xarm_sdk
-Invoked command in '/home/axel/Mobile-Robots-2026-1/build/xarm_sdk' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/axel/Mobile-Robots-2026-1/build/xarm_sdk
