@@ -1,0 +1,44 @@
+[1.261s] Invoking command in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/navigation/simple_move': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/christopher/Mobile-Robots-2026-1/build/simple_move/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/simple_move build --build-base /home/christopher/Mobile-Robots-2026-1/build/simple_move/build install --record /home/christopher/Mobile-Robots-2026-1/build/simple_move/install.log --single-version-externally-managed install_data
+[1.719s] running egg_info
+[1.723s] creating ../../../../build/simple_move/simple_move.egg-info
+[1.755s] writing ../../../../build/simple_move/simple_move.egg-info/PKG-INFO
+[1.755s] writing dependency_links to ../../../../build/simple_move/simple_move.egg-info/dependency_links.txt
+[1.756s] writing entry points to ../../../../build/simple_move/simple_move.egg-info/entry_points.txt
+[1.758s] writing requirements to ../../../../build/simple_move/simple_move.egg-info/requires.txt
+[1.758s] writing top-level names to ../../../../build/simple_move/simple_move.egg-info/top_level.txt
+[1.758s] writing manifest file '../../../../build/simple_move/simple_move.egg-info/SOURCES.txt'
+[1.830s] reading manifest file '../../../../build/simple_move/simple_move.egg-info/SOURCES.txt'
+[1.831s] adding license file 'LICENSE'
+[1.831s] writing manifest file '../../../../build/simple_move/simple_move.egg-info/SOURCES.txt'
+[1.831s] running build
+[1.831s] running build_py
+[1.832s] creating /home/christopher/Mobile-Robots-2026-1/build/simple_move/build
+[1.832s] creating /home/christopher/Mobile-Robots-2026-1/build/simple_move/build/lib
+[1.832s] creating /home/christopher/Mobile-Robots-2026-1/build/simple_move/build/lib/simple_move
+[1.832s] copying simple_move/path_follower.py -> /home/christopher/Mobile-Robots-2026-1/build/simple_move/build/lib/simple_move
+[1.840s] copying simple_move/__init__.py -> /home/christopher/Mobile-Robots-2026-1/build/simple_move/build/lib/simple_move
+[1.840s] copying simple_move/ros_basics.py -> /home/christopher/Mobile-Robots-2026-1/build/simple_move/build/lib/simple_move
+[1.843s] running install
+[1.847s] running install_lib
+[1.867s] copying /home/christopher/Mobile-Robots-2026-1/build/simple_move/build/lib/simple_move/path_follower.py -> /home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages/simple_move
+[1.867s] copying /home/christopher/Mobile-Robots-2026-1/build/simple_move/build/lib/simple_move/__init__.py -> /home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages/simple_move
+[1.867s] copying /home/christopher/Mobile-Robots-2026-1/build/simple_move/build/lib/simple_move/ros_basics.py -> /home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages/simple_move
+[1.868s] byte-compiling /home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages/simple_move/ros_basics.py to ros_basics.cpython-312.pyc
+[1.868s]   File "/home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages/simple_move/ros_basics.py", line 44
+[1.869s]     self.obstacle_detected = msg.ranges[len(msf.ranges)]//2]<1.0
+[1.869s]                                                            ^
+[1.869s] SyntaxError: unmatched ']'
+[1.869s] 
+[1.869s] running install_data
+[1.869s] creating /home/christopher/Mobile-Robots-2026-1/install/simple_move/share/ament_index
+[1.869s] creating /home/christopher/Mobile-Robots-2026-1/install/simple_move/share/ament_index/resource_index
+[1.870s] creating /home/christopher/Mobile-Robots-2026-1/install/simple_move/share/ament_index/resource_index/packages
+[1.870s] copying resource/simple_move -> /home/christopher/Mobile-Robots-2026-1/install/simple_move/share/ament_index/resource_index/packages
+[1.870s] copying package.xml -> /home/christopher/Mobile-Robots-2026-1/install/simple_move/share/simple_move
+[1.870s] running install_egg_info
+[1.888s] Copying ../../../../build/simple_move/simple_move.egg-info to /home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages/simple_move-0.0.0-py3.12.egg-info
+[1.889s] running install_scripts
+[2.023s] Installing path_follower script to /home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/simple_move
+[2.024s] Installing ros_basics script to /home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/simple_move
+[2.025s] writing list of installed files to '/home/christopher/Mobile-Robots-2026-1/build/simple_move/install.log'
+[2.046s] Invoked command in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/navigation/simple_move' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/christopher/Mobile-Robots-2026-1/build/simple_move/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/simple_move build --build-base /home/christopher/Mobile-Robots-2026-1/build/simple_move/build install --record /home/christopher/Mobile-Robots-2026-1/build/simple_move/install.log --single-version-externally-managed install_data

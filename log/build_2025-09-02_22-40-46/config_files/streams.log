@@ -1,0 +1,26 @@
+[0.022s] Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/config_files': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/config_files -- -j2 -l2
+[0.221s] Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/config_files' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/config_files -- -j2 -l2
+[0.223s] Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/config_files': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/config_files
+[0.264s] -- Install configuration: ""
+[0.264s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/rviz
+[0.267s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/rviz/simple_house.rviz
+[0.267s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation
+[0.267s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation/simple_house.pgm
+[0.267s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation/mapper_params.yaml
+[0.267s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation/simple_house.yaml
+[0.267s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/ament_index/resource_index/package_run_dependencies/config_files
+[0.267s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/ament_index/resource_index/parent_prefix_path/config_files
+[0.267s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/ament_prefix_path.sh
+[0.267s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/ament_prefix_path.dsv
+[0.267s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/path.sh
+[0.268s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/path.dsv
+[0.268s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.bash
+[0.268s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.sh
+[0.275s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.zsh
+[0.275s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.dsv
+[0.275s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/package.dsv
+[0.275s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/ament_index/resource_index/packages/config_files
+[0.275s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/cmake/config_filesConfig.cmake
+[0.275s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/cmake/config_filesConfig-version.cmake
+[0.275s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/package.xml
+[0.275s] Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/config_files' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/config_files

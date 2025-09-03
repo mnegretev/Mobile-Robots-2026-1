@@ -1,0 +1,123 @@
+[0.014s] Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_controller': AMENT_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_controller -DCMAKE_INSTALL_PREFIX=/home/christopher/Mobile-Robots-2026-1/install/xarm_controller
+[0.063s] -- The C compiler identification is GNU 13.3.0
+[0.110s] -- The CXX compiler identification is GNU 13.3.0
+[0.127s] -- Detecting C compiler ABI info
+[0.209s] -- Detecting C compiler ABI info - done
+[0.215s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.215s] -- Detecting C compile features
+[0.216s] -- Detecting C compile features - done
+[0.227s] -- Detecting CXX compiler ABI info
+[0.319s] -- Detecting CXX compiler ABI info - done
+[0.327s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.327s] -- Detecting CXX compile features
+[0.328s] -- Detecting CXX compile features - done
+[0.332s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.463s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.576s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.685s] -- Found hardware_interface: 4.35.0 (/opt/ros/jazzy/share/hardware_interface/cmake)
+[0.750s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.767s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.787s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.809s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.035s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.090s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.095s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.124s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.184s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.186s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.201s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.205s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.211s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.220s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.530s] -- Found controller_manager_msgs: 4.35.0 (/opt/ros/jazzy/share/controller_manager_msgs/cmake)
+[1.564s] -- Found xarm_msgs: 0.0.0 (/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/cmake)
+[1.619s] -- Found xarm_api: 0.0.0 (/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/cmake)
+[1.620s] -- Found xarm_sdk: 0.0.0 (/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/cmake)
+[1.629s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.633s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.633s] -- Configured cppcheck include dirs: /home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_controller/include
+[1.633s] -- Configured cppcheck exclude dirs and/or files: 
+[1.636s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.636s] -- Configured cpplint exclude dirs and/or files: 
+[1.636s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.637s] -- Configured 'flake8' exclude dirs and/or files: 
+[1.638s] -- Added test 'lint_cmake' to check CMake code style
+[1.638s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.641s] -- Added test 'uncrustify' to check C / C++ code style
+[1.641s] -- Configured uncrustify additional arguments: 
+[1.643s] -- Added test 'xmllint' to check XML markup files
+[1.646s] -- Configuring done (1.6s)
+[1.675s] -- Generating done (0.0s)
+[1.679s] -- Build files have been written to: /home/christopher/Mobile-Robots-2026-1/build/xarm_controller
+[1.689s] Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_controller' returned '0': AMENT_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_controller -DCMAKE_INSTALL_PREFIX=/home/christopher/Mobile-Robots-2026-1/install/xarm_controller
+[1.690s] Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_controller': AMENT_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/xarm_controller -- -j2 -l2
+[1.748s] [ 33%] [32mBuilding CXX object CMakeFiles/uf_robot_hardware.dir/src/hardware/uf_robot_system_hardware.cpp.o[0m
+[5.911s] [01m[K/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_controller/src/hardware/uf_robot_system_hardware.cpp:[m[K In member function ‘[01m[Kvirtual uf_robot_hardware::CallbackReturn uf_robot_hardware::UFRobotSystemHardware::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’:
+[5.911s] [01m[K/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_controller/src/hardware/uf_robot_system_hardware.cpp:163:57:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvirtual rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn hardware_interface::SystemInterface::[01;32m[Kon_init[m[K(const hardware_interface::HardwareInfo&)[m[K’ is deprecated: Use on_init(const HardwareComponentInterfaceParams & params) instead. [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[5.911s]   163 |         if ([01;35m[Khardware_interface::SystemInterface::on_init(info)[m[K != CallbackReturn::SUCCESS) {
+[5.911s]       |             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+[5.912s] In file included from [01m[K/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_controller/include/xarm_controller/hardware/uf_robot_system_hardware.h:22[m[K,
+[5.912s]                  from [01m[K/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_controller/src/hardware/uf_robot_system_hardware.cpp:9[m[K:
+[5.912s] [01m[K/opt/ros/jazzy/include/hardware_interface/hardware_interface/system_interface.hpp:243:26:[m[K [01;36m[Knote: [m[Kdeclared here
+[5.912s]   243 |   virtual CallbackReturn [01;36m[Kon_init[m[K(const HardwareInfo & hardware_info)
+[5.912s]       |                          [01;36m[K^~~~~~~[m[K
+[10.671s] [ 66%] [32mBuilding CXX object CMakeFiles/uf_robot_hardware.dir/src/hardware/uf_robot_fake_system_hardware.cpp.o[0m
+[14.556s] [100%] [32m[1mLinking CXX shared library libuf_robot_hardware.so[0m
+[15.689s] [100%] Built target uf_robot_hardware
+[15.701s] Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_controller' returned '0': AMENT_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/xarm_controller -- -j2 -l2
+[15.702s] Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_controller': AMENT_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/xarm_controller
+[15.710s] -- Install configuration: ""
+[15.711s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/uf_hardware_interface_plugins.xml
+[15.711s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/include
+[15.711s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/include/xarm_controller
+[15.711s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/include/xarm_controller/hardware
+[15.711s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/include/xarm_controller/hardware/bak_uf_robot_fake_system_hardware.h
+[15.712s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/include/xarm_controller/hardware/uf_robot_system_hardware.h
+[15.712s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/include/xarm_controller/hardware/uf_robot_fake_system_hardware.h
+[15.712s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/lib/libuf_robot_hardware.so
+[15.717s] -- Set non-toolchain portion of runtime path of "/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/lib/libuf_robot_hardware.so" to ""
+[15.717s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//launch
+[15.717s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//launch/xarm6_control_rviz_display.launch.py
+[15.717s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//launch/xarm5_control_rviz_display.launch.py
+[15.717s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//launch/uf850_control_rviz_display.launch.py
+[15.718s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//launch/_dual_ros2_control.launch.py
+[15.718s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//launch/xarm7_mirror_control_rviz_display.launch.py
+[15.718s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//launch/xarm7_control_rviz_display.launch.py
+[15.719s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//launch/_ros2_control.launch.py
+[15.719s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//launch/lib
+[15.719s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//launch/lib/robot_controller_lib.py
+[15.719s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//launch/_robot_ros2_control.launch.py
+[15.720s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//launch/lite6_control_rviz_display.launch.py
+[15.720s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//config
+[15.720s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//config/xarm6_controllers.yaml
+[15.720s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//config/xarm7_mirror_controllers.yaml
+[15.721s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//config/bio_gripper_controllers.yaml
+[15.721s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//config/xarm_gripper_controllers.yaml
+[15.721s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//config/lite6_controllers.yaml
+[15.721s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//config/xarm7_controllers.yaml
+[15.722s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//config/xarm5_controllers.yaml
+[15.722s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//config/xarm7_mirror_gripper_controllers.yaml
+[15.722s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//config/uf850_gripper_controllers.yaml
+[15.723s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller//config/uf850_controllers.yaml
+[15.723s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/environment/library_path.sh
+[15.723s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/environment/library_path.dsv
+[15.723s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/ament_index/resource_index/package_run_dependencies/xarm_controller
+[15.724s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/ament_index/resource_index/parent_prefix_path/xarm_controller
+[15.724s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/environment/ament_prefix_path.sh
+[15.724s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/environment/ament_prefix_path.dsv
+[15.724s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/environment/path.sh
+[15.724s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/environment/path.dsv
+[15.725s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/local_setup.bash
+[15.725s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/local_setup.sh
+[15.725s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/local_setup.zsh
+[15.725s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/local_setup.dsv
+[15.725s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/package.dsv
+[15.725s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/ament_index/resource_index/packages/xarm_controller
+[15.726s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/xarm_controller
+[15.726s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/cmake/ament_cmake_export_include_directories-extras.cmake
+[15.726s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/cmake/ament_cmake_export_libraries-extras.cmake
+[15.726s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/cmake/ament_cmake_export_dependencies-extras.cmake
+[15.726s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/cmake/xarm_controllerConfig.cmake
+[15.727s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/cmake/xarm_controllerConfig-version.cmake
+[15.727s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/package.xml
+[15.729s] Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_controller' returned '0': AMENT_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/xarm_controller

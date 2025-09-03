@@ -1,0 +1,24 @@
+[0.016s] Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/justina_gui': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/justina_gui -- -j2 -l2
+[0.191s] [  0%] Built target justina_gui_node_autogen_timestamp_deps
+[0.273s] [  7%] Built target justina_gui_node_autogen
+[0.429s] [100%] Built target justina_gui_node
+[0.463s] Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/justina_gui' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/justina_gui -- -j2 -l2
+[0.467s] Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/justina_gui': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/justina_gui
+[0.490s] -- Install configuration: ""
+[0.490s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_gui/lib/justina_gui/justina_gui_node
+[0.492s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/ament_index/resource_index/package_run_dependencies/justina_gui
+[0.492s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/ament_index/resource_index/parent_prefix_path/justina_gui
+[0.492s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/ament_prefix_path.sh
+[0.492s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/ament_prefix_path.dsv
+[0.492s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/path.sh
+[0.492s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/path.dsv
+[0.492s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.bash
+[0.492s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.sh
+[0.492s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.zsh
+[0.492s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.dsv
+[0.492s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.dsv
+[0.492s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/ament_index/resource_index/packages/justina_gui
+[0.492s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/cmake/justina_guiConfig.cmake
+[0.492s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/cmake/justina_guiConfig-version.cmake
+[0.493s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.xml
+[0.500s] Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/justina_gui' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/justina_gui

@@ -1,0 +1,878 @@
+[0.168s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.171s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=2, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7b07e556fcb0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7b07e56b45c0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7b07e56b45c0>>, mixin_verb=('build',))
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.234s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.234s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/christopher/Mobile-Robots-2026-1'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(Media) by extensions ['ignore', 'ignore_ament_install']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(Media) by extension 'ignore'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(Media) by extension 'ignore_ament_install'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(Media) by extensions ['colcon_pkg']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(Media) by extension 'colcon_pkg'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(Media) by extensions ['colcon_meta']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(Media) by extension 'colcon_meta'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(Media) by extensions ['ros']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(Media) by extension 'ros'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(Media) by extensions ['cmake', 'python']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(Media) by extension 'cmake'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(Media) by extension 'python'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(Media) by extensions ['python_setup_py']
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(Media) by extension 'python_setup_py'
+[0.275s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['ignore', 'ignore_ament_install']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'ignore'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'ignore_ament_install'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['colcon_pkg']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'colcon_pkg'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['colcon_meta']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'colcon_meta'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['ros']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'ros'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['cmake', 'python']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'cmake'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'python'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extensions ['python_setup_py']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws) by extension 'python_setup_py'
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/build) by extensions ['ignore', 'ignore_ament_install']
+[0.276s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/build) by extension 'ignore'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/build) ignored
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/install) by extensions ['ignore', 'ignore_ament_install']
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/install) by extension 'ignore'
+[0.277s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/install) ignored
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/log) by extensions ['ignore', 'ignore_ament_install']
+[0.278s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/log) by extension 'ignore'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/log) ignored
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['ignore', 'ignore_ament_install']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'ignore'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'ignore_ament_install'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['colcon_pkg']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'colcon_pkg'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['colcon_meta']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'colcon_meta'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['ros']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'ros'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['cmake', 'python']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'cmake'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'python'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extensions ['python_setup_py']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src) by extension 'python_setup_py'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/config_files) by extensions ['ignore', 'ignore_ament_install']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/config_files) by extension 'ignore'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/config_files) by extension 'ignore_ament_install'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/config_files) by extensions ['colcon_pkg']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/config_files) by extension 'colcon_pkg'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/config_files) by extensions ['colcon_meta']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/config_files) by extension 'colcon_meta'
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/config_files) by extensions ['ros']
+[0.279s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/config_files) by extension 'ros'
+[0.283s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/config_files' with type 'ros.ament_cmake' and name 'config_files'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware) by extensions ['ignore', 'ignore_ament_install']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware) by extension 'ignore'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware) by extension 'ignore_ament_install'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware) by extensions ['colcon_pkg']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware) by extension 'colcon_pkg'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware) by extensions ['colcon_meta']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware) by extension 'colcon_meta'
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware) by extensions ['ros']
+[0.283s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware) by extension 'ros'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware) by extensions ['cmake', 'python']
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware) by extension 'cmake'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware) by extension 'python'
+[0.284s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware) by extensions ['python_setup_py']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware) by extension 'python_setup_py'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/gazebo_envs) by extensions ['ignore', 'ignore_ament_install']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/gazebo_envs) by extension 'ignore'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/gazebo_envs) by extension 'ignore_ament_install'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/gazebo_envs) by extensions ['colcon_pkg']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/gazebo_envs) by extension 'colcon_pkg'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/gazebo_envs) by extensions ['colcon_meta']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/gazebo_envs) by extension 'colcon_meta'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/gazebo_envs) by extensions ['ros']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/gazebo_envs) by extension 'ros'
+[0.286s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/hardware/gazebo_envs' with type 'ros.ament_cmake' and name 'gazebo_envs'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/justina_description) by extensions ['ignore', 'ignore_ament_install']
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/justina_description) by extension 'ignore'
+[0.286s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/justina_description) by extension 'ignore_ament_install'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/justina_description) by extensions ['colcon_pkg']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/justina_description) by extension 'colcon_pkg'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/justina_description) by extensions ['colcon_meta']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/justina_description) by extension 'colcon_meta'
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/justina_description) by extensions ['ros']
+[0.287s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/justina_description) by extension 'ros'
+[0.288s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/hardware/justina_description' with type 'ros.ament_cmake' and name 'justina_description'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2) by extension 'ignore'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2) by extension 'ignore_ament_install'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2) by extensions ['colcon_pkg']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2) by extension 'colcon_pkg'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2) by extensions ['colcon_meta']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2) by extension 'colcon_meta'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2) by extensions ['ros']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2) by extension 'ros'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2) by extensions ['cmake', 'python']
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2) by extension 'cmake'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2) by extension 'python'
+[0.288s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2) by extensions ['python_setup_py']
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2) by extension 'python_setup_py'
+[0.289s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/uf_ros_lib) by extensions ['ignore', 'ignore_ament_install']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/uf_ros_lib) by extension 'ignore'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/uf_ros_lib) by extension 'ignore_ament_install'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/uf_ros_lib) by extensions ['colcon_pkg']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/uf_ros_lib) by extension 'colcon_pkg'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/uf_ros_lib) by extensions ['colcon_meta']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/uf_ros_lib) by extension 'colcon_meta'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/uf_ros_lib) by extensions ['ros']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/uf_ros_lib) by extension 'ros'
+[0.291s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/hardware/xarm_ros2/uf_ros_lib' with type 'ros.ament_python' and name 'uf_ros_lib'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_api) by extensions ['ignore', 'ignore_ament_install']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_api) by extension 'ignore'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_api) by extension 'ignore_ament_install'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_api) by extensions ['colcon_pkg']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_api) by extension 'colcon_pkg'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_api) by extensions ['colcon_meta']
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_api) by extension 'colcon_meta'
+[0.291s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_api) by extensions ['ros']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_api) by extension 'ros'
+[0.292s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/hardware/xarm_ros2/xarm_api' with type 'ros.ament_cmake' and name 'xarm_api'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_controller) by extension 'ignore'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_controller) by extension 'ignore_ament_install'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_controller) by extensions ['colcon_pkg']
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_controller) by extension 'colcon_pkg'
+[0.292s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_controller) by extensions ['colcon_meta']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_controller) by extension 'colcon_meta'
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_controller) by extensions ['ros']
+[0.293s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_controller) by extension 'ros'
+[0.295s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/hardware/xarm_ros2/xarm_controller' with type 'ros.ament_cmake' and name 'xarm_controller'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_description) by extensions ['ignore', 'ignore_ament_install']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_description) by extension 'ignore'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_description) by extension 'ignore_ament_install'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_description) by extensions ['colcon_pkg']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_description) by extension 'colcon_pkg'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_description) by extensions ['colcon_meta']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_description) by extension 'colcon_meta'
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_description) by extensions ['ros']
+[0.295s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_description) by extension 'ros'
+[0.296s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/hardware/xarm_ros2/xarm_description' with type 'ros.ament_cmake' and name 'xarm_description'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_msgs) by extension 'ignore'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_msgs) by extension 'ignore_ament_install'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_msgs) by extensions ['colcon_pkg']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_msgs) by extension 'colcon_pkg'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_msgs) by extensions ['colcon_meta']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_msgs) by extension 'colcon_meta'
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_msgs) by extensions ['ros']
+[0.296s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_msgs) by extension 'ros'
+[0.297s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/hardware/xarm_ros2/xarm_msgs' with type 'ros.ament_cmake' and name 'xarm_msgs'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_sdk) by extensions ['ignore', 'ignore_ament_install']
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_sdk) by extension 'ignore'
+[0.297s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_sdk) by extension 'ignore_ament_install'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_sdk) by extensions ['colcon_pkg']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_sdk) by extension 'colcon_pkg'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_sdk) by extensions ['colcon_meta']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_sdk) by extension 'colcon_meta'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_sdk) by extensions ['ros']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hardware/xarm_ros2/xarm_sdk) by extension 'ros'
+[0.298s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/hardware/xarm_ros2/xarm_sdk' with type 'ros.ament_cmake' and name 'xarm_sdk'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri) by extensions ['ignore', 'ignore_ament_install']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri) by extension 'ignore'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri) by extension 'ignore_ament_install'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri) by extensions ['colcon_pkg']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri) by extension 'colcon_pkg'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri) by extensions ['colcon_meta']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri) by extension 'colcon_meta'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri) by extensions ['ros']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri) by extension 'ros'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri) by extensions ['cmake', 'python']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri) by extension 'cmake'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri) by extension 'python'
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri) by extensions ['python_setup_py']
+[0.298s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri) by extension 'python_setup_py'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri/justina_gui) by extensions ['ignore', 'ignore_ament_install']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri/justina_gui) by extension 'ignore'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri/justina_gui) by extension 'ignore_ament_install'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri/justina_gui) by extensions ['colcon_pkg']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri/justina_gui) by extension 'colcon_pkg'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri/justina_gui) by extensions ['colcon_meta']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri/justina_gui) by extension 'colcon_meta'
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri/justina_gui) by extensions ['ros']
+[0.299s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/hri/justina_gui) by extension 'ros'
+[0.301s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/hri/justina_gui' with type 'ros.ament_cmake' and name 'justina_gui'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation) by extensions ['ignore', 'ignore_ament_install']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation) by extension 'ignore'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation) by extension 'ignore_ament_install'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation) by extensions ['colcon_pkg']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation) by extension 'colcon_pkg'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation) by extensions ['colcon_meta']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation) by extension 'colcon_meta'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation) by extensions ['ros']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation) by extension 'ros'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation) by extensions ['cmake', 'python']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation) by extension 'cmake'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation) by extension 'python'
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation) by extensions ['python_setup_py']
+[0.301s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation) by extension 'python_setup_py'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation/simple_move) by extensions ['ignore', 'ignore_ament_install']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation/simple_move) by extension 'ignore'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation/simple_move) by extension 'ignore_ament_install'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation/simple_move) by extensions ['colcon_pkg']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation/simple_move) by extension 'colcon_pkg'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation/simple_move) by extensions ['colcon_meta']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation/simple_move) by extension 'colcon_meta'
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation/simple_move) by extensions ['ros']
+[0.302s] Level 1:colcon.colcon_core.package_identification:_identify(ros2_ws/src/navigation/simple_move) by extension 'ros'
+[0.302s] DEBUG:colcon.colcon_core.package_identification:Package 'ros2_ws/src/navigation/simple_move' with type 'ros.ament_python' and name 'simple_move'
+[0.302s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.302s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.302s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.302s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.302s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.343s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.343s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.345s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 11 installed packages in /home/christopher/Mobile-Robots-2026-1/install
+[0.347s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 386 installed packages in /opt/ros/jazzy
+[0.348s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.431s] Level 5:colcon.colcon_core.verb:set package 'config_files' build argument 'cmake_args' from command line to 'None'
+[0.431s] Level 5:colcon.colcon_core.verb:set package 'config_files' build argument 'cmake_target' from command line to 'None'
+[0.431s] Level 5:colcon.colcon_core.verb:set package 'config_files' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.431s] Level 5:colcon.colcon_core.verb:set package 'config_files' build argument 'cmake_clean_cache' from command line to 'False'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'config_files' build argument 'cmake_clean_first' from command line to 'False'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'config_files' build argument 'cmake_force_configure' from command line to 'False'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'config_files' build argument 'ament_cmake_args' from command line to 'None'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'config_files' build argument 'catkin_cmake_args' from command line to 'None'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'config_files' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.432s] DEBUG:colcon.colcon_core.verb:Building package 'config_files' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/christopher/Mobile-Robots-2026-1/build/config_files', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/christopher/Mobile-Robots-2026-1/install/config_files', 'merge_install': False, 'path': '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/config_files', 'symlink_install': False, 'test_result_base': None}
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'gazebo_envs' build argument 'cmake_args' from command line to 'None'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'gazebo_envs' build argument 'cmake_target' from command line to 'None'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'gazebo_envs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'gazebo_envs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'gazebo_envs' build argument 'cmake_clean_first' from command line to 'False'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'gazebo_envs' build argument 'cmake_force_configure' from command line to 'False'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'gazebo_envs' build argument 'ament_cmake_args' from command line to 'None'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'gazebo_envs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'gazebo_envs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.432s] DEBUG:colcon.colcon_core.verb:Building package 'gazebo_envs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/christopher/Mobile-Robots-2026-1/build/gazebo_envs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs', 'merge_install': False, 'path': '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/gazebo_envs', 'symlink_install': False, 'test_result_base': None}
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'justina_description' build argument 'cmake_args' from command line to 'None'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'justina_description' build argument 'cmake_target' from command line to 'None'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'justina_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'justina_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'justina_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'justina_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'justina_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'justina_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'justina_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.432s] DEBUG:colcon.colcon_core.verb:Building package 'justina_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/christopher/Mobile-Robots-2026-1/build/justina_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/christopher/Mobile-Robots-2026-1/install/justina_description', 'merge_install': False, 'path': '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/justina_description', 'symlink_install': False, 'test_result_base': None}
+[0.432s] Level 5:colcon.colcon_core.verb:set package 'justina_gui' build argument 'cmake_args' from command line to 'None'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'justina_gui' build argument 'cmake_target' from command line to 'None'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'justina_gui' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.434s] Level 5:colcon.colcon_core.verb:set package 'justina_gui' build argument 'cmake_clean_cache' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'justina_gui' build argument 'cmake_clean_first' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'justina_gui' build argument 'cmake_force_configure' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'justina_gui' build argument 'ament_cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'justina_gui' build argument 'catkin_cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'justina_gui' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.435s] DEBUG:colcon.colcon_core.verb:Building package 'justina_gui' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/christopher/Mobile-Robots-2026-1/build/justina_gui', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/christopher/Mobile-Robots-2026-1/install/justina_gui', 'merge_install': False, 'path': '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui', 'symlink_install': False, 'test_result_base': None}
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'simple_move' build argument 'cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'simple_move' build argument 'cmake_target' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'simple_move' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'simple_move' build argument 'cmake_clean_cache' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'simple_move' build argument 'cmake_clean_first' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'simple_move' build argument 'cmake_force_configure' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'simple_move' build argument 'ament_cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'simple_move' build argument 'catkin_cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'simple_move' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.435s] DEBUG:colcon.colcon_core.verb:Building package 'simple_move' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/christopher/Mobile-Robots-2026-1/build/simple_move', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/christopher/Mobile-Robots-2026-1/install/simple_move', 'merge_install': False, 'path': '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/navigation/simple_move', 'symlink_install': False, 'test_result_base': None}
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'uf_ros_lib' build argument 'cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'uf_ros_lib' build argument 'cmake_target' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'uf_ros_lib' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'uf_ros_lib' build argument 'cmake_clean_cache' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'uf_ros_lib' build argument 'cmake_clean_first' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'uf_ros_lib' build argument 'cmake_force_configure' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'uf_ros_lib' build argument 'ament_cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'uf_ros_lib' build argument 'catkin_cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'uf_ros_lib' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.435s] DEBUG:colcon.colcon_core.verb:Building package 'uf_ros_lib' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/christopher/Mobile-Robots-2026-1/build/uf_ros_lib', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib', 'merge_install': False, 'path': '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/uf_ros_lib', 'symlink_install': False, 'test_result_base': None}
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'xarm_description' build argument 'cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'xarm_description' build argument 'cmake_target' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'xarm_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'xarm_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'xarm_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'xarm_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'xarm_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'xarm_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'xarm_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.436s] DEBUG:colcon.colcon_core.verb:Building package 'xarm_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/christopher/Mobile-Robots-2026-1/build/xarm_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/christopher/Mobile-Robots-2026-1/install/xarm_description', 'merge_install': False, 'path': '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_description', 'symlink_install': False, 'test_result_base': None}
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_msgs' build argument 'cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_msgs' build argument 'cmake_target' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.436s] DEBUG:colcon.colcon_core.verb:Building package 'xarm_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/christopher/Mobile-Robots-2026-1/build/xarm_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs', 'merge_install': False, 'path': '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_sdk' build argument 'cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_sdk' build argument 'cmake_target' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_sdk' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_sdk' build argument 'cmake_clean_cache' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_sdk' build argument 'cmake_clean_first' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_sdk' build argument 'cmake_force_configure' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_sdk' build argument 'ament_cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_sdk' build argument 'catkin_cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_sdk' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.436s] DEBUG:colcon.colcon_core.verb:Building package 'xarm_sdk' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/christopher/Mobile-Robots-2026-1/build/xarm_sdk', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk', 'merge_install': False, 'path': '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_sdk', 'symlink_install': False, 'test_result_base': None}
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_api' build argument 'cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_api' build argument 'cmake_target' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_api' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_api' build argument 'cmake_clean_cache' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_api' build argument 'cmake_clean_first' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_api' build argument 'cmake_force_configure' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_api' build argument 'ament_cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_api' build argument 'catkin_cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'xarm_api' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.436s] DEBUG:colcon.colcon_core.verb:Building package 'xarm_api' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/christopher/Mobile-Robots-2026-1/build/xarm_api', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/christopher/Mobile-Robots-2026-1/install/xarm_api', 'merge_install': False, 'path': '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_api', 'symlink_install': False, 'test_result_base': None}
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'xarm_controller' build argument 'cmake_args' from command line to 'None'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'xarm_controller' build argument 'cmake_target' from command line to 'None'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'xarm_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'xarm_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'xarm_controller' build argument 'cmake_clean_first' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'xarm_controller' build argument 'cmake_force_configure' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'xarm_controller' build argument 'ament_cmake_args' from command line to 'None'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'xarm_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'xarm_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.437s] DEBUG:colcon.colcon_core.verb:Building package 'xarm_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/christopher/Mobile-Robots-2026-1/build/xarm_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller', 'merge_install': False, 'path': '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_controller', 'symlink_install': False, 'test_result_base': None}
+[0.437s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.440s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.440s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_description' with build type 'ament_cmake'
+[0.440s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_description'
+[0.448s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.448s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.448s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.461s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_msgs' with build type 'ament_cmake'
+[0.461s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_msgs'
+[0.461s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.461s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.486s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/xarm_description -- -j2 -l2
+[0.494s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/xarm_msgs -- -j2 -l2
+[0.567s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/xarm_description -- -j2 -l2
+[0.597s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/xarm_description
+[0.676s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(xarm_description)
+[0.680s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_description' for CMake module files
+[0.683s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_description' for CMake config files
+[0.683s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_description', 'cmake_prefix_path')
+[0.684s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/share/xarm_description/hook/cmake_prefix_path.ps1'
+[0.684s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/share/xarm_description/hook/cmake_prefix_path.dsv'
+[0.685s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/xarm_description
+[0.687s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/share/xarm_description/hook/cmake_prefix_path.sh'
+[0.688s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/bin'
+[0.688s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/lib/pkgconfig/xarm_description.pc'
+[0.688s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/lib/python3.12/site-packages'
+[0.688s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/bin'
+[0.688s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/share/xarm_description/package.ps1'
+[0.689s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/share/xarm_description/package.dsv'
+[0.691s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/share/xarm_description/package.sh'
+[0.693s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/share/xarm_description/package.bash'
+[0.694s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/share/xarm_description/package.zsh'
+[0.697s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/xarm_description/share/colcon-core/packages/xarm_description)
+[0.697s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(xarm_description)
+[0.697s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_description' for CMake module files
+[0.698s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_description' for CMake config files
+[0.698s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_description', 'cmake_prefix_path')
+[0.698s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/share/xarm_description/hook/cmake_prefix_path.ps1'
+[0.700s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/share/xarm_description/hook/cmake_prefix_path.dsv'
+[0.700s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/share/xarm_description/hook/cmake_prefix_path.sh'
+[0.703s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/bin'
+[0.703s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/lib/pkgconfig/xarm_description.pc'
+[0.703s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/lib/python3.12/site-packages'
+[0.703s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/bin'
+[0.703s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/share/xarm_description/package.ps1'
+[0.705s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/share/xarm_description/package.dsv'
+[0.705s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/share/xarm_description/package.sh'
+[0.707s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/share/xarm_description/package.bash'
+[0.707s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_description/share/xarm_description/package.zsh'
+[0.707s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/xarm_description/share/colcon-core/packages/xarm_description)
+[0.709s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_sdk' with build type 'ament_cmake'
+[0.709s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_sdk'
+[0.709s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.709s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.729s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/xarm_sdk -- -j2 -l2
+[0.916s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/xarm_sdk -- -j2 -l2
+[0.921s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/xarm_sdk
+[0.952s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(xarm_sdk)
+[0.952s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk' for CMake module files
+[0.953s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/xarm_sdk
+[0.953s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk' for CMake config files
+[0.955s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_sdk', 'cmake_prefix_path')
+[0.955s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/hook/cmake_prefix_path.ps1'
+[0.959s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/hook/cmake_prefix_path.dsv'
+[0.961s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/hook/cmake_prefix_path.sh'
+[0.964s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib'
+[0.964s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_sdk', 'ld_library_path_lib')
+[0.964s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/hook/ld_library_path_lib.ps1'
+[0.964s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/hook/ld_library_path_lib.dsv'
+[0.965s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/hook/ld_library_path_lib.sh'
+[0.965s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/bin'
+[0.965s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib/pkgconfig/xarm_sdk.pc'
+[0.965s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib/python3.12/site-packages'
+[0.965s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/bin'
+[0.966s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/package.ps1'
+[0.967s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/package.dsv'
+[0.971s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/package.sh'
+[0.971s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/package.bash'
+[0.972s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/package.zsh'
+[0.972s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/colcon-core/packages/xarm_sdk)
+[0.973s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(xarm_sdk)
+[0.973s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk' for CMake module files
+[0.973s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk' for CMake config files
+[0.974s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_sdk', 'cmake_prefix_path')
+[0.974s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/hook/cmake_prefix_path.ps1'
+[0.974s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/hook/cmake_prefix_path.dsv'
+[0.977s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/hook/cmake_prefix_path.sh'
+[0.977s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib'
+[0.978s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_sdk', 'ld_library_path_lib')
+[0.978s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/hook/ld_library_path_lib.ps1'
+[0.980s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/hook/ld_library_path_lib.dsv'
+[0.982s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/hook/ld_library_path_lib.sh'
+[0.982s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/bin'
+[0.982s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib/pkgconfig/xarm_sdk.pc'
+[0.983s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib/python3.12/site-packages'
+[0.983s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/bin'
+[0.983s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/package.ps1'
+[0.986s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/package.dsv'
+[0.986s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/package.sh'
+[0.987s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/package.bash'
+[0.987s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/package.zsh'
+[0.987s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/share/colcon-core/packages/xarm_sdk)
+[0.989s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/config_files' with build type 'ament_cmake'
+[0.989s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/config_files'
+[0.989s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.989s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.011s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/config_files': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/config_files -- -j2 -l2
+[1.118s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/config_files' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/config_files -- -j2 -l2
+[1.121s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/config_files': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/config_files
+[1.148s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(config_files)
+[1.148s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/config_files' for CMake module files
+[1.149s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/config_files' for CMake config files
+[1.149s] Level 1:colcon.colcon_core.shell:create_environment_hook('config_files', 'cmake_prefix_path')
+[1.149s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/hook/cmake_prefix_path.ps1'
+[1.150s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/config_files' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/config_files
+[1.150s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/hook/cmake_prefix_path.dsv'
+[1.152s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/hook/cmake_prefix_path.sh'
+[1.156s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/config_files/bin'
+[1.156s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/config_files/lib/pkgconfig/config_files.pc'
+[1.157s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/config_files/lib/python3.12/site-packages'
+[1.157s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/config_files/bin'
+[1.158s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/package.ps1'
+[1.158s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/package.dsv'
+[1.165s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/package.sh'
+[1.167s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/package.bash'
+[1.169s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/package.zsh'
+[1.169s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/config_files/share/colcon-core/packages/config_files)
+[1.169s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(config_files)
+[1.170s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/config_files' for CMake module files
+[1.170s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/config_files' for CMake config files
+[1.170s] Level 1:colcon.colcon_core.shell:create_environment_hook('config_files', 'cmake_prefix_path')
+[1.170s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/hook/cmake_prefix_path.ps1'
+[1.173s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/hook/cmake_prefix_path.dsv'
+[1.173s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/hook/cmake_prefix_path.sh'
+[1.174s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/config_files/bin'
+[1.174s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/config_files/lib/pkgconfig/config_files.pc'
+[1.174s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/config_files/lib/python3.12/site-packages'
+[1.175s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/config_files/bin'
+[1.177s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/package.ps1'
+[1.177s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/package.dsv'
+[1.177s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/package.sh'
+[1.178s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/package.bash'
+[1.179s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/config_files/share/config_files/package.zsh'
+[1.180s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/config_files/share/colcon-core/packages/config_files)
+[1.180s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/gazebo_envs' with build type 'ament_cmake'
+[1.181s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/gazebo_envs'
+[1.181s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.181s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.203s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/gazebo_envs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/gazebo_envs -- -j2 -l2
+[1.311s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/gazebo_envs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/gazebo_envs -- -j2 -l2
+[1.312s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/gazebo_envs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/gazebo_envs
+[1.458s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_envs)
+[1.458s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs' for CMake module files
+[1.470s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs' for CMake config files
+[1.483s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/gazebo_envs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/gazebo_envs
+[1.491s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_envs', 'cmake_prefix_path')
+[1.491s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/hook/cmake_prefix_path.ps1'
+[1.492s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/hook/cmake_prefix_path.dsv'
+[1.496s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/hook/cmake_prefix_path.sh'
+[1.497s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/bin'
+[1.497s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/lib/pkgconfig/gazebo_envs.pc'
+[1.497s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/lib/python3.12/site-packages'
+[1.500s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/bin'
+[1.500s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/package.ps1'
+[1.500s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/package.dsv'
+[1.501s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/package.sh'
+[1.502s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/package.bash'
+[1.502s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/package.zsh'
+[1.504s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/share/colcon-core/packages/gazebo_envs)
+[1.505s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(gazebo_envs)
+[1.505s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs' for CMake module files
+[1.505s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs' for CMake config files
+[1.524s] Level 1:colcon.colcon_core.shell:create_environment_hook('gazebo_envs', 'cmake_prefix_path')
+[1.525s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/hook/cmake_prefix_path.ps1'
+[1.525s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/hook/cmake_prefix_path.dsv'
+[1.527s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/hook/cmake_prefix_path.sh'
+[1.529s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/bin'
+[1.529s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/lib/pkgconfig/gazebo_envs.pc'
+[1.529s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/lib/python3.12/site-packages'
+[1.530s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/bin'
+[1.531s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/package.ps1'
+[1.532s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/package.dsv'
+[1.532s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/package.sh'
+[1.536s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/package.bash'
+[1.536s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/package.zsh'
+[1.539s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs/share/colcon-core/packages/gazebo_envs)
+[1.539s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/justina_description' with build type 'ament_cmake'
+[1.539s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/justina_description'
+[1.539s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.539s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.567s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/justina_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/justina_description -- -j2 -l2
+[1.653s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/justina_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/justina_description -- -j2 -l2
+[1.655s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/justina_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/justina_description
+[1.691s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(justina_description)
+[1.691s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_description' for CMake module files
+[1.691s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/justina_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/justina_description
+[1.692s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_description' for CMake config files
+[1.692s] Level 1:colcon.colcon_core.shell:create_environment_hook('justina_description', 'cmake_prefix_path')
+[1.692s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/hook/cmake_prefix_path.ps1'
+[1.693s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/hook/cmake_prefix_path.dsv'
+[1.695s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/hook/cmake_prefix_path.sh'
+[1.697s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_description/bin'
+[1.697s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_description/lib/pkgconfig/justina_description.pc'
+[1.697s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_description/lib/python3.12/site-packages'
+[1.697s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_description/bin'
+[1.697s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.ps1'
+[1.701s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.dsv'
+[1.701s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.sh'
+[1.702s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.bash'
+[1.702s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.zsh'
+[1.703s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/colcon-core/packages/justina_description)
+[1.706s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(justina_description)
+[1.706s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_description' for CMake module files
+[1.707s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_description' for CMake config files
+[1.707s] Level 1:colcon.colcon_core.shell:create_environment_hook('justina_description', 'cmake_prefix_path')
+[1.708s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/hook/cmake_prefix_path.ps1'
+[1.708s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/hook/cmake_prefix_path.dsv'
+[1.709s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/hook/cmake_prefix_path.sh'
+[1.709s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_description/bin'
+[1.709s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_description/lib/pkgconfig/justina_description.pc'
+[1.709s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_description/lib/python3.12/site-packages'
+[1.709s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_description/bin'
+[1.712s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.ps1'
+[1.713s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.dsv'
+[1.714s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.sh'
+[1.715s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.bash'
+[1.715s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.zsh'
+[1.716s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/colcon-core/packages/justina_description)
+[1.717s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui' with build type 'ament_cmake'
+[1.718s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui'
+[1.718s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.718s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.732s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/justina_gui': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/justina_gui -- -j2 -l2
+[2.063s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/justina_gui' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/justina_gui -- -j2 -l2
+[2.063s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/justina_gui': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/justina_gui
+[2.104s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(justina_gui)
+[2.104s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_gui' for CMake module files
+[2.105s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_gui' for CMake config files
+[2.105s] Level 1:colcon.colcon_core.shell:create_environment_hook('justina_gui', 'cmake_prefix_path')
+[2.105s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/hook/cmake_prefix_path.ps1'
+[2.106s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/justina_gui' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/justina_gui
+[2.107s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/hook/cmake_prefix_path.dsv'
+[2.108s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/hook/cmake_prefix_path.sh'
+[2.109s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/lib'
+[2.109s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/bin'
+[2.109s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/lib/pkgconfig/justina_gui.pc'
+[2.110s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/lib/python3.12/site-packages'
+[2.110s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/bin'
+[2.110s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.ps1'
+[2.113s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.dsv'
+[2.114s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.sh'
+[2.114s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.bash'
+[2.115s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.zsh'
+[2.115s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/colcon-core/packages/justina_gui)
+[2.115s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(justina_gui)
+[2.115s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_gui' for CMake module files
+[2.118s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_gui' for CMake config files
+[2.118s] Level 1:colcon.colcon_core.shell:create_environment_hook('justina_gui', 'cmake_prefix_path')
+[2.118s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/hook/cmake_prefix_path.ps1'
+[2.118s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/hook/cmake_prefix_path.dsv'
+[2.119s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/hook/cmake_prefix_path.sh'
+[2.122s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/lib'
+[2.122s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/bin'
+[2.122s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/lib/pkgconfig/justina_gui.pc'
+[2.122s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/lib/python3.12/site-packages'
+[2.122s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/bin'
+[2.122s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.ps1'
+[2.124s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.dsv'
+[2.125s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.sh'
+[2.126s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.bash'
+[2.128s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.zsh'
+[2.128s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/justina_gui/share/colcon-core/packages/justina_gui)
+[2.129s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/navigation/simple_move' with build type 'ament_python'
+[2.129s] Level 1:colcon.colcon_core.shell:create_environment_hook('simple_move', 'ament_prefix_path')
+[2.129s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/simple_move/share/simple_move/hook/ament_prefix_path.ps1'
+[2.132s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/simple_move/share/simple_move/hook/ament_prefix_path.dsv'
+[2.132s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/simple_move/share/simple_move/hook/ament_prefix_path.sh'
+[2.135s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.136s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.647s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/navigation/simple_move'
+[2.647s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.647s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.868s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/xarm_msgs -- -j2 -l2
+[2.879s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/xarm_msgs
+[3.237s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(xarm_msgs)
+[3.237s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs' for CMake module files
+[3.237s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs' for CMake config files
+[3.252s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_msgs', 'cmake_prefix_path')
+[3.252s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/hook/cmake_prefix_path.ps1'
+[3.254s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/xarm_msgs
+[3.256s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/hook/cmake_prefix_path.dsv'
+[3.256s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/hook/cmake_prefix_path.sh'
+[3.257s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib'
+[3.257s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_msgs', 'ld_library_path_lib')
+[3.257s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/hook/ld_library_path_lib.ps1'
+[3.260s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/hook/ld_library_path_lib.dsv'
+[3.262s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/hook/ld_library_path_lib.sh'
+[3.262s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/bin'
+[3.262s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib/pkgconfig/xarm_msgs.pc'
+[3.262s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib/python3.12/site-packages'
+[3.262s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_msgs', 'pythonpath')
+[3.262s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/hook/pythonpath.ps1'
+[3.263s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/hook/pythonpath.dsv'
+[3.264s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/hook/pythonpath.sh'
+[3.264s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/bin'
+[3.264s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/package.ps1'
+[3.266s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/package.dsv'
+[3.267s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/package.sh'
+[3.269s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/package.bash'
+[3.270s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/package.zsh'
+[3.270s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/colcon-core/packages/xarm_msgs)
+[3.270s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(xarm_msgs)
+[3.271s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs' for CMake module files
+[3.271s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs' for CMake config files
+[3.275s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_msgs', 'cmake_prefix_path')
+[3.275s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/hook/cmake_prefix_path.ps1'
+[3.280s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/hook/cmake_prefix_path.dsv'
+[3.281s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/hook/cmake_prefix_path.sh'
+[3.281s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib'
+[3.281s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_msgs', 'ld_library_path_lib')
+[3.282s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/hook/ld_library_path_lib.ps1'
+[3.282s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/hook/ld_library_path_lib.dsv'
+[3.283s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/hook/ld_library_path_lib.sh'
+[3.285s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/bin'
+[3.285s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib/pkgconfig/xarm_msgs.pc'
+[3.285s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib/python3.12/site-packages'
+[3.285s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_msgs', 'pythonpath')
+[3.285s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/hook/pythonpath.ps1'
+[3.285s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/hook/pythonpath.dsv'
+[3.286s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/hook/pythonpath.sh'
+[3.290s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/bin'
+[3.290s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/package.ps1'
+[3.290s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/package.dsv'
+[3.291s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/package.sh'
+[3.291s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/package.bash'
+[3.292s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/package.zsh'
+[3.293s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/share/colcon-core/packages/xarm_msgs)
+[3.295s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_api' with build type 'ament_cmake'
+[3.295s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_api'
+[3.295s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.295s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.330s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_api': CMAKE_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:/home/christopher/Mobile-Robots-2026-1/install/xarm_controller:/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/justina_gui:/home/christopher/Mobile-Robots-2026-1/install/justina_description:/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs:/home/christopher/Mobile-Robots-2026-1/install/config_files:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/xarm_api -- -j2 -l2
+[3.928s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_api' returned '0': CMAKE_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:/home/christopher/Mobile-Robots-2026-1/install/xarm_controller:/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/justina_gui:/home/christopher/Mobile-Robots-2026-1/install/justina_description:/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs:/home/christopher/Mobile-Robots-2026-1/install/config_files:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/xarm_api -- -j2 -l2
+[3.928s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_api': CMAKE_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:/home/christopher/Mobile-Robots-2026-1/install/xarm_controller:/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/justina_gui:/home/christopher/Mobile-Robots-2026-1/install/justina_description:/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs:/home/christopher/Mobile-Robots-2026-1/install/config_files:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/xarm_api
+[3.952s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/navigation/simple_move': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/christopher/Mobile-Robots-2026-1/build/simple_move/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/simple_move build --build-base /home/christopher/Mobile-Robots-2026-1/build/simple_move/build install --record /home/christopher/Mobile-Robots-2026-1/build/simple_move/install.log --single-version-externally-managed install_data
+[3.960s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(xarm_api)
+[3.960s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_api' for CMake module files
+[3.961s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_api' for CMake config files
+[3.961s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_api', 'cmake_prefix_path')
+[3.963s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/hook/cmake_prefix_path.ps1'
+[3.963s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/hook/cmake_prefix_path.dsv'
+[3.963s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_api' returned '0': CMAKE_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:/home/christopher/Mobile-Robots-2026-1/install/xarm_controller:/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/justina_gui:/home/christopher/Mobile-Robots-2026-1/install/justina_description:/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs:/home/christopher/Mobile-Robots-2026-1/install/config_files:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/xarm_api
+[3.964s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/hook/cmake_prefix_path.sh'
+[3.966s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib'
+[3.966s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_api', 'ld_library_path_lib')
+[3.966s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/hook/ld_library_path_lib.ps1'
+[3.968s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/hook/ld_library_path_lib.dsv'
+[3.971s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/hook/ld_library_path_lib.sh'
+[3.971s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/bin'
+[3.971s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib/pkgconfig/xarm_api.pc'
+[3.971s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib/python3.12/site-packages'
+[3.971s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/bin'
+[3.972s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/package.ps1'
+[3.973s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/package.dsv'
+[3.976s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/package.sh'
+[3.977s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/package.bash'
+[3.979s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/package.zsh'
+[3.979s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/colcon-core/packages/xarm_api)
+[3.982s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(xarm_api)
+[3.982s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_api' for CMake module files
+[3.982s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_api' for CMake config files
+[3.982s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_api', 'cmake_prefix_path')
+[3.983s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/hook/cmake_prefix_path.ps1'
+[3.983s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/hook/cmake_prefix_path.dsv'
+[3.990s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/hook/cmake_prefix_path.sh'
+[3.991s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib'
+[3.991s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_api', 'ld_library_path_lib')
+[3.991s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/hook/ld_library_path_lib.ps1'
+[3.994s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/hook/ld_library_path_lib.dsv'
+[3.994s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/hook/ld_library_path_lib.sh'
+[3.996s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/bin'
+[3.996s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib/pkgconfig/xarm_api.pc'
+[3.996s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib/python3.12/site-packages'
+[3.996s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/bin'
+[3.997s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/package.ps1'
+[3.997s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/package.dsv'
+[4.002s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/package.sh'
+[4.002s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/package.bash'
+[4.003s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/xarm_api/package.zsh'
+[4.005s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/xarm_api/share/colcon-core/packages/xarm_api)
+[4.006s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/uf_ros_lib' with build type 'ament_python'
+[4.006s] Level 1:colcon.colcon_core.shell:create_environment_hook('uf_ros_lib', 'ament_prefix_path')
+[4.006s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/share/uf_ros_lib/hook/ament_prefix_path.ps1'
+[4.009s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/share/uf_ros_lib/hook/ament_prefix_path.dsv'
+[4.009s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/share/uf_ros_lib/hook/ament_prefix_path.sh'
+[4.011s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.011s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.455s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/uf_ros_lib'
+[4.455s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.455s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.961s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/simple_move' for CMake module files
+[4.962s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/navigation/simple_move' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/christopher/Mobile-Robots-2026-1/build/simple_move/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/simple_move build --build-base /home/christopher/Mobile-Robots-2026-1/build/simple_move/build install --record /home/christopher/Mobile-Robots-2026-1/build/simple_move/install.log --single-version-externally-managed install_data
+[4.962s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/simple_move' for CMake config files
+[4.963s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/simple_move/lib'
+[4.963s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/simple_move/bin'
+[4.963s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/pkgconfig/simple_move.pc'
+[4.963s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages'
+[4.963s] Level 1:colcon.colcon_core.shell:create_environment_hook('simple_move', 'pythonpath')
+[4.963s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/simple_move/share/simple_move/hook/pythonpath.ps1'
+[4.965s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/simple_move/share/simple_move/hook/pythonpath.dsv'
+[4.966s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/simple_move/share/simple_move/hook/pythonpath.sh'
+[4.967s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/simple_move/bin'
+[4.967s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(simple_move)
+[4.967s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/simple_move/share/simple_move/package.ps1'
+[4.968s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/simple_move/share/simple_move/package.dsv'
+[4.968s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/simple_move/share/simple_move/package.sh'
+[4.969s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/simple_move/share/simple_move/package.bash'
+[4.970s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/simple_move/share/simple_move/package.zsh'
+[4.971s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/simple_move/share/colcon-core/packages/simple_move)
+[4.974s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_controller' with build type 'ament_cmake'
+[4.974s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_controller'
+[4.974s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.974s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.021s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_controller': CMAKE_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:/home/christopher/Mobile-Robots-2026-1/install/xarm_controller:/home/christopher/Mobile-Robots-2026-1/install/justina_gui:/home/christopher/Mobile-Robots-2026-1/install/justina_description:/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs:/home/christopher/Mobile-Robots-2026-1/install/config_files:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/xarm_controller -- -j2 -l2
+[5.216s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_controller' returned '0': CMAKE_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:/home/christopher/Mobile-Robots-2026-1/install/xarm_controller:/home/christopher/Mobile-Robots-2026-1/install/justina_gui:/home/christopher/Mobile-Robots-2026-1/install/justina_description:/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs:/home/christopher/Mobile-Robots-2026-1/install/config_files:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/xarm_controller -- -j2 -l2
+[5.216s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_controller': CMAKE_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:/home/christopher/Mobile-Robots-2026-1/install/xarm_controller:/home/christopher/Mobile-Robots-2026-1/install/justina_gui:/home/christopher/Mobile-Robots-2026-1/install/justina_description:/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs:/home/christopher/Mobile-Robots-2026-1/install/config_files:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/xarm_controller
+[5.247s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(xarm_controller)
+[5.247s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller' for CMake module files
+[5.247s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller' for CMake config files
+[5.248s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_controller', 'cmake_prefix_path')
+[5.248s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/hook/cmake_prefix_path.ps1'
+[5.248s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/hook/cmake_prefix_path.dsv'
+[5.248s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/hook/cmake_prefix_path.sh'
+[5.250s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/lib'
+[5.250s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_controller', 'ld_library_path_lib')
+[5.250s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/hook/ld_library_path_lib.ps1'
+[5.250s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/xarm_controller' returned '0': CMAKE_PREFIX_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs:/home/christopher/Mobile-Robots-2026-1/install/xarm_description:/home/christopher/Mobile-Robots-2026-1/install/xarm_controller:/home/christopher/Mobile-Robots-2026-1/install/justina_gui:/home/christopher/Mobile-Robots-2026-1/install/justina_description:/home/christopher/Mobile-Robots-2026-1/install/gazebo_envs:/home/christopher/Mobile-Robots-2026-1/install/config_files:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib:/home/christopher/Mobile-Robots-2026-1/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/christopher/Mobile-Robots-2026-1/install/xarm_api/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_sdk/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_msgs/lib:/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/xarm_controller
+[5.251s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/hook/ld_library_path_lib.dsv'
+[5.251s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/hook/ld_library_path_lib.sh'
+[5.253s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/bin'
+[5.253s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/lib/pkgconfig/xarm_controller.pc'
+[5.253s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/lib/python3.12/site-packages'
+[5.253s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/bin'
+[5.253s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/package.ps1'
+[5.254s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/package.dsv'
+[5.256s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/package.sh'
+[5.256s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/package.bash'
+[5.256s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/package.zsh'
+[5.257s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/colcon-core/packages/xarm_controller)
+[5.258s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(xarm_controller)
+[5.258s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller' for CMake module files
+[5.259s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller' for CMake config files
+[5.259s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_controller', 'cmake_prefix_path')
+[5.259s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/hook/cmake_prefix_path.ps1'
+[5.259s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/hook/cmake_prefix_path.dsv'
+[5.262s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/hook/cmake_prefix_path.sh'
+[5.262s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/lib'
+[5.262s] Level 1:colcon.colcon_core.shell:create_environment_hook('xarm_controller', 'ld_library_path_lib')
+[5.262s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/hook/ld_library_path_lib.ps1'
+[5.264s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/hook/ld_library_path_lib.dsv'
+[5.264s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/hook/ld_library_path_lib.sh'
+[5.265s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/bin'
+[5.265s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/lib/pkgconfig/xarm_controller.pc'
+[5.265s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/lib/python3.12/site-packages'
+[5.265s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/bin'
+[5.265s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/package.ps1'
+[5.267s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/package.dsv'
+[5.268s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/package.sh'
+[5.268s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/package.bash'
+[5.269s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/xarm_controller/package.zsh'
+[5.270s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/xarm_controller/share/colcon-core/packages/xarm_controller)
+[5.876s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/uf_ros_lib': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/christopher/Mobile-Robots-2026-1/build/uf_ros_lib/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../../build/uf_ros_lib build --build-base /home/christopher/Mobile-Robots-2026-1/build/uf_ros_lib/build install --record /home/christopher/Mobile-Robots-2026-1/build/uf_ros_lib/install.log --single-version-externally-managed install_data
+[7.008s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib' for CMake module files
+[7.008s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib' for CMake config files
+[7.009s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/lib'
+[7.009s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/bin'
+[7.009s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/lib/pkgconfig/uf_ros_lib.pc'
+[7.015s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages'
+[7.016s] Level 1:colcon.colcon_core.shell:create_environment_hook('uf_ros_lib', 'pythonpath')
+[7.016s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/uf_ros_lib' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/christopher/Mobile-Robots-2026-1/build/uf_ros_lib/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../../build/uf_ros_lib build --build-base /home/christopher/Mobile-Robots-2026-1/build/uf_ros_lib/build install --record /home/christopher/Mobile-Robots-2026-1/build/uf_ros_lib/install.log --single-version-externally-managed install_data
+[7.017s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/share/uf_ros_lib/hook/pythonpath.ps1'
+[7.019s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/share/uf_ros_lib/hook/pythonpath.dsv'
+[7.022s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/share/uf_ros_lib/hook/pythonpath.sh'
+[7.022s] Level 1:colcon.colcon_core.environment:checking '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/bin'
+[7.022s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(uf_ros_lib)
+[7.022s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/share/uf_ros_lib/package.ps1'
+[7.025s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/share/uf_ros_lib/package.dsv'
+[7.026s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/share/uf_ros_lib/package.sh'
+[7.029s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/share/uf_ros_lib/package.bash'
+[7.029s] INFO:colcon.colcon_core.shell:Creating package script '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/share/uf_ros_lib/package.zsh'
+[7.030s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/share/colcon-core/packages/uf_ros_lib)
+[7.030s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[7.032s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[7.032s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[7.032s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[7.044s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[7.044s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[7.044s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[7.080s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[7.080s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/christopher/Mobile-Robots-2026-1/install/local_setup.ps1'
+[7.082s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/christopher/Mobile-Robots-2026-1/install/_local_setup_util_ps1.py'
+[7.083s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/christopher/Mobile-Robots-2026-1/install/setup.ps1'
+[7.094s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/christopher/Mobile-Robots-2026-1/install/local_setup.sh'
+[7.094s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/christopher/Mobile-Robots-2026-1/install/_local_setup_util_sh.py'
+[7.095s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/christopher/Mobile-Robots-2026-1/install/setup.sh'
+[7.096s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/christopher/Mobile-Robots-2026-1/install/local_setup.bash'
+[7.096s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/christopher/Mobile-Robots-2026-1/install/setup.bash'
+[7.097s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/christopher/Mobile-Robots-2026-1/install/local_setup.zsh'
+[7.098s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/christopher/Mobile-Robots-2026-1/install/setup.zsh'

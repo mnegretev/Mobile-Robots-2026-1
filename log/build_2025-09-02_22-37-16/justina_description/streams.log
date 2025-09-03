@@ -1,0 +1,23 @@
+[0.027s] Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/justina_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/justina_description -- -j2 -l2
+[0.129s] Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/justina_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/justina_description -- -j2 -l2
+[0.130s] Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/justina_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/justina_description
+[0.160s] -- Install configuration: ""
+[0.160s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/urdf
+[0.160s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/urdf/justina.xacro
+[0.162s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/urdf/justina_base.xacro
+[0.162s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/ament_index/resource_index/package_run_dependencies/justina_description
+[0.162s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/ament_index/resource_index/parent_prefix_path/justina_description
+[0.162s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/ament_prefix_path.sh
+[0.162s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/ament_prefix_path.dsv
+[0.163s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/path.sh
+[0.163s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/path.dsv
+[0.163s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.bash
+[0.163s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.sh
+[0.163s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.zsh
+[0.164s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.dsv
+[0.164s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.dsv
+[0.165s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/ament_index/resource_index/packages/justina_description
+[0.165s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/cmake/justina_descriptionConfig.cmake
+[0.165s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/cmake/justina_descriptionConfig-version.cmake
+[0.165s] -- Up-to-date: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.xml
+[0.176s] Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/justina_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/justina_description

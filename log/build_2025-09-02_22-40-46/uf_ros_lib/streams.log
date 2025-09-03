@@ -1,0 +1,19 @@
+[2.561s] Invoking command in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/uf_ros_lib': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/christopher/Mobile-Robots-2026-1/build/uf_ros_lib/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../../build/uf_ros_lib build --build-base /home/christopher/Mobile-Robots-2026-1/build/uf_ros_lib/build install --record /home/christopher/Mobile-Robots-2026-1/build/uf_ros_lib/install.log --single-version-externally-managed install_data
+[3.565s] running egg_info
+[3.624s] writing ../../../../../build/uf_ros_lib/uf_ros_lib.egg-info/PKG-INFO
+[3.627s] writing dependency_links to ../../../../../build/uf_ros_lib/uf_ros_lib.egg-info/dependency_links.txt
+[3.628s] writing requirements to ../../../../../build/uf_ros_lib/uf_ros_lib.egg-info/requires.txt
+[3.629s] writing top-level names to ../../../../../build/uf_ros_lib/uf_ros_lib.egg-info/top_level.txt
+[3.778s] reading manifest file '../../../../../build/uf_ros_lib/uf_ros_lib.egg-info/SOURCES.txt'
+[3.784s] writing manifest file '../../../../../build/uf_ros_lib/uf_ros_lib.egg-info/SOURCES.txt'
+[3.785s] running build
+[3.785s] running build_py
+[3.790s] running install
+[3.805s] running install_lib
+[3.855s] running install_data
+[3.856s] running install_egg_info
+[3.909s] removing '/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib-0.0.0-py3.12.egg-info' (and everything under it)
+[3.913s] Copying ../../../../../build/uf_ros_lib/uf_ros_lib.egg-info to /home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib-0.0.0-py3.12.egg-info
+[3.913s] running install_scripts
+[4.324s] writing list of installed files to '/home/christopher/Mobile-Robots-2026-1/build/uf_ros_lib/install.log'
+[4.490s] Invoked command in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/uf_ros_lib' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/christopher/Mobile-Robots-2026-1/build/uf_ros_lib/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/christopher/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../../build/uf_ros_lib build --build-base /home/christopher/Mobile-Robots-2026-1/build/uf_ros_lib/build install --record /home/christopher/Mobile-Robots-2026-1/build/uf_ros_lib/install.log --single-version-externally-managed install_data

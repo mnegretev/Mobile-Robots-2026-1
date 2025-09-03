@@ -1,0 +1,17 @@
+/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/urdf/justina.xacro
+/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/urdf/justina_base.xacro
+/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/ament_index/resource_index/package_run_dependencies/justina_description
+/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/ament_index/resource_index/parent_prefix_path/justina_description
+/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/ament_prefix_path.sh
+/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/ament_prefix_path.dsv
+/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/path.sh
+/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/path.dsv
+/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.bash
+/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.sh
+/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.zsh
+/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.dsv
+/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.dsv
+/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/ament_index/resource_index/packages/justina_description
+/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/cmake/justina_descriptionConfig.cmake
+/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/cmake/justina_descriptionConfig-version.cmake
+/home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.xml

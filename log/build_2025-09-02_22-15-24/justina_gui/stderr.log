@@ -1,0 +1,12 @@
+[01m[K/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::[01;32m[KarmSbAnglesValueChanged[m[K(double)[m[K’:
+[01m[K/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui/src/mainwindow.cpp:92:49:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kd[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   92 | void MainWindow::armSbAnglesValueChanged([01;35m[Kdouble d[m[K)
+      |                                          [01;35m[K~~~~~~~^[m[K
+[01m[K/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::[01;32m[KarmSbGripperValueChanged[m[K(double)[m[K’:
+[01m[K/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui/src/mainwindow.cpp:96:50:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kd[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   96 | void MainWindow::armSbGripperValueChanged([01;35m[Kdouble d[m[K)
+      |                                           [01;35m[K~~~~~~~^[m[K
+[01m[K/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::[01;32m[Karm_get_IK_and_update_ui[m[K(std::vector<double, std::allocator<double> >)[m[K’:
+[01m[K/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui/src/mainwindow.cpp:156:63:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcartesian[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  156 | void MainWindow::arm_get_IK_and_update_ui([01;35m[Kstd::vector<double> cartesian[m[K)
+      |                                           [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~[m[K

@@ -1,0 +1,31 @@
+[1.823s] Invoking command in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/navigation/simple_move': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/christopher/Mobile-Robots-2026-1/build/simple_move/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/simple_move build --build-base /home/christopher/Mobile-Robots-2026-1/build/simple_move/build install --record /home/christopher/Mobile-Robots-2026-1/build/simple_move/install.log --single-version-externally-managed install_data
+[2.276s] running egg_info
+[2.298s] writing ../../../../build/simple_move/simple_move.egg-info/PKG-INFO
+[2.298s] writing dependency_links to ../../../../build/simple_move/simple_move.egg-info/dependency_links.txt
+[2.298s] writing entry points to ../../../../build/simple_move/simple_move.egg-info/entry_points.txt
+[2.298s] writing requirements to ../../../../build/simple_move/simple_move.egg-info/requires.txt
+[2.299s] writing top-level names to ../../../../build/simple_move/simple_move.egg-info/top_level.txt
+[2.393s] reading manifest file '../../../../build/simple_move/simple_move.egg-info/SOURCES.txt'
+[2.394s] adding license file 'LICENSE'
+[2.395s] writing manifest file '../../../../build/simple_move/simple_move.egg-info/SOURCES.txt'
+[2.396s] running build
+[2.396s] running build_py
+[2.396s] copying simple_move/ros_basics.py -> /home/christopher/Mobile-Robots-2026-1/build/simple_move/build/lib/simple_move
+[2.403s] running install
+[2.416s] running install_lib
+[2.453s] copying /home/christopher/Mobile-Robots-2026-1/build/simple_move/build/lib/simple_move/ros_basics.py -> /home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages/simple_move
+[2.458s]   File "/home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages/simple_move/ros_basics.py", line 44
+[2.458s]     self.obstacle_detected = msg.ranges[len(msg.ranges)]//2]<1.0
+[2.458s]                                                            ^
+[2.458s] SyntaxError: unmatched ']'
+[2.458s] 
+[2.458s] byte-compiling /home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages/simple_move/ros_basics.py to ros_basics.cpython-312.pyc
+[2.459s] running install_data
+[2.459s] running install_egg_info
+[2.502s] removing '/home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages/simple_move-0.0.0-py3.12.egg-info' (and everything under it)
+[2.503s] Copying ../../../../build/simple_move/simple_move.egg-info to /home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages/simple_move-0.0.0-py3.12.egg-info
+[2.511s] running install_scripts
+[2.783s] Installing path_follower script to /home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/simple_move
+[2.783s] Installing ros_basics script to /home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/simple_move
+[2.786s] writing list of installed files to '/home/christopher/Mobile-Robots-2026-1/build/simple_move/install.log'
+[2.832s] Invoked command in '/home/christopher/Mobile-Robots-2026-1/ros2_ws/src/navigation/simple_move' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/christopher/Mobile-Robots-2026-1/build/simple_move/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/simple_move build --build-base /home/christopher/Mobile-Robots-2026-1/build/simple_move/build install --record /home/christopher/Mobile-Robots-2026-1/build/simple_move/install.log --single-version-externally-managed install_data

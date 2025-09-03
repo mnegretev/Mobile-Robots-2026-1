@@ -1,0 +1,5 @@
+  File "/home/christopher/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages/simple_move/ros_basics.py", line 44
+    self.obstacle_detected = msg.ranges[len(msf.ranges)]//2]<1.0
+                                                           ^
+SyntaxError: unmatched ']'
+
