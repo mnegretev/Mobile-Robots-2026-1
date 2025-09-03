@@ -1,0 +1,45 @@
+[0.030s] Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/justina_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/justina_description -DCMAKE_INSTALL_PREFIX=/home/christopher/Mobile-Robots-2026-1/install/justina_description
+[0.247s] -- The C compiler identification is GNU 13.3.0
+[0.406s] -- The CXX compiler identification is GNU 13.3.0
+[0.437s] -- Detecting C compiler ABI info
+[0.770s] -- Detecting C compiler ABI info - done
+[0.803s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.804s] -- Detecting C compile features
+[0.806s] -- Detecting C compile features - done
+[0.849s] -- Detecting CXX compiler ABI info
+[1.247s] -- Detecting CXX compiler ABI info - done
+[1.256s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.256s] -- Detecting CXX compile features
+[1.256s] -- Detecting CXX compile features - done
+[1.266s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.682s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.907s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[2.094s] -- Added test 'lint_cmake' to check CMake code style
+[2.096s] -- Added test 'xmllint' to check XML markup files
+[2.102s] -- Configuring done (2.0s)
+[2.110s] -- Generating done (0.0s)
+[2.117s] -- Build files have been written to: /home/christopher/Mobile-Robots-2026-1/build/justina_description
+[2.126s] Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/justina_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/christopher/Mobile-Robots-2026-1/ros2_ws/src/hardware/justina_description -DCMAKE_INSTALL_PREFIX=/home/christopher/Mobile-Robots-2026-1/install/justina_description
+[2.128s] Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/justina_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/justina_description -- -j2 -l2
+[2.282s] Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/justina_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/christopher/Mobile-Robots-2026-1/build/justina_description -- -j2 -l2
+[2.285s] Invoking command in '/home/christopher/Mobile-Robots-2026-1/build/justina_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/justina_description
+[2.319s] -- Install configuration: ""
+[2.320s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/urdf
+[2.320s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/urdf/justina.xacro
+[2.322s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/urdf/justina_base.xacro
+[2.329s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/ament_index/resource_index/package_run_dependencies/justina_description
+[2.329s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/ament_index/resource_index/parent_prefix_path/justina_description
+[2.329s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/ament_prefix_path.sh
+[2.329s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/ament_prefix_path.dsv
+[2.329s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/path.sh
+[2.329s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/environment/path.dsv
+[2.329s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.bash
+[2.329s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.sh
+[2.329s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.zsh
+[2.329s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/local_setup.dsv
+[2.333s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.dsv
+[2.333s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/ament_index/resource_index/packages/justina_description
+[2.333s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/cmake/justina_descriptionConfig.cmake
+[2.333s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/cmake/justina_descriptionConfig-version.cmake
+[2.333s] -- Installing: /home/christopher/Mobile-Robots-2026-1/install/justina_description/share/justina_description/package.xml
+[2.340s] Invoked command in '/home/christopher/Mobile-Robots-2026-1/build/justina_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/christopher/Mobile-Robots-2026-1/build/justina_description
