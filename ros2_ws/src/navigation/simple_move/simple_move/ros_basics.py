@@ -12,7 +12,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from sensor_msgs.msg import LaserScan
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "Daniel Ixbalanque Popoca Zúñiga"
 
 class RosBasicsNode(Node):
     def __init__(self):
@@ -24,23 +24,12 @@ class RosBasicsNode(Node):
         self.obstacle_detected = False
 
     def callback_timer(self):
-        #
-        # TODO:
-        # Declare a Twist message and assign the appropiate speeds:
-        # Move forward if there is no obstacle in front of the robot, and stop otherwise.
-        # Use the 'obstacle_detected' variable to check if there is an obstacle. 
-        # Publish the Twist message using the already declared publisher 'pub_cmd_vel'.
-        
-        return
+        msg = Twist()
+        msg.linear.x = 0.0 if self.obstacle_detected else 0.3
+        self.pub_cmd_vel.publish(msg)
 
     def callback_scan(self, msg):
-        #
-        # TODO:
-        # Do something to detect if there is an obstacle in front of the robot.
-        # Set the 'obstacle_detected' variable with True or False, accordingly.
-        #
-        
-        return
+        self.obstacle_detected = msg.ranges[len(msg.ranges)//2] < 1.0
 
 
 def main(args=None):
