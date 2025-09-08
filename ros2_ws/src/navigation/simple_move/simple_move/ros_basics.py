@@ -12,7 +12,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from sensor_msgs.msg import LaserScan
 
-FULL_NAME = "Belmonte Gonzalez Dania Melissa"
+FULL_NAME = "Belmonte Gonzalez Dania Melissa "
 
 class RosBasicsNode(Node):
     def __init__(self):
