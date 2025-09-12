@@ -20,7 +20,7 @@ import numpy
 import heapq
 import math
 
-NAME = "FULL NAME"
+NAME = "Romero Bernal Rocio Fabiola"
 
 class TreeNode:
     def __init__(self, x, y, parent=None):
@@ -81,13 +81,16 @@ class RRTNode(Node):
         tree = TreeNode(start_x, start_y, None)
         goal_node = TreeNode(goal_x, goal_y, None)
     
-        #
-        # TODO
-        # Implement the RRT algorithm for path planning
-        # The tree is already created with the corresponding starting node.
-        # Goal node is also already created.
-        # Return both, the tree and the path. You can follow these steps:
-        #
+        while goal_node.parent is None and max_attempts > 0:
+             [x,y] = self.get_random_q(grid_map)
+             nearest_node = self.get_nearest_node(tree, x, y)
+             new_node     = self.get_new_node(nearest_node, x, y,epsilon)
+             if not self.check_collision(nearest_node , new_node, grid_map):
+                 nearest_node.children.append(new_node)
+                 if not self.check_collision(new_node, goal_node, grid_map):
+                     new_node.children.append(goal_node)
+                     goal_node.parent = new_node
+             max_attempts -=1
         
         path = []
         while goal_node.parent is not None:
