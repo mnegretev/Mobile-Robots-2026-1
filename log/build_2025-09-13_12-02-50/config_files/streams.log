@@ -1,0 +1,26 @@
+[0.110s] Invoking command in '/home/quarcks/Mobile-Robots-2026-1/build/config_files': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quarcks/Mobile-Robots-2026-1/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/install/simple_move:/home/quarcks/Mobile-Robots-2026-1/install/path_planner:/home/quarcks/Mobile-Robots-2026-1/install/map_augmenter:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/quarcks/Mobile-Robots-2026-1/build/config_files -- -j12 -l12
+[1.280s] Invoked command in '/home/quarcks/Mobile-Robots-2026-1/build/config_files' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quarcks/Mobile-Robots-2026-1/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/install/simple_move:/home/quarcks/Mobile-Robots-2026-1/install/path_planner:/home/quarcks/Mobile-Robots-2026-1/install/map_augmenter:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/quarcks/Mobile-Robots-2026-1/build/config_files -- -j12 -l12
+[1.282s] Invoking command in '/home/quarcks/Mobile-Robots-2026-1/build/config_files': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quarcks/Mobile-Robots-2026-1/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/install/simple_move:/home/quarcks/Mobile-Robots-2026-1/install/path_planner:/home/quarcks/Mobile-Robots-2026-1/install/map_augmenter:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/quarcks/Mobile-Robots-2026-1/build/config_files
+[1.606s] -- Install configuration: ""
+[1.607s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/rviz
+[1.608s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/rviz/simple_house.rviz
+[1.609s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation
+[1.613s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation/mapper_params.yaml
+[1.618s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation/simple_house.pgm
+[1.622s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation/simple_house.yaml
+[1.623s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/ament_index/resource_index/package_run_dependencies/config_files
+[1.624s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/ament_index/resource_index/parent_prefix_path/config_files
+[1.626s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/ament_prefix_path.sh
+[1.627s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/ament_prefix_path.dsv
+[1.628s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/path.sh
+[1.629s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/path.dsv
+[1.629s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.bash
+[1.630s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.sh
+[1.631s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.zsh
+[1.632s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.dsv
+[1.632s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/package.dsv
+[1.632s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/ament_index/resource_index/packages/config_files
+[1.633s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/cmake/config_filesConfig.cmake
+[1.635s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/cmake/config_filesConfig-version.cmake
+[1.637s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/package.xml
+[2.004s] Invoked command in '/home/quarcks/Mobile-Robots-2026-1/build/config_files' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quarcks/Mobile-Robots-2026-1/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/install/simple_move:/home/quarcks/Mobile-Robots-2026-1/install/path_planner:/home/quarcks/Mobile-Robots-2026-1/install/map_augmenter:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/quarcks/Mobile-Robots-2026-1/build/config_files

@@ -1,0 +1,62 @@
+[0.095s] Invoking command in '/home/quarcks/Mobile-Robots-2026-1/build/xarm_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quarcks/Mobile-Robots-2026-1/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/install/simple_move:/home/quarcks/Mobile-Robots-2026-1/install/path_planner:/home/quarcks/Mobile-Robots-2026-1/install/map_augmenter:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/quarcks/Mobile-Robots-2026-1/build/xarm_sdk -- -j12 -l12
+[1.220s] [100%] Built target xarm_cxx_sdk
+[1.241s] Invoked command in '/home/quarcks/Mobile-Robots-2026-1/build/xarm_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quarcks/Mobile-Robots-2026-1/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/install/simple_move:/home/quarcks/Mobile-Robots-2026-1/install/path_planner:/home/quarcks/Mobile-Robots-2026-1/install/map_augmenter:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/quarcks/Mobile-Robots-2026-1/build/xarm_sdk -- -j12 -l12
+[1.243s] Invoking command in '/home/quarcks/Mobile-Robots-2026-1/build/xarm_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quarcks/Mobile-Robots-2026-1/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/install/simple_move:/home/quarcks/Mobile-Robots-2026-1/install/path_planner:/home/quarcks/Mobile-Robots-2026-1/install/map_augmenter:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/quarcks/Mobile-Robots-2026-1/build/xarm_sdk
+[1.587s] -- Install configuration: ""
+[1.588s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/environment/library_path.sh
+[1.588s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/environment/library_path.dsv
+[1.590s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include
+[1.591s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm
+[1.593s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core
+[1.593s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/report_data.h
+[1.593s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/port
+[1.593s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/port/socket.h
+[1.593s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/port/ser.h
+[1.593s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/os
+[1.593s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/os/bak
+[1.593s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/os/bak/thread.h
+[1.594s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/os/network.h
+[1.594s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/debug
+[1.594s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/debug/debug_print.h
+[1.594s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/common
+[1.594s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/common/data_type.h
+[1.594s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/common/crc16.h
+[1.594s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/common/queue_memcpy.h
+[1.594s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/xarm_config.h
+[1.594s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/connect.h
+[1.594s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/instruction
+[1.595s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/instruction/uxbus_cmd_tcp.h
+[1.595s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/instruction/uxbus_cmd.h
+[1.595s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/instruction/uxbus_cmd_ser.h
+[1.595s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/instruction/uxbus_cmd_config.h
+[1.595s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/instruction/servo3_config.h
+[1.595s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/wrapper
+[1.595s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/wrapper/common
+[1.595s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/wrapper/common/timer.h
+[1.596s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/wrapper/common/utils.h
+[1.596s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/wrapper/xarm_api.h
+[1.596s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/serial
+[1.596s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/serial/serial.h
+[1.596s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/serial/impl
+[1.596s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/serial/impl/win.h
+[1.596s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/serial/impl/unix.h
+[1.596s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/serial/v8stdint.h
+[1.596s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/lib/libxarm_cxx_sdk.so
+[1.607s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/share/ament_index/resource_index/package_run_dependencies/xarm_sdk
+[1.607s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/share/ament_index/resource_index/parent_prefix_path/xarm_sdk
+[1.607s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/environment/ament_prefix_path.sh
+[1.607s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/environment/ament_prefix_path.dsv
+[1.608s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/environment/path.sh
+[1.608s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/environment/path.dsv
+[1.608s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/local_setup.bash
+[1.608s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/local_setup.sh
+[1.608s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/local_setup.zsh
+[1.608s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/local_setup.dsv
+[1.608s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/package.dsv
+[1.608s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/share/ament_index/resource_index/packages/xarm_sdk
+[1.608s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/cmake/ament_cmake_export_libraries-extras.cmake
+[1.608s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.609s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/cmake/xarm_sdkConfig.cmake
+[1.609s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/cmake/xarm_sdkConfig-version.cmake
+[1.609s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/package.xml
+[1.990s] Invoked command in '/home/quarcks/Mobile-Robots-2026-1/build/xarm_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quarcks/Mobile-Robots-2026-1/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/install/simple_move:/home/quarcks/Mobile-Robots-2026-1/install/path_planner:/home/quarcks/Mobile-Robots-2026-1/install/map_augmenter:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/quarcks/Mobile-Robots-2026-1/build/xarm_sdk

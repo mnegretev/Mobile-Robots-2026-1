@@ -1,0 +1,24 @@
+[0.088s] Invoking command in '/home/quarcks/Mobile-Robots-2026-1/build/justina_gui': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quarcks/Mobile-Robots-2026-1/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/install/simple_move:/home/quarcks/Mobile-Robots-2026-1/install/path_planner:/home/quarcks/Mobile-Robots-2026-1/install/map_augmenter:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/quarcks/Mobile-Robots-2026-1/build/justina_gui -- -j12 -l12
+[1.224s] [  0%] Built target justina_gui_node_autogen_timestamp_deps
+[1.224s] [  7%] Built target justina_gui_node_autogen
+[1.225s] [100%] Built target justina_gui_node
+[1.259s] Invoked command in '/home/quarcks/Mobile-Robots-2026-1/build/justina_gui' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quarcks/Mobile-Robots-2026-1/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/install/simple_move:/home/quarcks/Mobile-Robots-2026-1/install/path_planner:/home/quarcks/Mobile-Robots-2026-1/install/map_augmenter:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/quarcks/Mobile-Robots-2026-1/build/justina_gui -- -j12 -l12
+[1.261s] Invoking command in '/home/quarcks/Mobile-Robots-2026-1/build/justina_gui': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quarcks/Mobile-Robots-2026-1/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/install/simple_move:/home/quarcks/Mobile-Robots-2026-1/install/path_planner:/home/quarcks/Mobile-Robots-2026-1/install/map_augmenter:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/quarcks/Mobile-Robots-2026-1/build/justina_gui
+[1.871s] -- Install configuration: ""
+[1.871s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/justina_gui/lib/justina_gui/justina_gui_node
+[1.871s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/justina_gui/share/ament_index/resource_index/package_run_dependencies/justina_gui
+[1.871s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/justina_gui/share/ament_index/resource_index/parent_prefix_path/justina_gui
+[1.871s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/ament_prefix_path.sh
+[1.871s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/ament_prefix_path.dsv
+[1.871s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/path.sh
+[1.871s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/path.dsv
+[1.871s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.bash
+[1.871s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.sh
+[1.871s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.zsh
+[1.871s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.dsv
+[1.872s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.dsv
+[1.872s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/justina_gui/share/ament_index/resource_index/packages/justina_gui
+[1.872s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/cmake/justina_guiConfig.cmake
+[1.872s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/cmake/justina_guiConfig-version.cmake
+[1.872s] -- Up-to-date: /home/quarcks/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.xml
+[2.011s] Invoked command in '/home/quarcks/Mobile-Robots-2026-1/build/justina_gui' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quarcks/Mobile-Robots-2026-1/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/install/simple_move:/home/quarcks/Mobile-Robots-2026-1/install/path_planner:/home/quarcks/Mobile-Robots-2026-1/install/map_augmenter:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/quarcks/Mobile-Robots-2026-1/build/justina_gui

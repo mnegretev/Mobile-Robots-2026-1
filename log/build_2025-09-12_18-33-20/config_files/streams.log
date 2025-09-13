@@ -1,0 +1,58 @@
+[0.033s] Invoking command in '/home/quarcks/Mobile-Robots-2026-1/build/config_files': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/quarcks/Mobile-Robots-2026-1/ros2_ws/src/config_files -DCMAKE_INSTALL_PREFIX=/home/quarcks/Mobile-Robots-2026-1/install/config_files
+[0.794s] -- The C compiler identification is GNU 13.3.0
+[0.794s] -- The CXX compiler identification is GNU 13.3.0
+[0.794s] -- Detecting C compiler ABI info
+[0.794s] -- Detecting C compiler ABI info - done
+[0.794s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.794s] -- Detecting C compile features
+[0.794s] -- Detecting C compile features - done
+[0.794s] -- Detecting CXX compiler ABI info
+[0.794s] -- Detecting CXX compiler ABI info - done
+[0.795s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.795s] -- Detecting CXX compile features
+[0.795s] -- Detecting CXX compile features - done
+[0.795s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.795s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.870s] -- Found rclcpp: 28.1.11 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.913s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.926s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.942s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.961s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.054s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.058s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.197s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.234s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.280s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.542s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.969s] -- Added test 'lint_cmake' to check CMake code style
+[1.975s] -- Added test 'xmllint' to check XML markup files
+[1.980s] -- Configuring done (1.9s)
+[1.999s] -- Generating done (0.0s)
+[2.017s] -- Build files have been written to: /home/quarcks/Mobile-Robots-2026-1/build/config_files
+[2.049s] Invoked command in '/home/quarcks/Mobile-Robots-2026-1/build/config_files' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/quarcks/Mobile-Robots-2026-1/ros2_ws/src/config_files -DCMAKE_INSTALL_PREFIX=/home/quarcks/Mobile-Robots-2026-1/install/config_files
+[2.050s] Invoking command in '/home/quarcks/Mobile-Robots-2026-1/build/config_files': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/quarcks/Mobile-Robots-2026-1/build/config_files -- -j12 -l12
+[2.178s] Invoked command in '/home/quarcks/Mobile-Robots-2026-1/build/config_files' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/quarcks/Mobile-Robots-2026-1/build/config_files -- -j12 -l12
+[2.178s] Invoking command in '/home/quarcks/Mobile-Robots-2026-1/build/config_files': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/quarcks/Mobile-Robots-2026-1/build/config_files
+[2.222s] -- Install configuration: ""
+[2.222s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/rviz
+[2.223s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/rviz/simple_house.rviz
+[2.223s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation
+[2.224s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation/mapper_params.yaml
+[2.224s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation/simple_house.pgm
+[2.224s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation/simple_house.yaml
+[2.224s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/ament_index/resource_index/package_run_dependencies/config_files
+[2.224s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/ament_index/resource_index/parent_prefix_path/config_files
+[2.224s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/ament_prefix_path.sh
+[2.225s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/ament_prefix_path.dsv
+[2.225s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/path.sh
+[2.225s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/path.dsv
+[2.225s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.bash
+[2.225s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.sh
+[2.225s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.zsh
+[2.225s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.dsv
+[2.225s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/package.dsv
+[2.225s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/ament_index/resource_index/packages/config_files
+[2.226s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/cmake/config_filesConfig.cmake
+[2.226s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/cmake/config_filesConfig-version.cmake
+[2.227s] -- Installing: /home/quarcks/Mobile-Robots-2026-1/install/config_files/share/config_files/package.xml
+[2.230s] Invoked command in '/home/quarcks/Mobile-Robots-2026-1/build/config_files' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/quarcks/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/quarcks/Mobile-Robots-2026-1/build/config_files

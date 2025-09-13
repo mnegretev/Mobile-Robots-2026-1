@@ -1,0 +1,33 @@
+[2.735s] Invoking command in '/home/quarcks/Mobile-Robots-2026-1/ros2_ws/src/navigation/map_augmenter': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/quarcks/Mobile-Robots-2026-1/build/map_augmenter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/quarcks/Mobile-Robots-2026-1/install/map_augmenter/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/map_augmenter build --build-base /home/quarcks/Mobile-Robots-2026-1/build/map_augmenter/build install --record /home/quarcks/Mobile-Robots-2026-1/build/map_augmenter/install.log --single-version-externally-managed install_data
+[3.315s] running egg_info
+[3.341s] writing ../../../../build/map_augmenter/map_augmenter.egg-info/PKG-INFO
+[3.342s] writing dependency_links to ../../../../build/map_augmenter/map_augmenter.egg-info/dependency_links.txt
+[3.342s] writing entry points to ../../../../build/map_augmenter/map_augmenter.egg-info/entry_points.txt
+[3.342s] writing requirements to ../../../../build/map_augmenter/map_augmenter.egg-info/requires.txt
+[3.342s] writing top-level names to ../../../../build/map_augmenter/map_augmenter.egg-info/top_level.txt
+[3.398s] reading manifest file '../../../../build/map_augmenter/map_augmenter.egg-info/SOURCES.txt'
+[3.398s] adding license file 'LICENSE'
+[3.398s] writing manifest file '../../../../build/map_augmenter/map_augmenter.egg-info/SOURCES.txt'
+[3.399s] running build
+[3.399s] running build_py
+[3.399s] copying map_augmenter/split_and_merge.py -> /home/quarcks/Mobile-Robots-2026-1/build/map_augmenter/build/lib/map_augmenter
+[3.399s] copying map_augmenter/map_inflater.py -> /home/quarcks/Mobile-Robots-2026-1/build/map_augmenter/build/lib/map_augmenter
+[3.399s] running install
+[3.407s] running install_lib
+[3.434s] copying /home/quarcks/Mobile-Robots-2026-1/build/map_augmenter/build/lib/map_augmenter/split_and_merge.py -> /home/quarcks/Mobile-Robots-2026-1/install/map_augmenter/lib/python3.12/site-packages/map_augmenter
+[3.435s] copying /home/quarcks/Mobile-Robots-2026-1/build/map_augmenter/build/lib/map_augmenter/map_inflater.py -> /home/quarcks/Mobile-Robots-2026-1/install/map_augmenter/lib/python3.12/site-packages/map_augmenter
+[3.435s] byte-compiling /home/quarcks/Mobile-Robots-2026-1/install/map_augmenter/lib/python3.12/site-packages/map_augmenter/split_and_merge.py to split_and_merge.cpython-312.pyc
+[3.438s] byte-compiling /home/quarcks/Mobile-Robots-2026-1/install/map_augmenter/lib/python3.12/site-packages/map_augmenter/map_inflater.py to map_inflater.cpython-312.pyc
+[3.439s] running install_data
+[3.439s] running install_egg_info
+[3.468s] removing '/home/quarcks/Mobile-Robots-2026-1/install/map_augmenter/lib/python3.12/site-packages/map_augmenter-0.0.0-py3.12.egg-info' (and everything under it)
+[3.468s] Copying ../../../../build/map_augmenter/map_augmenter.egg-info to /home/quarcks/Mobile-Robots-2026-1/install/map_augmenter/lib/python3.12/site-packages/map_augmenter-0.0.0-py3.12.egg-info
+[3.469s] running install_scripts
+[3.650s] Installing gvd script to /home/quarcks/Mobile-Robots-2026-1/install/map_augmenter/lib/map_augmenter
+[3.650s] Installing gvd_solved script to /home/quarcks/Mobile-Robots-2026-1/install/map_augmenter/lib/map_augmenter
+[3.650s] Installing map_inflater script to /home/quarcks/Mobile-Robots-2026-1/install/map_augmenter/lib/map_augmenter
+[3.651s] Installing map_inflater_solved script to /home/quarcks/Mobile-Robots-2026-1/install/map_augmenter/lib/map_augmenter
+[3.651s] Installing split_and_merge script to /home/quarcks/Mobile-Robots-2026-1/install/map_augmenter/lib/map_augmenter
+[3.651s] Installing split_and_merge_solved script to /home/quarcks/Mobile-Robots-2026-1/install/map_augmenter/lib/map_augmenter
+[3.651s] writing list of installed files to '/home/quarcks/Mobile-Robots-2026-1/build/map_augmenter/install.log'
+[3.688s] Invoked command in '/home/quarcks/Mobile-Robots-2026-1/ros2_ws/src/navigation/map_augmenter' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/quarcks/Mobile-Robots-2026-1/build/map_augmenter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/quarcks/Mobile-Robots-2026-1/install/map_augmenter/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/map_augmenter build --build-base /home/quarcks/Mobile-Robots-2026-1/build/map_augmenter/build install --record /home/quarcks/Mobile-Robots-2026-1/build/map_augmenter/install.log --single-version-externally-managed install_data
