@@ -17,6 +17,7 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(nav_msgs REQUIRED)
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
 file(GLOB PRO_SOURCE_DIR RELATIVE ${CMAKE_SOURCE_DIR} FOLLOW_SYMLINKS src/*.cpp)
@@ -32,6 +33,7 @@ include_directories(
   ${std_msgs_INCLUDE_DIRS}
   ${geometry_msgs_INCLUDE_DIRS}
   ${sensor_msgs_INCLUDE_DIRS}
+  ${nav_msgs_INCLUDE_DIRS}
   ${CMAKE_CURRENT_BINARY_DIR}
   ${CMAKE_CURRENT_SOURCE_DIR}
 )
@@ -56,6 +58,7 @@ target_link_libraries(justina_gui_node
   ${rclcpp_LIBRARIES}
   ${std_msgs_LIBRARIES}
   ${geometry_msgs_LIBRARIES}
+  ${nav_msgs_LIBRARIES}
   #${sensor_msgs_LIBRARIES}
 )
 
