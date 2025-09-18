@@ -43,5 +43,5 @@ Profesor Titular A<br>
 Jefe del Departamento de Procesamiento de Señales<br>
 Facultad de Ingeniería, UNAM <br>
 marco.negrete@ingenieria.unam.edu<br>
-mnegretev.info<br>
+https://mnegretev.info<br>
 
