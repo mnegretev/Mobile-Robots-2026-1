@@ -4,6 +4,10 @@
 #include <QMainWindow>
 #include "rclcomm.h"
 #include <iostream>
+#include <boost/algorithm/string.hpp>
+#include <boost/algorithm/string/split.hpp>
+#include <boost/algorithm/string/classification.hpp>
+
 QT_BEGIN_NAMESPACE
 namespace Ui
 {
