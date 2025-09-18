@@ -78,7 +78,7 @@ class RRTNode(Node):
         return False
 
     def rrt(self, start_x, start_y, goal_x, goal_y, grid_map, epsilon, max_attempts):
-        print("Inicio de busqueda")
+        #print("Inicio de busqueda")
         tree = TreeNode(start_x, start_y, None)
         goal_node = TreeNode(goal_x, goal_y, None)
     
@@ -90,7 +90,7 @@ class RRTNode(Node):
         # Return both, the tree and the path. You can follow these steps:
         #
         while goal_node.parent is None and max_attempts > 0:
-            print("--- Algoritmo --- ")
+            #print("--- Algoritmo --- ")
             [x,y] = self.get_random_q(grid_map)
             nearest_node = self.get_nearest_node(tree, x, y)
             new_node = self.get_new_node(nearest_node, x, y, epsilon)
