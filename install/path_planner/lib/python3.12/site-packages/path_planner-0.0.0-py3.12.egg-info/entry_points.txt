@@ -1,0 +1,7 @@
+[console_scripts]
+a_start = path_planner.a_star:main
+a_start_solved = path_planner.a_star_solved:main
+cost_map = path_planner.cost_map:main
+cost_map_solved = path_planner.cost_map_solved:main
+rrt = path_planner.rrt:main
+rrt_solved = path_planner.rrt_solved:main

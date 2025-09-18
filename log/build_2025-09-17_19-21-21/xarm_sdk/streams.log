@@ -1,0 +1,124 @@
+[0.094s] Invoking command in '/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/xarm_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_sdk -DCMAKE_INSTALL_PREFIX=/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk
+[0.586s] -- The C compiler identification is GNU 13.3.0
+[1.080s] -- The CXX compiler identification is GNU 13.3.0
+[1.217s] -- Detecting C compiler ABI info
+[1.926s] -- Detecting C compiler ABI info - done
+[2.023s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.027s] -- Detecting C compile features
+[2.029s] -- Detecting C compile features - done
+[2.102s] -- Detecting CXX compiler ABI info
+[2.910s] -- Detecting CXX compiler ABI info - done
+[3.018s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[3.023s] -- Detecting CXX compile features
+[3.028s] -- Detecting CXX compile features - done
+[3.073s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[4.645s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[6.563s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[8.001s] -- Added test 'copyright' to check source files copyright and LICENSE
+[8.200s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[8.202s] -- Configured cppcheck include dirs: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_sdk/cxx/include
+[8.202s] -- Configured cppcheck exclude dirs and/or files: 
+[8.399s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[8.400s] -- Configured cpplint exclude dirs and/or files: 
+[8.523s] -- Added test 'lint_cmake' to check CMake code style
+[8.741s] -- Added test 'uncrustify' to check C / C++ code style
+[8.744s] -- Configured uncrustify additional arguments: 
+[8.806s] -- Added test 'xmllint' to check XML markup files
+[8.860s] -- Configuring done (8.7s)
+[8.964s] -- Generating done (0.1s)
+[9.006s] -- Build files have been written to: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/xarm_sdk
+[9.040s] Invoked command in '/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/xarm_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/xarm_sdk -DCMAKE_INSTALL_PREFIX=/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk
+[9.047s] Invoking command in '/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/xarm_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/xarm_sdk -- -j4 -l4
+[9.698s] [  3%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/serial/impl/unix.cc.o[0m
+[9.750s] [  6%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/serial/impl/list_ports/list_ports_linux.cc.o[0m
+[9.755s] [  9%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/serial/impl/list_ports/list_ports_osx.cc.o[0m
+[9.778s] [ 12%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/serial/impl/list_ports/list_ports_win.cc.o[0m
+[10.355s] [ 15%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/serial/impl/win.cc.o[0m
+[10.422s] [ 18%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/serial/serial.cc.o[0m
+[10.675s] [ 21%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/common/crc16.cc.o[0m
+[11.638s] [ 25%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/common/queue_memcpy.cc.o[0m
+[14.683s] [ 28%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/connect.cc.o[0m
+[19.728s] [ 31%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/debug/debug_print.cc.o[0m
+[19.999s] [ 34%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/instruction/uxbus_cmd.cc.o[0m
+[29.941s] [ 37%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/os/network.cc.o[0m
+[32.638s] [ 40%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/port/ser.cc.o[0m
+[36.051s] [ 43%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/port/socket.cc.o[0m
+[39.306s] [ 46%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/report_data.cc.o[0m
+[41.088s] [ 50%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_api.cc.o[0m
+[81.924s] [ 53%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_bio.cc.o[0m
+[99.536s] [ 56%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_events.cc.o[0m
+[146.532s] [ 59%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_ft_sensor.cc.o[0m
+[159.906s] [ 62%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_gpio.cc.o[0m
+[172.566s] [ 65%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_gripper.cc.o[0m
+[183.461s] [ 68%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_linear_motor.cc.o[0m
+[193.808s] [ 71%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_modbus_tcp.cc.o[0m
+[207.086s] [ 75%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_motion.cc.o[0m
+[222.948s] [ 78%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_params.cc.o[0m
+[238.598s] [ 81%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_record.cc.o[0m
+[247.187s] [ 84%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_report.cc.o[0m
+[260.860s] [ 87%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_robotiq.cc.o[0m
+[271.925s] [ 90%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/wrapper/xarm_servo.cc.o[0m
+[283.373s] [ 93%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/instruction/uxbus_cmd_tcp.cc.o[0m
+[290.770s] [ 96%] [32mBuilding CXX object CMakeFiles/xarm_cxx_sdk.dir/cxx/src/xarm/core/instruction/uxbus_cmd_ser.cc.o[0m
+[298.285s] [100%] [32m[1mLinking CXX shared library libxarm_cxx_sdk.so[0m
+[301.872s] [100%] Built target xarm_cxx_sdk
+[302.155s] Invoked command in '/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/xarm_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/xarm_sdk -- -j4 -l4
+[302.175s] Invoking command in '/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/xarm_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/xarm_sdk
+[302.329s] -- Install configuration: ""
+[302.331s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/environment/library_path.sh
+[302.340s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/environment/library_path.dsv
+[302.346s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include
+[302.348s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/serial
+[302.353s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/serial/v8stdint.h
+[302.354s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/serial/impl
+[302.355s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/serial/impl/unix.h
+[302.363s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/serial/impl/win.h
+[302.365s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/serial/serial.h
+[302.367s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm
+[302.371s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/wrapper
+[302.373s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/wrapper/common
+[302.378s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/wrapper/common/timer.h
+[302.382s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/wrapper/common/utils.h
+[302.386s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/wrapper/xarm_api.h
+[302.389s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core
+[302.392s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/debug
+[302.395s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/debug/debug_print.h
+[302.399s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/report_data.h
+[302.404s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/common
+[302.406s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/common/queue_memcpy.h
+[302.409s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/common/data_type.h
+[302.410s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/common/crc16.h
+[302.417s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/connect.h
+[302.428s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/xarm_config.h
+[302.433s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/port
+[302.435s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/port/socket.h
+[302.438s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/port/ser.h
+[302.439s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/instruction
+[302.444s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/instruction/uxbus_cmd.h
+[302.446s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/instruction/servo3_config.h
+[302.447s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/instruction/uxbus_cmd_config.h
+[302.448s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/instruction/uxbus_cmd_tcp.h
+[302.449s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/instruction/uxbus_cmd_ser.h
+[302.450s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/os
+[302.451s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/os/network.h
+[302.452s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/os/bak
+[302.454s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/os/bak/thread.h
+[302.456s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/lib/libxarm_cxx_sdk.so
+[302.547s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/ament_index/resource_index/package_run_dependencies/xarm_sdk
+[302.550s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/ament_index/resource_index/parent_prefix_path/xarm_sdk
+[302.562s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/environment/ament_prefix_path.sh
+[302.572s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/environment/ament_prefix_path.dsv
+[302.574s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/environment/path.sh
+[302.584s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/environment/path.dsv
+[302.589s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/local_setup.bash
+[302.594s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/local_setup.sh
+[302.599s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/local_setup.zsh
+[302.601s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/local_setup.dsv
+[302.603s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/package.dsv
+[302.607s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/ament_index/resource_index/packages/xarm_sdk
+[302.614s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/cmake/ament_cmake_export_libraries-extras.cmake
+[302.617s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/cmake/ament_cmake_export_include_directories-extras.cmake
+[302.626s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/cmake/xarm_sdkConfig.cmake
+[302.631s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/cmake/xarm_sdkConfig-version.cmake
+[302.632s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/package.xml
+[302.671s] Invoked command in '/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/xarm_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/xarm_sdk

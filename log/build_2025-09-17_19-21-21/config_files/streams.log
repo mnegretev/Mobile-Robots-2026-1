@@ -1,0 +1,58 @@
+[0.092s] Invoking command in '/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/config_files': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/ros2_ws/src/config_files -DCMAKE_INSTALL_PREFIX=/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files
+[0.569s] -- The C compiler identification is GNU 13.3.0
+[1.063s] -- The CXX compiler identification is GNU 13.3.0
+[1.192s] -- Detecting C compiler ABI info
+[1.903s] -- Detecting C compiler ABI info - done
+[2.010s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.011s] -- Detecting C compile features
+[2.012s] -- Detecting C compile features - done
+[2.085s] -- Detecting CXX compiler ABI info
+[2.883s] -- Detecting CXX compiler ABI info - done
+[2.990s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.991s] -- Detecting CXX compile features
+[2.993s] -- Detecting CXX compile features - done
+[3.050s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[4.690s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[6.538s] -- Found rclcpp: 28.1.11 (/opt/ros/jazzy/share/rclcpp/cmake)
+[7.456s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[7.754s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[8.127s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[8.539s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[11.768s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[11.941s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[14.814s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[15.522s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[16.012s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[19.277s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[21.037s] -- Added test 'lint_cmake' to check CMake code style
+[21.058s] -- Added test 'xmllint' to check XML markup files
+[21.092s] -- Configuring done (20.9s)
+[21.154s] -- Generating done (0.0s)
+[21.197s] -- Build files have been written to: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/config_files
+[21.305s] Invoked command in '/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/config_files' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/ros2_ws/src/config_files -DCMAKE_INSTALL_PREFIX=/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files
+[21.316s] Invoking command in '/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/config_files': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/config_files -- -j4 -l4
+[22.265s] Invoked command in '/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/config_files' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/config_files -- -j4 -l4
+[22.283s] Invoking command in '/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/config_files': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/config_files
+[22.458s] -- Install configuration: ""
+[22.459s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/rviz
+[22.461s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/rviz/simple_house.rviz
+[22.469s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation
+[22.472s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation/simple_house.pgm
+[22.477s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation/mapper_params.yaml
+[22.478s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation/simple_house.yaml
+[22.483s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/ament_index/resource_index/package_run_dependencies/config_files
+[22.490s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/ament_index/resource_index/parent_prefix_path/config_files
+[22.496s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/ament_prefix_path.sh
+[22.500s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/ament_prefix_path.dsv
+[22.501s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/path.sh
+[22.507s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/path.dsv
+[22.508s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.bash
+[22.512s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.sh
+[22.513s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.zsh
+[22.526s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.dsv
+[22.527s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/package.dsv
+[22.536s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/ament_index/resource_index/packages/config_files
+[22.538s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/cmake/config_filesConfig.cmake
+[22.541s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/cmake/config_filesConfig-version.cmake
+[22.547s] -- Installing: /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/package.xml
+[22.555s] Invoked command in '/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/config_files' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/config_files

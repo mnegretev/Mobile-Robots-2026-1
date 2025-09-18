@@ -1,0 +1,12 @@
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/justina_gui/CMakeFiles/uninstall.dir
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/justina_gui/CMakeFiles/justina_gui_uninstall.dir
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/justina_gui/CMakeFiles/justina_gui_node.dir
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/justina_gui/CMakeFiles/test.dir
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/justina_gui/CMakeFiles/edit_cache.dir
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/justina_gui/CMakeFiles/rebuild_cache.dir
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/justina_gui/CMakeFiles/list_install_components.dir
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/justina_gui/CMakeFiles/install.dir
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/justina_gui/CMakeFiles/install/local.dir
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/justina_gui/CMakeFiles/install/strip.dir
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/justina_gui/CMakeFiles/justina_gui_node_autogen_timestamp_deps.dir
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/build/justina_gui/CMakeFiles/justina_gui_node_autogen.dir

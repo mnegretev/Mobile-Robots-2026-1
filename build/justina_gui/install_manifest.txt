@@ -1,0 +1,16 @@
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/justina_gui/lib/justina_gui/justina_gui_node
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/justina_gui/share/ament_index/resource_index/package_run_dependencies/justina_gui
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/justina_gui/share/ament_index/resource_index/parent_prefix_path/justina_gui
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/ament_prefix_path.sh
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/ament_prefix_path.dsv
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/path.sh
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/path.dsv
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.bash
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.sh
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.zsh
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.dsv
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.dsv
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/justina_gui/share/ament_index/resource_index/packages/justina_gui
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/cmake/justina_guiConfig.cmake
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/cmake/justina_guiConfig-version.cmake
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.xml
