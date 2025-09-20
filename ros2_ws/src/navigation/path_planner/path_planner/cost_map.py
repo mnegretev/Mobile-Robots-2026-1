@@ -13,32 +13,23 @@ from nav_msgs.msg import OccupancyGrid
 from nav_msgs.srv import GetMap
 import numpy
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "Rocio Fabiola Romero Bernal"
 
 class CostMapNode(Node):
     def get_cost_map(self, static_map, cost_radius):
         print("Getting cost map with " + str(cost_radius) + " cells")
         cost_map = numpy.copy(static_map)
         [height, width] = static_map.shape
-        #
-        # TODO:
-        # Write the code necessary to calculate a cost map for the given map.
-        # To calculate cost, consider as example the following map:    
-        # [[ 0 0 0 0 0 0]
-        #  [ 0 X 0 0 0 0]
-        #  [ 0 X X 0 0 0]
-        #  [ 0 X X 0 0 0]
-        #  [ 0 X 0 0 0 0]
-        #  [ 0 0 0 X 0 0]]
-        # Where occupied cells 'X' have a value of 100 and free cells have a value of 0.
-        # Cost is an integer indicating how near cells and obstacles are:
-        # [[ 3 3 3 2 2 1]
-        #  [ 3 X 3 3 2 1]
-        #  [ 3 X X 3 2 1]
-        #  [ 3 X X 3 2 2]
-        #  [ 3 X 3 3 3 2]
-        #  [ 3 3 3 X 3 2]]
-        # Cost_radius indicate the number of cells around obstacles with costs greater than zero.
+        for i in range(height):
+        for j in range(width):
+        if static_map[i,j] > 50:
+            for k1 in range(-cost_radius, cost_radius+1):
+                for k2 in range(-cost_radius, cost_radius+1):
+                    if (i+k1) < 0 or (i+k1) >= height or (j+k2) < 0 or (j+k2) >= width:
+                        continue
+                    cost = cost_radius - max(abs(k1), abs(k2)) + 1
+                    cost_map[i+k1, j+k2] = max(cost, cost_map[i+k1, j+k2])
+
         
         return cost_map
         

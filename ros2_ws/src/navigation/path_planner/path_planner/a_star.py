@@ -19,7 +19,7 @@ import numpy
 import heapq
 import math
 
-NAME = "FULL NAME"
+NAME = "Rocio Fabiola Romero Bernal"
 
 class AStarNode(Node):
     def a_star(self, start_r, start_c, goal_r, goal_c, grid_map, cost_map, use_diagonals):
@@ -40,32 +40,62 @@ class AStarNode(Node):
         g_values    [start_r, start_c] = 0
         [row, col]= [start_r, start_c]   #Current node
         #
-        # TODO:
-        # Implement the A* algorithm for path planning
-        # Map is considered to be a 2D array and start and goal positions
-        # are given as row-col pairs. You can follow these steps:
-        #
-        # WHILE open list is not empty and current is different from goal:
-        #     Get current node [row,col] from open list (see heapq.heappop function)
-        #     Mark current node as 'in_closed_list'
-        #     For [r,c,cost] in adjacent nodes:
-        #         Get r,c indices of neighbours of current node (check content of adjacents)
-        #         Discard if r,c is out of map, occupied, unknonw or in closed list, and continue
-        #         get a g-value g as: g-value of current node + dist + cost of neighbour r,c
-        #         Calculate heuristic 
-        #         Calculate f-value
-        #         IF g < g_value of neighbour r,c:
-        #             set g as g_value of neighbour r,c
-        #             set f as f_value of neighbour r,c
-        #             SET current node row,col as parent of neighbour r,c
-        #         If neighbour r,c is not in open list:
-        #             mark r,c as 'in_open_list'
-        #             add r,c to open list (check heapq.heappush)
-        #
-        
-        #
-        # END OF WHILE
-        #
+         for i in range (heigh):
+        def a_star(self, start_r, start_c, goal_r, goal_c, grid_map, cost_map, use_diagonals):
+    [height, width] = grid_map.shape
+    in_open_list   = numpy.full(grid_map.shape, False)
+    in_closed_list = numpy.full(grid_map.shape, False)
+    g_values       = numpy.full(grid_map.shape, float("inf"))
+    f_values       = numpy.full(grid_map.shape, float("inf"))
+    parent_nodes   = numpy.full((grid_map.shape[0],grid_map.shape[1],2),-1)
+    open_list = []
+    if use_diagonals:
+        adjacents = [[1,0,1],[0,1,1],[-1,0,1],[0,-1,1],[1,1,1.414],[-1,1,1.414],[-1,-1,1.414],[1,-1,1.414]]
+    else:
+        adjacents = [[1,0,1],[0,1,1],[-1,0,1],[0,-1,1]]
+    heapq.heappush(open_list, (0, [start_r, start_c]))
+    in_open_list[start_r, start_c] = True
+    g_values[start_r, start_c] = 0
+
+    while open_list:
+        _, current = heapq.heappop(open_list)
+        row, col = current
+        in_open_list[row, col] = False
+        in_closed_list[row, col] = True
+        if row == goal_r and col == goal_c:
+            break
+
+        for dr, dc, cost in adjacents:
+            r, c = row + dr, col + dc
+            if r < 0 or r >= height or c < 0 or c >= width:
+                continue
+            if grid_map[r, c] != 0:
+                continue
+            if in_closed_list[r, c]:
+                continue
+
+            dist = math.sqrt((r - row) ** 2 + (c - col) ** 2)
+            g = g_values[row, col] + dist * cost_map[r, c]
+            h = abs(r - goal_r) + abs(c - goal_c)  # Manhattan heuristic
+            f = g + h
+
+            if g < g_values[r, c]:
+                g_values[r, c] = g
+                f_values[r, c] = f
+                parent_nodes[r, c] = [row, col]
+                if not in_open_list[r, c]:
+                    heapq.heappush(open_list, (f, [r, c]))
+                    in_open_list[r, c] = True
+
+    path = []
+    if parent_nodes[goal_r, goal_c][0] != -1:
+        r, c = goal_r, goal_c
+        while r != start_r or c != start_c:
+            path.insert(0, [r, c])
+            r, c = parent_nodes[r, c]
+        path.insert(0, [start_r, start_c])
+    return path
+
         path = []
         while parent_nodes[goal_r, goal_c][0] != -1:
             path.insert(0, [goal_r, goal_c])
