@@ -41,27 +41,40 @@ class AStarNode(Node):
         [row, col]= [start_r, start_c]   #Current node
         #
         while open_list:
+            
             _, current = heapq.heappop(open_list)
             row, col = current
-            in_open_list[row, col] = False
-            in_closed_list[row, col] = True
+
+            
             if row == goal_r and col == goal_c:
                 break
 
+            in_open_list[row, col] = False
+            in_closed_list[row, col] = True
+
+            
             for dr, dc, cost in adjacents:
                 r, c = row + dr, col + dc
+
+                
                 if r < 0 or r >= height or c < 0 or c >= width:
                     continue
+                
                 if grid_map[r, c] != 0:
                     continue
+                
                 if in_closed_list[r, c]:
                     continue
 
-                dist = math.sqrt((r - row) ** 2 + (c - col) ** 2)
+                
+                dist = math.sqrt((dr)**2 + (dc)**2)
                 g = g_values[row, col] + dist * cost_map[r, c]
-                h = abs(r - goal_r) + abs(c - goal_c)  # Manhattan heuristic
+
+                
+                h = abs(r - goal_r) + abs(c - goal_c)
                 f = g + h
 
+                
                 if g < g_values[r, c]:
                     g_values[r, c] = g
                     f_values[r, c] = f
@@ -69,8 +82,9 @@ class AStarNode(Node):
                     if not in_open_list[r, c]:
                         heapq.heappush(open_list, (f, [r, c]))
                         in_open_list[r, c] = True
+
     
-        #
+        
         path = []
         while parent_nodes[goal_r, goal_c][0] != -1:
             path.insert(0, [goal_r, goal_c])
