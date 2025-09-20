@@ -40,22 +40,22 @@ class AStarNode(Node):
         g_values    [start_r, start_c] = 0
         [row, col]= [start_r, start_c]   #Current node
         #
-         for i in range (heigh):
-        def a_star(self, start_r, start_c, goal_r, goal_c, grid_map, cost_map, use_diagonals):
-    [height, width] = grid_map.shape
-    in_open_list   = numpy.full(grid_map.shape, False)
-    in_closed_list = numpy.full(grid_map.shape, False)
-    g_values       = numpy.full(grid_map.shape, float("inf"))
-    f_values       = numpy.full(grid_map.shape, float("inf"))
-    parent_nodes   = numpy.full((grid_map.shape[0],grid_map.shape[1],2),-1)
-    open_list = []
-    if use_diagonals:
-        adjacents = [[1,0,1],[0,1,1],[-1,0,1],[0,-1,1],[1,1,1.414],[-1,1,1.414],[-1,-1,1.414],[1,-1,1.414]]
-    else:
-        adjacents = [[1,0,1],[0,1,1],[-1,0,1],[0,-1,1]]
-    heapq.heappush(open_list, (0, [start_r, start_c]))
-    in_open_list[start_r, start_c] = True
-    g_values[start_r, start_c] = 0
+        for i in range (heigh):
+            def a_star(self, start_r, start_c, goal_r, goal_c, grid_map, cost_map, use_diagonals):
+            [height, width] = grid_map.shape
+            in_open_list   = numpy.full(grid_map.shape, False)
+            in_closed_list = numpy.full(grid_map.shape, False)
+            g_values       = numpy.full(grid_map.shape, float("inf"))
+            f_values       = numpy.full(grid_map.shape, float("inf"))
+            parent_nodes   = numpy.full((grid_map.shape[0],grid_map.shape[1],2),-1)
+            open_list = []
+        if use_diagonals:
+            adjacents = [[1,0,1],[0,1,1],[-1,0,1],[0,-1,1],[1,1,1.414],[-1,1,1.414],[-1,-1,1.414],[1,-1,1.414]]
+        else:
+            adjacents = [[1,0,1],[0,1,1],[-1,0,1],[0,-1,1]]
+            heapq.heappush(open_list, (0, [start_r, start_c]))
+            in_open_list[start_r, start_c] = True
+            g_values[start_r, start_c] = 0
 
     while open_list:
         _, current = heapq.heappop(open_list)
