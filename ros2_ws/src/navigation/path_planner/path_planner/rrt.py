@@ -88,16 +88,16 @@ class RRTNode(Node):
         # Goal node is also already created.
         # Return both, the tree and the path. You can follow these steps:
         #
-        while goal_node.parent is None and max_attemps > 0:
-		 [x,y] = self.get_random_q(grid_map)
-		 nearest_node = self.get_nearest_node(tree,x,y)
-		 new_node = self.get_new_node(nearest_node,x,y,epsilon)
-		if not self.check_colission(nearest_node,new_node,grid_map):
-			new_node.children.append(new_node)
-			if not self.check_collision(new_node,goal_node,grid_map):
-				new_node.children.append(goal_node)
-				goal_node.parent = new_node
-		max.attemps -= 1
+        while goal_node.parent is None and max_attempts > 0:
+            [x,y] = self.get_random_q(grid_map)
+            nearest_node = self.get_nearest_node(tree,x,y)
+            new_node     = self.get_new_node(nearest_node,x,y,epsilon)
+            if not self.check_collision(nearest_node,new_node,grid_map):
+                nearest_node.children.append(new_node)
+                if not self.check_collision(new_node,goal_node,grid_map):
+                    new_node.children.append(goal_node)
+                    goal_node.parent = new_node
+            max_attempts -= 1
 
         path = []
         while goal_node.parent is not None:
