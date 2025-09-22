@@ -20,7 +20,10 @@ import numpy
 import heapq
 import math
 
+import csv
+
 NAME = "Juan Mancera Lopez"
+
 
 class TreeNode:
     def __init__(self, x, y, parent=None):
@@ -30,6 +33,16 @@ class TreeNode:
         self.y = y
 
 class RRTNode(Node):
+
+    cont = 0
+    intento = []
+    tiempo = []
+    info = []
+    prev_sx = 0
+    prev_sy = 0
+    prev_gx = 100
+    prev_gy = 100
+
     def in_free_space(self, x,y,grid_map):
         c = int((x - grid_map.info.origin.position.x)/grid_map.info.resolution)
         r = int((y - grid_map.info.origin.position.y)/grid_map.info.resolution)
@@ -138,9 +151,13 @@ class RRTNode(Node):
         print("Got inflated map.")
         return response.map
    
-    def callback_rrt(self, req, resp):
-        [sx, sy] = [req.start.pose.position.x, req.start.pose.position.y]
-        [gx, gy] = [req.goal .pose.position.x, req.goal .pose.position.y]
+    def callback_rrt(self, req, resp, modo=0, ini=[0,0], fin=[1,1]):
+        if  (modo == 1):
+            [sx, sy] = ini
+            [gx, gy] = fin
+        else:
+            [sx, sy] = [req.start.pose.position.x, req.start.pose.position.y]
+            [gx, gy] = [req.goal .pose.position.x, req.goal .pose.position.y]
         epsilon  = self.get_parameter('epsilon').get_parameter_value().double_value
         max_attempts = self.get_parameter('max_n').get_parameter_value().integer_value
         print("Planning by RRT from ", [sx,sy], "to", [gx,gy],"with e=", epsilon, "and", max_attempts, "attempts.")
@@ -152,10 +169,70 @@ class RRTNode(Node):
         delta_ms = (end_time.nanoseconds - start_time.nanoseconds)/1e6
         if len(path) > 0:
             print("Path planned after " + str(delta_ms) + " ms")
+            #self.cont.append([[sx,sy],[gx,gy],1,str(delta_ms)])
+            acerto="✅"
         else:
             print("Cannot plan path from  " + str([sx, sy])+" to "+str([gx, gy]) + " :'(")
+            #self.cont.append([[sx,sy],[gx,gy],0,])
+            acerto="❌"
+        # Igual diferente. append si continua y menos de 5 (más borrar, menos no guardado)
         
-        
+        # Verificacion cuenta
+        if  [sx, sy, gx, gy] == [self.prev_sx, self.prev_sy, self.prev_gx, self.prev_gy]:
+            if  self.cont < 5:
+                self.cont += 1
+                print("Mismo intento, No ", self.cont)
+                self.intento.append(acerto)
+                if  acerto == "✅":
+                    self.tiempo.append(float(delta_ms))
+            else:
+                print("Exceso de intentos")
+        else:
+            print("Nuevo intento, reiniciando contador")
+            #Guardar valores pq ya se cumplio
+            if  self.cont == 5:
+                print("Datos suficientes, almacenando")
+                if (self.tiempo == []):
+                    conj = ([round(self.prev_sx,3), round(self.prev_sy,3)], [round(self.prev_gx,3), round(self.prev_gy,3)], *self.intento, self.intento.count("✅"))
+                else:
+                    conj = ([round(self.prev_sx,3), round(self.prev_sy,3)], [round(self.prev_gx,3), round(self.prev_gy,3)], *self.intento, self.intento.count("✅"), round(min(self.tiempo),3), round(max(self.tiempo),3), round(numpy.mean(self.tiempo),3))
+                print(conj)
+                self.info.append(conj)
+            #reiniciar datos para nuevo conteo
+            self.cont = 0
+            self.intento = []
+            self.tiempo = []
+
+        #Almacenamiento de datos
+        if ([sx,sy] == [0,0] and [gx,gy] == [15,15]):
+            print("Inicio almacenamiento de datos")
+            self.cont = 0
+            self.intento = []
+            self.tiempo = []
+            self.info = []
+            data_info = ("e=", epsilon, "", "max_attempts=", max_attempts)
+            self.info.append(data_info)
+            data_info = ("Pos inicial", "Pos final", "I1", "I2", "I3", "I4", "I5", "Cant Aciertos", "MinTmp(ms)", "MaxTmp(ms)", "AvgTmp(ms)")
+            self.info.append(data_info)
+        if ([sx,sy] == [0,0] and [gx,gy] == [16,16]):
+            print(self.info)
+            nombreArchivo = "SalidaDatos_" + str(epsilon).replace('.','_') + "_MA_" + str(max_attempts) + ".csv"
+            with open(nombreArchivo, mode="w", newline="", encoding="UTF-8") as archivo:
+                escritor = csv.writer(archivo)
+                escritor.writerows(self.info)
+            print("FINAL - Guardado de datos en: ", nombreArchivo)
+            print("")
+        if ([sx,sy] == [0,0] and [gx,gy] == [18,18]):
+            self.ejecucion_casos()
+
+        print(self.cont)
+        self.prev_sx = sx
+        self.prev_sy = sy
+        self.prev_gx = gx
+        self.prev_gy = gy
+
+        #-----------------------------
+
         self.msg_tree = self.get_tree_marker(tree)
         self.msg_path = Path()
         self.msg_path.header.frame_id = "map"
@@ -166,8 +243,26 @@ class RRTNode(Node):
             pose_stamped.pose.position.x = x
             pose_stamped.pose.position.y = y
             self.msg_path.poses.append(pose_stamped)
-        resp.plan = self.msg_path
-        return resp
+
+        if modo == 0:
+            resp.plan = self.msg_path
+            return resp
+        else:
+            return "Completado, de " + str(ini) + " a " + str(fin)
+
+    def ejecucion_casos(self):
+        Rutas = [[[0,0], [-2,4]],       [[0,0], [-1.5,5.3]],    [[2,0], [2,4.3]],           [[2,4.3], [-4.5,-1.5]],
+                [[0,0], [2,5.5]],       [[2,5.5], [0,0]],       [[2,5.5], [-2,1]],          [[-2,1], [2,5.5]],
+                [[2,5.5], [-4.5,-9]],   [[-4.5,-9], [2,5.5]],   [[0,0], [1, -12]],          [[2, 4.3], [1, -12]], 
+                [[2.5, 5], [1, -12]],   [[0,0], [-4.5, -9]],    [[-4.5, -9], [2.5, -10]],   [[-4.5, -9], [-5, 0]], 
+                [[-4.5, -9], [2, 4.3]]]
+        
+        for i in Rutas:
+            for cuenta in range(0,6):
+                resp = self.callback_rrt(0, 0, modo=1, ini=i[0], fin=i[1])
+            print("Ejecucion externa: " + resp)
+        print("\n---- Ejecucion de rutas compleatadas ----")
+        return 0
 
     def callback_timer(self):
         self.pub_path.publish(self.msg_path)
