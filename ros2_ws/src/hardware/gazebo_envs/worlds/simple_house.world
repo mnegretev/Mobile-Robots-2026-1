@@ -153,13 +153,13 @@
       </include>
       <pose>2.854050 3.45 0.000585 0 -0 0</pose>
     </model>
-    <model name='CoffeeTable_01_001'>
-      <static>true</static>
-      <include>
-        <uri>model://aws_robomaker_residential_CoffeeTable_01</uri>
-      </include>
-      <pose>1.512301 -1.733438 0.041983 0.000000 0.000000 0.01000</pose>
-    </model>
+    <!-- <model name='CoffeeTable_01_001'> -->
+    <!--   <static>true</static> -->
+    <!--   <include> -->
+    <!--     <uri>model://aws_robomaker_residential_CoffeeTable_01</uri> -->
+    <!--   </include> -->
+    <!--   <pose>1.512301 -1.733438 0.041983 0.000000 0.000000 0.01000</pose> -->
+    <!-- </model> -->
     <!-- <model name='CookingBench_01_001'> -->
     <!--   <include> -->
     <!--     <uri>model://aws_robomaker_residential_CookingBench_01</uri> -->
