@@ -19,7 +19,7 @@ import numpy
 import heapq
 import math
 
-NAME = "FULL NAME"
+NAME = "LEONARDO BARILLAS GONZALEZ"
 
 class AStarNode(Node):
     def a_star(self, start_r, start_c, goal_r, goal_c, grid_map, cost_map, use_diagonals):
@@ -37,8 +37,8 @@ class AStarNode(Node):
 
         heapq.heappush(open_list, (0, [start_r, start_c]))
         in_open_list[start_r, start_c] = True
-        g_values    [start_r, start_c] = 0
-        [row, col]= [start_r, start_c]   #Current node
+        g_values[start_r, start_c] = 0
+        [row, col] = [start_r, start_c]   #Current node
         #
         # TODO:
         # Implement the A* algorithm for path planning
@@ -62,7 +62,32 @@ class AStarNode(Node):
         #             mark r,c as 'in_open_list'
         #             add r,c to open list (check heapq.heappush)
         #
-        
+        while open_list and [row, col] != [goal_r, goal_c]:
+            _, [row, col] = heapq.heappop(open_list)
+            in_closed_list[row, col] = True
+
+            for dr, dc, dist in adjacents:
+                r = row + dr
+                c = col + dc
+
+                if r < 0 or r >= height or c < 0 or c >= width:
+                    continue
+                if grid_map[r, c] != 0 or in_closed_list[r, c]:
+                    continue
+
+                g = g_values[row, col] + dist + cost_map[r, c]
+                h = math.hypot(goal_r - r, goal_c - c)
+                f = g + h
+
+                if g < g_values[r, c]:
+                    g_values[r, c] = g
+                    f_values[r, c] = f
+                    parent_nodes[r, c] = [row, col]
+
+                    if not in_open_list[r, c]:
+                        in_open_list[r, c] = True
+                        heapq.heappush(open_list, (f, [r, c]))
+
         #
         # END OF WHILE
         #
