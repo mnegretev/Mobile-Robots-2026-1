@@ -3,5 +3,6 @@
 *.user
 #*#
 *.bkp
-PushAllChanges.py
-PullAllChanges.py
+build/
+install/
+log/
