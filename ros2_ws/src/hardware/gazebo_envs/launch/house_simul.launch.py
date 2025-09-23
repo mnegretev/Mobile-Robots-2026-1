@@ -20,7 +20,6 @@ def generate_launch_description():
     xacro_file_path = os.path.join(description_pkg_path, 'urdf','justina.xacro')
     robot_description_content = xacro.process_file(xacro_file_path).toxml()
        
-    robot_state_publisher_params = [{'robot_description': robot_description_content}]
     gz_bridge_params_path = os.path.join(gazebo_envs_pkg_path, 'config', 'gz_bridge.yaml')
     rviz_config_file = os.path.join(config_files_pkg_path, 'rviz', 'simple_house.rviz')
     map_config_file = os.path.join(config_files_pkg_path, 'navigation', 'simple_house.yaml')
@@ -58,14 +57,15 @@ def generate_launch_description():
             executable='robot_state_publisher',
             name='robot_state_publisher',
             output='screen',
-            parameters=robot_state_publisher_params
+            parameters=[{'robot_description': robot_description_content}]
         ),
         Node(
             package='ros_gz_bridge',
             executable='parameter_bridge',
             arguments=[
                 '--ros-args', '-p',
-                f'config_file:={gz_bridge_params_path}'
+                f'config_file:={gz_bridge_params_path}',
+                '-p', 'use_sim_time:=True',
             ],
             output='screen'
         ),
@@ -78,7 +78,7 @@ def generate_launch_description():
             package='rviz2',
             executable='rviz2',
             name='rviz2',
-            arguments=['-d', rviz_config_file],
+            arguments=['-d', rviz_config_file,'--ros-args', '-p', 'use_sim_time:=True',],
         ),
         
         Node(
@@ -86,14 +86,22 @@ def generate_launch_description():
             executable='map_server',
             name='map_server',
             output='screen',
-            parameters=[{'yaml_filename':map_config_file}]
+            parameters=[{'yaml_filename':map_config_file}, {'use_sim_time':True}]
         ),
         Node(
             package='nav2_amcl',
             executable='amcl',
             name='amcl',
             output='screen',
-            parameters=[{'base_frame_id':'base_link'}, {'set_initial_pose':True}]
+            parameters=[
+                {'base_frame_id':'base_link'},
+                {'set_initial_pose':True},
+                {'use_sim_time':True},
+                {'alpha1':0.01},
+                {'alpha2':0.01},
+                {'alpha3':0.1},
+                {'alpha4':0.1}
+            ]
         ),
         TimerAction(
             period=5.0,
