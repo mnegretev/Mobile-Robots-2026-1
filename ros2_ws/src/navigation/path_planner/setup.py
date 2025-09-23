@@ -26,6 +26,8 @@ setup(
             'cost_map_solved = path_planner.cost_map_solved:main',
             'a_start = path_planner.a_star:main',
             'a_start_solved = path_planner.a_star_solved:main',
+            'path_smoothing = path_planner.path_smoothing:main',
+            'path_smoothing_solved = path_planner.path_smoothing_solved:main',
         ],
     },
 )
