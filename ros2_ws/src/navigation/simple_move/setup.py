@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
             'ros_basics = simple_move.ros_basics:main',
             'path_follower = simple_move.path_follower:main',
+            'path_follower_solved = simple_move.path_follower_solved:main',
         ],
     },
 )
