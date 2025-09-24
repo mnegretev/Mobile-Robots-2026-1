@@ -37,9 +37,9 @@ class AStarNode(Node):
 
         heapq.heappush(open_list, (0, [start_r, start_c]))
         in_open_list[start_r, start_c] = True
-        g_values    [start_r, start_c] = 0
-        [row, col]= [start_r, start_c]   #Current node
-        #
+        g_values   [start_r, start_c] = 0
+        [row, col]= [start_r, start_c]    #Current node
+        
         # TODO:
         # Implement the A* algorithm for path planning
         # Map is considered to be a 2D array and start and goal positions
@@ -49,20 +49,65 @@ class AStarNode(Node):
         #     Get current node [row,col] from open list (see heapq.heappop function)
         #     Mark current node as 'in_closed_list'
         #     For [r,c,cost] in adjacent nodes:
-        #         Get r,c indices of neighbours of current node (check content of adjacents)
-        #         Discard if r,c is out of map, occupied, unknonw or in closed list, and continue
-        #         get a g-value g as: g-value of current node + dist + cost of neighbour r,c
-        #         Calculate heuristic 
-        #         Calculate f-value
-        #         IF g < g_value of neighbour r,c:
-        #             set g as g_value of neighbour r,c
-        #             set f as f_value of neighbour r,c
-        #             SET current node row,col as parent of neighbour r,c
-        #         If neighbour r,c is not in open list:
-        #             mark r,c as 'in_open_list'
-        #             add r,c to open list (check heapq.heappush)
+        #          Get r,c indices of neighbours of current node (check content of adjacents)
+        #          Discard if r,c is out of map, occupied, unknonw or in closed list, and continue
+        #          get a g-value g as: g-value of current node + dist + cost of neighbour r,c
+        #          Calculate heuristic 
+        #          Calculate f-value
+        #          IF g < g_value of neighbour r,c:
+        #              set g as g_value of neighbour r,c
+        #              set f as f_value of neighbour r,c
+        #              SET current node row,col as parent of neighbour r,c
+        #          If neighbour r,c is not in open list:
+        #              mark r,c as 'in_open_list'
+        #              add r,c to open list (check heapq.heappush)
         #
         
+        #
+        # END OF WHILE
+        #
+        
+        while len(open_list) > 0:
+            (f_current, [row, col]) = heapq.heappop(open_list)
+            
+            if row == goal_r and col == goal_c:
+                break
+            
+            in_closed_list[row, col] = True
+            
+            for [r_offset, c_offset, dist] in adjacents:
+                r_neighbor = row + r_offset
+                c_neighbor = col + c_offset
+                
+                # Discard if out of bounds, occupied, unknown, or in closed list
+                if (r_neighbor < 0 or r_neighbor >= height or
+                    c_neighbor < 0 or c_neighbor >= width or
+                    grid_map[r_neighbor, c_neighbor] != 0 or
+                    in_closed_list[r_neighbor, c_neighbor]):
+                    continue
+                
+                # Get the cost of the neighbor from the cost map
+                neighbor_cost = cost_map[r_neighbor, c_neighbor] / 100.0
+                
+                # Calculate new g-value
+                g_tentative = g_values[row, col] + dist + neighbor_cost
+                
+                if g_tentative < g_values[r_neighbor, c_neighbor]:
+                    g_values[r_neighbor, c_neighbor] = g_tentative
+                    
+                    # Calculate heuristic (Manhattan distance for non-diagonals, Euclidean for diagonals)
+                    if use_diagonals:
+                        h = math.sqrt((goal_r - r_neighbor)**2 + (goal_c - c_neighbor)**2)
+                    else:
+                        h = abs(goal_r - r_neighbor) + abs(goal_c - c_neighbor)
+                        
+                    f_values[r_neighbor, c_neighbor] = g_tentative + h
+                    parent_nodes[r_neighbor, c_neighbor] = [row, col]
+                    
+                    if not in_open_list[r_neighbor, c_neighbor]:
+                        heapq.heappush(open_list, (f_values[r_neighbor, c_neighbor], [r_neighbor, c_neighbor]))
+                        in_open_list[r_neighbor, c_neighbor] = True
+
         #
         # END OF WHILE
         #

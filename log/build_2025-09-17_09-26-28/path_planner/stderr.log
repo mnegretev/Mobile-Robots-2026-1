@@ -1,0 +1,5 @@
+  File "/home/catcyber02/Mobile-Robots-2026-1/install/path_planner/lib/python3.12/site-packages/path_planner/rrt.py", line 101
+    max attempts −= 1
+                 ^
+SyntaxError: invalid character '−' (U+2212)
+

@@ -1,0 +1,62 @@
+[0.064s] Invoking command in '/home/catcyber02/Mobile-Robots-2026-1/build/xarm_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/path_planner:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/map_augmenter:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/catcyber02/Mobile-Robots-2026-1/build/xarm_sdk -- -j8 -l8
+[0.200s] [100%] Built target xarm_cxx_sdk
+[0.582s] Invoked command in '/home/catcyber02/Mobile-Robots-2026-1/build/xarm_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/path_planner:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/map_augmenter:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/catcyber02/Mobile-Robots-2026-1/build/xarm_sdk -- -j8 -l8
+[0.586s] Invoking command in '/home/catcyber02/Mobile-Robots-2026-1/build/xarm_sdk': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/path_planner:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/map_augmenter:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/catcyber02/Mobile-Robots-2026-1/build/xarm_sdk
+[0.646s] -- Install configuration: ""
+[0.647s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/environment/library_path.sh
+[0.647s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/environment/library_path.dsv
+[0.647s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include
+[0.647s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm
+[0.648s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core
+[0.648s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/port
+[0.648s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/port/socket.h
+[0.648s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/port/ser.h
+[0.649s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/xarm_config.h
+[0.649s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/common
+[0.649s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/common/data_type.h
+[0.649s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/common/crc16.h
+[0.650s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/common/queue_memcpy.h
+[0.650s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/report_data.h
+[0.650s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/debug
+[0.650s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/debug/debug_print.h
+[0.650s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/instruction
+[0.651s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/instruction/servo3_config.h
+[0.652s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/instruction/uxbus_cmd_config.h
+[0.654s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/instruction/uxbus_cmd_ser.h
+[0.654s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/instruction/uxbus_cmd.h
+[0.655s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/instruction/uxbus_cmd_tcp.h
+[0.655s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/connect.h
+[0.656s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/os
+[0.657s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/os/network.h
+[0.657s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/os/bak
+[0.657s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/core/os/bak/thread.h
+[0.658s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/wrapper
+[0.682s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/wrapper/common
+[0.692s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/wrapper/common/utils.h
+[0.692s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/wrapper/common/timer.h
+[0.693s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/xarm/wrapper/xarm_api.h
+[0.695s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/serial
+[0.696s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/serial/v8stdint.h
+[0.697s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/serial/serial.h
+[0.697s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/serial/impl
+[0.697s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/serial/impl/unix.h
+[0.697s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/cxx/include/serial/impl/win.h
+[0.698s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/lib/libxarm_cxx_sdk.so
+[0.699s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/share/ament_index/resource_index/package_run_dependencies/xarm_sdk
+[0.699s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/share/ament_index/resource_index/parent_prefix_path/xarm_sdk
+[0.710s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/environment/ament_prefix_path.sh
+[0.714s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/environment/ament_prefix_path.dsv
+[0.715s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/environment/path.sh
+[0.715s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/environment/path.dsv
+[0.715s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/local_setup.bash
+[0.715s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/local_setup.sh
+[0.715s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/local_setup.zsh
+[0.716s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/local_setup.dsv
+[0.716s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/package.dsv
+[0.716s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/share/ament_index/resource_index/packages/xarm_sdk
+[0.716s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/cmake/ament_cmake_export_libraries-extras.cmake
+[0.716s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.717s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/cmake/xarm_sdkConfig.cmake
+[0.717s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/cmake/xarm_sdkConfig-version.cmake
+[0.717s] -- Up-to-date: /home/catcyber02/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/package.xml
+[1.038s] Invoked command in '/home/catcyber02/Mobile-Robots-2026-1/build/xarm_sdk' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/path_planner:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/map_augmenter:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/catcyber02/Mobile-Robots-2026-1/build/xarm_sdk

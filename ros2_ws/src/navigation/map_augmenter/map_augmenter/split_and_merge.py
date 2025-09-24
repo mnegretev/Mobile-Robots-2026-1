@@ -18,7 +18,7 @@ from builtin_interfaces.msg import Duration
 import numpy
 import math
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "Popoca Zuñiga Daniel Ixbalanque"
 
 class SplitAndMergeNode(Node):
     def adjust_line_by_LSE(self, points):
@@ -36,26 +36,47 @@ class SplitAndMergeNode(Node):
         distances = [abs(points[i][0]*math.cos(theta) + points[i][1]*math.sin(theta) - rho) for i in range(len(points))]
         idx = numpy.argmax(distances)
         return idx, distances[idx]
-
+    
     def split(self, points, threshold, min_points):
-        lines = []
-        #
-        # TODO:
-        # Implement the 'split' part of the split and merge algorithm for finding lines.
-        # Implement the recursive method of the algorithm. 
-        #
-        
-        return lines
+        if len(points) < min_points:
+            return []
+
+        rho, theta, xm, ym, length = self.adjust_line_by_LSE(points)
+        idx, dist = self.find_farthest_point(points, rho, theta)
+
+        if dist < threshold:
+            return [[rho, theta, xm, ym, length]]
+
+        # Recursión para dividir los puntos
+        lines1 = self.split(points[:idx], threshold, min_points)
+        lines2 = self.split(points[idx + 1:], threshold, min_points)
+
+        return lines1 + lines2
 
     def merge(self, lines, rho_tol, theta_tol):
-        new_lines = []
-        #
-        # TODO:
-        # Implement the 'merge' part of the split and merge algorithm.
-        # Two segments are merged into one if rho and theta differences
-        # are both smaller than a tolerance.
-        #
-        
+        if len(lines) < 2:
+            return lines
+
+        new_lines = [lines[0]]
+        for i in range(1, len(lines)):
+            rho1, theta1, xm1, ym1, length1 = lines[i]
+            rho2, theta2, xm2, ym2, length2 = new_lines[-1]
+
+            erho = abs((rho1 - rho2) / min(rho1, rho2))
+            etheta = abs(theta1 - theta2)
+
+            if erho < rho_tol and etheta < theta_tol:
+                # Fusionar
+                new_lines[-1] = [
+                    (rho1 + rho2) / 2,
+                    (theta1 + theta2) / 2,
+                    (xm1 + xm2) / 2,
+                    (ym1 + ym2) / 2,
+                    length1 + length2
+                ]
+            else:
+                new_lines.append([rho1, theta1, xm1, ym1, length1])
+
         return new_lines
 
     def split_and_merge(self, points, threshold, min_points, rho_tol, theta_tol):

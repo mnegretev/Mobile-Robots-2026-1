@@ -1,0 +1,24 @@
+[5.644s] Invoking command in '/home/catcyber02/Mobile-Robots-2026-1/build/map_augmenter': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/catcyber02/Mobile-Robots-2026-1/build/map_augmenter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/catcyber02/Mobile-Robots-2026-1/install/map_augmenter/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/catcyber02/Mobile-Robots-2026-1/build/map_augmenter/build --no-deps symlink_data --force
+[7.774s] running develop
+[8.850s] running egg_info
+[8.930s] writing map_augmenter.egg-info/PKG-INFO
+[8.934s] writing dependency_links to map_augmenter.egg-info/dependency_links.txt
+[8.941s] writing entry points to map_augmenter.egg-info/entry_points.txt
+[8.942s] writing requirements to map_augmenter.egg-info/requires.txt
+[8.943s] writing top-level names to map_augmenter.egg-info/top_level.txt
+[9.251s] reading manifest file 'map_augmenter.egg-info/SOURCES.txt'
+[9.260s] writing manifest file 'map_augmenter.egg-info/SOURCES.txt'
+[9.553s] running build_ext
+[9.560s] Creating /home/catcyber02/Mobile-Robots-2026-1/install/map_augmenter/lib/python3.12/site-packages/map-augmenter.egg-link (link to .)
+[9.565s] Installing gvd script to /home/catcyber02/Mobile-Robots-2026-1/install/map_augmenter/lib/map_augmenter
+[9.579s] Installing gvd_solved script to /home/catcyber02/Mobile-Robots-2026-1/install/map_augmenter/lib/map_augmenter
+[9.584s] Installing map_inflater script to /home/catcyber02/Mobile-Robots-2026-1/install/map_augmenter/lib/map_augmenter
+[9.584s] Installing map_inflater_solved script to /home/catcyber02/Mobile-Robots-2026-1/install/map_augmenter/lib/map_augmenter
+[9.607s] Installing split_and_merge script to /home/catcyber02/Mobile-Robots-2026-1/install/map_augmenter/lib/map_augmenter
+[9.608s] Installing split_and_merge_solved script to /home/catcyber02/Mobile-Robots-2026-1/install/map_augmenter/lib/map_augmenter
+[9.609s] 
+[9.611s] Installed /home/catcyber02/Mobile-Robots-2026-1/build/map_augmenter
+[9.614s] running symlink_data
+[9.617s] symbolically linking /home/catcyber02/Mobile-Robots-2026-1/build/map_augmenter/resource/map_augmenter -> /home/catcyber02/Mobile-Robots-2026-1/install/map_augmenter/share/ament_index/resource_index/packages
+[9.618s] symbolically linking /home/catcyber02/Mobile-Robots-2026-1/build/map_augmenter/package.xml -> /home/catcyber02/Mobile-Robots-2026-1/install/map_augmenter/share/map_augmenter
+[10.814s] Invoked command in '/home/catcyber02/Mobile-Robots-2026-1/build/map_augmenter' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/catcyber02/Mobile-Robots-2026-1/build/map_augmenter/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/catcyber02/Mobile-Robots-2026-1/install/map_augmenter/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/catcyber02/Mobile-Robots-2026-1/build/map_augmenter/build --no-deps symlink_data --force

@@ -13,7 +13,7 @@ from nav_msgs.msg import OccupancyGrid
 from nav_msgs.srv import GetMap
 import numpy
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "Popoca Zuñiga Daniel Ixbalanque"
 
 class MapInflaterNode(Node):
     def get_inflated_map(self, static_map, inflation_cells):
@@ -27,7 +27,20 @@ class MapInflaterNode(Node):
         # Map is given in 'static_map' as a bidimensional numpy array.
         # Consider as occupied cells all cells with an occupation value greater than 50
         #
-        
+                
+        # Recorremos todo el mapa
+        for i in range(len(static_map)):            # recorre las filas
+            for j in range(len(static_map[0])):     # recorre las columnas
+                # Si la celda es un obstáculo (valor 100)
+                if static_map[i, j] == 100:
+                    # Inflamos alrededor del obstáculo
+                    for k1 in range(-inflation_cells, inflation_cells):
+                        for k2 in range(-inflation_cells, inflation_cells):
+                            # Coordenadas de la celda vecina
+                            r = min(height - 1, max(0, i + k1))   # limita entre 0 y height-1
+                            c = min(width - 1, max(0, j + k2))    # limita entre 0 y width-1
+                            # Marca la celda como obstáculo inflado
+                            inflated[r, c] = 100
         return inflated
 
     def callback_inflated_map(self, request, response):

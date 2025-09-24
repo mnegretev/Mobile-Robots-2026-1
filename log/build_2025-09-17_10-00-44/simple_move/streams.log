@@ -1,0 +1,23 @@
+[5.179s] Invoking command in '/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/src/navigation/simple_move': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/catcyber02/Mobile-Robots-2026-1/build/simple_move/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/catcyber02/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/simple_move build --build-base /home/catcyber02/Mobile-Robots-2026-1/build/simple_move/build install --record /home/catcyber02/Mobile-Robots-2026-1/build/simple_move/install.log --single-version-externally-managed install_data
+[6.077s] running egg_info
+[6.139s] writing ../../../../build/simple_move/simple_move.egg-info/PKG-INFO
+[6.141s] writing dependency_links to ../../../../build/simple_move/simple_move.egg-info/dependency_links.txt
+[6.144s] writing entry points to ../../../../build/simple_move/simple_move.egg-info/entry_points.txt
+[6.145s] writing requirements to ../../../../build/simple_move/simple_move.egg-info/requires.txt
+[6.145s] writing top-level names to ../../../../build/simple_move/simple_move.egg-info/top_level.txt
+[6.283s] reading manifest file '../../../../build/simple_move/simple_move.egg-info/SOURCES.txt'
+[6.287s] adding license file 'LICENSE'
+[6.288s] writing manifest file '../../../../build/simple_move/simple_move.egg-info/SOURCES.txt'
+[6.288s] running build
+[6.288s] running build_py
+[6.288s] running install
+[6.311s] running install_lib
+[6.376s] running install_data
+[6.377s] running install_egg_info
+[6.442s] removing '/home/catcyber02/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages/simple_move-0.0.0-py3.12.egg-info' (and everything under it)
+[6.443s] Copying ../../../../build/simple_move/simple_move.egg-info to /home/catcyber02/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages/simple_move-0.0.0-py3.12.egg-info
+[6.445s] running install_scripts
+[6.952s] Installing path_follower script to /home/catcyber02/Mobile-Robots-2026-1/install/simple_move/lib/simple_move
+[6.959s] Installing ros_basics script to /home/catcyber02/Mobile-Robots-2026-1/install/simple_move/lib/simple_move
+[6.966s] writing list of installed files to '/home/catcyber02/Mobile-Robots-2026-1/build/simple_move/install.log'
+[7.130s] Invoked command in '/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/src/navigation/simple_move' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/catcyber02/Mobile-Robots-2026-1/build/simple_move/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/catcyber02/Mobile-Robots-2026-1/install/simple_move/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/simple_move build --build-base /home/catcyber02/Mobile-Robots-2026-1/build/simple_move/build install --record /home/catcyber02/Mobile-Robots-2026-1/build/simple_move/install.log --single-version-externally-managed install_data

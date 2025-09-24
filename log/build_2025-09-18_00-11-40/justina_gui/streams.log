@@ -1,0 +1,52 @@
+[0.107s] Invoking command in '/home/catcyber02/Mobile-Robots-2026-1/build/justina_gui': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/install/simple_move:/home/catcyber02/Mobile-Robots-2026-1/install/path_planner:/home/catcyber02/Mobile-Robots-2026-1/install/map_augmenter:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/path_planner:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/map_augmenter:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/catcyber02/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui -DCMAKE_INSTALL_PREFIX=/home/catcyber02/Mobile-Robots-2026-1/install/justina_gui
+[2.803s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.803s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[2.805s] -- Found rclcpp: 28.1.11 (/opt/ros/jazzy/share/rclcpp/cmake)
+[2.809s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[2.810s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[2.811s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.812s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.954s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[2.962s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[3.459s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[3.750s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[3.837s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[3.925s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[4.095s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[4.596s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[4.603s] -- Configured cppcheck include dirs: /home/catcyber02/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui/include
+[4.603s] -- Configured cppcheck exclude dirs and/or files: 
+[4.606s] -- Added test 'lint_cmake' to check CMake code style
+[4.613s] -- Added test 'uncrustify' to check C / C++ code style
+[4.614s] -- Configured uncrustify additional arguments: 
+[4.622s] -- Added test 'xmllint' to check XML markup files
+[4.623s] -- Configuring done (4.5s)
+[5.287s] -- Generating done (0.5s)
+[5.347s] -- Build files have been written to: /home/catcyber02/Mobile-Robots-2026-1/build/justina_gui
+[6.222s] Invoked command in '/home/catcyber02/Mobile-Robots-2026-1/build/justina_gui' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/install/simple_move:/home/catcyber02/Mobile-Robots-2026-1/install/path_planner:/home/catcyber02/Mobile-Robots-2026-1/install/map_augmenter:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/path_planner:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/map_augmenter:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/catcyber02/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui -DCMAKE_INSTALL_PREFIX=/home/catcyber02/Mobile-Robots-2026-1/install/justina_gui
+[6.230s] Invoking command in '/home/catcyber02/Mobile-Robots-2026-1/build/justina_gui': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/install/simple_move:/home/catcyber02/Mobile-Robots-2026-1/install/path_planner:/home/catcyber02/Mobile-Robots-2026-1/install/map_augmenter:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/path_planner:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/map_augmenter:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/catcyber02/Mobile-Robots-2026-1/build/justina_gui -- -j8 -l8
+[6.621s] [  0%] Built target justina_gui_node_autogen_timestamp_deps
+[6.892s] [  7%] [34m[1mAutomatic MOC for target justina_gui_node[0m
+[7.192s] [  7%] Built target justina_gui_node_autogen
+[7.543s] [100%] Built target justina_gui_node
+[7.614s] Invoked command in '/home/catcyber02/Mobile-Robots-2026-1/build/justina_gui' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/install/simple_move:/home/catcyber02/Mobile-Robots-2026-1/install/path_planner:/home/catcyber02/Mobile-Robots-2026-1/install/map_augmenter:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/path_planner:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/map_augmenter:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/catcyber02/Mobile-Robots-2026-1/build/justina_gui -- -j8 -l8
+[7.619s] Invoking command in '/home/catcyber02/Mobile-Robots-2026-1/build/justina_gui': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/install/simple_move:/home/catcyber02/Mobile-Robots-2026-1/install/path_planner:/home/catcyber02/Mobile-Robots-2026-1/install/map_augmenter:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/path_planner:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/map_augmenter:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/catcyber02/Mobile-Robots-2026-1/build/justina_gui
+[7.685s] -- Install configuration: ""
+[7.686s] -- Execute custom install script
+[7.686s] -- Symlinking: /home/catcyber02/Mobile-Robots-2026-1/install/justina_gui/lib/justina_gui/justina_gui_node
+[7.757s] -- Symlinking: /home/catcyber02/Mobile-Robots-2026-1/install/justina_gui/share/ament_index/resource_index/package_run_dependencies/justina_gui
+[7.830s] -- Symlinking: /home/catcyber02/Mobile-Robots-2026-1/install/justina_gui/share/ament_index/resource_index/parent_prefix_path/justina_gui
+[7.997s] -- Symlinking: /home/catcyber02/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/ament_prefix_path.sh
+[8.179s] -- Symlinking: /home/catcyber02/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/ament_prefix_path.dsv
+[8.400s] -- Symlinking: /home/catcyber02/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/path.sh
+[8.425s] -- Symlinking: /home/catcyber02/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/environment/path.dsv
+[8.475s] -- Symlinking: /home/catcyber02/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.bash
+[8.484s] -- Symlinking: /home/catcyber02/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.sh
+[8.484s] -- Symlinking: /home/catcyber02/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.zsh
+[8.485s] -- Symlinking: /home/catcyber02/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/local_setup.dsv
+[8.486s] -- Symlinking: /home/catcyber02/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.dsv
+[8.499s] -- Symlinking: /home/catcyber02/Mobile-Robots-2026-1/install/justina_gui/share/ament_index/resource_index/packages/justina_gui
+[8.548s] -- Symlinking: /home/catcyber02/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/cmake/justina_guiConfig.cmake
+[8.641s] -- Symlinking: /home/catcyber02/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/cmake/justina_guiConfig-version.cmake
+[8.702s] -- Symlinking: /home/catcyber02/Mobile-Robots-2026-1/install/justina_gui/share/justina_gui/package.xml
+[8.752s] Invoked command in '/home/catcyber02/Mobile-Robots-2026-1/build/justina_gui' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/install/simple_move:/home/catcyber02/Mobile-Robots-2026-1/install/path_planner:/home/catcyber02/Mobile-Robots-2026-1/install/map_augmenter:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/path_planner:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/map_augmenter:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/catcyber02/Mobile-Robots-2026-1/build/justina_gui

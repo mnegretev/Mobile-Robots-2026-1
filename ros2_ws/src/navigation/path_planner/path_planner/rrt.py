@@ -20,7 +20,7 @@ import numpy
 import heapq
 import math
 
-NAME = "FULL NAME"
+NAME = "Popoca Zuñiga Daniel Ixbalanque"
 
 class TreeNode:
     def __init__(self, x, y, parent=None):
@@ -89,6 +89,22 @@ class RRTNode(Node):
         # Return both, the tree and the path. You can follow these steps:
         #
         
+        attempts = max_attempts
+        
+        while goal_node.parent is None and attempts > 0:
+            [x, y] = self.get_random_q(grid_map)
+            nearest_node = self.get_nearest_node(tree, x, y)
+            new_node = self.get_new_node(nearest_node, x, y, epsilon)
+            
+            if new_node is not None and not self.check_collision(nearest_node, new_node, grid_map):
+                nearest_node.children.append(new_node)
+                
+                if not self.check_collision(new_node, goal_node, grid_map):
+                    new_node.children.append(goal_node)
+                    goal_node.parent = new_node
+                    
+            attempts -= 1
+
         path = []
         while goal_node.parent is not None:
             path.insert(0, [goal_node.x, goal_node.y])
@@ -130,6 +146,10 @@ class RRTNode(Node):
     def callback_rrt(self, req, resp):
         [sx, sy] = [req.start.pose.position.x, req.start.pose.position.y]
         [gx, gy] = [req.goal .pose.position.x, req.goal .pose.position.y]
+        
+        # Agrega esta línea para verificar si la función se ejecuta
+        self.get_logger().info('Solicitud de planificación recibida. Calculando ruta...')
+
         epsilon  = self.get_parameter('epsilon').get_parameter_value().double_value
         max_attempts = self.get_parameter('max_n').get_parameter_value().integer_value
         print("Planning by RRT from ", [sx,sy], "to", [gx,gy],"with e=", epsilon, "and", max_attempts, "attempts.")
@@ -150,6 +170,8 @@ class RRTNode(Node):
         self.msg_path.header.frame_id = "map"
         self.msg_path.header.stamp = self.get_clock().now().to_msg()
         self.msg_path.poses = []
+
+
         for [x,y] in path:
             pose_stamped = PoseStamped()
             pose_stamped.pose.position.x = x

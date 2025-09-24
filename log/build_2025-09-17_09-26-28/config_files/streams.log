@@ -1,0 +1,58 @@
+[0.080s] Invoking command in '/home/catcyber02/Mobile-Robots-2026-1/build/config_files': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/catcyber02/Mobile-Robots-2026-1/ros2_ws/src/config_files -DCMAKE_INSTALL_PREFIX=/home/catcyber02/Mobile-Robots-2026-1/install/config_files
+[0.438s] -- The C compiler identification is GNU 13.3.0
+[0.677s] -- The CXX compiler identification is GNU 13.3.0
+[0.734s] -- Detecting C compiler ABI info
+[1.153s] -- Detecting C compiler ABI info - done
+[1.184s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.184s] -- Detecting C compile features
+[1.185s] -- Detecting C compile features - done
+[1.210s] -- Detecting CXX compiler ABI info
+[1.660s] -- Detecting CXX compiler ABI info - done
+[1.700s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.700s] -- Detecting CXX compile features
+[1.702s] -- Detecting CXX compile features - done
+[1.721s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.324s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.824s] -- Found rclcpp: 28.1.11 (/opt/ros/jazzy/share/rclcpp/cmake)
+[3.028s] -- Found rosidl_generator_c: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[3.105s] -- Found rosidl_generator_cpp: 4.6.6 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[3.195s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.285s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.608s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[3.626s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[4.284s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[4.547s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[4.852s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[5.669s] -- Found ament_lint_auto: 0.17.3 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[6.686s] -- Added test 'lint_cmake' to check CMake code style
+[6.704s] -- Added test 'xmllint' to check XML markup files
+[6.734s] -- Configuring done (6.6s)
+[6.795s] -- Generating done (0.0s)
+[6.814s] -- Build files have been written to: /home/catcyber02/Mobile-Robots-2026-1/build/config_files
+[7.868s] Invoked command in '/home/catcyber02/Mobile-Robots-2026-1/build/config_files' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/catcyber02/Mobile-Robots-2026-1/ros2_ws/src/config_files -DCMAKE_INSTALL_PREFIX=/home/catcyber02/Mobile-Robots-2026-1/install/config_files
+[7.885s] Invoking command in '/home/catcyber02/Mobile-Robots-2026-1/build/config_files': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/catcyber02/Mobile-Robots-2026-1/build/config_files -- -j8 -l8
+[8.288s] Invoked command in '/home/catcyber02/Mobile-Robots-2026-1/build/config_files' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/catcyber02/Mobile-Robots-2026-1/build/config_files -- -j8 -l8
+[8.291s] Invoking command in '/home/catcyber02/Mobile-Robots-2026-1/build/config_files': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/catcyber02/Mobile-Robots-2026-1/build/config_files
+[8.359s] -- Install configuration: ""
+[8.360s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/config_files/rviz
+[8.362s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/config_files/rviz/simple_house.rviz
+[8.363s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation
+[8.366s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation/simple_house.pgm
+[8.368s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation/simple_house.yaml
+[8.370s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation/mapper_params.yaml
+[8.371s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/ament_index/resource_index/package_run_dependencies/config_files
+[8.374s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/ament_index/resource_index/parent_prefix_path/config_files
+[8.377s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/ament_prefix_path.sh
+[8.378s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/ament_prefix_path.dsv
+[8.379s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/path.sh
+[8.382s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/config_files/environment/path.dsv
+[8.384s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.bash
+[8.385s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.sh
+[8.388s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.zsh
+[8.390s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/config_files/local_setup.dsv
+[8.392s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/config_files/package.dsv
+[8.393s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/ament_index/resource_index/packages/config_files
+[8.396s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/config_files/cmake/config_filesConfig.cmake
+[8.399s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/config_files/cmake/config_filesConfig-version.cmake
+[8.401s] -- Installing: /home/catcyber02/Mobile-Robots-2026-1/install/config_files/share/config_files/package.xml
+[8.410s] Invoked command in '/home/catcyber02/Mobile-Robots-2026-1/build/config_files' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/uf_ros_lib:/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/install/simple_move:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/catcyber02/Mobile-Robots-2026-1/build/config_files

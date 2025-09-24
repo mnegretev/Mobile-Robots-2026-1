@@ -1,0 +1,61 @@
+[8.980s] Invoking command in '/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/uf_ros_lib': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../../build/uf_ros_lib build --build-base /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build install --record /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/install.log --single-version-externally-managed install_data
+[12.472s] running egg_info
+[12.473s] creating ../../../../../build/uf_ros_lib/uf_ros_lib.egg-info
+[12.658s] writing ../../../../../build/uf_ros_lib/uf_ros_lib.egg-info/PKG-INFO
+[12.665s] writing dependency_links to ../../../../../build/uf_ros_lib/uf_ros_lib.egg-info/dependency_links.txt
+[12.666s] writing requirements to ../../../../../build/uf_ros_lib/uf_ros_lib.egg-info/requires.txt
+[12.670s] writing top-level names to ../../../../../build/uf_ros_lib/uf_ros_lib.egg-info/top_level.txt
+[12.671s] writing manifest file '../../../../../build/uf_ros_lib/uf_ros_lib.egg-info/SOURCES.txt'
+[12.935s] reading manifest file '../../../../../build/uf_ros_lib/uf_ros_lib.egg-info/SOURCES.txt'
+[12.935s] writing manifest file '../../../../../build/uf_ros_lib/uf_ros_lib.egg-info/SOURCES.txt'
+[12.937s] running build
+[12.938s] running build_py
+[12.942s] creating /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build
+[12.944s] creating /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib
+[12.945s] creating /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib
+[12.947s] copying uf_ros_lib/parameter_descriptions.py -> /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib
+[12.949s] copying uf_ros_lib/__init__.py -> /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib
+[12.949s] copying uf_ros_lib/moveit_configs_builder.py -> /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib
+[12.957s] copying uf_ros_lib/uf_robot_utils.py -> /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib
+[12.962s] creating /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions
+[12.963s] copying uf_ros_lib/substitutions/__init__.py -> /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions
+[12.966s] copying uf_ros_lib/substitutions/common.py -> /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions
+[12.967s] copying uf_ros_lib/substitutions/joint_limits.py -> /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions
+[12.976s] copying uf_ros_lib/substitutions/planning_pipelines.py -> /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions
+[12.980s] copying uf_ros_lib/substitutions/kinematics.py -> /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions
+[12.989s] copying uf_ros_lib/substitutions/controllers.py -> /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions
+[12.990s] running install
+[13.052s] running install_lib
+[13.282s] creating /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib
+[13.287s] copying /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib/parameter_descriptions.py -> /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib
+[13.288s] creating /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib/substitutions
+[13.288s] copying /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions/__init__.py -> /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib/substitutions
+[13.290s] copying /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions/common.py -> /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib/substitutions
+[13.294s] copying /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions/joint_limits.py -> /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib/substitutions
+[13.295s] copying /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions/planning_pipelines.py -> /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib/substitutions
+[13.296s] copying /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions/kinematics.py -> /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib/substitutions
+[13.297s] copying /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib/substitutions/controllers.py -> /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib/substitutions
+[13.297s] copying /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib/__init__.py -> /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib
+[13.304s] copying /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib/moveit_configs_builder.py -> /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib
+[13.305s] copying /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build/lib/uf_ros_lib/uf_robot_utils.py -> /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib
+[13.305s] byte-compiling /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib/parameter_descriptions.py to parameter_descriptions.cpython-312.pyc
+[13.306s] byte-compiling /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib/substitutions/__init__.py to __init__.cpython-312.pyc
+[13.306s] byte-compiling /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib/substitutions/common.py to common.cpython-312.pyc
+[13.310s] byte-compiling /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib/substitutions/joint_limits.py to joint_limits.cpython-312.pyc
+[13.310s] byte-compiling /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib/substitutions/planning_pipelines.py to planning_pipelines.cpython-312.pyc
+[13.327s] byte-compiling /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib/substitutions/kinematics.py to kinematics.cpython-312.pyc
+[13.337s] byte-compiling /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib/substitutions/controllers.py to controllers.cpython-312.pyc
+[13.347s] byte-compiling /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib/__init__.py to __init__.cpython-312.pyc
+[13.350s] byte-compiling /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib/moveit_configs_builder.py to moveit_configs_builder.cpython-312.pyc
+[13.400s] byte-compiling /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib/uf_robot_utils.py to uf_robot_utils.cpython-312.pyc
+[13.407s] running install_data
+[13.411s] creating /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/share/ament_index
+[13.412s] creating /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/share/ament_index/resource_index
+[13.420s] creating /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/share/ament_index/resource_index/packages
+[13.420s] copying resource/uf_ros_lib -> /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/share/ament_index/resource_index/packages
+[13.422s] copying package.xml -> /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/share/uf_ros_lib
+[13.424s] running install_egg_info
+[13.641s] Copying ../../../../../build/uf_ros_lib/uf_ros_lib.egg-info to /home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages/uf_ros_lib-0.0.0-py3.12.egg-info
+[13.650s] running install_scripts
+[14.330s] writing list of installed files to '/home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/install.log'
+[14.514s] Invoked command in '/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/src/hardware/xarm_ros2/uf_ros_lib' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/catcyber02/Mobile-Robots-2026-1/install/uf_ros_lib/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../../build/uf_ros_lib build --build-base /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/build install --record /home/catcyber02/Mobile-Robots-2026-1/build/uf_ros_lib/install.log --single-version-externally-managed install_data

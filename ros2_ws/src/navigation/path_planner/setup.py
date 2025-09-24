@@ -24,8 +24,8 @@ setup(
             'rrt_solved = path_planner.rrt_solved:main',
             'cost_map = path_planner.cost_map:main',
             'cost_map_solved = path_planner.cost_map_solved:main',
-            'a_start = path_planner.a_star:main',
-            'a_start_solved = path_planner.a_star_solved:main',
+            'a_star = path_planner.a_star:main',
+            'a_star_solved = path_planner.a_star_solved:main',
         ],
     },
 )
