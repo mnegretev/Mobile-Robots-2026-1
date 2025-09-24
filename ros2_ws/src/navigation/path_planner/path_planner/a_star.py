@@ -19,9 +19,21 @@ import numpy
 import heapq
 import math
 
-NAME = "FULL NAME"
+import csv
+
+NAME = "Juan Mancera Lopez"
 
 class AStarNode(Node):
+
+    tiempo = []
+    ex_reng = []
+    prev_sx = 0
+    prev_sy = 0
+    prev_gx = 100
+    prev_gy = 100
+    fallos = 0
+    intentos = 0
+
     def a_star(self, start_r, start_c, goal_r, goal_c, grid_map, cost_map, use_diagonals):
         [height, width] = grid_map.shape
         in_open_list   = numpy.full(grid_map.shape, False)
@@ -62,11 +74,41 @@ class AStarNode(Node):
         #             mark r,c as 'in_open_list'
         #             add r,c to open list (check heapq.heappush)
         #
-        
+        while open_list != [] and [row, col] != [goal_r,goal_c]:
+            [row, col] = heapq.heappop(open_list)[1]
+            #print("height: ", height, "  -  wid: ", width)
+            #print("row: ", row, "  - col:", col)
+            in_closed_list[row, col] = True
+            in_open_list[row, col] = False
+            for adjacent in adjacents:
+                row_neight = row+adjacent[0]
+                col_neight = col+adjacent[1]
+                #print("Vecino row: ", row_neight, "  - col:", col_neight)
+                if (col_neight>=width or col_neight<0) or (row_neight>=height or row_neight<0):
+                    continue
+                if (in_closed_list[row_neight, col_neight] == True):
+                    continue
+                if (grid_map[row_neight,col_neight] >= 50):
+                    continue
+                g = g_values[row, col] + adjacent[2] + cost_map[row_neight,col_neight]
+                #Traer valor heurística del mapa de costo
+                h = math.sqrt((pow((row-row_neight),2)) + (pow((col-col_neight),2)))
+                f = g + h
+                if g < g_values[row_neight,col_neight]:
+                    g_values[row_neight,col_neight] = g
+                    f_values[row_neight,col_neight] = f
+                    parent_nodes[row_neight,col_neight] = [row,col]
+                if not in_open_list[row_neight,col_neight]:
+                    in_open_list[row_neight,col_neight] = True
+                    heapq.heappush(open_list, (f, [row_neight,col_neight]))
+                #print(open_list, " --- ")
         #
         # END OF WHILE
         #
         path = []
+        #Marcar error si no hubo
+        if goal_r>=height or goal_c>=width:
+            return path
         while parent_nodes[goal_r, goal_c][0] != -1:
             path.insert(0, [goal_r, goal_c])
             [goal_r, goal_c] = parent_nodes[goal_r, goal_c]
@@ -121,12 +163,83 @@ class AStarNode(Node):
         delta_ms = (end_time.nanoseconds - start_time.nanoseconds)/1e6
         if len(path) > 0:
             print("Path planned after " + str(delta_ms) + " ms with " +  str(len(path)) + " points")
+            nuevo_fallo = 0
         else:
             print("Cannot plan path from  " + str([sx, sy])+" to "+str([gx, gy]) + " :'(")
+            #self.fallos += 1
+            nuevo_fallo = 1
 
+        # Multiples intentos
+        if  [sx, sy, gx, gy] == [self.prev_sx, self.prev_sy, self.prev_gx, self.prev_gy]:
+            self.tiempo.append(float(delta_ms))
+            self.intentos += 1
+            self.fallos += nuevo_fallo
+        else:
+            if self.intentos > 1:
+                print("Guardando dato")
+                conj = ([round(self.prev_sx,3), round(self.prev_sy,3)], [round(self.prev_gx,3), round(self.prev_gy,3)], self.intentos, self.fallos, round(min(self.tiempo),3), round(max(self.tiempo),3), round(numpy.mean(self.tiempo),3))
+                self.ex_reng.append(conj)
+            self.intentos = 1
+            self.fallos = nuevo_fallo
+            self.tiempo = []
+            self.tiempo.append(float(delta_ms))
+        radio_cost = self.get_parameter('cost_radius').get_parameter_value().double_value
+
+        # Comandos
+        if ([sx,sy] == [0,0] and [gx,gy] == [15,15]):
+            #Empezar a grabar datos
+            print("Inicio almacenamiento de datos")
+            self.ex_reng = []
+            self.fallos = 0
+            self.intentos = 0
+            self.tiempo = []
+
+            data_info = ("Diagonals=", use_diagonals, "", "Cost Radius=", radio_cost)
+            self.ex_reng.append(data_info)
+            data_info = ("Pos inicial", "Pos final", "Cant. Intentos", "Cant. Fallos", "MinTmp(ms)", "MaxTmp(ms)", "AvgTmp(ms)")
+            self.ex_reng.append(data_info)
+        if ([sx,sy] == [0,0] and [gx,gy] == [16,16]):
+            #Guardar en CSV
+            nombreArchivo = "SalidaDatos_D" + str(use_diagonals) + "_CoRad_" + str(radio_cost).replace('.','_') + ".csv"
+            with open(nombreArchivo, mode="w", newline="", encoding="UTF-8") as archivo:
+                escritor = csv.writer(archivo)
+                escritor.writerows(self.ex_reng)
+            print("FINAL - Guardado de datos en: ", nombreArchivo)
+            print("")
+        if ([sx,sy] == [0,0] and [gx,gy] == [18,18]):
+            self.ejecucion_casos()
         self.msg_path = self.get_path_msg(path, res, zx, zy)
         resp.plan = self.msg_path
+
+        self.prev_sx = sx
+        self.prev_sy = sy
+        self.prev_gx = gx
+        self.prev_gy = gy
+
         return resp
+
+    def ejecucion_casos(self):
+        Rutas = [[[0,0], [-2,4]],       [[0,0], [-1.5,5.3]],    [[2,0], [2,4.3]],           [[2,4.3], [-4.5,-1.5]],
+                [[0,0], [2,5.5]],       [[2,5.5], [0,0]],       [[2,5.5], [-2,1]],          [[-2,1], [2,5.5]],
+                [[2,5.5], [-4.5,-9]],   [[-4.5,-9], [2,5.5]],   [[0,0], [1, -12]],          [[2, 4.3], [1, -12]], 
+                [[2.5, 5], [1, -12]],   [[0,0], [-4.5, -9]],    [[-4.5, -9], [2.5, -10]],   [[-4.5, -9], [-5, 0]], 
+                [[-4.5, -9], [2, 4.3]]]
+        print("-- Probando algoritmo con rutas establecidas")
+        for ruta in Rutas:
+            for cuenta in range(5): 
+                # Crear petición
+                req = GetPlan.Request()
+                req.start = PoseStamped(pose=Pose(position=Point(x=ruta[0][0],y=ruta[0][1])))
+                req.goal  = PoseStamped(pose=Pose(position=Point(x=ruta[1][0],y=ruta[1][1])))
+                #req.start = PoseStamped(pose=Pose(position=Point(x=-5.0, y=-5.0)))
+                #req.goal  = PoseStamped(pose=Pose(position=Point(x=5.0, y=-3.0)))
+                # Crear respuesta vacía
+                resp = GetPlan.Response()
+
+                # Llamar callback
+                resp = self.callback_a_star(req, resp)
+        print("-- Fin prueba algoritmo con rutas establecidas")
+        return 0
 
     def callback_timer(self):
         self.pub_path.publish(self.msg_path)
@@ -137,6 +250,8 @@ class AStarNode(Node):
         self.clt_inflated_map = self.create_client(GetMap, '/get_inflated_map')
         self.clt_cost_map     = self.create_client(GetMap, '/get_cost_map')
         
+        self.declare_parameter('cost_radius', 0.05)
+
         [self.inflated_map, self.cost_map] = self.get_maps()
         self.declare_parameter('diagonals', False)
         self.srv_plan_path = self.create_service(GetPlan, '/path_planning/plan_path', self.callback_a_star)
@@ -150,6 +265,7 @@ def main(args=None):
     rclpy.spin(a_star_node)
     a_star_node.destroy_node()
     rclpy.shutdown()
+
 
     
 if __name__ == '__main__':

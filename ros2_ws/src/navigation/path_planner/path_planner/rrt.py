@@ -258,7 +258,7 @@ class RRTNode(Node):
                 [[-4.5, -9], [2, 4.3]]]
         
         for i in Rutas:
-            for cuenta in range(0,6):
+            for cuenta in range(6):
                 resp = self.callback_rrt(0, 0, modo=1, ini=i[0], fin=i[1])
             print("Ejecucion externa: " + resp)
         print("\n---- Ejecucion de rutas compleatadas ----")
