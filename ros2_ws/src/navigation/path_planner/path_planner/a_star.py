@@ -19,7 +19,7 @@ import numpy
 import heapq
 import math
 
-NAME = "FULL NAME"
+NAME = "Angel Anduaga Balestrini"
 
 class AStarNode(Node):
     def a_star(self, start_r, start_c, goal_r, goal_c, grid_map, cost_map, use_diagonals):
@@ -66,6 +66,68 @@ class AStarNode(Node):
         #
         # END OF WHILE
         #
+                while open_list and (in_closed_list[goal_r, goal_c] == False):
+            # Get current node [row,col] from open list
+            current_f, current_node = heapq.heappop(open_list)
+            [row, col] = current_node
+            
+            # Skip if already in closed list (puede pasar con duplicados)
+            if in_closed_list[row, col]:
+                continue
+                
+            # Mark current node as 'in_closed_list'
+            in_open_list[row, col] = False
+            in_closed_list[row, col] = True
+            
+            # If we reached the goal, break early
+            if row == goal_r and col == goal_c:
+                break
+            
+            # For [r,c,cost] in adjacent nodes:
+            for [dr, dc, cost] in adjacents:
+                # Get r,c indices of neighbours
+                r = row + dr
+                c = col + dc
+                
+                # Discard if r,c is out of map
+                if r < 0 or r >= height or c < 0 or c >= width:
+                    continue
+                
+                # Discard if occupied or unknown (assuming 0=free, 1=occupied)
+                if grid_map[r, c] != 0:  # Ajusta según tu representación de obstáculos
+                    continue
+                
+                # Discard if in closed list
+                if in_closed_list[r, c]:
+                    continue
+                
+                # Calculate new g-value
+                additional_cost = cost_map[r, c] if cost_map is not None else cost
+                g = g_values[row, col] + cost + additional_cost
+                
+                # Calculate heuristic and f-value
+                h = heuristic(r, c, goal_r, goal_c)
+                f = g + h
+                
+                # IF g < g_value of neighbour r,c:
+                if g < g_values[r, c]:
+                    # Update values
+                    g_values[r, c] = g
+                    f_values[r, c] = f
+                    parent_nodes[r, c] = [row, col]
+                
+                # If neighbour r,c is not in open list:
+                if not in_open_list[r, c]:
+                    in_open_list[r, c] = True
+                    heapq.heappush(open_list, (f, [r, c]))
+        
+        #
+        # END OF WHILE
+        #
+        
+        # Reconstruct path (if goal is reachable)
+        if parent_nodes[goal_r, goal_c][0] == -1:
+            return []  # No path found
         path = []
         while parent_nodes[goal_r, goal_c][0] != -1:
             path.insert(0, [goal_r, goal_c])
