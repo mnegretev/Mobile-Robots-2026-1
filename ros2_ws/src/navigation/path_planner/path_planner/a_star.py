@@ -19,7 +19,7 @@ import numpy
 import heapq
 import math
 
-NAME = "FULL NAME"
+NAME = "CORTES CALDERON OSCAR"
 
 class AStarNode(Node):
     def a_star(self, start_r, start_c, goal_r, goal_c, grid_map, cost_map, use_diagonals):
@@ -62,10 +62,73 @@ class AStarNode(Node):
         #             mark r,c as 'in_open_list'
         #             add r,c to open list (check heapq.heappush)
         #
-        
+
         #
         # END OF WHILE
         #
+
+        # MIENTRAS la lista abierta no esté vacía y la actual sea diferente del objetivo:
+        while len(open_list) > 0:
+
+            # Obtener el nodo actual [fila, columna] de la lista abierta (menor f)
+            _, [row, col] = heapq.heappop(open_list)
+
+            if in_closed_list[row, col]:
+                continue
+
+            in_closed_list[row, col] = True
+
+            # ¿Llegamos?
+            if row == goal_r and col == goal_c:
+                break
+
+            # Expandir vecinos
+            for dr, dc, dist in adjacents:
+                r = row + dr
+                c = col + dc
+
+                # Descartar si r, c están fuera del mapa
+                if r < 0 or r >= height or c < 0 or c >= width:
+                    continue
+
+                # Descartar si está ocupado o es desconocido (en mapas inflados: 0=libre, 100=ocupado, -1=desconocido)
+                cell = grid_map[r, c]
+                if cell != 0:
+                    continue
+
+                # Descartar si está en lista cerrada
+                if in_closed_list[r, c]:
+                    continue
+
+                # Obtenga un valor g como: g(actual) + dist + costo del vecino r, c
+                cell_cost = float(cost_map[r, c]) / 100.0 if cost_map is not None else 0.0
+                g = g_values[row, col] + dist + cell_cost
+
+                # Calcular la heuristica
+                if use_diagonals:
+                    # Heurística octile (para 8-conectividad)
+                    dx = abs(goal_r - r)
+                    dy = abs(goal_c - c)
+                    h = (dx + dy) + (math.sqrt(2) - 2.0) * min(dx, dy)
+                else:
+                    # Heurística Manhattan (para 4-conectividad)
+                    h = abs(goal_r - r) + abs(goal_c - c)
+
+                # Calculate f-value
+                f = g + h
+
+                # IF g < g_value of neighbour r,c: actualizar mejor camino
+                if g < g_values[r, c]:
+                    g_values[r, c] = g
+                    f_values[r, c] = f
+                    parent_nodes[r, c] = [row, col]
+
+                    # If neighbour r,c is not in open list: añadirlo
+                    if not in_open_list[r, c]:
+                        in_open_list[r, c] = True
+                        heapq.heappush(open_list, (f, [r, c]))
+
+
         path = []
         while parent_nodes[goal_r, goal_c][0] != -1:
             path.insert(0, [goal_r, goal_c])
