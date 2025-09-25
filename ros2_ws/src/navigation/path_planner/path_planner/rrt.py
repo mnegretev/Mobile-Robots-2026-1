@@ -88,7 +88,7 @@ class RRTNode(Node):
         # Goal node is also already created.
         # Return both, the tree and the path. You can follow these steps:
         #
-        while goal.node.parent is None and max.attempts > 0:
+        while goal_node.parent is None and max_attempts > 0:
             [x,y] = self.get_random_q(grid_map)
             nearest_node = self.get_nearest_node(tree, x, y)
             new_node = self.get_new_node(nearest_node, x, y, epsilon)
