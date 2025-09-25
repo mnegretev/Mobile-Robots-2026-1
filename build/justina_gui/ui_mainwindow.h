@@ -937,7 +937,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Mobile Robots Popoca Zu\303\261iga Daniel Ixbalanque ", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Mobile Robots 2026-1 - FI UNAM", nullptr));
         gbNavig->setTitle(QCoreApplication::translate("MainWindow", "Mobile base and navigation", nullptr));
         navBtnExecPath->setText(QCoreApplication::translate("MainWindow", "Exec Path", nullptr));
         navLblStartPose->setText(QCoreApplication::translate("MainWindow", "Start Pose:", nullptr));

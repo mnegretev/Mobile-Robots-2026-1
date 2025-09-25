@@ -765,6 +765,27 @@ CMakeFiles/justina_gui_node.dir/src/rclcomm.cpp.o: \
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32__builder.hpp \
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32__traits.hpp \
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32__type_support.hpp \
+ /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/get_plan.hpp \
+ /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__struct.hpp \
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp \
+ /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp \
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp \
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp \
+ /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__struct.hpp \
+ /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__builder.hpp \
+ /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__traits.hpp \
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__traits.hpp \
+ /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__traits.hpp \
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__traits.hpp \
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__traits.hpp \
+ /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__traits.hpp \
+ /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__type_support.hpp \
+ /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/path.hpp \
+ /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__builder.hpp \
+ /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__type_support.hpp \
  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/twist.hpp \
  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp \
  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp \

@@ -250,6 +250,32 @@ justina_gui_node_autogen/timestamp: CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
   /opt/ros/jazzy/share/libstatistics_collector/cmake/libstatistics_collectorConfig.cmake \
   /opt/ros/jazzy/share/libstatistics_collector/cmake/libstatistics_collectorExport-none.cmake \
   /opt/ros/jazzy/share/libstatistics_collector/cmake/libstatistics_collectorExport.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/ament_cmake_export_dependencies-extras.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/ament_cmake_export_include_directories-extras.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/ament_cmake_export_libraries-extras.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/ament_cmake_export_targets-extras.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/export_nav_msgs__rosidl_generator_cExport-none.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/export_nav_msgs__rosidl_generator_cExport.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/export_nav_msgs__rosidl_generator_cppExport.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/export_nav_msgs__rosidl_generator_pyExport-none.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/export_nav_msgs__rosidl_generator_pyExport.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/export_nav_msgs__rosidl_typesupport_fastrtps_cExport-none.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/export_nav_msgs__rosidl_typesupport_fastrtps_cExport.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/export_nav_msgs__rosidl_typesupport_fastrtps_cppExport-none.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/export_nav_msgs__rosidl_typesupport_fastrtps_cppExport.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/nav_msgsConfig-version.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/nav_msgsConfig.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/nav_msgs__rosidl_typesupport_cExport-none.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/nav_msgs__rosidl_typesupport_cExport.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/nav_msgs__rosidl_typesupport_cppExport-none.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/nav_msgs__rosidl_typesupport_cppExport.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/nav_msgs__rosidl_typesupport_introspection_cExport-none.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/nav_msgs__rosidl_typesupport_introspection_cExport.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/nav_msgs__rosidl_typesupport_introspection_cppExport-none.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/nav_msgs__rosidl_typesupport_introspection_cppExport.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/rosidl_cmake-extras.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake \
+  /opt/ros/jazzy/share/nav_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake \
   /opt/ros/jazzy/share/rcl/cmake/ament_cmake_export_dependencies-extras.cmake \
   /opt/ros/jazzy/share/rcl/cmake/ament_cmake_export_include_directories-extras.cmake \
   /opt/ros/jazzy/share/rcl/cmake/ament_cmake_export_libraries-extras.cmake \
@@ -740,6 +766,14 @@ CMakeFiles/justina_gui_node.dir/include/moc_mainwindow.cpp.o: include/moc_mainwi
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp \
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/time.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__traits.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__traits.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__traits.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__traits.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
@@ -758,6 +792,17 @@ CMakeFiles/justina_gui_node.dir/include/moc_mainwindow.cpp.o: include/moc_mainwi
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_period.hpp \
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp \
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/visibility_control.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__builder.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__struct.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__traits.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__type_support.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/path.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__builder.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__struct.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__traits.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__type_support.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/get_plan.hpp \
   /opt/ros/jazzy/include/rcl/rcl/allocator.h \
   /opt/ros/jazzy/include/rcl/rcl/arguments.h \
   /opt/ros/jazzy/include/rcl/rcl/client.h \
@@ -1132,6 +1177,8 @@ CMakeFiles/justina_gui_node.dir/include/moc_mainwindow.cpp.o: include/moc_mainwi
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32_multi_array__struct.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32_multi_array__traits.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32_multi_array__type_support.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__struct.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__traits.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/multi_array_layout__struct.hpp \
@@ -1158,6 +1205,433 @@ CMakeFiles/justina_gui_node.dir/include/moc_mainwindow.cpp.o: include/moc_mainwi
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \
+  /usr/include/boost/algorithm/string.hpp \
+  /usr/include/boost/algorithm/string/case_conv.hpp \
+  /usr/include/boost/algorithm/string/classification.hpp \
+  /usr/include/boost/algorithm/string/compare.hpp \
+  /usr/include/boost/algorithm/string/concept.hpp \
+  /usr/include/boost/algorithm/string/config.hpp \
+  /usr/include/boost/algorithm/string/constants.hpp \
+  /usr/include/boost/algorithm/string/detail/case_conv.hpp \
+  /usr/include/boost/algorithm/string/detail/classification.hpp \
+  /usr/include/boost/algorithm/string/detail/find_format.hpp \
+  /usr/include/boost/algorithm/string/detail/find_format_all.hpp \
+  /usr/include/boost/algorithm/string/detail/find_format_store.hpp \
+  /usr/include/boost/algorithm/string/detail/find_iterator.hpp \
+  /usr/include/boost/algorithm/string/detail/finder.hpp \
+  /usr/include/boost/algorithm/string/detail/formatter.hpp \
+  /usr/include/boost/algorithm/string/detail/predicate.hpp \
+  /usr/include/boost/algorithm/string/detail/replace_storage.hpp \
+  /usr/include/boost/algorithm/string/detail/sequence.hpp \
+  /usr/include/boost/algorithm/string/detail/trim.hpp \
+  /usr/include/boost/algorithm/string/detail/util.hpp \
+  /usr/include/boost/algorithm/string/erase.hpp \
+  /usr/include/boost/algorithm/string/find.hpp \
+  /usr/include/boost/algorithm/string/find_format.hpp \
+  /usr/include/boost/algorithm/string/find_iterator.hpp \
+  /usr/include/boost/algorithm/string/finder.hpp \
+  /usr/include/boost/algorithm/string/formatter.hpp \
+  /usr/include/boost/algorithm/string/iter_find.hpp \
+  /usr/include/boost/algorithm/string/join.hpp \
+  /usr/include/boost/algorithm/string/predicate.hpp \
+  /usr/include/boost/algorithm/string/predicate_facade.hpp \
+  /usr/include/boost/algorithm/string/replace.hpp \
+  /usr/include/boost/algorithm/string/sequence_traits.hpp \
+  /usr/include/boost/algorithm/string/split.hpp \
+  /usr/include/boost/algorithm/string/std/list_traits.hpp \
+  /usr/include/boost/algorithm/string/std/slist_traits.hpp \
+  /usr/include/boost/algorithm/string/std/string_traits.hpp \
+  /usr/include/boost/algorithm/string/std_containers_traits.hpp \
+  /usr/include/boost/algorithm/string/trim.hpp \
+  /usr/include/boost/algorithm/string/yes_no_type.hpp \
+  /usr/include/boost/assert.hpp \
+  /usr/include/boost/assert/source_location.hpp \
+  /usr/include/boost/bind/detail/requires_cxx11.hpp \
+  /usr/include/boost/bind/mem_fn.hpp \
+  /usr/include/boost/bind/mem_fn_cc.hpp \
+  /usr/include/boost/bind/mem_fn_template.hpp \
+  /usr/include/boost/concept/assert.hpp \
+  /usr/include/boost/concept/detail/backward_compatibility.hpp \
+  /usr/include/boost/concept/detail/concept_def.hpp \
+  /usr/include/boost/concept/detail/concept_undef.hpp \
+  /usr/include/boost/concept/detail/general.hpp \
+  /usr/include/boost/concept/detail/has_constraints.hpp \
+  /usr/include/boost/concept/usage.hpp \
+  /usr/include/boost/concept_check.hpp \
+  /usr/include/boost/config.hpp \
+  /usr/include/boost/config/compiler/gcc.hpp \
+  /usr/include/boost/config/detail/cxx_composite.hpp \
+  /usr/include/boost/config/detail/posix_features.hpp \
+  /usr/include/boost/config/detail/select_compiler_config.hpp \
+  /usr/include/boost/config/detail/select_platform_config.hpp \
+  /usr/include/boost/config/detail/select_stdlib_config.hpp \
+  /usr/include/boost/config/detail/suffix.hpp \
+  /usr/include/boost/config/helper_macros.hpp \
+  /usr/include/boost/config/no_tr1/functional.hpp \
+  /usr/include/boost/config/no_tr1/memory.hpp \
+  /usr/include/boost/config/platform/linux.hpp \
+  /usr/include/boost/config/pragma_message.hpp \
+  /usr/include/boost/config/stdlib/libstdcpp3.hpp \
+  /usr/include/boost/config/user.hpp \
+  /usr/include/boost/config/workaround.hpp \
+  /usr/include/boost/core/addressof.hpp \
+  /usr/include/boost/core/checked_delete.hpp \
+  /usr/include/boost/core/demangle.hpp \
+  /usr/include/boost/core/enable_if.hpp \
+  /usr/include/boost/core/no_exceptions_support.hpp \
+  /usr/include/boost/core/noncopyable.hpp \
+  /usr/include/boost/core/ref.hpp \
+  /usr/include/boost/core/typeinfo.hpp \
+  /usr/include/boost/core/use_default.hpp \
+  /usr/include/boost/cstdint.hpp \
+  /usr/include/boost/current_function.hpp \
+  /usr/include/boost/detail/indirect_traits.hpp \
+  /usr/include/boost/detail/select_type.hpp \
+  /usr/include/boost/detail/workaround.hpp \
+  /usr/include/boost/exception/exception.hpp \
+  /usr/include/boost/function.hpp \
+  /usr/include/boost/function/detail/epilogue.hpp \
+  /usr/include/boost/function/detail/function_iterate.hpp \
+  /usr/include/boost/function/detail/maybe_include.hpp \
+  /usr/include/boost/function/detail/prologue.hpp \
+  /usr/include/boost/function/detail/requires_cxx11.hpp \
+  /usr/include/boost/function/function_base.hpp \
+  /usr/include/boost/function/function_fwd.hpp \
+  /usr/include/boost/function/function_template.hpp \
+  /usr/include/boost/function_equal.hpp \
+  /usr/include/boost/get_pointer.hpp \
+  /usr/include/boost/iterator/advance.hpp \
+  /usr/include/boost/iterator/detail/config_def.hpp \
+  /usr/include/boost/iterator/detail/config_undef.hpp \
+  /usr/include/boost/iterator/detail/enable_if.hpp \
+  /usr/include/boost/iterator/detail/facade_iterator_category.hpp \
+  /usr/include/boost/iterator/distance.hpp \
+  /usr/include/boost/iterator/interoperable.hpp \
+  /usr/include/boost/iterator/is_iterator.hpp \
+  /usr/include/boost/iterator/iterator_adaptor.hpp \
+  /usr/include/boost/iterator/iterator_categories.hpp \
+  /usr/include/boost/iterator/iterator_concepts.hpp \
+  /usr/include/boost/iterator/iterator_facade.hpp \
+  /usr/include/boost/iterator/iterator_traits.hpp \
+  /usr/include/boost/iterator/reverse_iterator.hpp \
+  /usr/include/boost/iterator/transform_iterator.hpp \
+  /usr/include/boost/limits.hpp \
+  /usr/include/boost/mem_fn.hpp \
+  /usr/include/boost/mpl/always.hpp \
+  /usr/include/boost/mpl/and.hpp \
+  /usr/include/boost/mpl/apply.hpp \
+  /usr/include/boost/mpl/apply_fwd.hpp \
+  /usr/include/boost/mpl/apply_wrap.hpp \
+  /usr/include/boost/mpl/arg.hpp \
+  /usr/include/boost/mpl/arg_fwd.hpp \
+  /usr/include/boost/mpl/assert.hpp \
+  /usr/include/boost/mpl/aux_/adl_barrier.hpp \
+  /usr/include/boost/mpl/aux_/arg_typedef.hpp \
+  /usr/include/boost/mpl/aux_/arity.hpp \
+  /usr/include/boost/mpl/aux_/arity_spec.hpp \
+  /usr/include/boost/mpl/aux_/common_name_wknd.hpp \
+  /usr/include/boost/mpl/aux_/config/adl.hpp \
+  /usr/include/boost/mpl/aux_/config/arrays.hpp \
+  /usr/include/boost/mpl/aux_/config/bcc.hpp \
+  /usr/include/boost/mpl/aux_/config/bind.hpp \
+  /usr/include/boost/mpl/aux_/config/compiler.hpp \
+  /usr/include/boost/mpl/aux_/config/ctps.hpp \
+  /usr/include/boost/mpl/aux_/config/dtp.hpp \
+  /usr/include/boost/mpl/aux_/config/eti.hpp \
+  /usr/include/boost/mpl/aux_/config/gcc.hpp \
+  /usr/include/boost/mpl/aux_/config/gpu.hpp \
+  /usr/include/boost/mpl/aux_/config/has_apply.hpp \
+  /usr/include/boost/mpl/aux_/config/has_xxx.hpp \
+  /usr/include/boost/mpl/aux_/config/integral.hpp \
+  /usr/include/boost/mpl/aux_/config/intel.hpp \
+  /usr/include/boost/mpl/aux_/config/lambda.hpp \
+  /usr/include/boost/mpl/aux_/config/msvc.hpp \
+  /usr/include/boost/mpl/aux_/config/msvc_typename.hpp \
+  /usr/include/boost/mpl/aux_/config/nttp.hpp \
+  /usr/include/boost/mpl/aux_/config/overload_resolution.hpp \
+  /usr/include/boost/mpl/aux_/config/pp_counter.hpp \
+  /usr/include/boost/mpl/aux_/config/preprocessor.hpp \
+  /usr/include/boost/mpl/aux_/config/static_constant.hpp \
+  /usr/include/boost/mpl/aux_/config/ttp.hpp \
+  /usr/include/boost/mpl/aux_/config/use_preprocessed.hpp \
+  /usr/include/boost/mpl/aux_/config/workaround.hpp \
+  /usr/include/boost/mpl/aux_/full_lambda.hpp \
+  /usr/include/boost/mpl/aux_/has_apply.hpp \
+  /usr/include/boost/mpl/aux_/has_type.hpp \
+  /usr/include/boost/mpl/aux_/include_preprocessed.hpp \
+  /usr/include/boost/mpl/aux_/integral_wrapper.hpp \
+  /usr/include/boost/mpl/aux_/lambda_arity_param.hpp \
+  /usr/include/boost/mpl/aux_/lambda_support.hpp \
+  /usr/include/boost/mpl/aux_/msvc_never_true.hpp \
+  /usr/include/boost/mpl/aux_/na.hpp \
+  /usr/include/boost/mpl/aux_/na_assert.hpp \
+  /usr/include/boost/mpl/aux_/na_fwd.hpp \
+  /usr/include/boost/mpl/aux_/na_spec.hpp \
+  /usr/include/boost/mpl/aux_/nested_type_wknd.hpp \
+  /usr/include/boost/mpl/aux_/nttp_decl.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/bind.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/or.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/quote.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/template_arity.hpp \
+  /usr/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp \
+  /usr/include/boost/mpl/aux_/preprocessor/default_params.hpp \
+  /usr/include/boost/mpl/aux_/preprocessor/enum.hpp \
+  /usr/include/boost/mpl/aux_/preprocessor/params.hpp \
+  /usr/include/boost/mpl/aux_/static_cast.hpp \
+  /usr/include/boost/mpl/aux_/template_arity.hpp \
+  /usr/include/boost/mpl/aux_/template_arity_fwd.hpp \
+  /usr/include/boost/mpl/aux_/type_wrapper.hpp \
+  /usr/include/boost/mpl/aux_/value_wknd.hpp \
+  /usr/include/boost/mpl/aux_/yes_no.hpp \
+  /usr/include/boost/mpl/bind.hpp \
+  /usr/include/boost/mpl/bind_fwd.hpp \
+  /usr/include/boost/mpl/bool.hpp \
+  /usr/include/boost/mpl/bool_fwd.hpp \
+  /usr/include/boost/mpl/eval_if.hpp \
+  /usr/include/boost/mpl/has_xxx.hpp \
+  /usr/include/boost/mpl/identity.hpp \
+  /usr/include/boost/mpl/if.hpp \
+  /usr/include/boost/mpl/int.hpp \
+  /usr/include/boost/mpl/int_fwd.hpp \
+  /usr/include/boost/mpl/integral_c_tag.hpp \
+  /usr/include/boost/mpl/lambda.hpp \
+  /usr/include/boost/mpl/lambda_fwd.hpp \
+  /usr/include/boost/mpl/limits/arity.hpp \
+  /usr/include/boost/mpl/logical.hpp \
+  /usr/include/boost/mpl/next.hpp \
+  /usr/include/boost/mpl/next_prior.hpp \
+  /usr/include/boost/mpl/not.hpp \
+  /usr/include/boost/mpl/or.hpp \
+  /usr/include/boost/mpl/placeholders.hpp \
+  /usr/include/boost/mpl/protect.hpp \
+  /usr/include/boost/mpl/quote.hpp \
+  /usr/include/boost/mpl/void.hpp \
+  /usr/include/boost/mpl/void_fwd.hpp \
+  /usr/include/boost/next_prior.hpp \
+  /usr/include/boost/preprocessor/arithmetic/add.hpp \
+  /usr/include/boost/preprocessor/arithmetic/dec.hpp \
+  /usr/include/boost/preprocessor/arithmetic/detail/div_base.hpp \
+  /usr/include/boost/preprocessor/arithmetic/detail/is_1_number.hpp \
+  /usr/include/boost/preprocessor/arithmetic/detail/is_maximum_number.hpp \
+  /usr/include/boost/preprocessor/arithmetic/detail/is_minimum_number.hpp \
+  /usr/include/boost/preprocessor/arithmetic/detail/maximum_number.hpp \
+  /usr/include/boost/preprocessor/arithmetic/inc.hpp \
+  /usr/include/boost/preprocessor/arithmetic/limits/dec_256.hpp \
+  /usr/include/boost/preprocessor/arithmetic/limits/inc_256.hpp \
+  /usr/include/boost/preprocessor/arithmetic/mod.hpp \
+  /usr/include/boost/preprocessor/arithmetic/sub.hpp \
+  /usr/include/boost/preprocessor/array/data.hpp \
+  /usr/include/boost/preprocessor/array/elem.hpp \
+  /usr/include/boost/preprocessor/array/size.hpp \
+  /usr/include/boost/preprocessor/cat.hpp \
+  /usr/include/boost/preprocessor/comma_if.hpp \
+  /usr/include/boost/preprocessor/comparison/equal.hpp \
+  /usr/include/boost/preprocessor/comparison/less_equal.hpp \
+  /usr/include/boost/preprocessor/comparison/limits/not_equal_256.hpp \
+  /usr/include/boost/preprocessor/comparison/not_equal.hpp \
+  /usr/include/boost/preprocessor/config/config.hpp \
+  /usr/include/boost/preprocessor/config/limits.hpp \
+  /usr/include/boost/preprocessor/control/deduce_d.hpp \
+  /usr/include/boost/preprocessor/control/detail/limits/while_256.hpp \
+  /usr/include/boost/preprocessor/control/detail/while.hpp \
+  /usr/include/boost/preprocessor/control/expr_iif.hpp \
+  /usr/include/boost/preprocessor/control/if.hpp \
+  /usr/include/boost/preprocessor/control/iif.hpp \
+  /usr/include/boost/preprocessor/control/limits/while_256.hpp \
+  /usr/include/boost/preprocessor/control/while.hpp \
+  /usr/include/boost/preprocessor/debug/error.hpp \
+  /usr/include/boost/preprocessor/detail/auto_rec.hpp \
+  /usr/include/boost/preprocessor/detail/check.hpp \
+  /usr/include/boost/preprocessor/detail/is_binary.hpp \
+  /usr/include/boost/preprocessor/detail/limits/auto_rec_256.hpp \
+  /usr/include/boost/preprocessor/empty.hpp \
+  /usr/include/boost/preprocessor/enum.hpp \
+  /usr/include/boost/preprocessor/enum_params.hpp \
+  /usr/include/boost/preprocessor/facilities/check_empty.hpp \
+  /usr/include/boost/preprocessor/facilities/empty.hpp \
+  /usr/include/boost/preprocessor/facilities/expand.hpp \
+  /usr/include/boost/preprocessor/facilities/identity.hpp \
+  /usr/include/boost/preprocessor/facilities/overload.hpp \
+  /usr/include/boost/preprocessor/identity.hpp \
+  /usr/include/boost/preprocessor/inc.hpp \
+  /usr/include/boost/preprocessor/iterate.hpp \
+  /usr/include/boost/preprocessor/iteration/detail/bounds/lower1.hpp \
+  /usr/include/boost/preprocessor/iteration/detail/bounds/upper1.hpp \
+  /usr/include/boost/preprocessor/iteration/detail/iter/forward1.hpp \
+  /usr/include/boost/preprocessor/iteration/detail/iter/limits/forward1_256.hpp \
+  /usr/include/boost/preprocessor/iteration/iterate.hpp \
+  /usr/include/boost/preprocessor/list/adt.hpp \
+  /usr/include/boost/preprocessor/list/detail/fold_left.hpp \
+  /usr/include/boost/preprocessor/list/detail/fold_right.hpp \
+  /usr/include/boost/preprocessor/list/detail/limits/fold_left_256.hpp \
+  /usr/include/boost/preprocessor/list/detail/limits/fold_right_256.hpp \
+  /usr/include/boost/preprocessor/list/fold_left.hpp \
+  /usr/include/boost/preprocessor/list/fold_right.hpp \
+  /usr/include/boost/preprocessor/list/limits/fold_left_256.hpp \
+  /usr/include/boost/preprocessor/list/reverse.hpp \
+  /usr/include/boost/preprocessor/logical/and.hpp \
+  /usr/include/boost/preprocessor/logical/bitand.hpp \
+  /usr/include/boost/preprocessor/logical/bitor.hpp \
+  /usr/include/boost/preprocessor/logical/bool.hpp \
+  /usr/include/boost/preprocessor/logical/compl.hpp \
+  /usr/include/boost/preprocessor/logical/limits/bool_256.hpp \
+  /usr/include/boost/preprocessor/logical/not.hpp \
+  /usr/include/boost/preprocessor/punctuation/comma.hpp \
+  /usr/include/boost/preprocessor/punctuation/comma_if.hpp \
+  /usr/include/boost/preprocessor/repeat.hpp \
+  /usr/include/boost/preprocessor/repetition/detail/for.hpp \
+  /usr/include/boost/preprocessor/repetition/detail/limits/for_256.hpp \
+  /usr/include/boost/preprocessor/repetition/enum.hpp \
+  /usr/include/boost/preprocessor/repetition/enum_binary_params.hpp \
+  /usr/include/boost/preprocessor/repetition/enum_params.hpp \
+  /usr/include/boost/preprocessor/repetition/enum_trailing_params.hpp \
+  /usr/include/boost/preprocessor/repetition/for.hpp \
+  /usr/include/boost/preprocessor/repetition/limits/for_256.hpp \
+  /usr/include/boost/preprocessor/repetition/limits/repeat_256.hpp \
+  /usr/include/boost/preprocessor/repetition/repeat.hpp \
+  /usr/include/boost/preprocessor/repetition/repeat_from_to.hpp \
+  /usr/include/boost/preprocessor/seq/cat.hpp \
+  /usr/include/boost/preprocessor/seq/detail/is_empty.hpp \
+  /usr/include/boost/preprocessor/seq/elem.hpp \
+  /usr/include/boost/preprocessor/seq/enum.hpp \
+  /usr/include/boost/preprocessor/seq/fold_left.hpp \
+  /usr/include/boost/preprocessor/seq/for_each_i.hpp \
+  /usr/include/boost/preprocessor/seq/limits/elem_256.hpp \
+  /usr/include/boost/preprocessor/seq/limits/enum_256.hpp \
+  /usr/include/boost/preprocessor/seq/limits/fold_left_256.hpp \
+  /usr/include/boost/preprocessor/seq/limits/size_256.hpp \
+  /usr/include/boost/preprocessor/seq/seq.hpp \
+  /usr/include/boost/preprocessor/seq/size.hpp \
+  /usr/include/boost/preprocessor/seq/transform.hpp \
+  /usr/include/boost/preprocessor/slot/detail/def.hpp \
+  /usr/include/boost/preprocessor/slot/detail/shared.hpp \
+  /usr/include/boost/preprocessor/slot/slot.hpp \
+  /usr/include/boost/preprocessor/stringize.hpp \
+  /usr/include/boost/preprocessor/tuple/detail/is_single_return.hpp \
+  /usr/include/boost/preprocessor/tuple/eat.hpp \
+  /usr/include/boost/preprocessor/tuple/elem.hpp \
+  /usr/include/boost/preprocessor/tuple/rem.hpp \
+  /usr/include/boost/preprocessor/variadic/elem.hpp \
+  /usr/include/boost/preprocessor/variadic/has_opt.hpp \
+  /usr/include/boost/preprocessor/variadic/limits/elem_64.hpp \
+  /usr/include/boost/preprocessor/variadic/limits/size_64.hpp \
+  /usr/include/boost/preprocessor/variadic/size.hpp \
+  /usr/include/boost/range/algorithm/equal.hpp \
+  /usr/include/boost/range/as_literal.hpp \
+  /usr/include/boost/range/begin.hpp \
+  /usr/include/boost/range/concepts.hpp \
+  /usr/include/boost/range/config.hpp \
+  /usr/include/boost/range/const_iterator.hpp \
+  /usr/include/boost/range/detail/common.hpp \
+  /usr/include/boost/range/detail/extract_optional_type.hpp \
+  /usr/include/boost/range/detail/has_member_size.hpp \
+  /usr/include/boost/range/detail/implementation_help.hpp \
+  /usr/include/boost/range/detail/misc_concept.hpp \
+  /usr/include/boost/range/detail/msvc_has_iterator_workaround.hpp \
+  /usr/include/boost/range/detail/safe_bool.hpp \
+  /usr/include/boost/range/detail/sfinae.hpp \
+  /usr/include/boost/range/detail/str_types.hpp \
+  /usr/include/boost/range/difference_type.hpp \
+  /usr/include/boost/range/distance.hpp \
+  /usr/include/boost/range/empty.hpp \
+  /usr/include/boost/range/end.hpp \
+  /usr/include/boost/range/functions.hpp \
+  /usr/include/boost/range/has_range_iterator.hpp \
+  /usr/include/boost/range/iterator.hpp \
+  /usr/include/boost/range/iterator_range.hpp \
+  /usr/include/boost/range/iterator_range_core.hpp \
+  /usr/include/boost/range/iterator_range_io.hpp \
+  /usr/include/boost/range/mutable_iterator.hpp \
+  /usr/include/boost/range/range_fwd.hpp \
+  /usr/include/boost/range/rbegin.hpp \
+  /usr/include/boost/range/rend.hpp \
+  /usr/include/boost/range/reverse_iterator.hpp \
+  /usr/include/boost/range/size.hpp \
+  /usr/include/boost/range/size_type.hpp \
+  /usr/include/boost/range/value_type.hpp \
+  /usr/include/boost/static_assert.hpp \
+  /usr/include/boost/throw_exception.hpp \
+  /usr/include/boost/type_traits/add_const.hpp \
+  /usr/include/boost/type_traits/add_lvalue_reference.hpp \
+  /usr/include/boost/type_traits/add_pointer.hpp \
+  /usr/include/boost/type_traits/add_reference.hpp \
+  /usr/include/boost/type_traits/add_rvalue_reference.hpp \
+  /usr/include/boost/type_traits/add_volatile.hpp \
+  /usr/include/boost/type_traits/alignment_of.hpp \
+  /usr/include/boost/type_traits/composite_traits.hpp \
+  /usr/include/boost/type_traits/conditional.hpp \
+  /usr/include/boost/type_traits/conjunction.hpp \
+  /usr/include/boost/type_traits/conversion_traits.hpp \
+  /usr/include/boost/type_traits/declval.hpp \
+  /usr/include/boost/type_traits/detail/config.hpp \
+  /usr/include/boost/type_traits/detail/has_binary_operator.hpp \
+  /usr/include/boost/type_traits/detail/is_function_cxx_11.hpp \
+  /usr/include/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp \
+  /usr/include/boost/type_traits/detail/yes_no_type.hpp \
+  /usr/include/boost/type_traits/enable_if.hpp \
+  /usr/include/boost/type_traits/function_traits.hpp \
+  /usr/include/boost/type_traits/has_minus.hpp \
+  /usr/include/boost/type_traits/has_minus_assign.hpp \
+  /usr/include/boost/type_traits/has_plus.hpp \
+  /usr/include/boost/type_traits/has_plus_assign.hpp \
+  /usr/include/boost/type_traits/has_trivial_copy.hpp \
+  /usr/include/boost/type_traits/has_trivial_destructor.hpp \
+  /usr/include/boost/type_traits/integral_constant.hpp \
+  /usr/include/boost/type_traits/intrinsics.hpp \
+  /usr/include/boost/type_traits/is_abstract.hpp \
+  /usr/include/boost/type_traits/is_arithmetic.hpp \
+  /usr/include/boost/type_traits/is_array.hpp \
+  /usr/include/boost/type_traits/is_base_and_derived.hpp \
+  /usr/include/boost/type_traits/is_class.hpp \
+  /usr/include/boost/type_traits/is_complete.hpp \
+  /usr/include/boost/type_traits/is_const.hpp \
+  /usr/include/boost/type_traits/is_constructible.hpp \
+  /usr/include/boost/type_traits/is_convertible.hpp \
+  /usr/include/boost/type_traits/is_copy_constructible.hpp \
+  /usr/include/boost/type_traits/is_default_constructible.hpp \
+  /usr/include/boost/type_traits/is_destructible.hpp \
+  /usr/include/boost/type_traits/is_enum.hpp \
+  /usr/include/boost/type_traits/is_floating_point.hpp \
+  /usr/include/boost/type_traits/is_function.hpp \
+  /usr/include/boost/type_traits/is_integral.hpp \
+  /usr/include/boost/type_traits/is_lvalue_reference.hpp \
+  /usr/include/boost/type_traits/is_member_function_pointer.hpp \
+  /usr/include/boost/type_traits/is_member_pointer.hpp \
+  /usr/include/boost/type_traits/is_pod.hpp \
+  /usr/include/boost/type_traits/is_pointer.hpp \
+  /usr/include/boost/type_traits/is_reference.hpp \
+  /usr/include/boost/type_traits/is_rvalue_reference.hpp \
+  /usr/include/boost/type_traits/is_same.hpp \
+  /usr/include/boost/type_traits/is_scalar.hpp \
+  /usr/include/boost/type_traits/is_signed.hpp \
+  /usr/include/boost/type_traits/is_union.hpp \
+  /usr/include/boost/type_traits/is_unsigned.hpp \
+  /usr/include/boost/type_traits/is_void.hpp \
+  /usr/include/boost/type_traits/is_volatile.hpp \
+  /usr/include/boost/type_traits/make_unsigned.hpp \
+  /usr/include/boost/type_traits/make_void.hpp \
+  /usr/include/boost/type_traits/negation.hpp \
+  /usr/include/boost/type_traits/remove_const.hpp \
+  /usr/include/boost/type_traits/remove_cv.hpp \
+  /usr/include/boost/type_traits/remove_pointer.hpp \
+  /usr/include/boost/type_traits/remove_reference.hpp \
+  /usr/include/boost/type_traits/type_identity.hpp \
+  /usr/include/boost/utility.hpp \
+  /usr/include/boost/utility/base_from_member.hpp \
+  /usr/include/boost/utility/binary.hpp \
+  /usr/include/boost/utility/detail/result_of_variadic.hpp \
+  /usr/include/boost/utility/enable_if.hpp \
+  /usr/include/boost/utility/identity_type.hpp \
+  /usr/include/boost/utility/result_of.hpp \
+  /usr/include/boost/version.hpp \
   /usr/include/c++/13/algorithm \
   /usr/include/c++/13/array \
   /usr/include/c++/13/atomic \
@@ -1275,6 +1749,7 @@ CMakeFiles/justina_gui_node.dir/include/moc_mainwindow.cpp.o: include/moc_mainwi
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/chrono \
+  /usr/include/c++/13/climits \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cmath \
   /usr/include/c++/13/codecvt \
@@ -1299,6 +1774,7 @@ CMakeFiles/justina_gui_node.dir/include/moc_mainwindow.cpp.o: include/moc_mainwi
   /usr/include/c++/13/ext/atomicity.h \
   /usr/include/c++/13/ext/concurrence.h \
   /usr/include/c++/13/ext/numeric_traits.h \
+  /usr/include/c++/13/ext/slist \
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/functional \
@@ -1358,6 +1834,7 @@ CMakeFiles/justina_gui_node.dir/include/moc_mainwindow.cpp.o: include/moc_mainwi
   /usr/include/c++/13/utility \
   /usr/include/c++/13/variant \
   /usr/include/c++/13/vector \
+  /usr/include/c++/13/version \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -1618,6 +2095,14 @@ CMakeFiles/justina_gui_node.dir/include/moc_rclcomm.cpp.o: include/moc_rclcomm.c
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp \
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/time.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__traits.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__traits.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__traits.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__traits.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
@@ -1636,6 +2121,17 @@ CMakeFiles/justina_gui_node.dir/include/moc_rclcomm.cpp.o: include/moc_rclcomm.c
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_period.hpp \
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp \
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/visibility_control.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__builder.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__struct.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__traits.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__type_support.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/path.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__builder.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__struct.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__traits.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__type_support.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/get_plan.hpp \
   /opt/ros/jazzy/include/rcl/rcl/allocator.h \
   /opt/ros/jazzy/include/rcl/rcl/arguments.h \
   /opt/ros/jazzy/include/rcl/rcl/client.h \
@@ -2010,6 +2506,8 @@ CMakeFiles/justina_gui_node.dir/include/moc_rclcomm.cpp.o: include/moc_rclcomm.c
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32_multi_array__struct.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32_multi_array__traits.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32_multi_array__type_support.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__struct.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__traits.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/multi_array_layout__struct.hpp \
@@ -2463,6 +2961,14 @@ CMakeFiles/justina_gui_node.dir/src/justina_gui_node.cpp.o: /home/catcyber02/Mob
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp \
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/time.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__traits.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__traits.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__traits.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__traits.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
@@ -2481,6 +2987,17 @@ CMakeFiles/justina_gui_node.dir/src/justina_gui_node.cpp.o: /home/catcyber02/Mob
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_period.hpp \
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp \
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/visibility_control.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__builder.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__struct.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__traits.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__type_support.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/path.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__builder.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__struct.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__traits.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__type_support.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/get_plan.hpp \
   /opt/ros/jazzy/include/rcl/rcl/allocator.h \
   /opt/ros/jazzy/include/rcl/rcl/arguments.h \
   /opt/ros/jazzy/include/rcl/rcl/client.h \
@@ -2855,6 +3372,8 @@ CMakeFiles/justina_gui_node.dir/src/justina_gui_node.cpp.o: /home/catcyber02/Mob
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32_multi_array__struct.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32_multi_array__traits.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32_multi_array__type_support.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__struct.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__traits.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/multi_array_layout__struct.hpp \
@@ -2881,6 +3400,433 @@ CMakeFiles/justina_gui_node.dir/src/justina_gui_node.cpp.o: /home/catcyber02/Mob
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \
+  /usr/include/boost/algorithm/string.hpp \
+  /usr/include/boost/algorithm/string/case_conv.hpp \
+  /usr/include/boost/algorithm/string/classification.hpp \
+  /usr/include/boost/algorithm/string/compare.hpp \
+  /usr/include/boost/algorithm/string/concept.hpp \
+  /usr/include/boost/algorithm/string/config.hpp \
+  /usr/include/boost/algorithm/string/constants.hpp \
+  /usr/include/boost/algorithm/string/detail/case_conv.hpp \
+  /usr/include/boost/algorithm/string/detail/classification.hpp \
+  /usr/include/boost/algorithm/string/detail/find_format.hpp \
+  /usr/include/boost/algorithm/string/detail/find_format_all.hpp \
+  /usr/include/boost/algorithm/string/detail/find_format_store.hpp \
+  /usr/include/boost/algorithm/string/detail/find_iterator.hpp \
+  /usr/include/boost/algorithm/string/detail/finder.hpp \
+  /usr/include/boost/algorithm/string/detail/formatter.hpp \
+  /usr/include/boost/algorithm/string/detail/predicate.hpp \
+  /usr/include/boost/algorithm/string/detail/replace_storage.hpp \
+  /usr/include/boost/algorithm/string/detail/sequence.hpp \
+  /usr/include/boost/algorithm/string/detail/trim.hpp \
+  /usr/include/boost/algorithm/string/detail/util.hpp \
+  /usr/include/boost/algorithm/string/erase.hpp \
+  /usr/include/boost/algorithm/string/find.hpp \
+  /usr/include/boost/algorithm/string/find_format.hpp \
+  /usr/include/boost/algorithm/string/find_iterator.hpp \
+  /usr/include/boost/algorithm/string/finder.hpp \
+  /usr/include/boost/algorithm/string/formatter.hpp \
+  /usr/include/boost/algorithm/string/iter_find.hpp \
+  /usr/include/boost/algorithm/string/join.hpp \
+  /usr/include/boost/algorithm/string/predicate.hpp \
+  /usr/include/boost/algorithm/string/predicate_facade.hpp \
+  /usr/include/boost/algorithm/string/replace.hpp \
+  /usr/include/boost/algorithm/string/sequence_traits.hpp \
+  /usr/include/boost/algorithm/string/split.hpp \
+  /usr/include/boost/algorithm/string/std/list_traits.hpp \
+  /usr/include/boost/algorithm/string/std/slist_traits.hpp \
+  /usr/include/boost/algorithm/string/std/string_traits.hpp \
+  /usr/include/boost/algorithm/string/std_containers_traits.hpp \
+  /usr/include/boost/algorithm/string/trim.hpp \
+  /usr/include/boost/algorithm/string/yes_no_type.hpp \
+  /usr/include/boost/assert.hpp \
+  /usr/include/boost/assert/source_location.hpp \
+  /usr/include/boost/bind/detail/requires_cxx11.hpp \
+  /usr/include/boost/bind/mem_fn.hpp \
+  /usr/include/boost/bind/mem_fn_cc.hpp \
+  /usr/include/boost/bind/mem_fn_template.hpp \
+  /usr/include/boost/concept/assert.hpp \
+  /usr/include/boost/concept/detail/backward_compatibility.hpp \
+  /usr/include/boost/concept/detail/concept_def.hpp \
+  /usr/include/boost/concept/detail/concept_undef.hpp \
+  /usr/include/boost/concept/detail/general.hpp \
+  /usr/include/boost/concept/detail/has_constraints.hpp \
+  /usr/include/boost/concept/usage.hpp \
+  /usr/include/boost/concept_check.hpp \
+  /usr/include/boost/config.hpp \
+  /usr/include/boost/config/compiler/gcc.hpp \
+  /usr/include/boost/config/detail/cxx_composite.hpp \
+  /usr/include/boost/config/detail/posix_features.hpp \
+  /usr/include/boost/config/detail/select_compiler_config.hpp \
+  /usr/include/boost/config/detail/select_platform_config.hpp \
+  /usr/include/boost/config/detail/select_stdlib_config.hpp \
+  /usr/include/boost/config/detail/suffix.hpp \
+  /usr/include/boost/config/helper_macros.hpp \
+  /usr/include/boost/config/no_tr1/functional.hpp \
+  /usr/include/boost/config/no_tr1/memory.hpp \
+  /usr/include/boost/config/platform/linux.hpp \
+  /usr/include/boost/config/pragma_message.hpp \
+  /usr/include/boost/config/stdlib/libstdcpp3.hpp \
+  /usr/include/boost/config/user.hpp \
+  /usr/include/boost/config/workaround.hpp \
+  /usr/include/boost/core/addressof.hpp \
+  /usr/include/boost/core/checked_delete.hpp \
+  /usr/include/boost/core/demangle.hpp \
+  /usr/include/boost/core/enable_if.hpp \
+  /usr/include/boost/core/no_exceptions_support.hpp \
+  /usr/include/boost/core/noncopyable.hpp \
+  /usr/include/boost/core/ref.hpp \
+  /usr/include/boost/core/typeinfo.hpp \
+  /usr/include/boost/core/use_default.hpp \
+  /usr/include/boost/cstdint.hpp \
+  /usr/include/boost/current_function.hpp \
+  /usr/include/boost/detail/indirect_traits.hpp \
+  /usr/include/boost/detail/select_type.hpp \
+  /usr/include/boost/detail/workaround.hpp \
+  /usr/include/boost/exception/exception.hpp \
+  /usr/include/boost/function.hpp \
+  /usr/include/boost/function/detail/epilogue.hpp \
+  /usr/include/boost/function/detail/function_iterate.hpp \
+  /usr/include/boost/function/detail/maybe_include.hpp \
+  /usr/include/boost/function/detail/prologue.hpp \
+  /usr/include/boost/function/detail/requires_cxx11.hpp \
+  /usr/include/boost/function/function_base.hpp \
+  /usr/include/boost/function/function_fwd.hpp \
+  /usr/include/boost/function/function_template.hpp \
+  /usr/include/boost/function_equal.hpp \
+  /usr/include/boost/get_pointer.hpp \
+  /usr/include/boost/iterator/advance.hpp \
+  /usr/include/boost/iterator/detail/config_def.hpp \
+  /usr/include/boost/iterator/detail/config_undef.hpp \
+  /usr/include/boost/iterator/detail/enable_if.hpp \
+  /usr/include/boost/iterator/detail/facade_iterator_category.hpp \
+  /usr/include/boost/iterator/distance.hpp \
+  /usr/include/boost/iterator/interoperable.hpp \
+  /usr/include/boost/iterator/is_iterator.hpp \
+  /usr/include/boost/iterator/iterator_adaptor.hpp \
+  /usr/include/boost/iterator/iterator_categories.hpp \
+  /usr/include/boost/iterator/iterator_concepts.hpp \
+  /usr/include/boost/iterator/iterator_facade.hpp \
+  /usr/include/boost/iterator/iterator_traits.hpp \
+  /usr/include/boost/iterator/reverse_iterator.hpp \
+  /usr/include/boost/iterator/transform_iterator.hpp \
+  /usr/include/boost/limits.hpp \
+  /usr/include/boost/mem_fn.hpp \
+  /usr/include/boost/mpl/always.hpp \
+  /usr/include/boost/mpl/and.hpp \
+  /usr/include/boost/mpl/apply.hpp \
+  /usr/include/boost/mpl/apply_fwd.hpp \
+  /usr/include/boost/mpl/apply_wrap.hpp \
+  /usr/include/boost/mpl/arg.hpp \
+  /usr/include/boost/mpl/arg_fwd.hpp \
+  /usr/include/boost/mpl/assert.hpp \
+  /usr/include/boost/mpl/aux_/adl_barrier.hpp \
+  /usr/include/boost/mpl/aux_/arg_typedef.hpp \
+  /usr/include/boost/mpl/aux_/arity.hpp \
+  /usr/include/boost/mpl/aux_/arity_spec.hpp \
+  /usr/include/boost/mpl/aux_/common_name_wknd.hpp \
+  /usr/include/boost/mpl/aux_/config/adl.hpp \
+  /usr/include/boost/mpl/aux_/config/arrays.hpp \
+  /usr/include/boost/mpl/aux_/config/bcc.hpp \
+  /usr/include/boost/mpl/aux_/config/bind.hpp \
+  /usr/include/boost/mpl/aux_/config/compiler.hpp \
+  /usr/include/boost/mpl/aux_/config/ctps.hpp \
+  /usr/include/boost/mpl/aux_/config/dtp.hpp \
+  /usr/include/boost/mpl/aux_/config/eti.hpp \
+  /usr/include/boost/mpl/aux_/config/gcc.hpp \
+  /usr/include/boost/mpl/aux_/config/gpu.hpp \
+  /usr/include/boost/mpl/aux_/config/has_apply.hpp \
+  /usr/include/boost/mpl/aux_/config/has_xxx.hpp \
+  /usr/include/boost/mpl/aux_/config/integral.hpp \
+  /usr/include/boost/mpl/aux_/config/intel.hpp \
+  /usr/include/boost/mpl/aux_/config/lambda.hpp \
+  /usr/include/boost/mpl/aux_/config/msvc.hpp \
+  /usr/include/boost/mpl/aux_/config/msvc_typename.hpp \
+  /usr/include/boost/mpl/aux_/config/nttp.hpp \
+  /usr/include/boost/mpl/aux_/config/overload_resolution.hpp \
+  /usr/include/boost/mpl/aux_/config/pp_counter.hpp \
+  /usr/include/boost/mpl/aux_/config/preprocessor.hpp \
+  /usr/include/boost/mpl/aux_/config/static_constant.hpp \
+  /usr/include/boost/mpl/aux_/config/ttp.hpp \
+  /usr/include/boost/mpl/aux_/config/use_preprocessed.hpp \
+  /usr/include/boost/mpl/aux_/config/workaround.hpp \
+  /usr/include/boost/mpl/aux_/full_lambda.hpp \
+  /usr/include/boost/mpl/aux_/has_apply.hpp \
+  /usr/include/boost/mpl/aux_/has_type.hpp \
+  /usr/include/boost/mpl/aux_/include_preprocessed.hpp \
+  /usr/include/boost/mpl/aux_/integral_wrapper.hpp \
+  /usr/include/boost/mpl/aux_/lambda_arity_param.hpp \
+  /usr/include/boost/mpl/aux_/lambda_support.hpp \
+  /usr/include/boost/mpl/aux_/msvc_never_true.hpp \
+  /usr/include/boost/mpl/aux_/na.hpp \
+  /usr/include/boost/mpl/aux_/na_assert.hpp \
+  /usr/include/boost/mpl/aux_/na_fwd.hpp \
+  /usr/include/boost/mpl/aux_/na_spec.hpp \
+  /usr/include/boost/mpl/aux_/nested_type_wknd.hpp \
+  /usr/include/boost/mpl/aux_/nttp_decl.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/bind.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/or.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/quote.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/template_arity.hpp \
+  /usr/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp \
+  /usr/include/boost/mpl/aux_/preprocessor/default_params.hpp \
+  /usr/include/boost/mpl/aux_/preprocessor/enum.hpp \
+  /usr/include/boost/mpl/aux_/preprocessor/params.hpp \
+  /usr/include/boost/mpl/aux_/static_cast.hpp \
+  /usr/include/boost/mpl/aux_/template_arity.hpp \
+  /usr/include/boost/mpl/aux_/template_arity_fwd.hpp \
+  /usr/include/boost/mpl/aux_/type_wrapper.hpp \
+  /usr/include/boost/mpl/aux_/value_wknd.hpp \
+  /usr/include/boost/mpl/aux_/yes_no.hpp \
+  /usr/include/boost/mpl/bind.hpp \
+  /usr/include/boost/mpl/bind_fwd.hpp \
+  /usr/include/boost/mpl/bool.hpp \
+  /usr/include/boost/mpl/bool_fwd.hpp \
+  /usr/include/boost/mpl/eval_if.hpp \
+  /usr/include/boost/mpl/has_xxx.hpp \
+  /usr/include/boost/mpl/identity.hpp \
+  /usr/include/boost/mpl/if.hpp \
+  /usr/include/boost/mpl/int.hpp \
+  /usr/include/boost/mpl/int_fwd.hpp \
+  /usr/include/boost/mpl/integral_c_tag.hpp \
+  /usr/include/boost/mpl/lambda.hpp \
+  /usr/include/boost/mpl/lambda_fwd.hpp \
+  /usr/include/boost/mpl/limits/arity.hpp \
+  /usr/include/boost/mpl/logical.hpp \
+  /usr/include/boost/mpl/next.hpp \
+  /usr/include/boost/mpl/next_prior.hpp \
+  /usr/include/boost/mpl/not.hpp \
+  /usr/include/boost/mpl/or.hpp \
+  /usr/include/boost/mpl/placeholders.hpp \
+  /usr/include/boost/mpl/protect.hpp \
+  /usr/include/boost/mpl/quote.hpp \
+  /usr/include/boost/mpl/void.hpp \
+  /usr/include/boost/mpl/void_fwd.hpp \
+  /usr/include/boost/next_prior.hpp \
+  /usr/include/boost/preprocessor/arithmetic/add.hpp \
+  /usr/include/boost/preprocessor/arithmetic/dec.hpp \
+  /usr/include/boost/preprocessor/arithmetic/detail/div_base.hpp \
+  /usr/include/boost/preprocessor/arithmetic/detail/is_1_number.hpp \
+  /usr/include/boost/preprocessor/arithmetic/detail/is_maximum_number.hpp \
+  /usr/include/boost/preprocessor/arithmetic/detail/is_minimum_number.hpp \
+  /usr/include/boost/preprocessor/arithmetic/detail/maximum_number.hpp \
+  /usr/include/boost/preprocessor/arithmetic/inc.hpp \
+  /usr/include/boost/preprocessor/arithmetic/limits/dec_256.hpp \
+  /usr/include/boost/preprocessor/arithmetic/limits/inc_256.hpp \
+  /usr/include/boost/preprocessor/arithmetic/mod.hpp \
+  /usr/include/boost/preprocessor/arithmetic/sub.hpp \
+  /usr/include/boost/preprocessor/array/data.hpp \
+  /usr/include/boost/preprocessor/array/elem.hpp \
+  /usr/include/boost/preprocessor/array/size.hpp \
+  /usr/include/boost/preprocessor/cat.hpp \
+  /usr/include/boost/preprocessor/comma_if.hpp \
+  /usr/include/boost/preprocessor/comparison/equal.hpp \
+  /usr/include/boost/preprocessor/comparison/less_equal.hpp \
+  /usr/include/boost/preprocessor/comparison/limits/not_equal_256.hpp \
+  /usr/include/boost/preprocessor/comparison/not_equal.hpp \
+  /usr/include/boost/preprocessor/config/config.hpp \
+  /usr/include/boost/preprocessor/config/limits.hpp \
+  /usr/include/boost/preprocessor/control/deduce_d.hpp \
+  /usr/include/boost/preprocessor/control/detail/limits/while_256.hpp \
+  /usr/include/boost/preprocessor/control/detail/while.hpp \
+  /usr/include/boost/preprocessor/control/expr_iif.hpp \
+  /usr/include/boost/preprocessor/control/if.hpp \
+  /usr/include/boost/preprocessor/control/iif.hpp \
+  /usr/include/boost/preprocessor/control/limits/while_256.hpp \
+  /usr/include/boost/preprocessor/control/while.hpp \
+  /usr/include/boost/preprocessor/debug/error.hpp \
+  /usr/include/boost/preprocessor/detail/auto_rec.hpp \
+  /usr/include/boost/preprocessor/detail/check.hpp \
+  /usr/include/boost/preprocessor/detail/is_binary.hpp \
+  /usr/include/boost/preprocessor/detail/limits/auto_rec_256.hpp \
+  /usr/include/boost/preprocessor/empty.hpp \
+  /usr/include/boost/preprocessor/enum.hpp \
+  /usr/include/boost/preprocessor/enum_params.hpp \
+  /usr/include/boost/preprocessor/facilities/check_empty.hpp \
+  /usr/include/boost/preprocessor/facilities/empty.hpp \
+  /usr/include/boost/preprocessor/facilities/expand.hpp \
+  /usr/include/boost/preprocessor/facilities/identity.hpp \
+  /usr/include/boost/preprocessor/facilities/overload.hpp \
+  /usr/include/boost/preprocessor/identity.hpp \
+  /usr/include/boost/preprocessor/inc.hpp \
+  /usr/include/boost/preprocessor/iterate.hpp \
+  /usr/include/boost/preprocessor/iteration/detail/bounds/lower1.hpp \
+  /usr/include/boost/preprocessor/iteration/detail/bounds/upper1.hpp \
+  /usr/include/boost/preprocessor/iteration/detail/iter/forward1.hpp \
+  /usr/include/boost/preprocessor/iteration/detail/iter/limits/forward1_256.hpp \
+  /usr/include/boost/preprocessor/iteration/iterate.hpp \
+  /usr/include/boost/preprocessor/list/adt.hpp \
+  /usr/include/boost/preprocessor/list/detail/fold_left.hpp \
+  /usr/include/boost/preprocessor/list/detail/fold_right.hpp \
+  /usr/include/boost/preprocessor/list/detail/limits/fold_left_256.hpp \
+  /usr/include/boost/preprocessor/list/detail/limits/fold_right_256.hpp \
+  /usr/include/boost/preprocessor/list/fold_left.hpp \
+  /usr/include/boost/preprocessor/list/fold_right.hpp \
+  /usr/include/boost/preprocessor/list/limits/fold_left_256.hpp \
+  /usr/include/boost/preprocessor/list/reverse.hpp \
+  /usr/include/boost/preprocessor/logical/and.hpp \
+  /usr/include/boost/preprocessor/logical/bitand.hpp \
+  /usr/include/boost/preprocessor/logical/bitor.hpp \
+  /usr/include/boost/preprocessor/logical/bool.hpp \
+  /usr/include/boost/preprocessor/logical/compl.hpp \
+  /usr/include/boost/preprocessor/logical/limits/bool_256.hpp \
+  /usr/include/boost/preprocessor/logical/not.hpp \
+  /usr/include/boost/preprocessor/punctuation/comma.hpp \
+  /usr/include/boost/preprocessor/punctuation/comma_if.hpp \
+  /usr/include/boost/preprocessor/repeat.hpp \
+  /usr/include/boost/preprocessor/repetition/detail/for.hpp \
+  /usr/include/boost/preprocessor/repetition/detail/limits/for_256.hpp \
+  /usr/include/boost/preprocessor/repetition/enum.hpp \
+  /usr/include/boost/preprocessor/repetition/enum_binary_params.hpp \
+  /usr/include/boost/preprocessor/repetition/enum_params.hpp \
+  /usr/include/boost/preprocessor/repetition/enum_trailing_params.hpp \
+  /usr/include/boost/preprocessor/repetition/for.hpp \
+  /usr/include/boost/preprocessor/repetition/limits/for_256.hpp \
+  /usr/include/boost/preprocessor/repetition/limits/repeat_256.hpp \
+  /usr/include/boost/preprocessor/repetition/repeat.hpp \
+  /usr/include/boost/preprocessor/repetition/repeat_from_to.hpp \
+  /usr/include/boost/preprocessor/seq/cat.hpp \
+  /usr/include/boost/preprocessor/seq/detail/is_empty.hpp \
+  /usr/include/boost/preprocessor/seq/elem.hpp \
+  /usr/include/boost/preprocessor/seq/enum.hpp \
+  /usr/include/boost/preprocessor/seq/fold_left.hpp \
+  /usr/include/boost/preprocessor/seq/for_each_i.hpp \
+  /usr/include/boost/preprocessor/seq/limits/elem_256.hpp \
+  /usr/include/boost/preprocessor/seq/limits/enum_256.hpp \
+  /usr/include/boost/preprocessor/seq/limits/fold_left_256.hpp \
+  /usr/include/boost/preprocessor/seq/limits/size_256.hpp \
+  /usr/include/boost/preprocessor/seq/seq.hpp \
+  /usr/include/boost/preprocessor/seq/size.hpp \
+  /usr/include/boost/preprocessor/seq/transform.hpp \
+  /usr/include/boost/preprocessor/slot/detail/def.hpp \
+  /usr/include/boost/preprocessor/slot/detail/shared.hpp \
+  /usr/include/boost/preprocessor/slot/slot.hpp \
+  /usr/include/boost/preprocessor/stringize.hpp \
+  /usr/include/boost/preprocessor/tuple/detail/is_single_return.hpp \
+  /usr/include/boost/preprocessor/tuple/eat.hpp \
+  /usr/include/boost/preprocessor/tuple/elem.hpp \
+  /usr/include/boost/preprocessor/tuple/rem.hpp \
+  /usr/include/boost/preprocessor/variadic/elem.hpp \
+  /usr/include/boost/preprocessor/variadic/has_opt.hpp \
+  /usr/include/boost/preprocessor/variadic/limits/elem_64.hpp \
+  /usr/include/boost/preprocessor/variadic/limits/size_64.hpp \
+  /usr/include/boost/preprocessor/variadic/size.hpp \
+  /usr/include/boost/range/algorithm/equal.hpp \
+  /usr/include/boost/range/as_literal.hpp \
+  /usr/include/boost/range/begin.hpp \
+  /usr/include/boost/range/concepts.hpp \
+  /usr/include/boost/range/config.hpp \
+  /usr/include/boost/range/const_iterator.hpp \
+  /usr/include/boost/range/detail/common.hpp \
+  /usr/include/boost/range/detail/extract_optional_type.hpp \
+  /usr/include/boost/range/detail/has_member_size.hpp \
+  /usr/include/boost/range/detail/implementation_help.hpp \
+  /usr/include/boost/range/detail/misc_concept.hpp \
+  /usr/include/boost/range/detail/msvc_has_iterator_workaround.hpp \
+  /usr/include/boost/range/detail/safe_bool.hpp \
+  /usr/include/boost/range/detail/sfinae.hpp \
+  /usr/include/boost/range/detail/str_types.hpp \
+  /usr/include/boost/range/difference_type.hpp \
+  /usr/include/boost/range/distance.hpp \
+  /usr/include/boost/range/empty.hpp \
+  /usr/include/boost/range/end.hpp \
+  /usr/include/boost/range/functions.hpp \
+  /usr/include/boost/range/has_range_iterator.hpp \
+  /usr/include/boost/range/iterator.hpp \
+  /usr/include/boost/range/iterator_range.hpp \
+  /usr/include/boost/range/iterator_range_core.hpp \
+  /usr/include/boost/range/iterator_range_io.hpp \
+  /usr/include/boost/range/mutable_iterator.hpp \
+  /usr/include/boost/range/range_fwd.hpp \
+  /usr/include/boost/range/rbegin.hpp \
+  /usr/include/boost/range/rend.hpp \
+  /usr/include/boost/range/reverse_iterator.hpp \
+  /usr/include/boost/range/size.hpp \
+  /usr/include/boost/range/size_type.hpp \
+  /usr/include/boost/range/value_type.hpp \
+  /usr/include/boost/static_assert.hpp \
+  /usr/include/boost/throw_exception.hpp \
+  /usr/include/boost/type_traits/add_const.hpp \
+  /usr/include/boost/type_traits/add_lvalue_reference.hpp \
+  /usr/include/boost/type_traits/add_pointer.hpp \
+  /usr/include/boost/type_traits/add_reference.hpp \
+  /usr/include/boost/type_traits/add_rvalue_reference.hpp \
+  /usr/include/boost/type_traits/add_volatile.hpp \
+  /usr/include/boost/type_traits/alignment_of.hpp \
+  /usr/include/boost/type_traits/composite_traits.hpp \
+  /usr/include/boost/type_traits/conditional.hpp \
+  /usr/include/boost/type_traits/conjunction.hpp \
+  /usr/include/boost/type_traits/conversion_traits.hpp \
+  /usr/include/boost/type_traits/declval.hpp \
+  /usr/include/boost/type_traits/detail/config.hpp \
+  /usr/include/boost/type_traits/detail/has_binary_operator.hpp \
+  /usr/include/boost/type_traits/detail/is_function_cxx_11.hpp \
+  /usr/include/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp \
+  /usr/include/boost/type_traits/detail/yes_no_type.hpp \
+  /usr/include/boost/type_traits/enable_if.hpp \
+  /usr/include/boost/type_traits/function_traits.hpp \
+  /usr/include/boost/type_traits/has_minus.hpp \
+  /usr/include/boost/type_traits/has_minus_assign.hpp \
+  /usr/include/boost/type_traits/has_plus.hpp \
+  /usr/include/boost/type_traits/has_plus_assign.hpp \
+  /usr/include/boost/type_traits/has_trivial_copy.hpp \
+  /usr/include/boost/type_traits/has_trivial_destructor.hpp \
+  /usr/include/boost/type_traits/integral_constant.hpp \
+  /usr/include/boost/type_traits/intrinsics.hpp \
+  /usr/include/boost/type_traits/is_abstract.hpp \
+  /usr/include/boost/type_traits/is_arithmetic.hpp \
+  /usr/include/boost/type_traits/is_array.hpp \
+  /usr/include/boost/type_traits/is_base_and_derived.hpp \
+  /usr/include/boost/type_traits/is_class.hpp \
+  /usr/include/boost/type_traits/is_complete.hpp \
+  /usr/include/boost/type_traits/is_const.hpp \
+  /usr/include/boost/type_traits/is_constructible.hpp \
+  /usr/include/boost/type_traits/is_convertible.hpp \
+  /usr/include/boost/type_traits/is_copy_constructible.hpp \
+  /usr/include/boost/type_traits/is_default_constructible.hpp \
+  /usr/include/boost/type_traits/is_destructible.hpp \
+  /usr/include/boost/type_traits/is_enum.hpp \
+  /usr/include/boost/type_traits/is_floating_point.hpp \
+  /usr/include/boost/type_traits/is_function.hpp \
+  /usr/include/boost/type_traits/is_integral.hpp \
+  /usr/include/boost/type_traits/is_lvalue_reference.hpp \
+  /usr/include/boost/type_traits/is_member_function_pointer.hpp \
+  /usr/include/boost/type_traits/is_member_pointer.hpp \
+  /usr/include/boost/type_traits/is_pod.hpp \
+  /usr/include/boost/type_traits/is_pointer.hpp \
+  /usr/include/boost/type_traits/is_reference.hpp \
+  /usr/include/boost/type_traits/is_rvalue_reference.hpp \
+  /usr/include/boost/type_traits/is_same.hpp \
+  /usr/include/boost/type_traits/is_scalar.hpp \
+  /usr/include/boost/type_traits/is_signed.hpp \
+  /usr/include/boost/type_traits/is_union.hpp \
+  /usr/include/boost/type_traits/is_unsigned.hpp \
+  /usr/include/boost/type_traits/is_void.hpp \
+  /usr/include/boost/type_traits/is_volatile.hpp \
+  /usr/include/boost/type_traits/make_unsigned.hpp \
+  /usr/include/boost/type_traits/make_void.hpp \
+  /usr/include/boost/type_traits/negation.hpp \
+  /usr/include/boost/type_traits/remove_const.hpp \
+  /usr/include/boost/type_traits/remove_cv.hpp \
+  /usr/include/boost/type_traits/remove_pointer.hpp \
+  /usr/include/boost/type_traits/remove_reference.hpp \
+  /usr/include/boost/type_traits/type_identity.hpp \
+  /usr/include/boost/utility.hpp \
+  /usr/include/boost/utility/base_from_member.hpp \
+  /usr/include/boost/utility/binary.hpp \
+  /usr/include/boost/utility/detail/result_of_variadic.hpp \
+  /usr/include/boost/utility/enable_if.hpp \
+  /usr/include/boost/utility/identity_type.hpp \
+  /usr/include/boost/utility/result_of.hpp \
+  /usr/include/boost/version.hpp \
   /usr/include/c++/13/algorithm \
   /usr/include/c++/13/array \
   /usr/include/c++/13/atomic \
@@ -2998,6 +3944,7 @@ CMakeFiles/justina_gui_node.dir/src/justina_gui_node.cpp.o: /home/catcyber02/Mob
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/chrono \
+  /usr/include/c++/13/climits \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cmath \
   /usr/include/c++/13/codecvt \
@@ -3022,6 +3969,7 @@ CMakeFiles/justina_gui_node.dir/src/justina_gui_node.cpp.o: /home/catcyber02/Mob
   /usr/include/c++/13/ext/atomicity.h \
   /usr/include/c++/13/ext/concurrence.h \
   /usr/include/c++/13/ext/numeric_traits.h \
+  /usr/include/c++/13/ext/slist \
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/functional \
@@ -3081,6 +4029,7 @@ CMakeFiles/justina_gui_node.dir/src/justina_gui_node.cpp.o: /home/catcyber02/Mob
   /usr/include/c++/13/utility \
   /usr/include/c++/13/variant \
   /usr/include/c++/13/vector \
+  /usr/include/c++/13/version \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -3353,6 +4302,14 @@ CMakeFiles/justina_gui_node.dir/src/mainwindow.cpp.o: /home/catcyber02/Mobile-Ro
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp \
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/time.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__traits.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__traits.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__traits.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__traits.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
@@ -3371,6 +4328,17 @@ CMakeFiles/justina_gui_node.dir/src/mainwindow.cpp.o: /home/catcyber02/Mobile-Ro
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_period.hpp \
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp \
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/visibility_control.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__builder.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__struct.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__traits.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__type_support.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/path.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__builder.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__struct.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__traits.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__type_support.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/get_plan.hpp \
   /opt/ros/jazzy/include/rcl/rcl/allocator.h \
   /opt/ros/jazzy/include/rcl/rcl/arguments.h \
   /opt/ros/jazzy/include/rcl/rcl/client.h \
@@ -3745,6 +4713,8 @@ CMakeFiles/justina_gui_node.dir/src/mainwindow.cpp.o: /home/catcyber02/Mobile-Ro
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32_multi_array__struct.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32_multi_array__traits.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32_multi_array__type_support.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__struct.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__traits.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/multi_array_layout__struct.hpp \
@@ -3771,6 +4741,433 @@ CMakeFiles/justina_gui_node.dir/src/mainwindow.cpp.o: /home/catcyber02/Mobile-Ro
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \
+  /usr/include/boost/algorithm/string.hpp \
+  /usr/include/boost/algorithm/string/case_conv.hpp \
+  /usr/include/boost/algorithm/string/classification.hpp \
+  /usr/include/boost/algorithm/string/compare.hpp \
+  /usr/include/boost/algorithm/string/concept.hpp \
+  /usr/include/boost/algorithm/string/config.hpp \
+  /usr/include/boost/algorithm/string/constants.hpp \
+  /usr/include/boost/algorithm/string/detail/case_conv.hpp \
+  /usr/include/boost/algorithm/string/detail/classification.hpp \
+  /usr/include/boost/algorithm/string/detail/find_format.hpp \
+  /usr/include/boost/algorithm/string/detail/find_format_all.hpp \
+  /usr/include/boost/algorithm/string/detail/find_format_store.hpp \
+  /usr/include/boost/algorithm/string/detail/find_iterator.hpp \
+  /usr/include/boost/algorithm/string/detail/finder.hpp \
+  /usr/include/boost/algorithm/string/detail/formatter.hpp \
+  /usr/include/boost/algorithm/string/detail/predicate.hpp \
+  /usr/include/boost/algorithm/string/detail/replace_storage.hpp \
+  /usr/include/boost/algorithm/string/detail/sequence.hpp \
+  /usr/include/boost/algorithm/string/detail/trim.hpp \
+  /usr/include/boost/algorithm/string/detail/util.hpp \
+  /usr/include/boost/algorithm/string/erase.hpp \
+  /usr/include/boost/algorithm/string/find.hpp \
+  /usr/include/boost/algorithm/string/find_format.hpp \
+  /usr/include/boost/algorithm/string/find_iterator.hpp \
+  /usr/include/boost/algorithm/string/finder.hpp \
+  /usr/include/boost/algorithm/string/formatter.hpp \
+  /usr/include/boost/algorithm/string/iter_find.hpp \
+  /usr/include/boost/algorithm/string/join.hpp \
+  /usr/include/boost/algorithm/string/predicate.hpp \
+  /usr/include/boost/algorithm/string/predicate_facade.hpp \
+  /usr/include/boost/algorithm/string/replace.hpp \
+  /usr/include/boost/algorithm/string/sequence_traits.hpp \
+  /usr/include/boost/algorithm/string/split.hpp \
+  /usr/include/boost/algorithm/string/std/list_traits.hpp \
+  /usr/include/boost/algorithm/string/std/slist_traits.hpp \
+  /usr/include/boost/algorithm/string/std/string_traits.hpp \
+  /usr/include/boost/algorithm/string/std_containers_traits.hpp \
+  /usr/include/boost/algorithm/string/trim.hpp \
+  /usr/include/boost/algorithm/string/yes_no_type.hpp \
+  /usr/include/boost/assert.hpp \
+  /usr/include/boost/assert/source_location.hpp \
+  /usr/include/boost/bind/detail/requires_cxx11.hpp \
+  /usr/include/boost/bind/mem_fn.hpp \
+  /usr/include/boost/bind/mem_fn_cc.hpp \
+  /usr/include/boost/bind/mem_fn_template.hpp \
+  /usr/include/boost/concept/assert.hpp \
+  /usr/include/boost/concept/detail/backward_compatibility.hpp \
+  /usr/include/boost/concept/detail/concept_def.hpp \
+  /usr/include/boost/concept/detail/concept_undef.hpp \
+  /usr/include/boost/concept/detail/general.hpp \
+  /usr/include/boost/concept/detail/has_constraints.hpp \
+  /usr/include/boost/concept/usage.hpp \
+  /usr/include/boost/concept_check.hpp \
+  /usr/include/boost/config.hpp \
+  /usr/include/boost/config/compiler/gcc.hpp \
+  /usr/include/boost/config/detail/cxx_composite.hpp \
+  /usr/include/boost/config/detail/posix_features.hpp \
+  /usr/include/boost/config/detail/select_compiler_config.hpp \
+  /usr/include/boost/config/detail/select_platform_config.hpp \
+  /usr/include/boost/config/detail/select_stdlib_config.hpp \
+  /usr/include/boost/config/detail/suffix.hpp \
+  /usr/include/boost/config/helper_macros.hpp \
+  /usr/include/boost/config/no_tr1/functional.hpp \
+  /usr/include/boost/config/no_tr1/memory.hpp \
+  /usr/include/boost/config/platform/linux.hpp \
+  /usr/include/boost/config/pragma_message.hpp \
+  /usr/include/boost/config/stdlib/libstdcpp3.hpp \
+  /usr/include/boost/config/user.hpp \
+  /usr/include/boost/config/workaround.hpp \
+  /usr/include/boost/core/addressof.hpp \
+  /usr/include/boost/core/checked_delete.hpp \
+  /usr/include/boost/core/demangle.hpp \
+  /usr/include/boost/core/enable_if.hpp \
+  /usr/include/boost/core/no_exceptions_support.hpp \
+  /usr/include/boost/core/noncopyable.hpp \
+  /usr/include/boost/core/ref.hpp \
+  /usr/include/boost/core/typeinfo.hpp \
+  /usr/include/boost/core/use_default.hpp \
+  /usr/include/boost/cstdint.hpp \
+  /usr/include/boost/current_function.hpp \
+  /usr/include/boost/detail/indirect_traits.hpp \
+  /usr/include/boost/detail/select_type.hpp \
+  /usr/include/boost/detail/workaround.hpp \
+  /usr/include/boost/exception/exception.hpp \
+  /usr/include/boost/function.hpp \
+  /usr/include/boost/function/detail/epilogue.hpp \
+  /usr/include/boost/function/detail/function_iterate.hpp \
+  /usr/include/boost/function/detail/maybe_include.hpp \
+  /usr/include/boost/function/detail/prologue.hpp \
+  /usr/include/boost/function/detail/requires_cxx11.hpp \
+  /usr/include/boost/function/function_base.hpp \
+  /usr/include/boost/function/function_fwd.hpp \
+  /usr/include/boost/function/function_template.hpp \
+  /usr/include/boost/function_equal.hpp \
+  /usr/include/boost/get_pointer.hpp \
+  /usr/include/boost/iterator/advance.hpp \
+  /usr/include/boost/iterator/detail/config_def.hpp \
+  /usr/include/boost/iterator/detail/config_undef.hpp \
+  /usr/include/boost/iterator/detail/enable_if.hpp \
+  /usr/include/boost/iterator/detail/facade_iterator_category.hpp \
+  /usr/include/boost/iterator/distance.hpp \
+  /usr/include/boost/iterator/interoperable.hpp \
+  /usr/include/boost/iterator/is_iterator.hpp \
+  /usr/include/boost/iterator/iterator_adaptor.hpp \
+  /usr/include/boost/iterator/iterator_categories.hpp \
+  /usr/include/boost/iterator/iterator_concepts.hpp \
+  /usr/include/boost/iterator/iterator_facade.hpp \
+  /usr/include/boost/iterator/iterator_traits.hpp \
+  /usr/include/boost/iterator/reverse_iterator.hpp \
+  /usr/include/boost/iterator/transform_iterator.hpp \
+  /usr/include/boost/limits.hpp \
+  /usr/include/boost/mem_fn.hpp \
+  /usr/include/boost/mpl/always.hpp \
+  /usr/include/boost/mpl/and.hpp \
+  /usr/include/boost/mpl/apply.hpp \
+  /usr/include/boost/mpl/apply_fwd.hpp \
+  /usr/include/boost/mpl/apply_wrap.hpp \
+  /usr/include/boost/mpl/arg.hpp \
+  /usr/include/boost/mpl/arg_fwd.hpp \
+  /usr/include/boost/mpl/assert.hpp \
+  /usr/include/boost/mpl/aux_/adl_barrier.hpp \
+  /usr/include/boost/mpl/aux_/arg_typedef.hpp \
+  /usr/include/boost/mpl/aux_/arity.hpp \
+  /usr/include/boost/mpl/aux_/arity_spec.hpp \
+  /usr/include/boost/mpl/aux_/common_name_wknd.hpp \
+  /usr/include/boost/mpl/aux_/config/adl.hpp \
+  /usr/include/boost/mpl/aux_/config/arrays.hpp \
+  /usr/include/boost/mpl/aux_/config/bcc.hpp \
+  /usr/include/boost/mpl/aux_/config/bind.hpp \
+  /usr/include/boost/mpl/aux_/config/compiler.hpp \
+  /usr/include/boost/mpl/aux_/config/ctps.hpp \
+  /usr/include/boost/mpl/aux_/config/dtp.hpp \
+  /usr/include/boost/mpl/aux_/config/eti.hpp \
+  /usr/include/boost/mpl/aux_/config/gcc.hpp \
+  /usr/include/boost/mpl/aux_/config/gpu.hpp \
+  /usr/include/boost/mpl/aux_/config/has_apply.hpp \
+  /usr/include/boost/mpl/aux_/config/has_xxx.hpp \
+  /usr/include/boost/mpl/aux_/config/integral.hpp \
+  /usr/include/boost/mpl/aux_/config/intel.hpp \
+  /usr/include/boost/mpl/aux_/config/lambda.hpp \
+  /usr/include/boost/mpl/aux_/config/msvc.hpp \
+  /usr/include/boost/mpl/aux_/config/msvc_typename.hpp \
+  /usr/include/boost/mpl/aux_/config/nttp.hpp \
+  /usr/include/boost/mpl/aux_/config/overload_resolution.hpp \
+  /usr/include/boost/mpl/aux_/config/pp_counter.hpp \
+  /usr/include/boost/mpl/aux_/config/preprocessor.hpp \
+  /usr/include/boost/mpl/aux_/config/static_constant.hpp \
+  /usr/include/boost/mpl/aux_/config/ttp.hpp \
+  /usr/include/boost/mpl/aux_/config/use_preprocessed.hpp \
+  /usr/include/boost/mpl/aux_/config/workaround.hpp \
+  /usr/include/boost/mpl/aux_/full_lambda.hpp \
+  /usr/include/boost/mpl/aux_/has_apply.hpp \
+  /usr/include/boost/mpl/aux_/has_type.hpp \
+  /usr/include/boost/mpl/aux_/include_preprocessed.hpp \
+  /usr/include/boost/mpl/aux_/integral_wrapper.hpp \
+  /usr/include/boost/mpl/aux_/lambda_arity_param.hpp \
+  /usr/include/boost/mpl/aux_/lambda_support.hpp \
+  /usr/include/boost/mpl/aux_/msvc_never_true.hpp \
+  /usr/include/boost/mpl/aux_/na.hpp \
+  /usr/include/boost/mpl/aux_/na_assert.hpp \
+  /usr/include/boost/mpl/aux_/na_fwd.hpp \
+  /usr/include/boost/mpl/aux_/na_spec.hpp \
+  /usr/include/boost/mpl/aux_/nested_type_wknd.hpp \
+  /usr/include/boost/mpl/aux_/nttp_decl.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/bind.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/or.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/quote.hpp \
+  /usr/include/boost/mpl/aux_/preprocessed/gcc/template_arity.hpp \
+  /usr/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp \
+  /usr/include/boost/mpl/aux_/preprocessor/default_params.hpp \
+  /usr/include/boost/mpl/aux_/preprocessor/enum.hpp \
+  /usr/include/boost/mpl/aux_/preprocessor/params.hpp \
+  /usr/include/boost/mpl/aux_/static_cast.hpp \
+  /usr/include/boost/mpl/aux_/template_arity.hpp \
+  /usr/include/boost/mpl/aux_/template_arity_fwd.hpp \
+  /usr/include/boost/mpl/aux_/type_wrapper.hpp \
+  /usr/include/boost/mpl/aux_/value_wknd.hpp \
+  /usr/include/boost/mpl/aux_/yes_no.hpp \
+  /usr/include/boost/mpl/bind.hpp \
+  /usr/include/boost/mpl/bind_fwd.hpp \
+  /usr/include/boost/mpl/bool.hpp \
+  /usr/include/boost/mpl/bool_fwd.hpp \
+  /usr/include/boost/mpl/eval_if.hpp \
+  /usr/include/boost/mpl/has_xxx.hpp \
+  /usr/include/boost/mpl/identity.hpp \
+  /usr/include/boost/mpl/if.hpp \
+  /usr/include/boost/mpl/int.hpp \
+  /usr/include/boost/mpl/int_fwd.hpp \
+  /usr/include/boost/mpl/integral_c_tag.hpp \
+  /usr/include/boost/mpl/lambda.hpp \
+  /usr/include/boost/mpl/lambda_fwd.hpp \
+  /usr/include/boost/mpl/limits/arity.hpp \
+  /usr/include/boost/mpl/logical.hpp \
+  /usr/include/boost/mpl/next.hpp \
+  /usr/include/boost/mpl/next_prior.hpp \
+  /usr/include/boost/mpl/not.hpp \
+  /usr/include/boost/mpl/or.hpp \
+  /usr/include/boost/mpl/placeholders.hpp \
+  /usr/include/boost/mpl/protect.hpp \
+  /usr/include/boost/mpl/quote.hpp \
+  /usr/include/boost/mpl/void.hpp \
+  /usr/include/boost/mpl/void_fwd.hpp \
+  /usr/include/boost/next_prior.hpp \
+  /usr/include/boost/preprocessor/arithmetic/add.hpp \
+  /usr/include/boost/preprocessor/arithmetic/dec.hpp \
+  /usr/include/boost/preprocessor/arithmetic/detail/div_base.hpp \
+  /usr/include/boost/preprocessor/arithmetic/detail/is_1_number.hpp \
+  /usr/include/boost/preprocessor/arithmetic/detail/is_maximum_number.hpp \
+  /usr/include/boost/preprocessor/arithmetic/detail/is_minimum_number.hpp \
+  /usr/include/boost/preprocessor/arithmetic/detail/maximum_number.hpp \
+  /usr/include/boost/preprocessor/arithmetic/inc.hpp \
+  /usr/include/boost/preprocessor/arithmetic/limits/dec_256.hpp \
+  /usr/include/boost/preprocessor/arithmetic/limits/inc_256.hpp \
+  /usr/include/boost/preprocessor/arithmetic/mod.hpp \
+  /usr/include/boost/preprocessor/arithmetic/sub.hpp \
+  /usr/include/boost/preprocessor/array/data.hpp \
+  /usr/include/boost/preprocessor/array/elem.hpp \
+  /usr/include/boost/preprocessor/array/size.hpp \
+  /usr/include/boost/preprocessor/cat.hpp \
+  /usr/include/boost/preprocessor/comma_if.hpp \
+  /usr/include/boost/preprocessor/comparison/equal.hpp \
+  /usr/include/boost/preprocessor/comparison/less_equal.hpp \
+  /usr/include/boost/preprocessor/comparison/limits/not_equal_256.hpp \
+  /usr/include/boost/preprocessor/comparison/not_equal.hpp \
+  /usr/include/boost/preprocessor/config/config.hpp \
+  /usr/include/boost/preprocessor/config/limits.hpp \
+  /usr/include/boost/preprocessor/control/deduce_d.hpp \
+  /usr/include/boost/preprocessor/control/detail/limits/while_256.hpp \
+  /usr/include/boost/preprocessor/control/detail/while.hpp \
+  /usr/include/boost/preprocessor/control/expr_iif.hpp \
+  /usr/include/boost/preprocessor/control/if.hpp \
+  /usr/include/boost/preprocessor/control/iif.hpp \
+  /usr/include/boost/preprocessor/control/limits/while_256.hpp \
+  /usr/include/boost/preprocessor/control/while.hpp \
+  /usr/include/boost/preprocessor/debug/error.hpp \
+  /usr/include/boost/preprocessor/detail/auto_rec.hpp \
+  /usr/include/boost/preprocessor/detail/check.hpp \
+  /usr/include/boost/preprocessor/detail/is_binary.hpp \
+  /usr/include/boost/preprocessor/detail/limits/auto_rec_256.hpp \
+  /usr/include/boost/preprocessor/empty.hpp \
+  /usr/include/boost/preprocessor/enum.hpp \
+  /usr/include/boost/preprocessor/enum_params.hpp \
+  /usr/include/boost/preprocessor/facilities/check_empty.hpp \
+  /usr/include/boost/preprocessor/facilities/empty.hpp \
+  /usr/include/boost/preprocessor/facilities/expand.hpp \
+  /usr/include/boost/preprocessor/facilities/identity.hpp \
+  /usr/include/boost/preprocessor/facilities/overload.hpp \
+  /usr/include/boost/preprocessor/identity.hpp \
+  /usr/include/boost/preprocessor/inc.hpp \
+  /usr/include/boost/preprocessor/iterate.hpp \
+  /usr/include/boost/preprocessor/iteration/detail/bounds/lower1.hpp \
+  /usr/include/boost/preprocessor/iteration/detail/bounds/upper1.hpp \
+  /usr/include/boost/preprocessor/iteration/detail/iter/forward1.hpp \
+  /usr/include/boost/preprocessor/iteration/detail/iter/limits/forward1_256.hpp \
+  /usr/include/boost/preprocessor/iteration/iterate.hpp \
+  /usr/include/boost/preprocessor/list/adt.hpp \
+  /usr/include/boost/preprocessor/list/detail/fold_left.hpp \
+  /usr/include/boost/preprocessor/list/detail/fold_right.hpp \
+  /usr/include/boost/preprocessor/list/detail/limits/fold_left_256.hpp \
+  /usr/include/boost/preprocessor/list/detail/limits/fold_right_256.hpp \
+  /usr/include/boost/preprocessor/list/fold_left.hpp \
+  /usr/include/boost/preprocessor/list/fold_right.hpp \
+  /usr/include/boost/preprocessor/list/limits/fold_left_256.hpp \
+  /usr/include/boost/preprocessor/list/reverse.hpp \
+  /usr/include/boost/preprocessor/logical/and.hpp \
+  /usr/include/boost/preprocessor/logical/bitand.hpp \
+  /usr/include/boost/preprocessor/logical/bitor.hpp \
+  /usr/include/boost/preprocessor/logical/bool.hpp \
+  /usr/include/boost/preprocessor/logical/compl.hpp \
+  /usr/include/boost/preprocessor/logical/limits/bool_256.hpp \
+  /usr/include/boost/preprocessor/logical/not.hpp \
+  /usr/include/boost/preprocessor/punctuation/comma.hpp \
+  /usr/include/boost/preprocessor/punctuation/comma_if.hpp \
+  /usr/include/boost/preprocessor/repeat.hpp \
+  /usr/include/boost/preprocessor/repetition/detail/for.hpp \
+  /usr/include/boost/preprocessor/repetition/detail/limits/for_256.hpp \
+  /usr/include/boost/preprocessor/repetition/enum.hpp \
+  /usr/include/boost/preprocessor/repetition/enum_binary_params.hpp \
+  /usr/include/boost/preprocessor/repetition/enum_params.hpp \
+  /usr/include/boost/preprocessor/repetition/enum_trailing_params.hpp \
+  /usr/include/boost/preprocessor/repetition/for.hpp \
+  /usr/include/boost/preprocessor/repetition/limits/for_256.hpp \
+  /usr/include/boost/preprocessor/repetition/limits/repeat_256.hpp \
+  /usr/include/boost/preprocessor/repetition/repeat.hpp \
+  /usr/include/boost/preprocessor/repetition/repeat_from_to.hpp \
+  /usr/include/boost/preprocessor/seq/cat.hpp \
+  /usr/include/boost/preprocessor/seq/detail/is_empty.hpp \
+  /usr/include/boost/preprocessor/seq/elem.hpp \
+  /usr/include/boost/preprocessor/seq/enum.hpp \
+  /usr/include/boost/preprocessor/seq/fold_left.hpp \
+  /usr/include/boost/preprocessor/seq/for_each_i.hpp \
+  /usr/include/boost/preprocessor/seq/limits/elem_256.hpp \
+  /usr/include/boost/preprocessor/seq/limits/enum_256.hpp \
+  /usr/include/boost/preprocessor/seq/limits/fold_left_256.hpp \
+  /usr/include/boost/preprocessor/seq/limits/size_256.hpp \
+  /usr/include/boost/preprocessor/seq/seq.hpp \
+  /usr/include/boost/preprocessor/seq/size.hpp \
+  /usr/include/boost/preprocessor/seq/transform.hpp \
+  /usr/include/boost/preprocessor/slot/detail/def.hpp \
+  /usr/include/boost/preprocessor/slot/detail/shared.hpp \
+  /usr/include/boost/preprocessor/slot/slot.hpp \
+  /usr/include/boost/preprocessor/stringize.hpp \
+  /usr/include/boost/preprocessor/tuple/detail/is_single_return.hpp \
+  /usr/include/boost/preprocessor/tuple/eat.hpp \
+  /usr/include/boost/preprocessor/tuple/elem.hpp \
+  /usr/include/boost/preprocessor/tuple/rem.hpp \
+  /usr/include/boost/preprocessor/variadic/elem.hpp \
+  /usr/include/boost/preprocessor/variadic/has_opt.hpp \
+  /usr/include/boost/preprocessor/variadic/limits/elem_64.hpp \
+  /usr/include/boost/preprocessor/variadic/limits/size_64.hpp \
+  /usr/include/boost/preprocessor/variadic/size.hpp \
+  /usr/include/boost/range/algorithm/equal.hpp \
+  /usr/include/boost/range/as_literal.hpp \
+  /usr/include/boost/range/begin.hpp \
+  /usr/include/boost/range/concepts.hpp \
+  /usr/include/boost/range/config.hpp \
+  /usr/include/boost/range/const_iterator.hpp \
+  /usr/include/boost/range/detail/common.hpp \
+  /usr/include/boost/range/detail/extract_optional_type.hpp \
+  /usr/include/boost/range/detail/has_member_size.hpp \
+  /usr/include/boost/range/detail/implementation_help.hpp \
+  /usr/include/boost/range/detail/misc_concept.hpp \
+  /usr/include/boost/range/detail/msvc_has_iterator_workaround.hpp \
+  /usr/include/boost/range/detail/safe_bool.hpp \
+  /usr/include/boost/range/detail/sfinae.hpp \
+  /usr/include/boost/range/detail/str_types.hpp \
+  /usr/include/boost/range/difference_type.hpp \
+  /usr/include/boost/range/distance.hpp \
+  /usr/include/boost/range/empty.hpp \
+  /usr/include/boost/range/end.hpp \
+  /usr/include/boost/range/functions.hpp \
+  /usr/include/boost/range/has_range_iterator.hpp \
+  /usr/include/boost/range/iterator.hpp \
+  /usr/include/boost/range/iterator_range.hpp \
+  /usr/include/boost/range/iterator_range_core.hpp \
+  /usr/include/boost/range/iterator_range_io.hpp \
+  /usr/include/boost/range/mutable_iterator.hpp \
+  /usr/include/boost/range/range_fwd.hpp \
+  /usr/include/boost/range/rbegin.hpp \
+  /usr/include/boost/range/rend.hpp \
+  /usr/include/boost/range/reverse_iterator.hpp \
+  /usr/include/boost/range/size.hpp \
+  /usr/include/boost/range/size_type.hpp \
+  /usr/include/boost/range/value_type.hpp \
+  /usr/include/boost/static_assert.hpp \
+  /usr/include/boost/throw_exception.hpp \
+  /usr/include/boost/type_traits/add_const.hpp \
+  /usr/include/boost/type_traits/add_lvalue_reference.hpp \
+  /usr/include/boost/type_traits/add_pointer.hpp \
+  /usr/include/boost/type_traits/add_reference.hpp \
+  /usr/include/boost/type_traits/add_rvalue_reference.hpp \
+  /usr/include/boost/type_traits/add_volatile.hpp \
+  /usr/include/boost/type_traits/alignment_of.hpp \
+  /usr/include/boost/type_traits/composite_traits.hpp \
+  /usr/include/boost/type_traits/conditional.hpp \
+  /usr/include/boost/type_traits/conjunction.hpp \
+  /usr/include/boost/type_traits/conversion_traits.hpp \
+  /usr/include/boost/type_traits/declval.hpp \
+  /usr/include/boost/type_traits/detail/config.hpp \
+  /usr/include/boost/type_traits/detail/has_binary_operator.hpp \
+  /usr/include/boost/type_traits/detail/is_function_cxx_11.hpp \
+  /usr/include/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp \
+  /usr/include/boost/type_traits/detail/yes_no_type.hpp \
+  /usr/include/boost/type_traits/enable_if.hpp \
+  /usr/include/boost/type_traits/function_traits.hpp \
+  /usr/include/boost/type_traits/has_minus.hpp \
+  /usr/include/boost/type_traits/has_minus_assign.hpp \
+  /usr/include/boost/type_traits/has_plus.hpp \
+  /usr/include/boost/type_traits/has_plus_assign.hpp \
+  /usr/include/boost/type_traits/has_trivial_copy.hpp \
+  /usr/include/boost/type_traits/has_trivial_destructor.hpp \
+  /usr/include/boost/type_traits/integral_constant.hpp \
+  /usr/include/boost/type_traits/intrinsics.hpp \
+  /usr/include/boost/type_traits/is_abstract.hpp \
+  /usr/include/boost/type_traits/is_arithmetic.hpp \
+  /usr/include/boost/type_traits/is_array.hpp \
+  /usr/include/boost/type_traits/is_base_and_derived.hpp \
+  /usr/include/boost/type_traits/is_class.hpp \
+  /usr/include/boost/type_traits/is_complete.hpp \
+  /usr/include/boost/type_traits/is_const.hpp \
+  /usr/include/boost/type_traits/is_constructible.hpp \
+  /usr/include/boost/type_traits/is_convertible.hpp \
+  /usr/include/boost/type_traits/is_copy_constructible.hpp \
+  /usr/include/boost/type_traits/is_default_constructible.hpp \
+  /usr/include/boost/type_traits/is_destructible.hpp \
+  /usr/include/boost/type_traits/is_enum.hpp \
+  /usr/include/boost/type_traits/is_floating_point.hpp \
+  /usr/include/boost/type_traits/is_function.hpp \
+  /usr/include/boost/type_traits/is_integral.hpp \
+  /usr/include/boost/type_traits/is_lvalue_reference.hpp \
+  /usr/include/boost/type_traits/is_member_function_pointer.hpp \
+  /usr/include/boost/type_traits/is_member_pointer.hpp \
+  /usr/include/boost/type_traits/is_pod.hpp \
+  /usr/include/boost/type_traits/is_pointer.hpp \
+  /usr/include/boost/type_traits/is_reference.hpp \
+  /usr/include/boost/type_traits/is_rvalue_reference.hpp \
+  /usr/include/boost/type_traits/is_same.hpp \
+  /usr/include/boost/type_traits/is_scalar.hpp \
+  /usr/include/boost/type_traits/is_signed.hpp \
+  /usr/include/boost/type_traits/is_union.hpp \
+  /usr/include/boost/type_traits/is_unsigned.hpp \
+  /usr/include/boost/type_traits/is_void.hpp \
+  /usr/include/boost/type_traits/is_volatile.hpp \
+  /usr/include/boost/type_traits/make_unsigned.hpp \
+  /usr/include/boost/type_traits/make_void.hpp \
+  /usr/include/boost/type_traits/negation.hpp \
+  /usr/include/boost/type_traits/remove_const.hpp \
+  /usr/include/boost/type_traits/remove_cv.hpp \
+  /usr/include/boost/type_traits/remove_pointer.hpp \
+  /usr/include/boost/type_traits/remove_reference.hpp \
+  /usr/include/boost/type_traits/type_identity.hpp \
+  /usr/include/boost/utility.hpp \
+  /usr/include/boost/utility/base_from_member.hpp \
+  /usr/include/boost/utility/binary.hpp \
+  /usr/include/boost/utility/detail/result_of_variadic.hpp \
+  /usr/include/boost/utility/enable_if.hpp \
+  /usr/include/boost/utility/identity_type.hpp \
+  /usr/include/boost/utility/result_of.hpp \
+  /usr/include/boost/version.hpp \
   /usr/include/c++/13/algorithm \
   /usr/include/c++/13/array \
   /usr/include/c++/13/atomic \
@@ -3888,6 +5285,7 @@ CMakeFiles/justina_gui_node.dir/src/mainwindow.cpp.o: /home/catcyber02/Mobile-Ro
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/chrono \
+  /usr/include/c++/13/climits \
   /usr/include/c++/13/clocale \
   /usr/include/c++/13/cmath \
   /usr/include/c++/13/codecvt \
@@ -3912,6 +5310,7 @@ CMakeFiles/justina_gui_node.dir/src/mainwindow.cpp.o: /home/catcyber02/Mobile-Ro
   /usr/include/c++/13/ext/atomicity.h \
   /usr/include/c++/13/ext/concurrence.h \
   /usr/include/c++/13/ext/numeric_traits.h \
+  /usr/include/c++/13/ext/slist \
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
   /usr/include/c++/13/functional \
@@ -3971,6 +5370,7 @@ CMakeFiles/justina_gui_node.dir/src/mainwindow.cpp.o: /home/catcyber02/Mobile-Ro
   /usr/include/c++/13/utility \
   /usr/include/c++/13/variant \
   /usr/include/c++/13/vector \
+  /usr/include/c++/13/version \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -4271,6 +5671,14 @@ CMakeFiles/justina_gui_node.dir/src/rclcomm.cpp.o: /home/catcyber02/Mobile-Robot
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp \
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/time.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__traits.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__traits.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__traits.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp \
+  /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__traits.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__builder.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp \
   /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__traits.hpp \
@@ -4289,6 +5697,17 @@ CMakeFiles/justina_gui_node.dir/src/rclcomm.cpp.o: /home/catcyber02/Mobile-Robot
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_period.hpp \
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp \
   /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/visibility_control.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__builder.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__struct.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__traits.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__type_support.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/path.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__builder.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__struct.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__traits.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__type_support.hpp \
+  /opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/get_plan.hpp \
   /opt/ros/jazzy/include/rcl/rcl/allocator.h \
   /opt/ros/jazzy/include/rcl/rcl/arguments.h \
   /opt/ros/jazzy/include/rcl/rcl/client.h \
@@ -4663,6 +6082,8 @@ CMakeFiles/justina_gui_node.dir/src/rclcomm.cpp.o: /home/catcyber02/Mobile-Robot
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32_multi_array__struct.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32_multi_array__traits.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32_multi_array__type_support.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__struct.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__traits.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/multi_array_layout__struct.hpp \
@@ -5106,25 +6527,13 @@ CMakeFiles/justina_gui_node.dir/src/rclcomm.cpp.o: /home/catcyber02/Mobile-Robot
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolBar:
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGroupBox:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDoubleSpinBox:
 
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h:
 
@@ -5133,10 +6542,6 @@ CMakeFiles/justina_gui_node.dir/src/rclcomm.cpp.o: /home/catcyber02/Mobile-Robot
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h:
 
 qrc_resource.cpp:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h:
 
@@ -5150,10 +6555,6 @@ qrc_resource.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h:
@@ -5162,17 +6563,11 @@ qrc_resource.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h:
 
@@ -5188,11 +6583,7 @@ qrc_resource.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h:
 
@@ -5202,27 +6593,15 @@ qrc_resource.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h:
 
@@ -5241,8 +6620,6 @@ qrc_resource.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QThread:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
@@ -5282,8 +6659,6 @@ qrc_resource.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h:
@@ -5296,19 +6671,11 @@ qrc_resource.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
@@ -5318,11 +6685,7 @@ qrc_resource.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/time64.h:
-
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
@@ -5330,17 +6693,11 @@ qrc_resource.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-least.h:
 
-/usr/include/x86_64-linux-gnu/bits/ss_flags.h:
-
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigstksz.h:
 
 /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
-
-/usr/include/x86_64-linux-gnu/bits/time.h:
-
-/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
 
@@ -5348,15 +6705,11 @@ qrc_resource.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/sigaction.h:
 
-/usr/include/x86_64-linux-gnu/bits/select.h:
-
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
@@ -5380,19 +6733,11 @@ qrc_resource.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
 
-/usr/include/x86_64-linux-gnu/bits/floatn.h:
-
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
-/usr/include/x86_64-linux-gnu/bits/timex.h:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
-
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
-/usr/include/x86_64-linux-gnu/bits/confname.h:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
@@ -5405,8 +6750,6 @@ qrc_resource.cpp:
 /usr/include/stdlib.h:
 
 /usr/include/stdint.h:
-
-/usr/include/stdc-predef.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h:
 
@@ -5433,8 +6776,6 @@ qrc_resource.cpp:
 /usr/include/c++/13/utility:
 
 /usr/include/c++/13/unordered_map:
-
-/usr/include/c++/13/typeinfo:
 
 /usr/include/c++/13/typeindex:
 
@@ -5478,19 +6819,9 @@ qrc_resource.cpp:
 
 /usr/include/c++/13/optional:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qelapsedtimer.h:
-
-/usr/include/c++/13/numeric:
-
-/usr/include/wctype.h:
-
-/usr/include/c++/13/mutex:
-
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/include/c++/13/memory:
-
-/usr/include/c++/13/locale:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qdeadlinetimer.h:
 
@@ -5515,10 +6846,6 @@ qrc_resource.cpp:
 /usr/include/c++/13/exception:
 
 /usr/include/c++/13/cwctype:
-
-/usr/include/c++/13/cwchar:
-
-/usr/include/c++/13/ctime:
 
 /usr/include/c++/13/cstring:
 
@@ -5545,6 +6872,10 @@ qrc_resource.cpp:
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h:
 
 /usr/include/c++/13/clocale:
+
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
+/usr/include/c++/13/climits:
 
 /usr/include/c++/13/chrono:
 
@@ -5576,8 +6907,6 @@ qrc_resource.cpp:
 
 /usr/include/c++/13/bits/stl_multiset.h:
 
-/usr/include/c++/13/bits/stl_map.h:
-
 /usr/include/c++/13/bits/stl_list.h:
 
 /usr/include/c++/13/bits/stl_iterator_base_types.h:
@@ -5608,33 +6937,15 @@ ui_mainwindow.h:
 
 /usr/include/c++/13/bits/shared_ptr.h:
 
-/usr/include/c++/13/bits/requires_hosted.h:
-
 /usr/include/c++/13/bits/refwrap.h:
 
 /usr/include/c++/13/bits/ptr_traits.h:
 
 /usr/include/c++/13/bits/predefined_ops.h:
 
-/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
-
-/usr/include/c++/13/bits/stl_bvector.h:
-
-/usr/include/c++/13/bits/parse_numbers.h:
-
-/usr/include/c++/13/bits/ostream_insert.h:
-
 /usr/include/c++/13/bits/new_allocator.h:
 
 /usr/include/c++/13/bits/move.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgroupbox.h:
-
-/usr/include/c++/13/bits/memoryfwd.h:
-
-/usr/include/c++/13/bits/memory_resource.h:
-
-/usr/include/c++/13/bits/locale_facets_nonio.tcc:
 
 /usr/include/c++/13/bits/locale_facets_nonio.h:
 
@@ -5644,13 +6955,7 @@ ui_mainwindow.h:
 
 /usr/include/c++/13/bits/locale_facets.h:
 
-/usr/include/c++/13/bits/locale_conv.h:
-
 /usr/include/c++/13/bits/locale_classes.tcc:
-
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h:
-
-/usr/include/c++/13/bits/list.tcc:
 
 /usr/include/c++/13/bits/hashtable_policy.h:
 
@@ -5668,8 +6973,6 @@ ui_mainwindow.h:
 
 /usr/include/c++/13/bits/erase_if.h:
 
-/usr/include/c++/13/bits/enable_special_members.h:
-
 /usr/include/c++/13/bits/cxxabi_forced.h:
 
 /usr/include/c++/13/bits/cpp_type_traits.h:
@@ -5684,8 +6987,6 @@ ui_mainwindow.h:
 
 /usr/include/c++/13/bits/charconv.h:
 
-/usr/include/c++/13/bits/basic_string.tcc:
-
 /usr/include/c++/13/bits/atomic_lockfree_defines.h:
 
 /usr/include/c++/13/bits/atomic_base.h:
@@ -5698,6 +6999,600 @@ ui_mainwindow.h:
 
 /usr/include/c++/13/algorithm:
 
+/usr/include/boost/utility/detail/result_of_variadic.hpp:
+
+/usr/include/c++/13/bits/basic_string.tcc:
+
+/usr/include/boost/utility/binary.hpp:
+
+/usr/include/boost/type_traits/remove_reference.hpp:
+
+/usr/include/boost/type_traits/make_unsigned.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h:
+
+/usr/include/boost/type_traits/is_volatile.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h:
+
+/usr/include/boost/type_traits/is_void.hpp:
+
+/usr/include/boost/type_traits/is_unsigned.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/confname.h:
+
+/usr/include/boost/type_traits/is_union.hpp:
+
+/usr/include/boost/type_traits/is_pointer.hpp:
+
+/usr/include/boost/type_traits/is_member_pointer.hpp:
+
+/usr/include/c++/13/ctime:
+
+/usr/include/boost/type_traits/is_member_function_pointer.hpp:
+
+/usr/include/boost/type_traits/is_function.hpp:
+
+/usr/include/boost/type_traits/is_floating_point.hpp:
+
+/usr/include/boost/type_traits/is_default_constructible.hpp:
+
+/usr/include/boost/type_traits/is_copy_constructible.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel:
+
+/usr/include/boost/type_traits/is_constructible.hpp:
+
+/usr/include/boost/type_traits/is_complete.hpp:
+
+/usr/include/boost/type_traits/is_arithmetic.hpp:
+
+/usr/include/boost/type_traits/is_abstract.hpp:
+
+/usr/include/boost/type_traits/intrinsics.hpp:
+
+/usr/include/boost/type_traits/has_plus_assign.hpp:
+
+/usr/include/boost/type_traits/function_traits.hpp:
+
+/usr/include/boost/type_traits/detail/is_member_function_pointer_cxx_11.hpp:
+
+/usr/include/boost/type_traits/detail/is_function_cxx_11.hpp:
+
+/usr/include/boost/type_traits/conditional.hpp:
+
+/usr/include/boost/type_traits/is_destructible.hpp:
+
+/usr/include/boost/type_traits/add_rvalue_reference.hpp:
+
+/usr/include/boost/type_traits/add_reference.hpp:
+
+/usr/include/boost/type_traits/add_pointer.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/select.h:
+
+/usr/include/boost/throw_exception.hpp:
+
+/usr/include/boost/static_assert.hpp:
+
+/usr/include/boost/range/reverse_iterator.hpp:
+
+/usr/include/boost/range/rbegin.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
+/usr/include/c++/13/bits/stl_bvector.h:
+
+/usr/include/c++/13/bits/parse_numbers.h:
+
+/usr/include/boost/range/iterator_range_io.hpp:
+
+/usr/include/boost/range/iterator_range.hpp:
+
+/usr/include/boost/range/iterator.hpp:
+
+/usr/include/boost/range/has_range_iterator.hpp:
+
+/usr/include/boost/range/functions.hpp:
+
+/usr/include/boost/range/end.hpp:
+
+/usr/include/boost/range/empty.hpp:
+
+/usr/include/boost/range/distance.hpp:
+
+/usr/include/c++/13/bits/locale_facets_nonio.tcc:
+
+/usr/include/boost/range/detail/safe_bool.hpp:
+
+/usr/include/boost/range/detail/msvc_has_iterator_workaround.hpp:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/boost/range/detail/misc_concept.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h:
+
+/usr/include/boost/range/detail/implementation_help.hpp:
+
+/usr/include/boost/range/detail/extract_optional_type.hpp:
+
+/usr/include/boost/range/detail/common.hpp:
+
+/usr/include/boost/range/const_iterator.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h:
+
+/usr/include/boost/range/concepts.hpp:
+
+/usr/include/boost/range/algorithm/equal.hpp:
+
+/usr/include/boost/preprocessor/variadic/limits/size_64.hpp:
+
+/usr/include/boost/preprocessor/variadic/limits/elem_64.hpp:
+
+/usr/include/boost/preprocessor/variadic/has_opt.hpp:
+
+/usr/include/boost/type_traits/has_trivial_copy.hpp:
+
+/usr/include/boost/preprocessor/variadic/elem.hpp:
+
+/usr/include/boost/preprocessor/tuple/eat.hpp:
+
+/usr/include/boost/preprocessor/slot/slot.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolBar:
+
+/usr/include/boost/preprocessor/slot/detail/def.hpp:
+
+/usr/include/boost/preprocessor/seq/transform.hpp:
+
+/usr/include/boost/preprocessor/seq/size.hpp:
+
+/usr/include/boost/preprocessor/seq/seq.hpp:
+
+/usr/include/boost/preprocessor/seq/limits/size_256.hpp:
+
+/usr/include/boost/preprocessor/seq/limits/fold_left_256.hpp:
+
+/usr/include/boost/preprocessor/seq/limits/elem_256.hpp:
+
+/usr/include/boost/preprocessor/seq/for_each_i.hpp:
+
+/usr/include/c++/13/cwchar:
+
+/usr/include/boost/preprocessor/seq/enum.hpp:
+
+/usr/include/boost/preprocessor/seq/cat.hpp:
+
+/usr/include/boost/preprocessor/repetition/repeat_from_to.hpp:
+
+/usr/include/boost/preprocessor/repetition/repeat.hpp:
+
+/usr/include/boost/preprocessor/repetition/limits/for_256.hpp:
+
+/usr/include/boost/preprocessor/repetition/for.hpp:
+
+/usr/include/c++/13/locale:
+
+/usr/include/boost/preprocessor/repetition/enum_trailing_params.hpp:
+
+/usr/include/boost/preprocessor/repetition/enum_params.hpp:
+
+/usr/include/c++/13/bits/enable_special_members.h:
+
+/usr/include/boost/preprocessor/repetition/enum_binary_params.hpp:
+
+/usr/include/boost/preprocessor/repetition/detail/limits/for_256.hpp:
+
+/usr/include/boost/preprocessor/repetition/detail/for.hpp:
+
+/usr/include/boost/preprocessor/punctuation/comma_if.hpp:
+
+/usr/include/boost/preprocessor/logical/limits/bool_256.hpp:
+
+/usr/include/boost/preprocessor/logical/compl.hpp:
+
+/usr/include/boost/preprocessor/logical/bool.hpp:
+
+/usr/include/boost/preprocessor/logical/bitor.hpp:
+
+/usr/include/boost/preprocessor/logical/bitand.hpp:
+
+/usr/include/boost/preprocessor/logical/and.hpp:
+
+/usr/include/boost/preprocessor/list/reverse.hpp:
+
+/usr/include/boost/preprocessor/list/fold_right.hpp:
+
+/usr/include/boost/preprocessor/list/detail/limits/fold_left_256.hpp:
+
+/usr/include/boost/preprocessor/iteration/iterate.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
+
+/usr/include/boost/preprocessor/iteration/detail/iter/limits/forward1_256.hpp:
+
+/usr/include/boost/preprocessor/iteration/detail/iter/forward1.hpp:
+
+/usr/include/boost/preprocessor/iteration/detail/bounds/lower1.hpp:
+
+/usr/include/boost/preprocessor/iterate.hpp:
+
+/usr/include/boost/preprocessor/identity.hpp:
+
+/usr/include/boost/preprocessor/facilities/identity.hpp:
+
+/usr/include/boost/preprocessor/facilities/expand.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgroupbox.h:
+
+/usr/include/c++/13/bits/memoryfwd.h:
+
+/usr/include/boost/preprocessor/facilities/check_empty.hpp:
+
+/usr/include/boost/preprocessor/enum.hpp:
+
+/usr/include/boost/preprocessor/detail/limits/auto_rec_256.hpp:
+
+/usr/include/boost/preprocessor/detail/auto_rec.hpp:
+
+/usr/include/boost/preprocessor/control/while.hpp:
+
+/usr/include/boost/preprocessor/control/expr_iif.hpp:
+
+/usr/include/boost/preprocessor/control/detail/while.hpp:
+
+/usr/include/boost/preprocessor/control/detail/limits/while_256.hpp:
+
+/usr/include/boost/preprocessor/control/deduce_d.hpp:
+
+/usr/include/c++/13/bits/ostream_insert.h:
+
+/usr/include/boost/preprocessor/config/limits.hpp:
+
+/usr/include/boost/preprocessor/config/config.hpp:
+
+/usr/include/boost/preprocessor/comparison/not_equal.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/floatn.h:
+
+/usr/include/boost/preprocessor/comparison/limits/not_equal_256.hpp:
+
+/usr/include/boost/preprocessor/cat.hpp:
+
+/usr/include/boost/preprocessor/array/elem.hpp:
+
+/usr/include/boost/preprocessor/array/data.hpp:
+
+/usr/include/boost/preprocessor/arithmetic/mod.hpp:
+
+/usr/include/boost/preprocessor/arithmetic/limits/inc_256.hpp:
+
+/usr/include/boost/preprocessor/arithmetic/limits/dec_256.hpp:
+
+/usr/include/wctype.h:
+
+/usr/include/c++/13/mutex:
+
+/usr/include/boost/preprocessor/arithmetic/detail/is_maximum_number.hpp:
+
+/usr/include/boost/next_prior.hpp:
+
+/usr/include/boost/mpl/void.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h:
+
+/usr/include/boost/mpl/quote.hpp:
+
+/usr/include/boost/mpl/protect.hpp:
+
+/usr/include/boost/mpl/or.hpp:
+
+/usr/include/boost/mpl/not.hpp:
+
+/usr/include/boost/mpl/next_prior.hpp:
+
+/usr/include/boost/mpl/lambda_fwd.hpp:
+
+/usr/include/boost/range/as_literal.hpp:
+
+/usr/include/boost/mpl/lambda.hpp:
+
+/usr/include/boost/mpl/int.hpp:
+
+/usr/include/boost/mpl/if.hpp:
+
+/usr/include/boost/mpl/identity.hpp:
+
+/usr/include/boost/mpl/has_xxx.hpp:
+
+/usr/include/boost/mpl/eval_if.hpp:
+
+/usr/include/boost/mpl/bool_fwd.hpp:
+
+/usr/include/boost/mpl/aux_/value_wknd.hpp:
+
+/usr/include/boost/mpl/aux_/type_wrapper.hpp:
+
+/usr/include/boost/mpl/aux_/template_arity.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h:
+
+/usr/include/boost/mpl/aux_/static_cast.hpp:
+
+/usr/include/boost/range/iterator_range_core.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessor/default_params.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessor/def_params_tail.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/or.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/arg.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/apply_fwd.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp:
+
+/usr/include/boost/type_traits/is_convertible.hpp:
+
+/usr/include/boost/type_traits/has_plus.hpp:
+
+/usr/include/boost/mpl/aux_/nttp_decl.hpp:
+
+/usr/include/boost/mpl/aux_/na_spec.hpp:
+
+/usr/include/boost/mpl/aux_/na_fwd.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/placeholders.hpp:
+
+/usr/include/boost/mpl/aux_/na_assert.hpp:
+
+/usr/include/boost/mpl/aux_/na.hpp:
+
+/usr/include/boost/mpl/aux_/lambda_support.hpp:
+
+/usr/include/boost/mpl/aux_/lambda_arity_param.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h:
+
+/usr/include/boost/mpl/aux_/config/workaround.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h:
+
+/usr/include/boost/mpl/aux_/config/static_constant.hpp:
+
+/usr/include/boost/mpl/aux_/config/preprocessor.hpp:
+
+/usr/include/boost/mpl/aux_/config/pp_counter.hpp:
+
+/usr/include/boost/mpl/aux_/config/overload_resolution.hpp:
+
+/usr/include/boost/mpl/aux_/config/msvc.hpp:
+
+/usr/include/boost/mpl/aux_/config/lambda.hpp:
+
+/usr/include/boost/mpl/aux_/config/integral.hpp:
+
+/usr/include/boost/mpl/aux_/config/gcc.hpp:
+
+/usr/include/boost/mpl/aux_/config/bind.hpp:
+
+/usr/include/boost/preprocessor/arithmetic/detail/div_base.hpp:
+
+/usr/include/boost/mpl/aux_/config/adl.hpp:
+
+/usr/include/boost/mpl/aux_/arity_spec.hpp:
+
+/usr/include/boost/mpl/aux_/arity.hpp:
+
+/usr/include/boost/mpl/aux_/arg_typedef.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h:
+
+/usr/include/boost/mpl/assert.hpp:
+
+/usr/include/boost/mpl/arg_fwd.hpp:
+
+/usr/include/boost/range/rend.hpp:
+
+/usr/include/boost/mpl/arg.hpp:
+
+/usr/include/c++/13/bits/locale_conv.h:
+
+/usr/include/boost/mpl/apply_wrap.hpp:
+
+/usr/include/boost/mpl/apply_fwd.hpp:
+
+/usr/include/boost/mpl/and.hpp:
+
+/usr/include/boost/mem_fn.hpp:
+
+/usr/include/boost/limits.hpp:
+
+/usr/include/boost/iterator/transform_iterator.hpp:
+
+/usr/include/boost/preprocessor/arithmetic/detail/maximum_number.hpp:
+
+/usr/include/boost/iterator/iterator_traits.hpp:
+
+/usr/include/boost/iterator/iterator_facade.hpp:
+
+/usr/include/boost/iterator/iterator_concepts.hpp:
+
+/usr/include/boost/iterator/iterator_adaptor.hpp:
+
+/usr/include/c++/13/typeinfo:
+
+/usr/include/boost/iterator/distance.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+
+/usr/include/boost/iterator/detail/config_undef.hpp:
+
+/usr/include/boost/get_pointer.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h:
+
+/usr/include/c++/13/bits/list.tcc:
+
+/usr/include/boost/function_equal.hpp:
+
+/usr/include/boost/function/function_fwd.hpp:
+
+/usr/include/boost/function/function_base.hpp:
+
+/usr/include/boost/function/detail/requires_cxx11.hpp:
+
+/usr/include/boost/mpl/next.hpp:
+
+/usr/include/boost/function/detail/epilogue.hpp:
+
+/usr/include/boost/function.hpp:
+
+/usr/include/boost/exception/exception.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h:
+
+/usr/include/boost/core/use_default.hpp:
+
+/usr/include/boost/core/typeinfo.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/ss_flags.h:
+
+/usr/include/boost/core/ref.hpp:
+
+/usr/include/boost/core/noncopyable.hpp:
+
+/usr/include/boost/core/no_exceptions_support.hpp:
+
+/usr/include/boost/core/addressof.hpp:
+
+/usr/include/c++/13/bits/memory_resource.h:
+
+/usr/include/boost/mpl/aux_/preprocessor/enum.hpp:
+
+/usr/include/boost/config/workaround.hpp:
+
+/usr/include/boost/iterator/detail/config_def.hpp:
+
+/usr/include/boost/config/user.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+/usr/include/boost/config/stdlib/libstdcpp3.hpp:
+
+/usr/include/boost/config/no_tr1/memory.hpp:
+
+/usr/include/boost/config/no_tr1/functional.hpp:
+
+/usr/include/boost/config/helper_macros.hpp:
+
+/usr/include/boost/config/detail/select_stdlib_config.hpp:
+
+/usr/include/boost/detail/select_type.hpp:
+
+/usr/include/boost/config/detail/select_compiler_config.hpp:
+
+/usr/include/boost/config/detail/posix_features.hpp:
+
+/usr/include/boost/config/detail/cxx_composite.hpp:
+
+/usr/include/boost/concept_check.hpp:
+
+/usr/include/boost/concept/usage.hpp:
+
+/usr/include/boost/concept/detail/backward_compatibility.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/time64.h:
+
+/usr/include/boost/bind/mem_fn_template.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
+
+/usr/include/boost/bind/mem_fn.hpp:
+
+/usr/include/boost/type_traits/add_lvalue_reference.hpp:
+
+/usr/include/boost/assert/source_location.hpp:
+
+/usr/include/boost/assert.hpp:
+
+/usr/include/boost/algorithm/string/std/string_traits.hpp:
+
+/usr/include/boost/mpl/bind_fwd.hpp:
+
+/usr/include/boost/algorithm/string/std/list_traits.hpp:
+
+/usr/include/boost/algorithm/string/split.hpp:
+
+/usr/include/boost/algorithm/string/replace.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h:
+
+/usr/include/boost/algorithm/string/predicate.hpp:
+
+/usr/include/boost/type_traits/is_class.hpp:
+
+/usr/include/boost/algorithm/string/iter_find.hpp:
+
+/usr/include/boost/algorithm/string/formatter.hpp:
+
+/usr/include/boost/algorithm/string/finder.hpp:
+
+/usr/include/boost/algorithm/string/find_iterator.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h:
+
+/usr/include/boost/algorithm/string/find_format.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/time.h:
+
+/usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
+
+/usr/include/boost/algorithm/string/erase.hpp:
+
+/usr/include/boost/algorithm/string/detail/util.hpp:
+
+/usr/include/boost/algorithm/string/detail/trim.hpp:
+
+/usr/include/boost/algorithm/string/detail/replace_storage.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/usr/include/boost/algorithm/string/detail/predicate.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h:
+
+/usr/include/boost/algorithm/string/detail/finder.hpp:
+
+/usr/include/boost/algorithm/string/detail/find_iterator.hpp:
+
+/usr/include/boost/algorithm/string/detail/find_format_store.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h:
+
+/usr/include/boost/algorithm/string/detail/find_format_all.hpp:
+
+/usr/include/boost/type_traits/alignment_of.hpp:
+
+/usr/include/boost/algorithm/string/detail/classification.hpp:
+
+/usr/include/boost/algorithm/string/config.hpp:
+
+/usr/include/boost/algorithm/string/case_conv.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h:
+
+/usr/include/boost/algorithm/string.hpp:
+
 /usr/include/asm-generic/errno.h:
 
 /usr/include/asm-generic/errno-base.h:
@@ -5708,13 +7603,23 @@ ui_mainwindow.h:
 
 /opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/srv/get_type_description.h:
 
+/usr/include/boost/type_traits/conversion_traits.hpp:
+
 /opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/srv/detail/get_type_description__functions.h:
 
 /opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/rosidl_generator_c__visibility_control.h:
 
+/usr/include/boost/type_traits/remove_const.hpp:
+
 /opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/detail/field__struct.h:
 
+/usr/include/boost/utility.hpp:
+
+/usr/include/boost/algorithm/string/join.hpp:
+
 /opt/ros/jazzy/include/tracetools/tracetools/visibility_control.hpp:
+
+/usr/include/boost/type_traits/is_scalar.hpp:
 
 /opt/ros/jazzy/include/tracetools/tracetools/utils.hpp:
 
@@ -5728,6 +7633,8 @@ ui_mainwindow.h:
 
 /opt/ros/jazzy/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
 
+/usr/include/boost/type_traits/is_const.hpp:
+
 /opt/ros/jazzy/include/std_msgs/std_msgs/msg/float32_multi_array.hpp:
 
 /usr/include/c++/13/pstl/glue_numeric_defs.h:
@@ -5736,6 +7643,8 @@ ui_mainwindow.h:
 
 /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/multi_array_layout__traits.hpp:
 
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__traits.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/sigstack.h:
 
 /usr/include/c++/13/bits/allocator.h:
@@ -5743,6 +7652,8 @@ ui_mainwindow.h:
 /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32_multi_array__type_support.hpp:
 
 /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32_multi_array__traits.hpp:
+
+/usr/include/boost/preprocessor/arithmetic/detail/is_1_number.hpp:
 
 /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32_multi_array__struct.hpp:
 
@@ -5774,37 +7685,91 @@ ui_mainwindow.h:
 
 /opt/ros/jazzy/include/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp/message_introspection.hpp:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h:
+/opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
 
-/opt/ros/jazzy/share/sensor_msgs/cmake/export_sensor_msgs__rosidl_typesupport_fastrtps_cExport.cmake:
+/opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_typesupport_cpp/service_type_support.hpp:
 
-/opt/ros/jazzy/share/rosidl_typesupport_cpp/cmake/ament_cmake_export_libraries-extras.cmake:
+/opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_typesupport_cpp/message_type_support.hpp:
 
-/opt/ros/jazzy/share/sensor_msgs/cmake/export_sensor_msgs__rosidl_generator_pyExport.cmake:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_source__struct.h:
 
-/opt/ros/jazzy/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_append_install_code.cmake:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_description__struct.h:
 
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/individual_type_description__struct.h:
 
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field_type__struct.h:
 
-/opt/ros/jazzy/share/sensor_msgs/cmake/export_sensor_msgs__rosidl_generator_cExport.cmake:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/type_adapter.hpp:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
 
-/opt/ros/jazzy/share/sensor_msgs/cmake/export_sensor_msgsExport.cmake:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/sequence_bound.h:
 
-/opt/ros/jazzy/share/rmw_dds_common/cmake/rmw_dds_common__rosidl_typesupport_introspection_cppExport-none.cmake:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
 
-/opt/ros/jazzy/share/ament_cmake_export_dependencies/cmake/ament_cmake_export_dependenciesConfig.cmake:
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h:
 
-/usr/include/c++/13/bits/string_view.tcc:
+/usr/include/c++/13/bits/functexcept.h:
 
-/usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake:
+/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/visibility_control.h:
 
-/opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/detail/type_source__struct.h:
+/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/types.h:
 
-/opt/ros/jazzy/share/rosidl_typesupport_introspection_cpp/cmake/rosidl_typesupport_introspection_cppExport-none.cmake:
+/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/identifier.h:
+
+/usr/include/boost/preprocessor/logical/not.hpp:
+
+/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/dynamic_message_type_support_struct.h:
+
+/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/api/serialization_support_interface.h:
+
+/usr/include/boost/type_traits/detail/has_binary_operator.hpp:
+
+/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/api/serialization_support.h:
+
+/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/api/dynamic_type.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h:
+
+/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/api/dynamic_data.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h:
+
+/opt/ros/jazzy/include/rmw/rmw/visibility_control.h:
+
+/opt/ros/jazzy/include/rmw/rmw/types.h:
+
+/opt/ros/jazzy/include/rmw/rmw/topic_endpoint_info_array.h:
+
+/opt/ros/jazzy/include/rmw/rmw/topic_endpoint_info.h:
+
+/opt/ros/jazzy/include/rmw/rmw/time.h:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/quote.hpp:
+
+/opt/ros/jazzy/include/rmw/rmw/subscription_options.h:
+
+/opt/ros/jazzy/include/rmw/rmw/serialized_message.h:
+
+/usr/include/boost/type_traits/integral_constant.hpp:
+
+/opt/ros/jazzy/include/rmw/rmw/rmw.h:
+
+/usr/include/boost/type_traits/type_identity.hpp:
+
+/opt/ros/jazzy/include/rmw/rmw/ret_types.h:
+
+/usr/include/c++/13/bits/range_access.h:
+
+/opt/ros/jazzy/include/rmw/rmw/qos_string_conversions.h:
+
+/usr/include/locale.h:
+
+/opt/ros/jazzy/include/rmw/rmw/qos_profiles.h:
+
+/opt/ros/jazzy/include/rmw/rmw/qos_policy_kind.h:
+
+/usr/include/boost/preprocessor/detail/check.hpp:
 
 /opt/ros/jazzy/share/rosidl_typesupport_introspection_cpp/cmake/ament_cmake_export_dependencies-extras.cmake:
 
@@ -5813,6 +7778,8 @@ ui_mainwindow.h:
 /opt/ros/jazzy/include/rcl/rcl/service_introspection.h:
 
 /opt/ros/jazzy/share/rosidl_typesupport_introspection_c/cmake/rosidl_typesupport_introspection_cConfig.cmake:
+
+/usr/include/boost/mpl/aux_/config/dtp.hpp:
 
 /opt/ros/jazzy/share/rmw/cmake/ament_cmake_export_dependencies-extras.cmake:
 
@@ -5830,6 +7797,8 @@ ui_mainwindow.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/get_message_type_support_handle.hpp:
 
+/usr/include/boost/mpl/aux_/config/intel.hpp:
+
 /opt/ros/jazzy/share/rosidl_typesupport_fastrtps_cpp/cmake/rosidl_typesupport_fastrtps_cppConfig-version.cmake:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__type_support.hpp:
@@ -5844,21 +7813,17 @@ ui_mainwindow.h:
 
 /usr/include/c++/13/bits/basic_string.h:
 
+/usr/include/boost/function/detail/maybe_include.hpp:
+
 /opt/ros/jazzy/share/rmw/cmake/rmwExport.cmake:
 
 /opt/ros/jazzy/share/rosidl_typesupport_fastrtps_c/cmake/ament_cmake_export_targets-extras.cmake:
 
 /opt/ros/jazzy/share/rosidl_typesupport_fastrtps_c/cmake/ament_cmake_export_include_directories-extras.cmake:
 
+/usr/include/boost/core/demangle.hpp:
+
 /opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake/ament_cmake_export_include_directories-extras.cmake:
-
-/opt/ros/jazzy/share/sensor_msgs/cmake/ament_cmake_export_targets-extras.cmake:
-
-/opt/ros/jazzy/share/rosgraph_msgs/cmake/rosgraph_msgs__rosidl_typesupport_cppExport.cmake:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters_atomically__builder.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__struct.hpp:
 
@@ -5866,17 +7831,9 @@ ui_mainwindow.h:
 
 /opt/ros/jazzy/share/rosidl_typesupport_cpp/cmake/ament_cmake_export_include_directories-extras.cmake:
 
-/opt/ros/jazzy/share/rosidl_typesupport_cpp/cmake/ament_cmake_export_dependencies-extras.cmake:
+/usr/include/boost/mpl/aux_/integral_wrapper.hpp:
 
 /opt/ros/jazzy/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cExport.cmake:
-
-/opt/ros/jazzy/share/statistics_msgs/cmake/export_statistics_msgs__rosidl_generator_cppExport.cmake:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
-
-/opt/ros/jazzy/share/sensor_msgs/cmake/sensor_msgs__rosidl_typesupport_cExport.cmake:
-
-/opt/ros/jazzy/share/builtin_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake:
 
 /opt/ros/jazzy/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cConfig.cmake:
 
@@ -5884,7 +7841,7 @@ ui_mainwindow.h:
 
 /opt/ros/jazzy/share/rosidl_typesupport_c/cmake/get_used_typesupports.cmake:
 
-/opt/ros/jazzy/share/rosidl_typesupport_introspection_c/cmake/ament_cmake_export_include_directories-extras.cmake:
+/usr/include/boost/type_traits/composite_traits.hpp:
 
 /opt/ros/jazzy/share/rosidl_generator_type_description/cmake/rosidl_generator_type_description-extras.cmake:
 
@@ -5904,7 +7861,11 @@ ui_mainwindow.h:
 
 /opt/ros/jazzy/share/ament_cmake_python/cmake/ament_cmake_pythonConfig.cmake:
 
-/opt/ros/jazzy/include/rmw/rmw/serialized_message.h:
+/usr/include/boost/preprocessor/inc.hpp:
+
+/usr/include/boost/preprocessor/array/size.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/bind_fwd.hpp:
 
 /opt/ros/jazzy/share/rosidl_runtime_c/cmake/ament_cmake_export_targets-extras.cmake:
 
@@ -5916,11 +7877,13 @@ ui_mainwindow.h:
 
 /opt/ros/jazzy/share/rosidl_typesupport_fastrtps_cpp/cmake/rosidl_typesupport_fastrtps_cppExport.cmake:
 
+/usr/include/boost/preprocessor/stringize.hpp:
+
+/usr/include/boost/cstdint.hpp:
+
 /opt/ros/jazzy/share/rosidl_generator_cpp/cmake/rosidl_generator_cppConfig-version.cmake:
 
 /opt/ros/jazzy/share/rosidl_generator_cpp/cmake/rosidl_generator_cpp-extras.cmake:
-
-/usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake:
 
 /opt/ros/jazzy/include/rmw/rmw/event.h:
 
@@ -5964,6 +7927,10 @@ ui_mainwindow.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/detail/qos_parameters.hpp:
 
+/usr/include/boost/utility/result_of.hpp:
+
+/usr/include/boost/bind/mem_fn_cc.hpp:
+
 /opt/ros/jazzy/share/rosidl_generator_cpp/cmake/register_cpp.cmake:
 
 /opt/ros/jazzy/share/rosgraph_msgs/cmake/export_rosgraph_msgs__rosidl_generator_cExport.cmake:
@@ -5978,23 +7945,19 @@ ui_mainwindow.h:
 
 /opt/ros/jazzy/include/rcl/rcl/context.h:
 
+/usr/include/boost/type_traits/remove_pointer.hpp:
+
 /opt/ros/jazzy/share/rmw_implementation_cmake/cmake/rmw_implementation_cmakeConfig.cmake:
 
 /usr/include/ctype.h:
 
 /opt/ros/jazzy/share/rmw_implementation_cmake/cmake/rmw_implementation_cmake-extras.cmake:
 
-/opt/ros/jazzy/share/rmw_implementation_cmake/cmake/rmw_implementation_cmakeConfig-version.cmake:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/wait_set.hpp:
-
-/usr/include/c++/13/bits/vector.tcc:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_service.hpp:
-
 /opt/ros/jazzy/share/rmw_implementation_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:
 
 /opt/ros/jazzy/share/rmw_implementation/cmake/export_rmw_implementationExport.cmake:
+
+/usr/include/boost/mpl/aux_/has_type.hpp:
 
 /opt/ros/jazzy/share/ament_cmake_libraries/cmake/ament_libraries_deduplicate.cmake:
 
@@ -6004,13 +7967,15 @@ ui_mainwindow.h:
 
 /opt/ros/jazzy/share/ament_cmake_core/cmake/core/get_executable_path.cmake:
 
-/opt/ros/jazzy/include/rmw/rmw/time.h:
-
 /opt/ros/jazzy/share/rmw_fastrtps_shared_cpp/cmake/rmw_fastrtps_shared_cppConfig.cmake:
 
 /opt/ros/jazzy/share/rmw_fastrtps_shared_cpp/cmake/rmw_fastrtps_shared_cppConfig-version.cmake:
 
 /opt/ros/jazzy/share/rmw_fastrtps_shared_cpp/cmake/rmw_fastrtps_shared_cpp-extras.cmake:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QThread:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/nav_msgs__rosidl_typesupport_cExport.cmake:
 
 /opt/ros/jazzy/share/std_msgs/cmake/std_msgs__rosidl_typesupport_cppExport-none.cmake:
 
@@ -6032,6 +7997,8 @@ ui_mainwindow.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
 
+/usr/include/boost/concept/assert.hpp:
+
 /opt/ros/jazzy/share/rmw_fastrtps_shared_cpp/cmake/ament_cmake_export_include_directories-extras.cmake:
 
 /opt/ros/jazzy/share/statistics_msgs/cmake/statistics_msgs__rosidl_typesupport_cExport-none.cmake:
@@ -6039,22 +8006,6 @@ ui_mainwindow.h:
 /opt/ros/jazzy/share/rmw_fastrtps_shared_cpp/cmake/ament_cmake_export_dependencies-extras.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:
-
-/usr/include/c++/13/bits/this_thread_sleep.h:
-
-/opt/ros/jazzy/share/rosgraph_msgs/cmake/rosgraph_msgs__rosidl_typesupport_introspection_cExport-none.cmake:
-
-/opt/ros/jazzy/share/rcpputils/cmake/rcpputilsExport-none.cmake:
-
-/opt/ros/jazzy/share/statistics_msgs/cmake/statistics_msgs__rosidl_typesupport_introspection_cppExport-none.cmake:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake:
-
-/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake/rmw_fastrtps_cppConfig.cmake:
-
-/opt/ros/jazzy/share/sensor_msgs/cmake/export_sensor_msgs__rosidl_generator_cppExport.cmake:
-
-/opt/ros/jazzy/include/rmw/rmw/qos_policy_kind.h:
 
 /opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake/ament_cmake_export_libraries-extras.cmake:
 
@@ -6064,9 +8015,17 @@ ui_mainwindow.h:
 
 /opt/ros/jazzy/share/rosidl_dynamic_typesupport/cmake/rosidl_dynamic_typesupport-exportExport.cmake:
 
+/opt/ros/jazzy/share/rmw_dds_common/cmake/rmw_dds_common__rosidl_typesupport_introspection_cppExport-none.cmake:
+
+/opt/ros/jazzy/share/ament_cmake_export_dependencies/cmake/ament_cmake_export_dependenciesConfig.cmake:
+
+/opt/ros/jazzy/share/sensor_msgs/cmake/export_sensor_msgsExport.cmake:
+
 /usr/include/c++/13/bits/invoke.h:
 
 /opt/ros/jazzy/share/rmw_dds_common/cmake/rmw_dds_common__rosidl_typesupport_introspection_cExport.cmake:
+
+/usr/include/boost/type_traits/declval.hpp:
 
 /opt/ros/jazzy/share/rosidl_typesupport_introspection_cpp/cmake/ament_cmake_export_include_directories-extras.cmake:
 
@@ -6082,11 +8041,15 @@ ui_mainwindow.h:
 
 /opt/ros/jazzy/share/rmw_dds_common/cmake/export_rmw_dds_common__rosidl_typesupport_fastrtps_cppExport-none.cmake:
 
+/usr/include/boost/preprocessor/empty.hpp:
+
 /opt/ros/jazzy/share/ament_cmake_core/cmake/core/all.cmake:
 
 /opt/ros/jazzy/include/rcl/rcl/network_flow_endpoints.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h:
+
+/usr/include/boost/preprocessor/seq/limits/enum_256.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/subscription_base.hpp:
 
@@ -6100,23 +8063,21 @@ ui_mainwindow.h:
 
 /opt/ros/jazzy/share/rmw_dds_common/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake:
 
+/usr/include/boost/mpl/aux_/has_apply.hpp:
+
 /opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake/rmw_fastrtps_cpp-extras.cmake:
 
+/usr/include/boost/iterator/reverse_iterator.hpp:
+
 /opt/ros/jazzy/share/rmw_dds_common/cmake/ament_cmake_export_targets-extras.cmake:
-
-/opt/ros/jazzy/share/rmw_dds_common/cmake/ament_cmake_export_include_directories-extras.cmake:
-
-CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
-
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
-
-/usr/share/cmake-3.28/Modules/FindPython3.cmake:
 
 /opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake/rmw_fastrtps_cppConfig-version.cmake:
 
 /opt/ros/jazzy/share/rmw/cmake/rmwConfig.cmake:
 
 /opt/ros/jazzy/share/rosidl_typesupport_introspection_cpp/cmake/rosidl_typesupport_introspection_cppConfig-version.cmake:
+
+/usr/include/boost/preprocessor/seq/elem.hpp:
 
 /opt/ros/jazzy/share/rcutils/cmake/rcutilsConfig.cmake:
 
@@ -6128,9 +8089,7 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /opt/ros/jazzy/share/rosidl_generator_c/cmake/rosidl_generator_cConfig.cmake:
 
-/usr/include/c++/13/debug/assertions.h:
-
-/opt/ros/jazzy/share/rcutils/cmake/rcutilsConfig-version.cmake:
+/usr/include/boost/preprocessor/variadic/size.hpp:
 
 /opt/ros/jazzy/share/rcutils/cmake/ament_cmake_export_targets-extras.cmake:
 
@@ -6154,9 +8113,25 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /opt/ros/jazzy/include/rcutils/rcutils/error_handling.h:
 
+/usr/include/boost/mpl/aux_/template_arity_fwd.hpp:
+
+/usr/include/boost/algorithm/string/detail/sequence.hpp:
+
+/opt/ros/jazzy/share/rcpputils/cmake/rcpputilsExport-none.cmake:
+
+/usr/include/c++/13/bits/this_thread_sleep.h:
+
+/opt/ros/jazzy/share/rosgraph_msgs/cmake/rosgraph_msgs__rosidl_typesupport_introspection_cExport-none.cmake:
+
+/opt/ros/jazzy/share/statistics_msgs/cmake/statistics_msgs__rosidl_typesupport_introspection_cppExport-none.cmake:
+
 /opt/ros/jazzy/share/rmw_implementation/cmake/ament_cmake_export_dependencies-extras.cmake:
 
+/usr/include/boost/preprocessor/comparison/less_equal.hpp:
+
 /opt/ros/jazzy/share/ament_cmake_export_targets/cmake/ament_cmake_export_targetsConfig.cmake:
+
+/usr/include/boost/config/platform/linux.hpp:
 
 /opt/ros/jazzy/share/rmw_dds_common/cmake/rmw_dds_common__rosidl_typesupport_cppExport-none.cmake:
 
@@ -6166,11 +8141,9 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /opt/ros/jazzy/share/rcpputils/cmake/ament_cmake_export_libraries-extras.cmake:
 
+/usr/include/boost/range/value_type.hpp:
+
 /opt/ros/jazzy/share/rmw_dds_common/cmake/rmw_dds_common__rosidl_typesupport_cExport.cmake:
-
-/opt/ros/jazzy/share/sensor_msgs/cmake/export_sensor_msgs__rosidl_typesupport_fastrtps_cppExport-none.cmake:
-
-/opt/ros/jazzy/share/std_msgs/cmake/std_msgs__rosidl_typesupport_cppExport.cmake:
 
 /opt/ros/jazzy/share/rcpputils/cmake/ament_cmake_export_dependencies-extras.cmake:
 
@@ -6180,11 +8153,17 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h:
 
+/usr/include/boost/mpl/aux_/preprocessed/gcc/apply_wrap.hpp:
+
 /opt/ros/jazzy/share/rclcpp/cmake/rclcppConfig.cmake:
 
 /usr/include/c++/13/bits/node_handle.h:
 
 /opt/ros/jazzy/share/rclcpp/cmake/ament_cmake_export_include_directories-extras.cmake:
+
+/usr/include/boost/preprocessor/seq/detail/is_empty.hpp:
+
+/usr/include/boost/preprocessor/list/detail/fold_right.hpp:
 
 /opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/srv/detail/get_type_description__struct.h:
 
@@ -6200,6 +8179,8 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /opt/ros/jazzy/share/rcl_logging_interface/cmake/ament_cmake_export_dependencies-extras.cmake:
 
+/usr/include/boost/mpl/aux_/common_name_wknd.hpp:
+
 /opt/ros/jazzy/share/rosidl_typesupport_c/cmake/rosidl_typesupport_cExport-none.cmake:
 
 /opt/ros/jazzy/share/rcpputils/cmake/rcpputilsConfig-version.cmake:
@@ -6208,33 +8189,19 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_include_directories/cmake/ament_cmake_include_directoriesConfig.cmake:
 
+/usr/include/boost/preprocessor/arithmetic/inc.hpp:
+
 /opt/ros/jazzy/share/rcl_interfaces/cmake/rcl_interfaces__rosidl_typesupport_introspection_cppExport-none.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_xmllint/cmake/ament_cmake_xmllintConfig.cmake:
 
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/serialized_message.hpp:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/sequence_bound.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/usr/include/c++/13/tr1/legendre_function.tcc:
-
-/opt/ros/jazzy/share/sensor_msgs/cmake/export_sensor_msgs__rosidl_generator_cExport-none.cmake:
 
 /opt/ros/jazzy/share/rosidl_typesupport_fastrtps_c/cmake/rosidl_typesupport_fastrtps_cConfig-version.cmake:
 
 /opt/ros/jazzy/include/rcl_yaml_param_parser/rcl_yaml_param_parser/visibility_control.h:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h:
-
-/opt/ros/jazzy/share/sensor_msgs/cmake/sensor_msgs__rosidl_typesupport_cExport-none.cmake:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake:
-
-/opt/ros/jazzy/lib/python3.12/site-packages/ament_package/template/package_level/local_setup.bash.in:
+/usr/include/boost/range/detail/sfinae.hpp:
 
 /opt/ros/jazzy/share/rosidl_runtime_cpp/cmake/ament_cmake_export_targets-extras.cmake:
 
@@ -6256,6 +8223,12 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /opt/ros/jazzy/share/rcl_interfaces/cmake/export_rcl_interfaces__rosidl_generator_cExport.cmake:
 
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h:
+
+/usr/include/boost/algorithm/string/std/slist_traits.hpp:
+
+/opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__struct.hpp:
+
 /opt/ros/jazzy/share/fastrtps/cmake/fastrtps-shared-targets-none.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_uncrustify/cmake/ament_cmake_uncrustifyConfig-version.cmake:
@@ -6266,13 +8239,89 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /usr/include/c++/13/bits/char_traits.h:
 
+/usr/include/boost/range/difference_type.hpp:
+
 /opt/ros/jazzy/share/rcl/cmake/rclExport.cmake:
 
 /opt/ros/jazzy/share/statistics_msgs/cmake/export_statistics_msgs__rosidl_typesupport_fastrtps_cppExport.cmake:
 
-/opt/ros/jazzy/include/rmw/rmw/init_options.h:
+/opt/ros/jazzy/share/rcl/cmake/rclConfig-version.cmake:
 
-/opt/ros/jazzy/share/ament_cmake_include_directories/cmake/ament_include_directories_order.cmake:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qelapsedtimer.h:
+
+/usr/include/c++/13/numeric:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/export_nav_msgs__rosidl_generator_cppExport.cmake:
+
+/opt/ros/jazzy/share/rcl_interfaces/cmake/rcl_interfaces__rosidl_typesupport_cppExport.cmake:
+
+/usr/include/c++/13/ext/aligned_buffer.h:
+
+/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/subscription.hpp:
+
+/opt/ros/jazzy/share/rcl/cmake/ament_cmake_export_targets-extras.cmake:
+
+/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui/src/mainwindow.cpp:
+
+/opt/ros/jazzy/share/rcl_interfaces/cmake/rcl_interfaces__rosidl_typesupport_cExport.cmake:
+
+/usr/include/boost/preprocessor/slot/detail/shared.hpp:
+
+/opt/ros/jazzy/share/rcl/cmake/ament_cmake_export_libraries-extras.cmake:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/set_parameters.hpp:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters__struct.hpp:
+
+/usr/include/c++/13/debug/assertions.h:
+
+/usr/include/boost/mpl/placeholders.hpp:
+
+/opt/ros/jazzy/share/rcutils/cmake/rcutilsConfig-version.cmake:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/nav_msgs__rosidl_typesupport_introspection_cppExport.cmake:
+
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/multi_array_layout__struct.hpp:
+
+/opt/ros/jazzy/share/builtin_interfaces/cmake/builtin_interfaces__rosidl_typesupport_cExport-none.cmake:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/nav_msgs__rosidl_typesupport_introspection_cExport-none.cmake:
+
+/opt/ros/jazzy/share/fastrtps/cmake/fast-discovery-server-targets-none.cmake:
+
+/opt/ros/jazzy/share/rmw/cmake/ament_cmake_export_libraries-extras.cmake:
+
+/opt/ros/jazzy/share/rmw_dds_common/cmake/export_rmw_dds_common__rosidl_generator_pyExport.cmake:
+
+/opt/ros/jazzy/share/service_msgs/cmake/service_msgs__rosidl_typesupport_cExport-none.cmake:
+
+/opt/ros/jazzy/share/statistics_msgs/cmake/export_statistics_msgs__rosidl_generator_cppExport.cmake:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/export_nav_msgs__rosidl_typesupport_fastrtps_cppExport-none.cmake:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/export_nav_msgs__rosidl_typesupport_fastrtps_cExport-none.cmake:
+
+/opt/ros/jazzy/share/rmw_dds_common/cmake/ament_cmake_export_include_directories-extras.cmake:
+
+/usr/include/boost/config.hpp:
+
+CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
+
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+
+/usr/share/cmake-3.28/Modules/FindPython3.cmake:
+
+/usr/include/boost/concept/detail/general.hpp:
+
+/opt/ros/jazzy/include/rmw/rmw/init_options.h:
 
 /opt/ros/jazzy/share/rcl_interfaces/cmake/export_rcl_interfaces__rosidl_generator_cExport-none.cmake:
 
@@ -6280,9 +8329,9 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
-/opt/ros/jazzy/share/builtin_interfaces/cmake/export_builtin_interfaces__rosidl_generator_pyExport-none.cmake:
+/usr/include/boost/type_traits/negation.hpp:
 
-/opt/ros/jazzy/share/ament_cmake_libraries/cmake/ament_cmake_librariesConfig.cmake:
+/opt/ros/jazzy/share/builtin_interfaces/cmake/export_builtin_interfaces__rosidl_generator_pyExport-none.cmake:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h:
 
@@ -6296,7 +8345,11 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters__traits.hpp:
 
+/usr/include/boost/config/detail/suffix.hpp:
+
 /opt/ros/jazzy/share/rcl_logging_interface/cmake/rcl_logging_interfaceConfig.cmake:
+
+/usr/include/boost/preprocessor/list/fold_left.hpp:
 
 /opt/ros/jazzy/include/rmw/rmw/error_handling.h:
 
@@ -6306,7 +8359,11 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp:
 
+/usr/include/boost/preprocessor/arithmetic/detail/is_minimum_number.hpp:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_services_interface.hpp:
+
+/usr/include/boost/preprocessor/control/iif.hpp:
 
 /opt/ros/jazzy/share/fastrtps_cmake_module/cmake/fastrtps_cmake_moduleConfig.cmake:
 
@@ -6316,7 +8373,15 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /usr/include/c++/13/unordered_set:
 
+/usr/include/boost/mpl/aux_/full_lambda.hpp:
+
 /opt/ros/jazzy/share/ament_cmake_gen_version_h/cmake/ament_cmake_gen_version_h.cmake:
+
+/usr/include/boost/type_traits/is_pod.hpp:
+
+/opt/ros/jazzy/share/rosidl_dynamic_typesupport/cmake/rosidl_dynamic_typesupportConfig.cmake:
+
+/opt/ros/jazzy/share/ament_index_cpp/cmake/export_ament_index_cppExport-none.cmake:
 
 /opt/ros/jazzy/share/rosgraph_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake:
 
@@ -6336,7 +8401,21 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /usr/include/c++/13/queue:
 
+/usr/include/boost/type_traits/add_volatile.hpp:
+
+/usr/include/boost/iterator/is_iterator.hpp:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/create_generic_publisher.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h:
+
+/usr/include/c++/13/ext/numeric_traits.h:
+
+/usr/include/boost/algorithm/string/predicate_facade.hpp:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
+
+/opt/ros/jazzy/share/ament_cmake_test/cmake/ament_add_test.cmake:
 
 /opt/ros/jazzy/share/rosidl_runtime_c/cmake/ament_cmake_export_include_directories-extras.cmake:
 
@@ -6344,33 +8423,31 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /opt/ros/jazzy/share/rmw/cmake/configure_rmw_library.cmake:
 
-/opt/ros/jazzy/share/rosidl_typesupport_fastrtps_cpp/cmake/rosidl_typesupport_fastrtps_cpp-extras.cmake:
+/opt/ros/jazzy/share/ament_cmake_libraries/cmake/ament_cmake_librariesConfig.cmake:
 
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h:
-
-/opt/ros/jazzy/share/rmw_implementation/cmake/export_rmw_implementationExport-none.cmake:
-
-/opt/ros/jazzy/share/rmw_dds_common/cmake/ament_cmake_export_libraries-extras.cmake:
-
-/opt/ros/jazzy/share/rcl_interfaces/cmake/ament_cmake_export_targets-extras.cmake:
-
-/opt/ros/jazzy/share/rosidl_typesupport_cpp/cmake/rosidl_typesupport_cpp-extras.cmake:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/parameter.hpp:
-
-/opt/ros/jazzy/share/geometry_msgs/cmake/export_geometry_msgs__rosidl_typesupport_fastrtps_cppExport.cmake:
-
-/opt/ros/jazzy/share/std_msgs/cmake/export_std_msgs__rosidl_generator_cppExport.cmake:
+/opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__struct.hpp:
 
 /opt/ros/jazzy/lib/cmake/fastcdr/fastcdr-shared-targets-none.cmake:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/wait_set_policies/detail/synchronization_policy_common.hpp:
+
+/opt/ros/jazzy/share/rmw_dds_common/cmake/export_rmw_dds_common__rosidl_generator_cExport.cmake:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h:
 
 /opt/ros/jazzy/share/ament_cmake_export_libraries/cmake/ament_export_library_names.cmake:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/export_nav_msgs__rosidl_generator_cExport.cmake:
+
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_export_libraries/cmake/ament_cmake_export_librariesConfig-version.cmake:
+
+/usr/include/boost/core/enable_if.hpp:
 
 /opt/ros/jazzy/share/ament_cmake_uncrustify/cmake/ament_cmake_uncrustify_lint_hook.cmake:
 
@@ -6380,9 +8457,13 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /usr/include/c++/13/ext/string_conversions.h:
 
+/usr/include/boost/type_traits/is_same.hpp:
+
 /opt/ros/jazzy/share/ament_cmake_export_interfaces/cmake/ament_cmake_export_interfacesConfig.cmake:
 
 /opt/ros/jazzy/share/geometry_msgs/cmake/export_geometry_msgs__rosidl_generator_cppExport.cmake:
+
+/usr/include/boost/mpl/aux_/nested_type_wknd.hpp:
 
 /opt/ros/jazzy/share/ament_cmake_export_include_directories/cmake/ament_cmake_export_include_directoriesConfig.cmake:
 
@@ -6400,13 +8481,29 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /opt/ros/jazzy/lib/python3.12/site-packages/ament_package/template/package_level/local_setup.sh.in:
 
+/usr/include/boost/type_traits/is_lvalue_reference.hpp:
+
 /opt/ros/jazzy/share/geometry_msgs/cmake/ament_cmake_export_targets-extras.cmake:
+
+/usr/include/c++/13/cxxabi.h:
+
+/opt/ros/jazzy/share/ament_cmake_export_dependencies/cmake/ament_export_dependencies.cmake:
 
 /opt/ros/jazzy/share/builtin_interfaces/cmake/export_builtin_interfaces__rosidl_generator_pyExport.cmake:
 
 /opt/ros/jazzy/include/rcutils/rcutils/types/uint8_array.h:
 
 /opt/ros/jazzy/share/rcl_interfaces/cmake/export_rcl_interfaces__rosidl_generator_cppExport.cmake:
+
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+/usr/share/cmake-3.28/Modules/FindPython/Support.cmake:
+
+/opt/ros/jazzy/share/statistics_msgs/cmake/statistics_msgsConfig.cmake:
+
+/usr/include/boost/preprocessor/list/detail/fold_left.hpp:
+
+/usr/include/boost/mpl/aux_/config/use_preprocessed.hpp:
 
 /opt/ros/jazzy/share/ament_cmake_export_libraries/cmake/ament_cmake_export_libraries-extras.cmake:
 
@@ -6425,8 +8522,6 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 /opt/ros/jazzy/share/rmw_implementation_cmake/cmake/get_default_rmw_implementation.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_cppcheck/cmake/ament_cppcheck.cmake:
-
-/opt/ros/jazzy/share/sensor_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
@@ -6450,9 +8545,9 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__builder.hpp:
 
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__traits.hpp:
+/usr/include/boost/type_traits/is_rvalue_reference.hpp:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_description__struct.h:
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__traits.hpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h:
 
@@ -6478,6 +8573,8 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /opt/ros/jazzy/include/rcutils/rcutils/types/char_array.h:
 
+/usr/include/boost/preprocessor/repetition/limits/repeat_256.hpp:
+
 /opt/ros/jazzy/include/rmw/rmw/names_and_types.h:
 
 /opt/ros/jazzy/share/rcl_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:
@@ -6485,6 +8582,14 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 /opt/ros/jazzy/share/service_msgs/cmake/export_service_msgs__rosidl_typesupport_fastrtps_cExport-none.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_flake8/cmake/ament_cmake_flake8-extras.cmake:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/export_nav_msgs__rosidl_typesupport_fastrtps_cExport.cmake:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/c++/13/tr1/legendre_function.tcc:
+
+/opt/ros/jazzy/share/sensor_msgs/cmake/export_sensor_msgs__rosidl_generator_cExport-none.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_uninstall_script.cmake.in:
 
@@ -6500,6 +8605,12 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install.cmake.in:
 
+/usr/include/boost/version.hpp:
+
+/opt/ros/jazzy/share/rclcpp/cmake/rclcppConfig-version.cmake:
+
+/opt/ros/jazzy/share/ament_cmake_core/cmake/index/ament_index_get_resources.cmake:
+
 /opt/ros/jazzy/share/type_description_interfaces/cmake/export_type_description_interfaces__rosidl_typesupport_fastrtps_cppExport-none.cmake:
 
 /home/catcyber02/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui/resources/resource.qrc:
@@ -6509,6 +8620,8 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 /opt/ros/jazzy/share/statistics_msgs/cmake/export_statistics_msgs__rosidl_generator_cExport-none.cmake:
 
 /opt/ros/jazzy/include/rcutils/rcutils/sha256.h:
+
+/usr/include/boost/config/pragma_message.hpp:
 
 /opt/ros/jazzy/share/rcl_interfaces/cmake/rcl_interfaces__rosidl_typesupport_introspection_cExport-none.cmake:
 
@@ -6520,6 +8633,8 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /opt/ros/jazzy/share/rosidl_typesupport_cpp/cmake/rosidl_typesupport_cppExport.cmake:
 
+/usr/include/boost/mpl/integral_c_tag.hpp:
+
 /opt/ros/jazzy/share/rcl_yaml_param_parser/cmake/rcl_yaml_param_parserExport.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_export_link_flags/cmake/ament_cmake_export_link_flagsConfig.cmake:
@@ -6530,41 +8645,33 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /usr/include/c++/13/bits/sstream.tcc:
 
+/usr/include/boost/mpl/limits/arity.hpp:
+
 /opt/ros/jazzy/share/std_msgs/cmake/ament_cmake_export_targets-extras.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_core/cmake/ament_cmake_environment-extras.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_lint_cmake/cmake/ament_cmake_lint_cmake_lint_hook.cmake:
 
-/opt/ros/jazzy/share/ament_cmake_core/cmake/symlink_install/install.cmake:
+/opt/ros/jazzy/share/builtin_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake:
 
-/opt/ros/jazzy/share/sensor_msgs/cmake/export_sensor_msgs__rosidl_generator_pyExport-none.cmake:
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
-/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui/src/mainwindow.cpp:
-
-/opt/ros/jazzy/share/rcl_interfaces/cmake/rcl_interfaces__rosidl_typesupport_cExport.cmake:
-
-/opt/ros/jazzy/share/rcl/cmake/ament_cmake_export_libraries-extras.cmake:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/set_parameters.hpp:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters__struct.hpp:
+/opt/ros/jazzy/share/sensor_msgs/cmake/sensor_msgs__rosidl_typesupport_cExport.cmake:
 
 /opt/ros/jazzy/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake:
 
-/opt/ros/jazzy/share/ament_cmake_core/cmake/index/ament_index_get_resources.cmake:
-
-/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh:
+/usr/include/boost/type_traits/has_minus.hpp:
 
 /opt/ros/jazzy/share/ament_cmake_export_link_flags/cmake/ament_cmake_export_link_flags-extras.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_core/cmake/ament_cmake_coreConfig-version.cmake:
 
 /opt/ros/jazzy/share/service_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake:
+
+/usr/include/boost/preprocessor/arithmetic/dec.hpp:
 
 /opt/ros/jazzy/share/rcl_yaml_param_parser/cmake/ament_cmake_export_libraries-extras.cmake:
 
@@ -6584,15 +8691,23 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit:
 
+/usr/include/boost/mpl/bind.hpp:
+
 /opt/ros/jazzy/share/rmw_fastrtps_shared_cpp/cmake/rmw_fastrtps_shared_cppExport-none.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_lint_cmake/cmake/ament_cmake_lint_cmakeConfig-version.cmake:
+
+/opt/ros/jazzy/share/rcl/cmake/rclConfig.cmake:
+
+/opt/ros/jazzy/share/sensor_msgs/cmake/rosidl_cmake-extras.cmake:
 
 /opt/ros/jazzy/share/rosidl_dynamic_typesupport/cmake/rosidl_dynamic_typesupport-exportExport-none.cmake:
 
 /opt/ros/jazzy/share/type_description_interfaces/cmake/type_description_interfaces__rosidl_typesupport_introspection_cExport.cmake:
 
 /opt/ros/jazzy/share/rmw_dds_common/cmake/export_rmw_dds_common__rosidl_generator_pyExport-none.cmake:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/bind.hpp:
 
 /opt/ros/jazzy/include/rcl/rcl/error_handling.h:
 
@@ -6603,8 +8718,6 @@ CMakeFiles/3.28.3/CMakeCXXCompiler.cmake:
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/get_node_parameters_interface.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/allocator/allocator_common.hpp:
-
-/opt/ros/jazzy/share/sensor_msgs/cmake/export_sensor_msgs__rosidl_typesupport_fastrtps_cExport-none.cmake:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h:
 
@@ -6628,9 +8741,23 @@ ament_cmake_package_templates/templates.cmake:
 
 /opt/ros/jazzy/include/rcutils/rcutils/types.h:
 
+/usr/include/boost/type_traits/remove_cv.hpp:
+
+/usr/include/boost/mpl/aux_/config/has_apply.hpp:
+
 /opt/ros/jazzy/share/builtin_interfaces/cmake/export_builtin_interfaces__rosidl_generator_cExport-none.cmake:
 
 /opt/ros/jazzy/share/rosidl_typesupport_introspection_cpp/cmake/ament_cmake_export_libraries-extras.cmake:
+
+/opt/ros/jazzy/share/rcl_interfaces/cmake/ament_cmake_export_targets-extras.cmake:
+
+/opt/ros/jazzy/share/rosidl_typesupport_cpp/cmake/rosidl_typesupport_cpp-extras.cmake:
+
+/usr/include/boost/preprocessor/enum_params.hpp:
+
+/opt/ros/jazzy/share/rmw_dds_common/cmake/ament_cmake_export_libraries-extras.cmake:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/parameter.hpp:
 
 /opt/ros/jazzy/share/ament_cmake_export_libraries/cmake/ament_cmake_export_librariesConfig.cmake:
 
@@ -6640,9 +8767,13 @@ ament_cmake_package_templates/templates.cmake:
 
 /opt/ros/jazzy/include/rcutils/rcutils/qsort.h:
 
-/opt/ros/jazzy/share/rosidl_typesupport_interface/cmake/ament_cmake_export_targets-extras.cmake:
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
-/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui/CMakeLists.txt:
+/opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_type_support_decl.hpp:
+
+/opt/ros/jazzy/share/builtin_interfaces/cmake/ament_cmake_export_targets-extras.cmake:
+
+/opt/ros/jazzy/lib/cmake/fastcdr/fastcdr-shared-targets.cmake:
 
 /opt/ros/jazzy/share/rosidl_typesupport_introspection_c/cmake/rosidl_typesupport_introspection_cConfig-version.cmake:
 
@@ -6656,13 +8787,13 @@ ament_cmake_package_templates/templates.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh:
 
-/opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_typesupport_cpp/message_type_support.hpp:
-
 /usr/include/c++/13/ext/type_traits.h:
 
 /opt/ros/jazzy/share/rcl_interfaces/cmake/rcl_interfaces__rosidl_typesupport_cppExport-none.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_export_definitions/cmake/ament_export_definitions.cmake:
+
+/usr/include/boost/iterator/interoperable.hpp:
 
 /opt/ros/jazzy/share/rclcpp/cmake/rclcppExport-none.cmake:
 
@@ -6684,11 +8815,13 @@ ament_cmake_package_templates/templates.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_core/cmake/index/ament_index_register_package.cmake:
 
+/opt/ros/jazzy/share/nav_msgs/cmake/export_nav_msgs__rosidl_generator_cExport-none.cmake:
+
+/usr/include/x86_64-linux-gnu/bits/sigthread.h:
+
+/opt/ros/jazzy/share/rosidl_typesupport_cpp/cmake/rosidl_typesupport_cppConfig.cmake:
+
 /opt/ros/jazzy/share/builtin_interfaces/cmake/ament_cmake_export_libraries-extras.cmake:
-
-/opt/ros/jazzy/share/sensor_msgs/cmake/ament_cmake_export_dependencies-extras.cmake:
-
-/opt/ros/jazzy/share/rcl_yaml_param_parser/cmake/ament_cmake_export_dependencies-extras.cmake:
 
 /opt/ros/jazzy/include/rcl/rcl/service.h:
 
@@ -6702,27 +8835,29 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_options.hpp:
 
+/opt/ros/jazzy/share/sensor_msgs/cmake/sensor_msgs__rosidl_typesupport_introspection_cppExport.cmake:
+
+/opt/ros/jazzy/share/ament_cmake_export_interfaces/cmake/ament_export_interfaces.cmake:
+
 /usr/include/limits.h:
 
 /opt/ros/jazzy/include/rmw/rmw/impl/config.h:
 
-/usr/include/c++/13/cxxabi.h:
-
-/opt/ros/jazzy/share/ament_cmake_export_dependencies/cmake/ament_export_dependencies.cmake:
-
-/opt/ros/jazzy/share/sensor_msgs/cmake/rosidl_cmake-extras.cmake:
-
-/opt/ros/jazzy/share/rcl/cmake/rclConfig.cmake:
-
-/usr/include/c++/13/ext/aligned_buffer.h:
-
-/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/subscription.hpp:
-
-/opt/ros/jazzy/share/rcl/cmake/ament_cmake_export_targets-extras.cmake:
+/usr/include/boost/mpl/always.hpp:
 
 /opt/ros/jazzy/share/ament_cmake/cmake/ament_cmakeConfig-version.cmake:
+
+/usr/include/boost/mpl/aux_/yes_no.hpp:
+
+/opt/ros/jazzy/share/rmw_implementation_cmake/cmake/call_for_each_rmw_implementation.cmake:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/timer.hpp:
+
+/opt/ros/jazzy/share/ament_cmake_core/cmake/index/ament_index_get_prefix_path.cmake:
+
+/usr/include/c++/13/bits/stl_map.h:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake:
 
 /opt/ros/jazzy/share/geometry_msgs/cmake/export_geometry_msgs__rosidl_generator_cExport.cmake:
 
@@ -6746,6 +8881,8 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /opt/ros/jazzy/share/rmw/cmake/register_rmw_implementation.cmake:
 
+/usr/include/boost/mpl/logical.hpp:
+
 /opt/ros/jazzy/share/ament_cmake_core/cmake/index/ament_index_get_resource.cmake:
 
 /opt/ros/jazzy/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:
@@ -6757,6 +8894,12 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 /opt/ros/jazzy/share/ament_lint_common/cmake/ament_cmake_export_dependencies-extras.cmake:
 
 /opt/ros/jazzy/share/std_msgs/cmake/std_msgsConfig.cmake:
+
+/usr/include/x86_64-linux-gnu/bits/timex.h:
+
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/export_nav_msgs__rosidl_typesupport_fastrtps_cppExport.cmake:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h:
 
@@ -6772,27 +8915,31 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /opt/ros/jazzy/share/libstatistics_collector/cmake/ament_cmake_export_targets-extras.cmake:
 
-/opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_typesupport_cpp/service_type_support.hpp:
-
 /opt/ros/jazzy/share/rosgraph_msgs/cmake/export_rosgraph_msgs__rosidl_typesupport_fastrtps_cppExport-none.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py:
 
 /opt/ros/jazzy/share/ament_cmake_core/cmake/core/templates/nameConfig.cmake.in:
 
+/usr/include/boost/preprocessor/repetition/enum.hpp:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/rosidl_cmake-extras.cmake:
+
+/opt/ros/jazzy/share/fastrtps/cmake/fastrtps-config-version.cmake:
+
+/opt/ros/jazzy/share/ament_cmake_test/cmake/ament_cmake_test-extras.cmake:
+
 /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/float32__traits.hpp:
 
 /opt/ros/jazzy/share/ament_cmake_export_definitions/cmake/ament_cmake_export_definitionsConfig-version.cmake:
 
+/opt/ros/jazzy/share/ament_cmake_include_directories/cmake/ament_include_directories_order.cmake:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/ament_cmake_export_include_directories-extras.cmake:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/apply.hpp:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/experimental/subscription_intra_process.hpp:
-
-/opt/ros/jazzy/share/ament_lint_auto/cmake/ament_lint_autoConfig-version.cmake:
-
-/opt/ros/jazzy/share/sensor_msgs/cmake/ament_cmake_export_include_directories-extras.cmake:
-
-/usr/include/c++/13/bits/postypes.h:
-
-/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/moving_average.hpp:
 
 /opt/ros/jazzy/share/fastrtps/cmake/fast-discovery-server-targets.cmake:
 
@@ -6804,21 +8951,29 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /opt/ros/jazzy/share/sensor_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake:
 
-/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/identifier.h:
-
 /opt/ros/jazzy/share/rcl_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake:
 
 /opt/ros/jazzy/lib/foonathan_memory/cmake/foonathan_memory-config-none.cmake:
 
+/usr/include/boost/utility/identity_type.hpp:
+
+/usr/include/boost/preprocessor/control/limits/while_256.hpp:
+
 /opt/ros/jazzy/share/rcl_logging_interface/cmake/rcl_logging_interfaceExport.cmake:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:
+
+/opt/ros/jazzy/share/ament_cmake_target_dependencies/cmake/ament_cmake_target_dependenciesConfig-version.cmake:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/message_memory_strategy.hpp:
 
 /opt/ros/jazzy/share/ament_cmake_core/cmake/ament_cmake_uninstall_target-extras.cmake:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+
+/opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__builder.hpp:
 
 /opt/ros/jazzy/share/ament_cmake_flake8/cmake/ament_cmake_flake8Config.cmake:
 
@@ -6830,9 +8985,23 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /opt/ros/jazzy/share/builtin_interfaces/cmake/builtin_interfacesConfig-version.cmake:
 
+/usr/include/boost/concept/detail/concept_undef.hpp:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake:
+
+/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake/rmw_fastrtps_cppConfig.cmake:
+
+/opt/ros/jazzy/share/sensor_msgs/cmake/export_sensor_msgs__rosidl_generator_cppExport.cmake:
+
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake:
+
 /opt/ros/jazzy/share/libstatistics_collector/cmake/ament_cmake_export_libraries-extras.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_add_default_options.cmake:
+
+/usr/include/boost/type_traits/make_void.hpp:
 
 /opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/detail/individual_type_description__struct.h:
 
@@ -6848,13 +9017,19 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_python/cmake/ament_python_install_package.cmake:
 
+/usr/include/boost/preprocessor/comma_if.hpp:
+
 /opt/ros/jazzy/share/rosidl_typesupport_c/cmake/ament_cmake_export_dependencies-extras.cmake:
 
 /opt/ros/jazzy/share/rmw_implementation/cmake/rmw_implementation-extras.cmake:
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
+/usr/include/boost/algorithm/string/classification.hpp:
+
 /opt/ros/jazzy/share/rmw_dds_common/cmake/rmw_dds_commonConfig.cmake:
+
+/usr/include/boost/type_traits/is_integral.hpp:
 
 /opt/ros/jazzy/share/rcl_logging_interface/cmake/rcl_logging_interfaceExport-none.cmake:
 
@@ -6867,6 +9042,10 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 /opt/ros/jazzy/share/ament_cmake_cppcheck/cmake/ament_cmake_cppcheckConfig-version.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_core/cmake/ament_cmake_environment_hooks-extras.cmake:
+
+/usr/include/boost/iterator/iterator_categories.hpp:
+
+/usr/include/boost/detail/workaround.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__builder.hpp:
 
@@ -6888,9 +9067,13 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_programs.cmake:
 
+/usr/include/boost/core/checked_delete.hpp:
+
 /opt/ros/jazzy/share/ament_cmake_export_include_directories/cmake/ament_cmake_export_include_directories-extras.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_core/cmake/core/assert_file_exists.cmake:
+
+/usr/include/boost/current_function.hpp:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake:
 
@@ -6898,9 +9081,15 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_export_interfaces/cmake/ament_cmake_export_interfaces-extras.cmake:
 
+/usr/include/boost/type_traits/is_reference.hpp:
+
+/usr/include/boost/function/function_template.hpp:
+
 /opt/ros/jazzy/share/rosidl_typesupport_c/cmake/ament_cmake_export_targets-extras.cmake:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_time_source_interface.hpp:
+
+/usr/include/boost/preprocessor/seq/fold_left.hpp:
 
 /opt/ros/jazzy/share/ament_cmake_target_dependencies/cmake/ament_cmake_target_dependencies-extras.cmake:
 
@@ -6914,9 +9103,13 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/parameter_descriptor.hpp:
 
+/usr/include/boost/mpl/aux_/config/ttp.hpp:
+
 /opt/ros/jazzy/share/std_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake:
 
 /opt/ros/jazzy/share/rosgraph_msgs/cmake/rosgraph_msgs__rosidl_typesupport_introspection_cppExport-none.cmake:
+
+/usr/include/boost/mpl/aux_/config/bcc.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__builder.hpp:
 
@@ -6929,10 +9122,6 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 /opt/ros/jazzy/include/rmw/rmw/events_statuses/incompatible_type.h:
 
 /opt/ros/jazzy/share/fastrtps/cmake/fastrtps-shared-targets.cmake:
-
-/opt/ros/jazzy/share/sensor_msgs/cmake/sensor_msgs__rosidl_typesupport_cppExport.cmake:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__struct.hpp:
 
 /opt/ros/jazzy/share/rcl_interfaces/cmake/export_rcl_interfaces__rosidl_typesupport_fastrtps_cExport.cmake:
 
@@ -6952,21 +9141,25 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h:
 
+/usr/include/boost/range/config.hpp:
+
 /opt/ros/jazzy/share/ament_cmake_core/cmake/core/templates/nameConfig-version.cmake.in:
 
 /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
 
+/usr/include/boost/preprocessor/facilities/empty.hpp:
+
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake:
 
 /usr/include/c++/13/tr1/poly_laguerre.tcc:
+
+/usr/include/boost/preprocessor/tuple/elem.hpp:
 
 /opt/ros/jazzy/share/rosidl_dynamic_typesupport/cmake/ament_cmake_export_targets-extras.cmake:
 
 /usr/include/c++/13/bits/std_abs.h:
 
 /opt/ros/jazzy/include/rcl/rcl/init_options.h:
-
-/opt/ros/jazzy/share/ament_cmake_core/cmake/environment/ament_cmake_environment_package_hook.cmake:
 
 /opt/ros/jazzy/share/rosidl_core_runtime/cmake/rosidl_core_runtime-extras.cmake:
 
@@ -6978,9 +9171,13 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /opt/ros/jazzy/share/service_msgs/cmake/export_service_msgs__rosidl_generator_cExport.cmake:
 
+/usr/include/boost/preprocessor/tuple/detail/is_single_return.hpp:
+
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/ament_cmake_environment_hooks_package_hook.cmake:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/nav_msgsConfig.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_version/cmake/ament_cmake_versionConfig.cmake:
 
@@ -6990,15 +9187,29 @@ CMakeFiles/3.28.3/CMakeSystem.cmake:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/guard_condition.hpp:
 
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:
+
 ament_cmake_core/package.cmake:
 
+/usr/include/boost/utility/base_from_member.hpp:
+
 /opt/ros/jazzy/share/ament_cmake_pep257/cmake/ament_cmake_pep257Config-version.cmake:
+
+/usr/include/boost/mpl/aux_/include_preprocessed.hpp:
+
+/usr/include/boost/detail/indirect_traits.hpp:
 
 /opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/detail/key_value__struct.h:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake:
 
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_hash.h:
+
+/opt/ros/jazzy/share/ament_cmake_pep257/cmake/ament_cmake_pep257Config.cmake:
+
 /opt/ros/jazzy/share/ament_cmake_pep257/cmake/ament_cmake_pep257_lint_hook.cmake:
+
+/usr/include/boost/type_traits/is_array.hpp:
 
 /opt/ros/jazzy/share/ament_cmake_pep257/cmake/ament_pep257.cmake:
 
@@ -7006,13 +9217,7 @@ ament_cmake_core/package.cmake:
 
 /opt/ros/jazzy/share/geometry_msgs/cmake/geometry_msgs__rosidl_typesupport_cppExport.cmake:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/message_memory_strategy.hpp:
-
-/opt/ros/jazzy/share/ament_cmake_target_dependencies/cmake/ament_cmake_target_dependenciesConfig-version.cmake:
-
-/opt/ros/jazzy/share/fastrtps/cmake/fastrtps-config-version.cmake:
-
-/opt/ros/jazzy/share/ament_cmake_test/cmake/ament_cmake_test-extras.cmake:
+/opt/ros/jazzy/share/rosidl_typesupport_cpp/cmake/ament_cmake_export_dependencies-extras.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_target_dependencies/cmake/ament_get_recursive_properties.cmake:
 
@@ -7021,14 +9226,6 @@ ament_cmake_core/package.cmake:
 /opt/ros/jazzy/share/rosgraph_msgs/cmake/rosgraph_msgs__rosidl_typesupport_cExport-none.cmake:
 
 /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake:
-
-/opt/ros/jazzy/share/fastrtps/cmake/fast-discovery-server-targets-none.cmake:
-
-/opt/ros/jazzy/share/rmw/cmake/ament_cmake_export_libraries-extras.cmake:
-
-/opt/ros/jazzy/share/rmw_dds_common/cmake/export_rmw_dds_common__rosidl_generator_pyExport.cmake:
-
-/opt/ros/jazzy/share/service_msgs/cmake/service_msgs__rosidl_typesupport_cExport-none.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_test/cmake/ament_cmake_testConfig-version.cmake:
 
@@ -7046,15 +9243,15 @@ ament_cmake_core/package.cmake:
 
 /opt/ros/jazzy/share/rmw_implementation/cmake/rmw_implementationConfig-version.cmake:
 
+/opt/ros/jazzy/share/geometry_msgs/cmake/export_geometry_msgs__rosidl_typesupport_fastrtps_cppExport.cmake:
+
+/opt/ros/jazzy/share/std_msgs/cmake/export_std_msgs__rosidl_generator_cppExport.cmake:
+
 /opt/ros/jazzy/share/ament_cmake_export_targets/cmake/ament_export_targets.cmake:
 
 /opt/ros/jazzy/share/rmw_dds_common/cmake/export_rmw_dds_common__rosidl_generator_cppExport.cmake:
 
 /opt/ros/jazzy/include/rcutils/rcutils/logging.h:
-
-/usr/include/locale.h:
-
-/opt/ros/jazzy/include/rmw/rmw/qos_profiles.h:
 
 /opt/ros/jazzy/share/ament_cmake_version/cmake/ament_cmake_version-extras.cmake:
 
@@ -7063,6 +9260,10 @@ ament_cmake_core/package.cmake:
 /opt/ros/jazzy/share/rosidl_generator_cpp/cmake/rosidl_generator_cppConfig.cmake:
 
 /opt/ros/jazzy/share/fastrtps/cmake/fastrtps-config.cmake:
+
+/usr/include/boost/algorithm/string/trim.hpp:
+
+/usr/include/boost/algorithm/string/concept.hpp:
 
 /opt/ros/jazzy/share/geometry_msgs/cmake/export_geometry_msgs__rosidl_typesupport_fastrtps_cExport.cmake:
 
@@ -7076,17 +9277,25 @@ ament_cmake_core/package.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_xmllint/cmake/ament_cmake_xmllintConfig-version.cmake:
 
-/opt/ros/jazzy/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:
+/opt/ros/jazzy/share/rosidl_typesupport_cpp/cmake/ament_cmake_export_libraries-extras.cmake:
 
-/opt/ros/jazzy/share/rmw_implementation_cmake/cmake/get_available_rmw_implementations.cmake:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h:
 
-/opt/ros/jazzy/share/rmw_dds_common/cmake/rmw_dds_common__rosidl_typesupport_introspection_cppExport.cmake:
-
-/opt/ros/jazzy/share/ament_cmake_libraries/cmake/ament_cmake_libraries-extras.cmake:
+/opt/ros/jazzy/share/sensor_msgs/cmake/export_sensor_msgs__rosidl_typesupport_fastrtps_cExport.cmake:
 
 /opt/ros/jazzy/share/rcl_logging_interface/cmake/rcl_logging_interfaceConfig-version.cmake:
 
+/opt/ros/jazzy/share/nav_msgs/cmake/export_nav_msgs__rosidl_generator_pyExport.cmake:
+
 /opt/ros/jazzy/share/ament_index_cpp/cmake/ament_cmake_export_targets-extras.cmake:
+
+/opt/ros/jazzy/share/rosidl_typesupport_fastrtps_cpp/cmake/rosidl_typesupport_fastrtps_cpp-extras.cmake:
+
+/home/catcyber02/Mobile-Robots-2026-1/ros2_ws/src/hri/justina_gui/CMakeLists.txt:
+
+/opt/ros/jazzy/share/rosidl_typesupport_interface/cmake/ament_cmake_export_targets-extras.cmake:
+
+/usr/include/boost/algorithm/string/detail/find_format.hpp:
 
 /opt/ros/jazzy/share/ament_cmake_export_libraries/cmake/ament_export_libraries.cmake:
 
@@ -7094,11 +9303,11 @@ ament_cmake_core/package.cmake:
 
 /usr/include/c++/13/bits/uses_allocator.h:
 
+/usr/include/boost/mpl/int_fwd.hpp:
+
 /opt/ros/jazzy/share/builtin_interfaces/cmake/export_builtin_interfaces__rosidl_typesupport_fastrtps_cExport.cmake:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_waitables_interface.hpp:
-
-/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/dynamic_message_type_support_struct.h:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/floating_point_range__traits.hpp:
 
@@ -7110,31 +9319,51 @@ ament_cmake_core/package.cmake:
 
 /opt/ros/jazzy/share/ament_lint_common/cmake/ament_lint_commonConfig-version.cmake:
 
+/opt/ros/jazzy/share/rosgraph_msgs/cmake/rosgraph_msgs__rosidl_typesupport_cppExport.cmake:
+
+/opt/ros/jazzy/share/sensor_msgs/cmake/ament_cmake_export_targets-extras.cmake:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h:
+
+/usr/include/boost/type_traits/add_const.hpp:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters_atomically__builder.hpp:
+
 justina_gui_node_autogen/mocs_compilation.cpp:
 
 /opt/ros/jazzy/share/rcl_yaml_param_parser/cmake/rcl_yaml_param_parserConfig-version.cmake:
 
+/usr/include/c++/13/bits/requires_hosted.h:
+
+/usr/include/boost/iterator/detail/enable_if.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp:
+
+/usr/include/boost/mpl/aux_/config/eti.hpp:
+
 /opt/ros/jazzy/share/libstatistics_collector/cmake/libstatistics_collectorConfig-version.cmake:
 
-/opt/ros/jazzy/share/rcl_interfaces/cmake/rcl_interfaces__rosidl_typesupport_cppExport.cmake:
+/opt/ros/jazzy/include/rmw/rmw/security_options.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-/opt/ros/jazzy/share/statistics_msgs/cmake/statistics_msgsConfig.cmake:
-
-/usr/share/cmake-3.28/Modules/FindPython/Support.cmake:
+/opt/ros/jazzy/share/builtin_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake:
 
 /opt/ros/jazzy/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake:
 
-/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/multi_array_layout__struct.hpp:
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h:
 
-/opt/ros/jazzy/share/builtin_interfaces/cmake/builtin_interfaces__rosidl_typesupport_cExport-none.cmake:
+/opt/ros/jazzy/share/rmw_implementation/cmake/export_rmw_implementationExport-none.cmake:
+
+/usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/export_nav_msgs__rosidl_generator_pyExport-none.cmake:
 
 /opt/ros/jazzy/share/ament_lint_auto/cmake/ament_lint_auto-extras.cmake:
 
 /opt/ros/jazzy/share/builtin_interfaces/cmake/builtin_interfaces__rosidl_typesupport_cExport.cmake:
 
 /opt/ros/jazzy/share/builtin_interfaces/cmake/builtin_interfaces__rosidl_typesupport_cppExport-none.cmake:
+
+/usr/include/boost/range/mutable_iterator.hpp:
 
 /opt/ros/jazzy/share/rosidl_typesupport_fastrtps_cpp/cmake/ament_cmake_export_include_directories-extras.cmake:
 
@@ -7158,23 +9387,11 @@ justina_gui_node_autogen/mocs_compilation.cpp:
 
 /opt/ros/jazzy/share/builtin_interfaces/cmake/export_builtin_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake:
 
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-/opt/ros/jazzy/share/builtin_interfaces/cmake/ament_cmake_export_targets-extras.cmake:
-
-/opt/ros/jazzy/lib/cmake/fastcdr/fastcdr-shared-targets.cmake:
-
-/opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_type_support_decl.hpp:
-
 /opt/ros/jazzy/share/ament_cmake_lint_cmake/cmake/ament_cmake_lint_cmakeConfig.cmake:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_timers_interface_traits.hpp:
 
 /opt/ros/jazzy/share/builtin_interfaces/cmake/builtin_interfaces__rosidl_typesupport_introspection_cppExport-none.cmake:
-
-/usr/include/c++/13/bits/range_access.h:
-
-/opt/ros/jazzy/include/rmw/rmw/qos_string_conversions.h:
 
 /opt/ros/jazzy/share/ament_cmake_python/cmake/ament_cmake_python-extras.cmake:
 
@@ -7190,15 +9407,19 @@ justina_gui_node_autogen/mocs_compilation.cpp:
 
 /opt/ros/jazzy/share/geometry_msgs/cmake/geometry_msgs__rosidl_typesupport_introspection_cExport-none.cmake:
 
+/usr/include/boost/type_traits/is_enum.hpp:
+
+/usr/include/boost/type_traits/detail/config.hpp:
+
 /opt/ros/jazzy/share/service_msgs/cmake/export_service_msgs__rosidl_typesupport_fastrtps_cppExport.cmake:
 
-/opt/ros/jazzy/share/ament_cmake_pep257/cmake/ament_cmake_pep257Config.cmake:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_hash.h:
+/usr/include/boost/type_traits/is_base_and_derived.hpp:
 
 /opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules/FindFastRTPS.cmake:
 
 /opt/ros/jazzy/share/ament_index_cpp/cmake/ament_index_cppConfig.cmake:
+
+/usr/include/boost/function/detail/prologue.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__builder.hpp:
 
@@ -7208,6 +9429,8 @@ justina_gui_node_autogen/mocs_compilation.cpp:
 
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__type_support.hpp:
 
+/usr/include/boost/preprocessor/list/detail/limits/fold_right_256.hpp:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/is_ros_compatible_type.hpp:
 
 /usr/include/linux/close_range.h:
@@ -7216,29 +9439,49 @@ justina_gui_node_autogen/mocs_compilation.cpp:
 
 /opt/ros/jazzy/share/statistics_msgs/cmake/ament_cmake_export_targets-extras.cmake:
 
-/usr/include/x86_64-linux-gnu/bits/sigthread.h:
-
-/opt/ros/jazzy/share/rosidl_typesupport_cpp/cmake/rosidl_typesupport_cppConfig.cmake:
+/opt/ros/jazzy/share/nav_msgs/cmake/ament_cmake_export_dependencies-extras.cmake:
 
 /opt/ros/jazzy/share/fastrtps_cmake_module/cmake/fastrtps_cmake_module-extras.cmake:
 
 /opt/ros/jazzy/share/geometry_msgs/cmake/ament_cmake_export_libraries-extras.cmake:
 
+/usr/include/boost/preprocessor/list/limits/fold_left_256.hpp:
+
+/opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__traits.hpp:
+
+/usr/include/boost/algorithm/string/constants.hpp:
+
+/opt/ros/jazzy/share/rosidl_typesupport_introspection_c/cmake/ament_cmake_export_include_directories-extras.cmake:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/nav_msgs__rosidl_typesupport_cExport-none.cmake:
+
 /opt/ros/jazzy/share/libstatistics_collector/cmake/ament_cmake_export_include_directories-extras.cmake:
+
+/usr/include/boost/iterator/detail/facade_iterator_category.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/parameter_value.hpp:
 
 /opt/ros/jazzy/share/rosidl_runtime_c/cmake/ament_cmake_export_libraries-extras.cmake:
 
-/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/api/serialization_support_interface.h:
+/opt/ros/jazzy/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_append_install_code.cmake:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h:
+/usr/include/boost/range/detail/str_types.hpp:
 
-/opt/ros/jazzy/share/rosidl_dynamic_typesupport/cmake/ament_cmake_export_dependencies-extras.cmake:
+/usr/include/boost/algorithm/string/yes_no_type.hpp:
+
+/opt/ros/jazzy/share/sensor_msgs/cmake/export_sensor_msgs__rosidl_generator_pyExport.cmake:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake:
 
 /opt/ros/jazzy/share/geometry_msgs/cmake/export_geometry_msgs__rosidl_generator_cExport-none.cmake:
 
 /opt/ros/jazzy/include/rmw/rmw/macros.h:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/nav_msgs__rosidl_typesupport_cppExport-none.cmake:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/ament_cmake_export_targets-extras.cmake:
 
 /opt/ros/jazzy/share/rosgraph_msgs/cmake/ament_cmake_export_targets-extras.cmake:
 
@@ -7254,15 +9497,11 @@ justina_gui_node_autogen/mocs_compilation.cpp:
 
 /opt/ros/jazzy/share/std_msgs/cmake/ament_cmake_export_dependencies-extras.cmake:
 
-/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake:
-
-/opt/ros/jazzy/include/rcl/rcl/node.h:
-
 /opt/ros/jazzy/share/rosidl_default_runtime/cmake/ament_cmake_export_dependencies-extras.cmake:
 
 /opt/ros/jazzy/share/geometry_msgs/cmake/geometry_msgs__rosidl_typesupport_cExport-none.cmake:
 
-/opt/ros/jazzy/share/rclcpp/cmake/rclcppConfig-version.cmake:
+/opt/ros/jazzy/share/nav_msgs/cmake/nav_msgs__rosidl_typesupport_introspection_cppExport-none.cmake:
 
 /opt/ros/jazzy/share/geometry_msgs/cmake/geometry_msgs__rosidl_typesupport_introspection_cppExport-none.cmake:
 
@@ -7296,37 +9535,83 @@ justina_gui_node_autogen/mocs_compilation.cpp:
 
 /opt/ros/jazzy/share/libstatistics_collector/cmake/libstatistics_collectorExport.cmake:
 
-/opt/ros/jazzy/share/rmw_implementation_cmake/cmake/call_for_each_rmw_implementation.cmake:
+/usr/include/boost/type_traits/has_trivial_destructor.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/timer.hpp:
+/opt/ros/jazzy/share/rmw_implementation_cmake/cmake/rmw_implementation_cmakeConfig-version.cmake:
 
-/opt/ros/jazzy/share/ament_cmake_core/cmake/index/ament_index_get_prefix_path.cmake:
+/opt/ros/jazzy/include/rclcpp/rclcpp/wait_set.hpp:
+
+/opt/ros/jazzy/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake:
+
+/opt/ros/jazzy/share/rmw_dds_common/cmake/rmw_dds_common__rosidl_typesupport_introspection_cppExport.cmake:
+
+/opt/ros/jazzy/share/ament_cmake_libraries/cmake/ament_cmake_libraries-extras.cmake:
+
+/opt/ros/jazzy/share/rmw_implementation_cmake/cmake/get_available_rmw_implementations.cmake:
+
+/usr/include/c++/13/bits/vector.tcc:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_service.hpp:
+
+/opt/ros/jazzy/include/type_description_interfaces/type_description_interfaces/msg/detail/type_source__struct.h:
+
+/opt/ros/jazzy/share/rosidl_typesupport_introspection_cpp/cmake/rosidl_typesupport_introspection_cppExport-none.cmake:
+
+/opt/ros/jazzy/share/rcl_yaml_param_parser/cmake/ament_cmake_export_dependencies-extras.cmake:
+
+/opt/ros/jazzy/share/sensor_msgs/cmake/ament_cmake_export_dependencies-extras.cmake:
+
+/opt/ros/jazzy/share/ament_lint_auto/cmake/ament_lint_autoConfig-version.cmake:
+
+/opt/ros/jazzy/share/sensor_msgs/cmake/ament_cmake_export_include_directories-extras.cmake:
+
+/usr/include/c++/13/bits/postypes.h:
+
+/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/moving_average.hpp:
+
+/usr/include/c++/13/bits/string_view.tcc:
+
+/usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake:
+
+/opt/ros/jazzy/share/sensor_msgs/cmake/export_sensor_msgs__rosidl_generator_cExport.cmake:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/type_adapter.hpp:
+
+/opt/ros/jazzy/share/ament_cmake_core/cmake/symlink_install/install.cmake:
+
+/opt/ros/jazzy/share/sensor_msgs/cmake/export_sensor_msgs__rosidl_generator_pyExport-none.cmake:
+
+/opt/ros/jazzy/share/sensor_msgs/cmake/export_sensor_msgs__rosidl_typesupport_fastrtps_cExport-none.cmake:
+
+/opt/ros/jazzy/share/sensor_msgs/cmake/export_sensor_msgs__rosidl_typesupport_fastrtps_cppExport-none.cmake:
+
+/opt/ros/jazzy/share/std_msgs/cmake/std_msgs__rosidl_typesupport_cppExport.cmake:
+
+/opt/ros/jazzy/share/sensor_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake:
+
+/opt/ros/jazzy/lib/python3.12/site-packages/ament_package/template/package_level/local_setup.bash.in:
+
+/opt/ros/jazzy/share/sensor_msgs/cmake/sensor_msgs__rosidl_typesupport_cExport-none.cmake:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__struct.hpp:
+
+/opt/ros/jazzy/share/sensor_msgs/cmake/sensor_msgs__rosidl_typesupport_cppExport.cmake:
+
+/opt/ros/jazzy/include/rcl/rcl/node.h:
+
+/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake:
 
 /usr/include/signal.h:
 
 /opt/ros/jazzy/share/sensor_msgs/cmake/sensor_msgs__rosidl_typesupport_introspection_cExport-none.cmake:
 
-/opt/ros/jazzy/share/ament_index_cpp/cmake/export_ament_index_cppExport-none.cmake:
-
-/opt/ros/jazzy/share/rosidl_dynamic_typesupport/cmake/rosidl_dynamic_typesupportConfig.cmake:
-
-/opt/ros/jazzy/share/rcl/cmake/rclConfig-version.cmake:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h:
-
-/usr/include/c++/13/ext/numeric_traits.h:
-
-/opt/ros/jazzy/share/ament_cmake_test/cmake/ament_add_test.cmake:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
-
 /opt/ros/jazzy/share/sensor_msgs/cmake/sensor_msgs__rosidl_typesupport_introspection_cExport.cmake:
 
 /usr/share/cmake-3.28/Modules/CMakeParseArguments.cmake:
-
-/opt/ros/jazzy/share/ament_cmake_export_interfaces/cmake/ament_export_interfaces.cmake:
-
-/opt/ros/jazzy/share/sensor_msgs/cmake/sensor_msgs__rosidl_typesupport_introspection_cppExport.cmake:
 
 /opt/ros/jazzy/share/service_msgs/cmake/ament_cmake_export_dependencies-extras.cmake:
 
@@ -7338,6 +9623,8 @@ justina_gui_node_autogen/mocs_compilation.cpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_base.hpp:
 
+/usr/include/boost/preprocessor/detail/is_binary.hpp:
+
 /opt/ros/jazzy/share/service_msgs/cmake/ament_cmake_export_targets-extras.cmake:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameter_types__builder.hpp:
@@ -7347,6 +9634,8 @@ justina_gui_node_autogen/mocs_compilation.cpp:
 /opt/ros/jazzy/share/rosidl_typesupport_introspection_c/cmake/rosidl_typesupport_introspection_c-extras.cmake:
 
 /opt/ros/jazzy/share/service_msgs/cmake/export_service_msgs__rosidl_generator_pyExport.cmake:
+
+/usr/include/boost/utility/enable_if.hpp:
 
 /usr/lib/x86_64-linux-gnu/cmake/tinyxml2/tinyxml2-config-version.cmake:
 
@@ -7361,6 +9650,8 @@ justina_gui_node_autogen/mocs_compilation.cpp:
 /opt/ros/jazzy/include/rclcpp/rclcpp/create_subscription.hpp:
 
 /opt/ros/jazzy/share/service_msgs/cmake/rosidl_cmake-extras.cmake:
+
+/usr/include/boost/algorithm/string/compare.hpp:
 
 /opt/ros/jazzy/share/service_msgs/cmake/service_msgsConfig-version.cmake:
 
@@ -7378,6 +9669,8 @@ justina_gui_node_autogen/mocs_compilation.cpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/experimental/create_intra_process_buffer.hpp:
 
+/usr/include/boost/preprocessor/arithmetic/sub.hpp:
+
 /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:
 
 /opt/ros/jazzy/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake:
@@ -7394,6 +9687,10 @@ justina_gui_node_autogen/mocs_compilation.cpp:
 
 /usr/include/c++/13/bits/uniform_int_dist.h:
 
+/usr/include/boost/type_traits/detail/yes_no_type.hpp:
+
+/usr/include/boost/preprocessor/comparison/equal.hpp:
+
 /opt/ros/jazzy/share/statistics_msgs/cmake/export_statistics_msgs__rosidl_generator_cExport.cmake:
 
 /opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:
@@ -7408,6 +9705,8 @@ justina_gui_node_autogen/mocs_compilation.cpp:
 
 /opt/ros/jazzy/share/statistics_msgs/cmake/export_statistics_msgs__rosidl_generator_pyExport.cmake:
 
+/usr/include/boost/mpl/aux_/config/gpu.hpp:
+
 /opt/ros/jazzy/share/builtin_interfaces/cmake/builtin_interfaces__rosidl_typesupport_introspection_cppExport.cmake:
 
 /opt/ros/jazzy/share/statistics_msgs/cmake/export_statistics_msgs__rosidl_typesupport_fastrtps_cExport.cmake:
@@ -7417,6 +9716,8 @@ justina_gui_node_autogen/mocs_compilation.cpp:
 /opt/ros/jazzy/share/geometry_msgs/cmake/geometry_msgs__rosidl_typesupport_cppExport-none.cmake:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/network_flow_endpoint.hpp:
+
+/usr/include/boost/preprocessor/punctuation/comma.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__traits.hpp:
 
@@ -7438,13 +9739,11 @@ justina_gui_node_autogen/mocs_compilation.cpp:
 
 include/moc_mainwindow.cpp:
 
-/usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h:
-
-/opt/ros/jazzy/include/rmw/rmw/visibility_control.h:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/wait_set_policies/static_storage.hpp:
 
 /opt/ros/jazzy/include/rmw/rmw/event_callback_type.h:
+
+/usr/include/boost/preprocessor/debug/error.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters__type_support.hpp:
 
@@ -7458,7 +9757,17 @@ include/moc_mainwindow.cpp:
 
 /opt/ros/jazzy/share/std_msgs/cmake/ament_cmake_export_include_directories-extras.cmake:
 
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field__struct.h:
+
+/opt/ros/jazzy/share/rosgraph_msgs/cmake/export_rosgraph_msgs__rosidl_generator_cppExport.cmake:
+
+/opt/ros/jazzy/share/std_msgs/cmake/export_std_msgs__rosidl_generator_pyExport.cmake:
+
+/usr/include/boost/config/compiler/gcc.hpp:
+
 /opt/ros/jazzy/share/std_msgs/cmake/export_std_msgs__rosidl_typesupport_fastrtps_cExport.cmake:
+
+/usr/include/boost/mpl/aux_/config/has_xxx.hpp:
 
 /usr/include/assert.h:
 
@@ -7467,6 +9776,8 @@ include/moc_mainwindow.cpp:
 /usr/include/c++/13/bits/stl_numeric.h:
 
 /opt/ros/jazzy/share/std_msgs/cmake/export_std_msgs__rosidl_typesupport_fastrtps_cppExport.cmake:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/ament_cmake_export_libraries-extras.cmake:
 
 /opt/ros/jazzy/share/std_msgs/cmake/rosidl_cmake-extras.cmake:
 
@@ -7492,15 +9803,23 @@ include/moc_mainwindow.cpp:
 
 /opt/ros/jazzy/share/tracetools/cmake/ament_cmake_export_libraries-extras.cmake:
 
+/usr/include/boost/range/size.hpp:
+
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/get_parameter_types.hpp:
+
+/usr/include/boost/algorithm/string/sequence_traits.hpp:
 
 /opt/ros/jazzy/share/tracetools/cmake/ament_cmake_export_link_flags-extras.cmake:
 
 /usr/include/c++/13/bits/algorithmfwd.h:
 
+/usr/include/boost/mpl/aux_/config/msvc_typename.hpp:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/experimental/executors/events_executor/events_executor_event_types.hpp:
 
 /opt/ros/jazzy/share/tracetools/cmake/tracetoolsConfig.cmake:
+
+/usr/include/c++/13/version:
 
 /opt/ros/jazzy/share/tracetools/cmake/tracetools_exportExport.cmake:
 
@@ -7526,6 +9845,8 @@ include/moc_mainwindow.cpp:
 
 /opt/ros/jazzy/share/type_description_interfaces/cmake/export_type_description_interfaces__rosidl_generator_pyExport.cmake:
 
+/usr/include/boost/preprocessor/repeat.hpp:
+
 /opt/ros/jazzy/share/ament_cmake_version/cmake/ament_cmake_versionConfig-version.cmake:
 
 /usr/share/cmake-3.28/Modules/FindPackageMessage.cmake:
@@ -7537,6 +9858,8 @@ include/moc_mainwindow.cpp:
 /opt/ros/jazzy/share/ament_cmake_version/cmake/ament_export_development_version_if_higher_than_manifest.cmake:
 
 /opt/ros/jazzy/share/type_description_interfaces/cmake/export_type_description_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake:
+
+/usr/include/boost/mpl/aux_/adl_barrier.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_topics_interface.hpp:
 
@@ -7572,6 +9895,8 @@ include/moc_mainwindow.cpp:
 
 /usr/include/c++/13/bits/nested_exception.h:
 
+/usr/include/boost/range/range_fwd.hpp:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/create_generic_subscription.hpp:
 
 /opt/ros/jazzy/share/rosidl_typesupport_introspection_cpp/cmake/rosidl_typesupport_introspection_cppConfig.cmake:
@@ -7586,7 +9911,7 @@ include/moc_mainwindow.cpp:
 
 /opt/ros/jazzy/share/type_description_interfaces/cmake/type_description_interfaces__rosidl_typesupport_cppExport.cmake:
 
-/opt/ros/jazzy/include/rmw/rmw/ret_types.h:
+/usr/include/boost/mpl/bool.hpp:
 
 /opt/ros/jazzy/share/type_description_interfaces/cmake/type_description_interfaces__rosidl_typesupport_introspection_cExport-none.cmake:
 
@@ -7614,9 +9939,17 @@ include/moc_mainwindow.cpp:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake:
 
+/usr/include/c++/13/bits/stl_heap.h:
+
+/opt/ros/jazzy/include/rcl/rcl/visibility_control.h:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake:
+
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters_atomically__type_support.hpp:
+
+/usr/include/boost/function/detail/function_iterate.hpp:
 
 /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:
 
@@ -7652,7 +9985,17 @@ include/moc_mainwindow.cpp:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake:
 
+/usr/include/boost/mpl/void_fwd.hpp:
+
+/opt/ros/jazzy/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__traits.hpp:
+
+/usr/include/boost/type_traits/enable_if.hpp:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/parameter_event_handler.hpp:
+
+/opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__type_support.hpp:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake:
 
@@ -7660,17 +10003,13 @@ include/moc_mainwindow.cpp:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake:
 
-/usr/include/c++/13/bits/functexcept.h:
-
-/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/visibility_control.h:
-
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake:
 
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake:
+/usr/include/boost/config/detail/select_platform_config.hpp:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake:
+
+/opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__traits.hpp:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake:
 
@@ -7700,7 +10039,7 @@ include/moc_mainwindow.cpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/wait_set_policies/dynamic_storage.hpp:
 
-/opt/ros/jazzy/include/rmw/rmw/rmw.h:
+/usr/include/c++/13/ext/slist:
 
 /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake:
 
@@ -7713,6 +10052,10 @@ include/moc_mainwindow.cpp:
 /opt/ros/jazzy/share/rcutils/cmake/ament_cmake_export_dependencies-extras.cmake:
 
 /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake:
+
+/usr/include/boost/iterator/advance.hpp:
+
+/usr/include/boost/algorithm/string/find.hpp:
 
 /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake:
 
@@ -7762,6 +10105,8 @@ include/moc_mainwindow.cpp:
 
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp:
 
+/usr/include/boost/preprocessor/iteration/detail/bounds/upper1.hpp:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/any_executable.hpp:
 
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h:
@@ -7773,6 +10118,26 @@ include/moc_mainwindow.cpp:
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__traits.hpp:
 
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__traits.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__traits.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp:
+
+/opt/ros/jazzy/share/ament_cmake_core/cmake/environment/ament_cmake_environment_package_hook.cmake:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__traits.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/environments.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/loaned_message.hpp:
+
+/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/vector3__struct.hpp:
 
@@ -7800,6 +10165,8 @@ include/moc_mainwindow.cpp:
 
 /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/twist.hpp:
 
+/usr/include/boost/mpl/aux_/config/arrays.hpp:
+
 /opt/ros/jazzy/share/rmw_fastrtps_shared_cpp/cmake/ament_cmake_export_targets-extras.cmake:
 
 /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/collector.hpp:
@@ -7810,11 +10177,11 @@ include/moc_mainwindow.cpp:
 
 /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/service_type_support_struct.h:
-
 /opt/ros/jazzy/share/service_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake:
 
 /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/metric_details_interface.hpp:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/nav_msgsConfig-version.cmake:
 
 /opt/ros/jazzy/share/rcutils/cmake/rcutilsExport.cmake:
 
@@ -7826,19 +10193,43 @@ include/moc_mainwindow.cpp:
 
 /opt/ros/jazzy/share/rmw/cmake/rmw-extras.cmake:
 
-/opt/ros/jazzy/share/rclcpp/cmake/ament_cmake_export_dependencies-extras.cmake:
-
 /opt/ros/jazzy/share/rcl/cmake/ament_cmake_export_include_directories-extras.cmake:
+
+/opt/ros/jazzy/share/rclcpp/cmake/ament_cmake_export_dependencies-extras.cmake:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake:
 
 /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/visibility_control.hpp:
+
+/opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/detail/path__builder.hpp:
+
+/opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_type_descriptions_interface.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h:
+
+/usr/include/boost/type_traits/is_signed.hpp:
+
+/opt/ros/jazzy/share/rosidl_dynamic_typesupport/cmake/ament_cmake_export_dependencies-extras.cmake:
+
+/opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/detail/get_plan__type_support.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/detail/rmw_implementation_specific_subscription_payload.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_topics_interface_traits.hpp:
+
+/opt/ros/jazzy/include/nav_msgs/nav_msgs/srv/get_plan.hpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar:
 
 /opt/ros/jazzy/include/rcl/rcl/client.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:
+
+/usr/include/boost/algorithm/string/std_containers_traits.hpp:
 
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/time.hpp:
 
@@ -7868,18 +10259,6 @@ include/moc_mainwindow.cpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:
 
-/usr/include/c++/13/bits/stl_heap.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake:
-
-/opt/ros/jazzy/include/rcl/rcl/visibility_control.h:
-
-/usr/include/x86_64-linux-gnu/bits/environments.h:
-
-/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/twist__struct.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/loaned_message.hpp:
-
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/floating_point_range__struct.hpp:
@@ -7900,7 +10279,13 @@ include/moc_mainwindow.cpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__builder.hpp:
 
+/usr/include/boost/preprocessor/tuple/rem.hpp:
+
+/opt/ros/jazzy/include/nav_msgs/nav_msgs/msg/path.hpp:
+
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__struct.hpp:
+
+/usr/include/boost/preprocessor/list/adt.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/contexts/default_context.hpp:
 
@@ -7909,6 +10294,8 @@ include/moc_mainwindow.cpp:
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__type_support.hpp:
+
+/usr/include/boost/range/detail/has_member_size.hpp:
 
 /opt/ros/jazzy/share/statistics_msgs/cmake/rosidl_cmake-extras.cmake:
 
@@ -7920,11 +10307,25 @@ include/moc_mainwindow.cpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__type_support.hpp:
 
+/usr/include/c++/13/bits/uses_allocator_args.h:
+
+/opt/ros/jazzy/share/geometry_msgs/cmake/ament_cmake_export_include_directories-extras.cmake:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/get_node_timers_interface.hpp:
+
+/opt/ros/jazzy/share/statistics_msgs/cmake/statistics_msgs__rosidl_typesupport_introspection_cExport-none.cmake:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake:
+
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__builder.hpp:
+
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__struct.hpp:
 
 /opt/ros/jazzy/share/builtin_interfaces/cmake/rosidl_cmake-extras.cmake:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__traits.hpp:
+
+/usr/include/boost/mpl/aux_/preprocessed/gcc/template_arity.hpp:
 
 /opt/ros/jazzy/share/sensor_msgs/cmake/sensor_msgsConfig.cmake:
 
@@ -7954,6 +10355,10 @@ include/moc_rclcomm.cpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/describe_parameters.hpp:
 
+/usr/include/boost/range/size_type.hpp:
+
+/opt/ros/jazzy/share/nav_msgs/cmake/nav_msgs__rosidl_typesupport_cppExport.cmake:
+
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__builder.hpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h:
@@ -7962,13 +10367,15 @@ include/moc_rclcomm.cpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__struct.hpp:
 
+/usr/include/boost/mpl/apply.hpp:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/experimental/ros_message_intra_process_buffer.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__traits.hpp:
 
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_source__struct.h:
-
 /usr/include/c++/13/sstream:
+
+/usr/include/boost/algorithm/string/detail/formatter.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__type_support.hpp:
 
@@ -7985,6 +10392,8 @@ include/moc_rclcomm.cpp:
 /opt/ros/jazzy/share/std_msgs/cmake/export_std_msgs__rosidl_generator_pyExport-none.cmake:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__struct.hpp:
+
+/usr/include/boost/concept/detail/concept_def.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/wait_set_policies/sequential_synchronization.hpp:
 
@@ -8014,6 +10423,8 @@ include/moc_rclcomm.cpp:
 
 /opt/ros/jazzy/include/rcl_yaml_param_parser/rcl_yaml_param_parser/parser.h:
 
+/usr/include/boost/preprocessor/control/if.hpp:
+
 /opt/ros/jazzy/include/rcl_yaml_param_parser/rcl_yaml_param_parser/types.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/dynamic_typesupport/dynamic_serialization_support.hpp:
@@ -8021,6 +10432,8 @@ include/moc_rclcomm.cpp:
 /opt/ros/jazzy/include/rclcpp/rclcpp/any_subscription_callback.hpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdalign.h:
+
+/usr/include/boost/type_traits/has_minus_assign.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/callback_group.hpp:
 
@@ -8048,6 +10461,8 @@ include/moc_rclcomm.cpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/event_handler.hpp:
 
+/usr/include/boost/preprocessor/arithmetic/add.hpp:
+
 /opt/ros/jazzy/share/rosidl_typesupport_cpp/cmake/rosidl_typesupport_cppConfig-version.cmake:
 
 /opt/ros/jazzy/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py:
@@ -8058,9 +10473,13 @@ include/moc_rclcomm.cpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/exceptions/exceptions.hpp:
 
+/usr/include/boost/algorithm/string/detail/case_conv.hpp:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/experimental/buffers/intra_process_buffer.hpp:
 
 /usr/include/c++/13/bits/deque.tcc:
+
+/usr/include/boost/mpl/aux_/preprocessor/params.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/executor_options.hpp:
 
@@ -8072,7 +10491,15 @@ include/moc_rclcomm.cpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:
 
+/opt/ros/jazzy/share/nav_msgs/cmake/nav_msgs__rosidl_typesupport_introspection_cExport.cmake:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/executors/static_single_threaded_executor.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/expand_topic_or_service_name.hpp:
 
 /opt/ros/jazzy/share/rosidl_typesupport_introspection_cpp/cmake/rosidl_typesupport_introspection_cppExport.cmake:
 
@@ -8100,19 +10527,23 @@ include/moc_rclcomm.cpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/function_traits.hpp:
 
+/usr/include/boost/concept/detail/has_constraints.hpp:
+
 /opt/ros/jazzy/share/ament_cmake_python/cmake/ament_get_python_install_dir.cmake:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/generic_client.hpp:
 
-/opt/ros/jazzy/share/rosidl_typesupport_fastrtps_c/cmake/ament_cmake_export_dependencies-extras.cmake:
-
 /opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_initialization.hpp:
+
+/opt/ros/jazzy/share/rosidl_typesupport_fastrtps_c/cmake/ament_cmake_export_dependencies-extras.cmake:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/generic_publisher.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/generic_subscription.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/init_options.hpp:
+
+/usr/include/boost/mpl/aux_/msvc_never_true.hpp:
 
 /opt/ros/jazzy/include/rcl/rcl/graph.h:
 
@@ -8126,6 +10557,12 @@ include/moc_rclcomm.cpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/message_info.hpp:
 
+/opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_runtime_cpp/service_type_support_decl.hpp:
+
+/opt/ros/jazzy/include/rmw/rmw/subscription_content_filter_options.h:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/node_impl.hpp:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/get_node_base_interface.hpp:
 
 /opt/ros/jazzy/share/tracetools/cmake/tracetoolsConfig-version.cmake:
@@ -8134,6 +10571,8 @@ include/moc_rclcomm.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h:
 
+/usr/include/boost/bind/detail/requires_cxx11.hpp:
+
 /opt/ros/jazzy/share/rcl_interfaces/cmake/rcl_interfaces__rosidl_typesupport_introspection_cppExport.cmake:
 
 /opt/ros/jazzy/share/libstatistics_collector/cmake/libstatistics_collectorConfig.cmake:
@@ -8141,18 +10580,6 @@ include/moc_rclcomm.cpp:
 /usr/share/cmake-3.28/Modules/Platform/Linux.cmake:
 
 /opt/ros/jazzy/include/rcutils/rcutils/visibility_control.h:
-
-/usr/include/c++/13/bits/uses_allocator_args.h:
-
-/opt/ros/jazzy/share/geometry_msgs/cmake/ament_cmake_export_include_directories-extras.cmake:
-
-/opt/ros/jazzy/share/statistics_msgs/cmake/statistics_msgs__rosidl_typesupport_introspection_cExport-none.cmake:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__builder.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/get_node_timers_interface.hpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h:
 
@@ -8178,14 +10605,6 @@ include/moc_rclcomm.cpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_timers_interface.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/detail/rmw_implementation_specific_subscription_payload.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_topics_interface_traits.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_type_descriptions_interface.hpp:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/parameter.hpp:
 
 /opt/ros/jazzy/share/rmw_dds_common/cmake/export_rmw_dds_common__rosidl_typesupport_fastrtps_cExport.cmake:
@@ -8201,6 +10620,8 @@ include/moc_rclcomm.cpp:
 /opt/ros/jazzy/include/rclcpp/rclcpp/publisher.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/publisher_base.hpp:
+
+/usr/include/boost/mpl/aux_/config/ctps.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/context.hpp:
 
@@ -8220,15 +10641,13 @@ include/moc_rclcomm.cpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/serialization.hpp:
 
-/opt/ros/jazzy/include/rclcpp/rclcpp/subscription_traits.hpp:
+/usr/include/boost/range/begin.hpp:
 
-/opt/ros/jazzy/include/rmw/rmw/types.h:
+/opt/ros/jazzy/include/rclcpp/rclcpp/subscription_traits.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/subscription_wait_set_mask.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:
-
-/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/api/dynamic_type.h:
 
 /opt/ros/jazzy/share/service_msgs/cmake/service_msgs__rosidl_typesupport_cppExport.cmake:
 
@@ -8252,10 +10671,6 @@ include/moc_rclcomm.cpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/wait_result_kind.hpp:
 
-/opt/ros/jazzy/share/rmw_dds_common/cmake/export_rmw_dds_common__rosidl_generator_cExport.cmake:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/wait_set_policies/detail/synchronization_policy_common.hpp:
-
 /opt/ros/jazzy/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp:
@@ -8264,9 +10679,13 @@ include/moc_rclcomm.cpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/wait_set_template.hpp:
 
+/usr/include/boost/preprocessor/facilities/overload.hpp:
+
 /opt/ros/jazzy/share/rcl_interfaces/cmake/rcl_interfacesConfig-version.cmake:
 
 /opt/ros/jazzy/include/rcpputils/rcpputils/join.hpp:
+
+/usr/include/boost/mpl/aux_/config/nttp.hpp:
 
 /opt/ros/jazzy/share/rosgraph_msgs/cmake/rosgraph_msgs__rosidl_typesupport_cExport.cmake:
 
@@ -8289,6 +10708,8 @@ include/moc_rclcomm.cpp:
 /opt/ros/jazzy/share/rosgraph_msgs/cmake/export_rosgraph_msgs__rosidl_typesupport_fastrtps_cppExport.cmake:
 
 /opt/ros/jazzy/include/rcutils/rcutils/types/string_array.h:
+
+/usr/include/boost/type_traits/conjunction.hpp:
 
 /opt/ros/jazzy/share/rosidl_dynamic_typesupport/cmake/rosidl_dynamic_typesupportConfig-version.cmake:
 
@@ -8324,6 +10745,8 @@ include/moc_rclcomm.cpp:
 
 /usr/include/c++/13/string_view:
 
+/usr/include/boost/mpl/aux_/config/compiler.hpp:
+
 /opt/ros/jazzy/include/rmw/rmw/incompatible_qos_events_statuses.h:
 
 /opt/ros/jazzy/include/rcl/rcl/timer.h:
@@ -8337,51 +10760,3 @@ include/moc_rclcomm.cpp:
 /opt/ros/jazzy/share/statistics_msgs/cmake/statistics_msgs__rosidl_typesupport_cppExport.cmake:
 
 /opt/ros/jazzy/include/rmw/rmw/network_flow_endpoint_array.h:
-
-/opt/ros/jazzy/share/builtin_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake:
-
-/opt/ros/jazzy/include/rmw/rmw/security_options.h:
-
-/opt/ros/jazzy/include/rmw/rmw/subscription_options.h:
-
-/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/api/serialization_support.h:
-
-/opt/ros/jazzy/include/rmw/rmw/topic_endpoint_info.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h:
-
-/opt/ros/jazzy/include/rmw/rmw/topic_endpoint_info_array.h:
-
-/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/types.h:
-
-/opt/ros/jazzy/include/rosidl_dynamic_typesupport/rosidl_dynamic_typesupport/api/dynamic_data.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/action_type_support_struct.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/expand_topic_or_service_name.hpp:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
-
-/opt/ros/jazzy/share/rosgraph_msgs/cmake/export_rosgraph_msgs__rosidl_generator_cppExport.cmake:
-
-/opt/ros/jazzy/share/std_msgs/cmake/export_std_msgs__rosidl_generator_pyExport.cmake:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field__struct.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/field_type__struct.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/individual_type_description__struct.h:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/node_impl.hpp:
-
-/opt/ros/jazzy/include/rmw/rmw/subscription_content_filter_options.h:
-
-/opt/ros/jazzy/include/rosidl_runtime_cpp/rosidl_runtime_cpp/service_type_support_decl.hpp:
-
-/opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h:
