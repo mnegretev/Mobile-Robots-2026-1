@@ -66,7 +66,7 @@ class AStarNode(Node):
         #
         # END OF WHILE
         #
-                while open_list and (in_closed_list[goal_r, goal_c] == False):
+        while open_list and (in_closed_list[goal_r, goal_c] == False):
             # Get current node [row,col] from open list
             current_f, current_node = heapq.heappop(open_list)
             [row, col] = current_node
