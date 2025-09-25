@@ -97,7 +97,7 @@ class RRTNode(Node):
                 if not self.check_collision(new_node, goal_node, grid_map):
                   new_node.children.append(goal_node)
                   goal_node.parent = new_node
-        max_attempts -= 1
+            max_attempts -= 1
         path = []
         while goal_node.parent is not None:
             path.insert(0, [goal_node.x, goal_node.y])
