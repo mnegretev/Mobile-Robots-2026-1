@@ -18,7 +18,7 @@ from builtin_interfaces.msg import Duration
 import numpy
 import math
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "GUERRERO ALVIRDE GUSTAVO"
 
 class SplitAndMergeNode(Node):
     def adjust_line_by_LSE(self, points):

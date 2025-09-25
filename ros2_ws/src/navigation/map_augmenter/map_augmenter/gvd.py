@@ -16,7 +16,7 @@ import queue
 import sys
 import math
     
-FULL_NAME = "FULL NAME"
+FULL_NAME = "GUERRERO ALVIRDE GUSTAVO"
     
 class GVDNode(Node):
     
