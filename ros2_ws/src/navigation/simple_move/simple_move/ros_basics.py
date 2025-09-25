@@ -31,8 +31,8 @@ class RosBasicsNode(Node):
         # Use the 'obstacle_detected' variable to check if there is an obstacle. 
         # Publish the Twist message using the already declared publisher 'pub_cmd_vel'.
         msg = Twist()
-	msg.linear.x = 0.0 if self.obsracle_detected else 0.3
-	self.pub_cmd_vel.publish(msg)
+        msg.linear.x = 0.0 if self.obstacle_detected else 0.3
+        self.pub_cmd_vel.publish(msg)
         return
 
     def callback_scan(self, msg):
@@ -41,7 +41,7 @@ class RosBasicsNode(Node):
         # Do something to detect if there is an obstacle in front of the robot.
         # Set the 'obstacle_detected' variable with True or False, accordingly.
         #
-	self.obstacle_detected = msg.ranges[len(msg.ranges)//2] < 1.0        
+        self.obstacle_detected = msg.ranges[len(msg.ranges)//2] < 1.0        
         return
 
 
