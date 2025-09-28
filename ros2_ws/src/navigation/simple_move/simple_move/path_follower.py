@@ -24,7 +24,7 @@ import math
 import numpy
 import time
 
-NAME = "FULL NAME"
+NAME = "Diego Cruz Oviedo"
 
 SM_INIT = 0
 SM_WAIT_FOR_NEW_GOAL = 10
@@ -48,7 +48,10 @@ class PathFollowerNode(Node):
         # Remember to keep error angle in the interval (-pi,pi]
         # Return the tuple [v,w]
         #
-        
+        error_a = math.atan2(goal_y - robot_y, goal_x - robot_x) - robot_a
+        error_a = (error_a + math.pi)%(2*math.pi)-math.pi
+        v = v_max*math.exp(-error_a*error_a/alpha)
+        w = w_max*(2/(1 + math.exp(-error_a/beta)) - 1)    
         return [v,w]
 
     def follow_path(self, path, alpha, beta, v_max, w_max, tol):
@@ -72,6 +75,17 @@ class PathFollowerNode(Node):
         #
         # END OF WHILE
         #
+        idx = 0
+        Pg = path[idx]
+        Pr, robot_a = self.get_robot_pose()
+        while numpy.linalg.norm(path[-1] - Pr) > 0.1 and rclpy.ok():
+            v, w = self.calculate_control(Pr[0], Pr[1], robot_a, Pg[0], Pg[1], alpha, beta, v_max, w_max)
+            self.publish_and_save_data(Pr[0], Pr[1], robot_a, Pg[0], Pg[1], v, w)
+            Pr, robot_a = self.get_robot_pose()
+            if numpy.linalg.norm(Pg - Pr) < 0.3:
+                idx = min(idx + 1, len(path) - 1)
+                Pg = path[idx]
+
         return
 
     def publish_and_save_data(self, robot_x, robot_y, robot_a, goal_x, goal_y, v,w):
