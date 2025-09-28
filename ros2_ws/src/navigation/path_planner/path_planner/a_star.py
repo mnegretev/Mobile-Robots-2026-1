@@ -19,7 +19,7 @@ import numpy
 import heapq
 import math
 
-NAME = "FULL NAME"
+NAME = "Axel Jovani Ruiz Martinez"
 
 class AStarNode(Node):
     def a_star(self, start_r, start_c, goal_r, goal_c, grid_map, cost_map, use_diagonals):
@@ -62,7 +62,68 @@ class AStarNode(Node):
         #             mark r,c as 'in_open_list'
         #             add r,c to open list (check heapq.heappush)
         #
-        
+        # WHILE open list is not empty and current is different from goal:
+        while len(open_list) > 0:
+            # Get current node [row,col] from open list (min f-value)
+            f_curr, [row, col] = heapq.heappop(open_list)
+
+            # If this node was already expanded, skip
+            if in_closed_list[row, col]:
+                continue
+
+            # Goal check
+            if row == goal_r and col == goal_c:
+                break
+
+            # Mark current node as 'in_closed_list'
+            in_closed_list[row, col] = True
+
+            # For [r,c,cost] in adjacent nodes:
+            for dr, dc, move_cost in adjacents:
+                nr = row + dr
+                nc = col + dc
+
+                # Discard if r,c is out of map
+                if nr < 0 or nr >= height or nc < 0 or nc >= width:
+                    continue
+
+                # Discard if occupied or unknown or in closed list
+                # OccupancyGrid convention: -1 unknown, 0 free, 100 occupied (general convention) -> keep only 0
+                if grid_map[nr, nc] != 0:
+                    continue
+                if in_closed_list[nr, nc]:
+                    continue
+
+                # get a g-value g as: g-value of current node + dist + cost of neighbour r,c
+                # cost_map is additive traversal cost; move_cost is 1 or 1.414 for diagonals
+                g_new = g_values[row, col] + move_cost + float(cost_map[nr, nc])
+
+                # Calculate heuristic
+                dc_abs = abs(goal_c - nc)
+                dr_abs = abs(goal_r - nr)
+                if use_diagonals:
+                    # Octile distance heuristic (D=1, D2=sqrt(2))
+                    D = 1.0
+                    D2 = math.sqrt(2.0)
+                    h = D * max(dc_abs, dr_abs) + (D2 - D) * min(dc_abs, dr_abs)
+                else:
+                    # Manhattan distance
+                    h = dc_abs + dr_abs
+
+                # Calculate f-value
+                f_new = g_new + h
+
+                # IF g < g_value of neighbour r,c: update parent and scores
+                if g_new < g_values[nr, nc]:
+                    g_values[nr, nc] = g_new
+                    f_values[nr, nc] = f_new
+                    parent_nodes[nr, nc] = [row, col]
+
+                    # If neighbour r,c is not in open list: mark and push
+                    # Push anyway to update priority; closed-list check will discard stale entries
+                    if not in_open_list[nr, nc]:
+                        in_open_list[nr, nc] = True
+                    heapq.heappush(open_list, (f_new, [nr, nc]))
         #
         # END OF WHILE
         #
