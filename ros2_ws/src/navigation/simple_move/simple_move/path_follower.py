@@ -24,7 +24,7 @@ import math
 import numpy
 import time
 
-NAME = "FULL NAME"
+NAME = "Juan Mancera Lopez"
 
 SM_INIT = 0
 SM_WAIT_FOR_NEW_GOAL = 10
@@ -48,7 +48,13 @@ class PathFollowerNode(Node):
         # Remember to keep error angle in the interval (-pi,pi]
         # Return the tuple [v,w]
         #
-        
+
+        error_a = math.atan2(goal_y-robot_y, goal_x-robot_x) - robot_a
+        error_a = (error_a + math.pi)%(2*math.pi) - math.pi
+
+        v = v_max*math.exp(-error_a*error_a/alpha)
+        w = w_max*(2/(1 + math.exp(-error_a/beta)) - 1)
+
         return [v,w]
 
     def follow_path(self, path, alpha, beta, v_max, w_max, tol):
@@ -68,7 +74,21 @@ class PathFollowerNode(Node):
         #     If dist to goal point is less than 0.3 (you can change this constant)
         #         Change goal point to the next point in the path
         #
-            
+        goal_position = path.pop(0)
+        Pr, robot_a = self.get_robot_pose()
+        Num_meta = 1
+        #print("Lleno hacia el punto ", Num_meta)
+        posicion_destino = path[-1]
+        while math.dist(posicion_destino, Pr)>tol and rclpy.ok():
+            #def calculate_control(self, robot_x, robot_y, robot_a, goal_x, goal_y, alpha, beta, v_max, w_max):
+            [v, w] = self.calculate_control(Pr[0], Pr[1], robot_a, goal_position[0], goal_position[1], alpha, beta, v_max, w_max)
+            #def publish_and_save_data(self, robot_x, robot_y, robot_a, goal_x, goal_y, v,w):
+            self.publish_and_save_data(Pr[0], Pr[1], robot_a, goal_position[0], goal_position[1], v, w)
+            Pr, robot_a = self.get_robot_pose()
+            if math.dist(goal_position, Pr) < 0.3 and len(path)>0:
+                goal_position = path.pop(0)
+                Num_meta += 1
+                #print("Lleno hacia el punto ", Num_meta)
         #
         # END OF WHILE
         #
