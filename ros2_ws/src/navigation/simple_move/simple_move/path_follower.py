@@ -136,7 +136,7 @@ class PathFollowerNode(Node):
         self.tf_listener = TransformListener(self.tf_buffer, self)
         self.declare_parameter('v_max', 0.5)
         self.declare_parameter('w_max', 0.5)
-        self.declare_parameter('alpha', 1.0)
+        self.declare_parameter('alpha', 0.5)
         self.declare_parameter('beta',  1.0)
         self.declare_parameter('tol',  0.3)
         self.clt_plan_path = self.create_client(GetPlan, '/path_planning/plan_path')
