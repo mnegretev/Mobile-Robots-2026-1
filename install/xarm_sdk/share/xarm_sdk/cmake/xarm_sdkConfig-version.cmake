@@ -1,1 +1,0 @@
-/home/catcyber02/Mobile-Robots-2026-1/build/xarm_sdk/ament_cmake_core/xarm_sdkConfig-version.cmake

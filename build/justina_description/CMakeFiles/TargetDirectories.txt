@@ -1,9 +1,0 @@
-/home/catcyber02/Mobile-Robots-2026-1/build/justina_description/CMakeFiles/uninstall.dir
-/home/catcyber02/Mobile-Robots-2026-1/build/justina_description/CMakeFiles/justina_description_uninstall.dir
-/home/catcyber02/Mobile-Robots-2026-1/build/justina_description/CMakeFiles/test.dir
-/home/catcyber02/Mobile-Robots-2026-1/build/justina_description/CMakeFiles/edit_cache.dir
-/home/catcyber02/Mobile-Robots-2026-1/build/justina_description/CMakeFiles/rebuild_cache.dir
-/home/catcyber02/Mobile-Robots-2026-1/build/justina_description/CMakeFiles/list_install_components.dir
-/home/catcyber02/Mobile-Robots-2026-1/build/justina_description/CMakeFiles/install.dir
-/home/catcyber02/Mobile-Robots-2026-1/build/justina_description/CMakeFiles/install/local.dir
-/home/catcyber02/Mobile-Robots-2026-1/build/justina_description/CMakeFiles/install/strip.dir

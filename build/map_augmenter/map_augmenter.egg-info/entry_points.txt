@@ -1,7 +1,0 @@
-[console_scripts]
-gvd = map_augmenter.gvd:main
-gvd_solved = map_augmenter.gvd_solved:main
-map_inflater = map_augmenter.map_inflater:main
-map_inflater_solved = map_augmenter.map_inflater_solved:main
-split_and_merge = map_augmenter.split_and_merge:main
-split_and_merge_solved = map_augmenter.split_and_merge_solved:main

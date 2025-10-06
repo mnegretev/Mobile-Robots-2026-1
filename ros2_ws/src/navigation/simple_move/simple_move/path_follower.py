@@ -23,8 +23,27 @@ from ament_index_python.packages import get_package_share_directory
 import math
 import numpy
 import time
+import os
+import numpy as np
+import matplotlib.pyplot as plt
 
-NAME = "FULL NAME"
+
+# Fallback for missing navig_msgs
+try:
+    from navig_msgs.srv import ProcessPath
+except ImportError:
+    from nav_msgs.msg import Path
+    
+    class ProcessPath:
+        class Request:
+            def __init__(self):
+                self.path = Path()
+        
+        class Response:
+            def __init__(self):
+                self.processed_path = Path()
+
+NAME = "Popoca Zuñiga Daniel Ixbalanque"
 
 SM_INIT = 0
 SM_WAIT_FOR_NEW_GOAL = 10
@@ -35,7 +54,6 @@ SM_SAVE_DATA = 50
 
 class PathFollowerNode(Node):
     def calculate_control(self, robot_x, robot_y, robot_a, goal_x, goal_y, alpha, beta, v_max, w_max):
-        v,w = 0,0
         #
         # TODO:
         # Implement the control law given by:
@@ -49,7 +67,25 @@ class PathFollowerNode(Node):
         # Return the tuple [v,w]
         #
         
-        return [v,w]
+        # Calculate desired angle to goal
+        desired_angle = math.atan2(goal_y - robot_y, goal_x - robot_x)
+        
+        # Calculate angle error and normalize to (-pi, pi]
+        error_a = desired_angle - robot_a
+        while error_a > math.pi:
+            error_a -= 2 * math.pi
+        while error_a <= -math.pi:
+            error_a += 2 * math.pi
+        
+        # Calculate control signals
+        v = v_max * math.exp(-error_a * error_a / alpha)
+        w = w_max * (2 / (1 + math.exp(-error_a / beta)) - 1)
+        
+        # Limit angular velocity to avoid overshooting
+        if abs(w) > w_max:
+            w = math.copysign(w_max, w)
+        
+        return [v, w]
 
     def follow_path(self, path, alpha, beta, v_max, w_max, tol):
         #
@@ -68,6 +104,47 @@ class PathFollowerNode(Node):
         #     If dist to goal point is less than 0.3 (you can change this constant)
         #         Change goal point to the next point in the path
         #
+        
+        if len(path) == 0:
+            return
+            
+        # Set initial goal point
+        current_goal_index = 0
+        goal_x, goal_y = path[current_goal_index]
+        last_point = path[-1]
+        
+        # Get initial robot position
+        robot_pose, robot_a = self.get_robot_pose()
+        robot_x, robot_y = robot_pose
+        
+        # Calculate distance to last point
+        distance_to_last = math.sqrt((last_point[0] - robot_x)**2 + (last_point[1] - robot_y)**2)
+        
+        while distance_to_last > tol and rclpy.ok():
+            # Get current robot position
+            robot_pose, robot_a = self.get_robot_pose()
+            robot_x, robot_y = robot_pose
+            
+            # Calculate control signals
+            v, w = self.calculate_control(robot_x, robot_y, robot_a, goal_x, goal_y, alpha, beta, v_max, w_max)
+            
+            # Publish control signals and save data
+            self.publish_and_save_data(robot_x, robot_y, robot_a, goal_x, goal_y, v, w)
+            
+            # Calculate distance to current goal point
+            distance_to_goal = math.sqrt((goal_x - robot_x)**2 + (goal_y - robot_y)**2)
+            
+            # If close to current goal, move to next point
+            if distance_to_goal < 0.3 and current_goal_index < len(path) - 1:
+                current_goal_index += 1
+                goal_x, goal_y = path[current_goal_index]
+                print(f"Moving to next waypoint: [{goal_x:.2f}, {goal_y:.2f}]")
+            
+            # Calculate distance to last point for loop condition
+            distance_to_last = math.sqrt((last_point[0] - robot_x)**2 + (last_point[1] - robot_y)**2)
+            
+            # Small delay to prevent excessive CPU usage
+            time.sleep(0.01)
             
         #
         # END OF WHILE
@@ -210,10 +287,105 @@ class PathFollowerNode(Node):
                 f = open(self.data_file, "w")
                 f.write(s)
                 f.close()
+
+                # NUEVO: Generar gráficas automáticamente
+                v_max = self.get_parameter('v_max').get_parameter_value().double_value
+                w_max = self.get_parameter('w_max').get_parameter_value().double_value
+                alpha = self.get_parameter('alpha').get_parameter_value().double_value
+                beta  = self.get_parameter('beta').get_parameter_value().double_value
+                plot_data_and_save(self.data_file, v_max, w_max, alpha, beta)
+
+                # Borrar el archivo de datos para siguiente ejecución
+                os.remove(self.data_file)
+
                 state = SM_INIT
-                
+
             rclpy.spin_once(self)
             time.sleep(0.001)
+
+
+def plot_data_and_save(data_file, v_max, w_max, alpha, beta):
+
+    if not os.path.exists(data_file) or os.path.getsize(data_file) == 0:
+        print(f" No se encontraron datos en {data_file}. No se generarán gráficas.")
+        return
+
+    data = np.loadtxt(data_file, delimiter=",")
+    if data.ndim == 1 or len(data) == 0:
+        print(" Archivo de datos vacío o con formato incorrecto. No se puede graficar.")
+        return
+
+    # Crear carpeta "Graficas" si no existe
+    base_dir = os.path.dirname(data_file)
+    graficas_dir = os.path.join(base_dir, "Graficas")
+    os.makedirs(graficas_dir, exist_ok=True)
+
+    # Cargar datos
+    data = np.loadtxt(data_file, delimiter=",")
+    robot_x = data[:, 0]
+    robot_y = data[:, 1]
+    robot_a = data[:, 2]
+    goal_x = data[:, 3]
+    goal_y = data[:, 4]
+    v = data[:, 5]
+    w = data[:, 6]
+
+    # Calcular error angular
+    e_a = np.arctan2(goal_y - robot_y, goal_x - robot_x) - robot_a
+    e_a = (e_a + np.pi) % (2 * np.pi) - np.pi
+
+    # Calcular velocidades ideales
+    v_ideal = v_max * np.exp(-e_a**2 / alpha)
+    w_ideal = w_max * (2 / (1 + np.exp(-e_a / beta)) - 1)
+
+    # --- Contador para n ---
+    count_file = os.path.join(graficas_dir, "count.txt")
+    n = 1
+    if os.path.exists(count_file):
+        with open(count_file, "r") as f:
+            n = int(f.read().strip()) + 1
+    with open(count_file, "w") as f:
+        f.write(str(n))
+
+    # --- Gráfica 1: Trayectoria ---
+    plt.figure(figsize=(7, 6))
+    plt.plot(goal_x, goal_y, "rx--", label="Ruta deseada")
+    plt.plot(robot_x, robot_y, "b-", label="Ruta seguida")
+    plt.scatter(robot_x[0], robot_y[0], c="green", s=100, label="Inicio")
+    plt.scatter(robot_x[-1], robot_y[-1], c="purple", s=100, label="Fin")
+    plt.xlabel("X [m]")
+    plt.ylabel("Y [m]")
+    plt.title(f"Trayectoria\nv_max={v_max}, w_max={w_max}, α={alpha}, β={beta}")
+    plt.legend()
+    plt.axis("equal")
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig(os.path.join(graficas_dir, f"Ruta_{n}.png"))
+    plt.close()
+
+    # --- Gráfica 2: Velocidades ---
+    plt.figure(figsize=(10, 5))
+    plt.subplot(2, 1, 1)
+    plt.plot(v, "b-", label="v real")
+    plt.plot(v_ideal, "r--", label="v ideal")
+    plt.ylabel("Velocidad lineal [m/s]")
+    plt.legend()
+    plt.grid(True)
+
+    plt.subplot(2, 1, 2)
+    plt.plot(w, "g-", label="ω real")
+    plt.plot(w_ideal, "m--", label="ω ideal")
+    plt.xlabel("Paso de muestreo")
+    plt.ylabel("Velocidad angular [rad/s]")
+    plt.legend()
+    plt.grid(True)
+
+    plt.suptitle(f"Velocidades\nv_max={v_max}, w_max={w_max}, α={alpha}, β={beta}")
+    plt.tight_layout()
+    plt.savefig(os.path.join(graficas_dir, f"V_W_{n}.png"))
+    plt.close()
+
+    print(f" Gráficas guardadas en {graficas_dir}/Ruta_{n}.png y V_W_{n}.png")
     
 
 
