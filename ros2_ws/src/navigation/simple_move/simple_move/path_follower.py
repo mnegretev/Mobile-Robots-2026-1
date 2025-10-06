@@ -93,7 +93,6 @@ class PathFollowerNode(Node):
             self.get_logger().warn("Ruta vacía")
             return
 
-        # Umbral para avanzar al siguiente punto
         switch_dist = max(0.1, min(0.6, 0.3))  
         goal_idx = 0
         goal_x, goal_y = float(path[goal_idx][0]), float(path[goal_idx][1])
@@ -108,24 +107,19 @@ class PathFollowerNode(Node):
 
         last_point = (float(path[-1][0]), float(path[-1][1]))
 
-        # Bucle principal
         while rclpy.ok() and dist((robot_x, robot_y), last_point) > tol:
             # Control
             v, w = self.calculate_control(robot_x, robot_y, robot_a, goal_x, goal_y, alpha, beta, v_max, w_max)
 
-            # Publica y guarda
             self.publish_and_save_data(robot_x, robot_y, robot_a, goal_x, goal_y, v, w)
 
-            # Actualiza pose
             rp, robot_a = self.get_robot_pose()
             robot_x, robot_y = float(rp[0]), float(rp[1])
 
-            # ¿Siguiente punto?
             if dist((robot_x, robot_y), (goal_x, goal_y)) < switch_dist and goal_idx < len(path) - 1:
                 goal_idx += 1
                 goal_x, goal_y = float(path[goal_idx][0]), float(path[goal_idx][1])
 
-        # Al llegar a la meta, detener
         self.publish_and_save_data(robot_x, robot_y, robot_a, last_point[0], last_point[1], 0.0, 0.0)
         return
 
@@ -271,8 +265,6 @@ class PathFollowerNode(Node):
             rclpy.spin_once(self)
             time.sleep(0.001)
     
-
-
 def main(args=None):
     rclpy.init(args=args)
     path_follower_node = PathFollowerNode()
