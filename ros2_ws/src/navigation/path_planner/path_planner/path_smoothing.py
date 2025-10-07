@@ -13,7 +13,7 @@ from geometry_msgs.msg import Pose, PoseStamped, Point
 from navig_msgs.srv import ProcessPath
 import numpy
 
-NAME = "FULL NAME"
+NAME = "AXEL JOVANI RUIZ MARTINEZ"
 
 class PathSmoothingNode(Node):
     def smooth_path(self, Q, w1, w2, max_steps):
@@ -30,7 +30,34 @@ class PathSmoothingNode(Node):
         # The smoothed path must have the same shape.
         # Return the smoothed path.
         #
-        
+        # Gradiente inicial (mismo shape que P; extremos anclados => gradiente cero)
+        grad = numpy.zeros_like(P)
+
+        # Anclar extremos desde el inicio
+        P[0] = Q[0]
+        P[-1] = Q[-1]
+        steps   = 0 
+
+        while steps < max_steps:
+            # Calcular gradiente interior: w1 * laplaciano + w2 * término de datos
+            laplacian = 2 * P[1:-1] - P[:-2] - P[2:]  # (n-2, 2)
+            data_term = P[1:-1] - Q[1:-1]              # (n-2, 2)
+            grad[1:-1] = w1 * laplacian + w2 * data_term
+
+            # Norma del gradiente interior para criterio de paro
+            gnorm = numpy.linalg.norm(grad[1:-1])
+            if gnorm <= tol:
+                break
+
+            # Actualización solo en puntos interiores
+            P[1:-1] -= epsilon * grad[1:-1]
+
+            # Re-anclar extremos
+            P[0] = Q[0]
+            P[-1] = Q[-1]
+
+            steps += 1
+            
         return P
 
     def callback_smooth_path(self, request, response):
