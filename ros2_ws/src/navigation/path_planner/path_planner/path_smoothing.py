@@ -13,7 +13,7 @@ from geometry_msgs.msg import Pose, PoseStamped, Point
 from navig_msgs.srv import ProcessPath
 import numpy
 
-NAME = "FULL NAME"
+NAME = "Romero Bernal Rocio Fabiola"
 
 class PathSmoothingNode(Node):
     def smooth_path(self, Q, w1, w2, max_steps):
@@ -23,13 +23,32 @@ class PathSmoothingNode(Node):
         epsilon = 0.1                       
         #
         # TODO:
-        # Write the code to smooth the path Q, using the gradient descend algorithm,
-        # and return a new smoothed path P.
-        # Path is composed of a set of points [x,y] as follows:
-        # [[x0,y0], [x1,y1], ..., [xn,ym]].
-        # The smoothed path must have the same shape.
-        # Return the smoothed path.
-        #
+       def smooth_path(path, max_steps, tol, w1, w2, epsilon):
+           steps = 0
+           n = len(path)
+           J_grad = [0] * n  # Inicializar gradientes
+           J_grad[0] = 0
+           J_grad[-1] = 0
+
+           while steps < max_steps:
+               max_grad_norm = 0
+               new_path = path.copy()
+
+               for i in range(1, n-1):
+                   grad_i = w1 * (2 * path[i] - path[i-1] - path[i+1]) + w2 * (path[i] - original_path[i])
+                   new_path[i] = path[i] - epsilon * grad_i
+                   grad_norm = abs(grad_i)  # Puedes adaptar si los puntos son multidimensionales
+                   if grad_norm > max_grad_norm:
+                       max_grad_norm = grad_norm
+
+               path = new_path
+               steps += 1
+
+               if max_grad_norm <= tol:
+                   break
+ 
+           return path
+
         
         return P
 
