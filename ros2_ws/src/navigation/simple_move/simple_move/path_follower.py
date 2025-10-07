@@ -24,7 +24,7 @@ import math
 import numpy
 import time
 
-NAME = "FULL NAME"
+NAME = "Melissa Maruuati Matias Zavala"
 
 SM_INIT = 0
 SM_WAIT_FOR_NEW_GOAL = 10
@@ -34,6 +34,10 @@ SM_FOLLOWING_PATH = 40
 SM_SAVE_DATA = 50
 
 class PathFollowerNode(Node):
+    def _wrap_to_pi(self, angle: float) -> float:
+        a = (angle + math.pi) % (2.0 * math.pi) - math.pi
+        return a if a != -math.pi else math.pi
+    
     def calculate_control(self, robot_x, robot_y, robot_a, goal_x, goal_y, alpha, beta, v_max, w_max):
         v,w = 0,0
         #
@@ -48,7 +52,16 @@ class PathFollowerNode(Node):
         # Remember to keep error angle in the interval (-pi,pi]
         # Return the tuple [v,w]
         #
-        
+        dx = goal_x - robot_x
+        dy = goal_y - robot_y
+        desired_a = math.atan2(dy, dx)
+
+        error_a = self._wrap_to_pi(desired_a - robot_a)
+
+        v = v_max * math.exp(-(error_a * error_a) / max(alpha, 1e-6))
+        w = w_max * (2.0 / (1.0 + math.exp(-(error_a) / max(beta, 1e-6))) - 1.0)
+
+
         return [v,w]
 
     def follow_path(self, path, alpha, beta, v_max, w_max, tol):
@@ -68,10 +81,36 @@ class PathFollowerNode(Node):
         #     If dist to goal point is less than 0.3 (you can change this constant)
         #         Change goal point to the next point in the path
         #
-            
         #
         # END OF WHILE
         #
+
+        if path is None or len(path) == 0:
+            self.get_logger().warn("Ruta vacía")
+            return
+
+        switch_dist = max(0.1, min(0.6, 0.3))  
+        goal_idx = 0
+        goal_x, goal_y = float(path[goal_idx][0]), float(path[goal_idx][1])
+
+        # Posición inicial
+        robot_p, robot_a = self.get_robot_pose()
+        robot_x, robot_y = float(robot_p[0]), float(robot_p[1])
+
+        # Distancia euclidiana
+        def dist(a, b):
+            return math.hypot(a[0] - b[0], a[1] - b[1])
+        last_point = (float(path[-1][0]), float(path[-1][1]))
+
+        while rclpy.ok() and dist((robot_x, robot_y), last_point) > tol:
+            v, w = self.calculate_control(robot_x, robot_y, robot_a, goal_x, goal_y, alpha, beta, v_max, w_max)
+            self.publish_and_save_data(robot_x, robot_y, robot_a, goal_x, goal_y, v, w)
+            rp, robot_a = self.get_robot_pose()
+            robot_x, robot_y = float(rp[0]), float(rp[1])
+            if dist((robot_x, robot_y), (goal_x, goal_y)) < switch_dist and goal_idx < len(path) - 1:
+                goal_idx += 1
+                goal_x, goal_y = float(path[goal_idx][0]), float(path[goal_idx][1])
+        self.publish_and_save_data(robot_x, robot_y, robot_a, last_point[0], last_point[1], 0.0, 0.0)
         return
 
     def publish_and_save_data(self, robot_x, robot_y, robot_a, goal_x, goal_y, v,w):
@@ -99,6 +138,7 @@ class PathFollowerNode(Node):
         return robot_pose, robot_a
 
     def callback_goal_pose(self, msg):
+        self.nav_data = []
         self.goal_pose = numpy.asarray([msg.pose.position.x, msg.pose.position.y])
         print("Received new goal pose: ", self.goal_pose)
         self.new_goal_pose = True
@@ -215,8 +255,6 @@ class PathFollowerNode(Node):
             rclpy.spin_once(self)
             time.sleep(0.001)
     
-
-
 def main(args=None):
     rclpy.init(args=args)
     path_follower_node = PathFollowerNode()
