@@ -365,16 +365,15 @@ def plot_data_and_save(data_file, v_max, w_max, alpha, beta):
 
     # --- Gráfica 2: Velocidades ---
     plt.figure(figsize=(10, 5))
+
     plt.subplot(2, 1, 1)
-    plt.plot(v, "b-", label="v real")
-    plt.plot(v_ideal, "r--", label="v ideal")
+    plt.plot(v, "b-", label="v (lineal)")
     plt.ylabel("Velocidad lineal [m/s]")
     plt.legend()
     plt.grid(True)
 
     plt.subplot(2, 1, 2)
-    plt.plot(w, "g-", label="ω real")
-    plt.plot(w_ideal, "m--", label="ω ideal")
+    plt.plot(w, "g-", label="ω (angular)")
     plt.xlabel("Paso de muestreo")
     plt.ylabel("Velocidad angular [rad/s]")
     plt.legend()
@@ -386,7 +385,6 @@ def plot_data_and_save(data_file, v_max, w_max, alpha, beta):
     plt.close()
 
     print(f" Gráficas guardadas en {graficas_dir}/Ruta_{n}.png y V_W_{n}.png")
-    
 
 
 def main(args=None):
