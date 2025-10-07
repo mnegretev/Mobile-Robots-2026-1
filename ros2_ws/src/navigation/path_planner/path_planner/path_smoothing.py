@@ -13,7 +13,7 @@ from geometry_msgs.msg import Pose, PoseStamped, Point
 from navig_msgs.srv import ProcessPath
 import numpy
 
-NAME = "FULL NAME"
+NAME = "CORTES CALDERON OSCAR"
 
 class PathSmoothingNode(Node):
     def smooth_path(self, Q, w1, w2, max_steps):
@@ -30,6 +30,35 @@ class PathSmoothingNode(Node):
         # The smoothed path must have the same shape.
         # Return the smoothed path.
         #
+        
+        # Copia como flotantes (evita modificar Q y asegura operaciones numéricas)
+        P = numpy.array(Q, dtype=float, copy=True)
+
+        tol     = 1e-5          # tolerancia de parada por norma del gradiente
+        epsilon = 0.1           # paso de gradiente (learning rate)
+        steps   = 0
+
+        # Si la ruta es muy corta, no hay qué suavizar
+        if P.shape[0] < 3:
+            return P
+
+        n = P.shape[0]
+
+        while steps < max_steps:
+            # Gradiente (mismas dimensiones que P); extremos en cero por definición
+            nabla = numpy.zeros_like(P)
+
+            # i en [1, n-1) -> puntos interiores
+            for i in range(1, n - 1):
+                nabla[i] = w1 * (2.0 * P[i] - P[i - 1] - P[i + 1]) + w2 * (P[i] - Q[i])
+
+            # Criterio de paro: norma del gradiente
+            if numpy.linalg.norm(nabla) <= tol:
+                break
+
+            # Paso de descenso de gradiente
+            P = P - epsilon * nabla
+            steps += 1
         
         return P
 

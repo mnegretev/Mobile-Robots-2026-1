@@ -24,7 +24,7 @@ import math
 import numpy
 import time
 
-NAME = "FULL NAME"
+NAME = "CORTES CALDERON OSCAR"
 
 SM_INIT = 0
 SM_WAIT_FOR_NEW_GOAL = 10
@@ -48,7 +48,26 @@ class PathFollowerNode(Node):
         # Remember to keep error angle in the interval (-pi,pi]
         # Return the tuple [v,w]
         #
-        
+
+        # 1) Error angular ea = bearing(goal) - heading(robot) ---
+        ea = math.atan2(goal_y - robot_y, goal_x - robot_x) - robot_a
+        # Normaliza a (-pi, pi]
+        ea = (ea + math.pi) % (2.0 * math.pi) - math.pi
+
+        # 2) Evitar divisiones por cero en tuning ---
+        if alpha <= 1e-9:
+            alpha = 1e-9
+        if beta <= 1e-9:
+            beta = 1e-9
+
+        # 3) Leyes de control del enunciado ---
+        v = v_max * math.exp( -(ea * ea) / alpha )
+        w = w_max * ( (2.0 / (1.0 + math.exp(-ea / beta))) - 1.0 )
+
+        # v debe ser no negativa y acotada, w queda naturalmente en [-w_max, w_max]
+        v = max(0.0, min(v, v_max))
+        w = max(-w_max, min(w, w_max))
+
         return [v,w]
 
     def follow_path(self, path, alpha, beta, v_max, w_max, tol):
@@ -72,6 +91,70 @@ class PathFollowerNode(Node):
         #
         # END OF WHILE
         #
+
+        # Validaciones básicas
+        if not path:
+            self.get_logger().warn("follow_path: ruta vacía; nada que seguir.")
+            
+            # Detener por si acaso
+            try:
+                # si tu publish_and_save_data exige todos los args, omite este primer stop
+                pass
+            except Exception:
+                pass
+            return
+
+        def dist_xy(p, q):
+            return math.hypot(p[0] - q[0], p[1] - q[1])
+
+        # Estado inicial
+        (robot_x, robot_y), robot_a = self.get_robot_pose()
+        goal_idx = 0
+        goal = path[goal_idx]
+        last_goal = path[-1]
+
+        change_goal_thresh = 0.30  # umbral para pasar al siguiente waypoint
+
+        # Bucle principal 
+        while rclpy.ok() and dist_xy((robot_x, robot_y), last_goal) > tol:
+            try:
+                # Orden correcto de argumentos según tu firma:
+                v, w = self.calculate_control(
+                    robot_x, robot_y, robot_a,
+                    goal[0], goal[1],
+                    alpha, beta, v_max, w_max
+                )
+            except Exception as e:
+                self.get_logger().error(f"Error en calculate_control: {e}")
+                v, w = 0.0, 0.0
+
+            # Publicar y guardar (firma completa que te exige el método)
+            try:
+                self.publish_and_save_data(robot_x, robot_y, robot_a, goal[0], goal[1], v, w)
+            except Exception as e:
+                self.get_logger().error(f"Error al publicar/guardar datos: {e}")
+
+            # Actualizar pose
+            (robot_x, robot_y), robot_a = self.get_robot_pose()
+
+            # ¿Ya alcanzamos el waypoint actual?
+            if dist_xy((robot_x, robot_y), goal) < change_goal_thresh and goal_idx < len(path) - 1:
+                goal_idx += 1
+                goal = path[goal_idx]
+
+            # Ritmo del lazo (≈20 Hz)
+            try:
+                self.rate.sleep()
+            except Exception:
+                time.sleep(0.05)
+
+        # Salida del bucle: dentro de la tolerancia al objetivo final
+        try:
+            # Detener enviando ceros (manteniendo la firma completa)
+            self.publish_and_save_data(robot_x, robot_y, robot_a, goal[0], goal[1], 0.0, 0.0)
+        except Exception:
+            pass
+
         return
 
     def publish_and_save_data(self, robot_x, robot_y, robot_a, goal_x, goal_y, v,w):
