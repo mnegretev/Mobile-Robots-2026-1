@@ -23,7 +23,7 @@ class PathSmoothingNode(Node):
         epsilon = 0.1                       
         #
         # TODO:
-       def smooth_path(path, max_steps, tol, w1, w2, epsilon):
+        def smooth_path(path, max_steps, tol, w1, w2, epsilon):
            steps = 0
            n = len(path)
            J_grad = [0] * n  # Inicializar gradientes
