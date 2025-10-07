@@ -24,7 +24,7 @@ import math
 import numpy
 import time
 
-NAME = "FULL NAME"
+NAME = "CHRISTOPHER SAN JUAN FLORES"
 
 SM_INIT = 0
 SM_WAIT_FOR_NEW_GOAL = 10
@@ -48,7 +48,11 @@ class PathFollowerNode(Node):
         # Remember to keep error angle in the interval (-pi,pi]
         # Return the tuple [v,w]
         #
-        
+        error_a = math.atan2(goal_y - robot_y, goal_x - robot_x) - robot_a
+        error_a = (error_a + math.pi) % (2 * math.pi) - math.pi
+
+        v = v_max*math.exp(-error_a*error_a/alpha)
+        w = w_max*(2/(1 + math.exp(-error_a/beta)) - 1)
         return [v,w]
 
     def follow_path(self, path, alpha, beta, v_max, w_max, tol):
@@ -68,7 +72,16 @@ class PathFollowerNode(Node):
         #     If dist to goal point is less than 0.3 (you can change this constant)
         #         Change goal point to the next point in the path
         #
-            
+        idx = 0
+        Pg = path[idx]
+        Pr, robot_a = self.get_robot_pose()
+        while numpy.linalg.norm(path[-1] - Pr) > tol and rclpy.ok():
+            v,w = self.calculate_control(Pr[0], Pr[1], robot_a, Pg[0], Pg[1], alpha, beta, v_max, w_max)
+            self.publish_and_save_data(Pr[0], Pr[1], robot_a, Pg[0], Pg[1],v,w)
+            Pr, robot_a = self.get_robot_pose()
+            if numpy.linalg.norm(Pg - Pr) < 0.3:
+                idx = min(idx+1, len(path)-1)
+                Pg = path[idx]
         #
         # END OF WHILE
         #
@@ -116,8 +129,8 @@ class PathFollowerNode(Node):
         self.tf_listener = TransformListener(self.tf_buffer, self)
         self.declare_parameter('v_max', 0.5)
         self.declare_parameter('w_max', 0.5)
-        self.declare_parameter('alpha', 1.0)
-        self.declare_parameter('beta',  1.0)
+        self.declare_parameter('alpha', 0.3)
+        self.declare_parameter('beta',  0.3)
         self.declare_parameter('tol',  0.3)
         self.clt_plan_path = self.create_client(GetPlan, '/path_planning/plan_path')
         self.clt_smooth_path = self.create_client(ProcessPath, '/path_planning/smooth_path')
