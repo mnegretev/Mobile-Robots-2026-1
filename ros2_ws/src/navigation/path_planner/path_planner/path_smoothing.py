@@ -23,33 +23,12 @@ class PathSmoothingNode(Node):
         epsilon = 0.1                       
         #
         # TODO:
-         def smooth_path(path, max_steps, tol, w1, w2, epsilon):
-           steps = 0
-           n = len(path)
-           J_grad = [0] * n  # Inicializar gradientes
-           J_grad[0] = 0
-           J_grad[-1] = 0
-
-           while steps < max_steps:
-               max_grad_norm = 0
-               new_path = path.copy()
-
-               for i in range(1, n-1):
-                   grad_i = w1 * (2 * path[i] - path[i-1] - path[i+1]) + w2 * (path[i] - original_path[i])
-                   new_path[i] = path[i] - epsilon * grad_i
-                   grad_norm = abs(grad_i)  # Puedes adaptar si los puntos son multidimensionales
-                   if grad_norm > max_grad_norm:
-                       max_grad_norm = grad_norm
-
-               path = new_path
-               steps += 1
-
-               if max_grad_norm <= tol:
-                   break
- 
-           return path
-
-        
+        steps = 0
+        while numpy.linalg.norm(nabla) > tol and steps < max_steps:
+            for i in range(1, len(P) - 1):
+                nabla[i] = w1 * (2 * P[i] - P[i-1] - P[i+1]) + w2 * (P[i] - Q[i])
+            P = P - epsilon * nabla
+            steps += 1        
         return P
 
     def callback_smooth_path(self, request, response):
@@ -94,4 +73,4 @@ def main(args=None):
 
     
 if __name__ == '__main__':
-    main()
+    main()S
