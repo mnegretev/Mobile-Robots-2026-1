@@ -24,7 +24,7 @@ import math
 import numpy
 import time
 
-NAME = "FULL NAME"
+NAME = "Angel Anduaga Balestrini"
 
 SM_INIT = 0
 SM_WAIT_FOR_NEW_GOAL = 10
@@ -36,42 +36,46 @@ SM_SAVE_DATA = 50
 class PathFollowerNode(Node):
     def calculate_control(self, robot_x, robot_y, robot_a, goal_x, goal_y, alpha, beta, v_max, w_max):
         v,w = 0,0
-        #
         # TODO:
         # Implement the control law given by:
-        #
         # v = v_max*math.exp(-error_a*error_a/alpha)
         # w = w_max*(2/(1 + math.exp(-error_a/beta)) - 1)
-        #
         # where error_a is the angle error
         # and v_max, w_max, alpha and beta, are tunning constants.
         # Remember to keep error angle in the interval (-pi,pi]
         # Return the tuple [v,w]
-        #
+        error_a = math.atan2(goal_y - robot_y, goal_x - robot_x) - robot_a
+        error_a = (error_a + math.pi) % (2 * math.pi) - math.pi  # Keep error_a in (-pi, pi]
+        v = v_max * math.exp(-error_a * error_a / alpha)
+        w = w_max * (2 / (1 + math.exp(-error_a / beta)) - 1) 
         
         return [v,w]
 
     def follow_path(self, path, alpha, beta, v_max, w_max, tol):
-        #
         # TODO:
         # Use the calculate_control function to move the robot along the path.
         # Path is given as a sequence of points [[x0,y0], [x1,y1], ..., [xn,yn]]
         # You can use the following steps to perform the path tracking:
-        #
         # Set goal point as the first point of the path
         # Get robot position with Pr, robot_a = get_robot_pose()
-        #
         # WHILE distance to last point > tol and rclpy.ok():
         #     Calculate control signals v and w
         #     Publish the control signals with the function publish_and_save_data()
         #     Get robot position
         #     If dist to goal point is less than 0.3 (you can change this constant)
         #         Change goal point to the next point in the path
-        #
-            
-        #
+        idx = 0
+        Pg = path[idx]
+        Pr, robot_a = get_robot_pose()
+        while numpy.linalg.norm(path[-1] - Pr) > 0.1 and not rospy.is_shutdown() :
+            v,w = calculate_control(Pr[0], Pr[1], robot_a, Pg[0], Pg[1], alpha, beta, v_max, w_max)
+            publish_and_save_data(Pr[0], Pr[1], robot_a, Pg[0], Pg[1], v, w)
+            Pr, robot_a = get_robot_pose()
+            if numpy.linalg.norm(Pg - Pr) < 0.3:
+                idx = min(idx+1, len(path)-1)
+                Pg = path[idx]
         # END OF WHILE
-        #
+
         return
 
     def publish_and_save_data(self, robot_x, robot_y, robot_a, goal_x, goal_y, v,w):
