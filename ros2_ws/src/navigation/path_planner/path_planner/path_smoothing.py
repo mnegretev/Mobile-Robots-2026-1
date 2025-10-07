@@ -24,6 +24,8 @@ class PathSmoothingNode(Node):
         #
         # TODO:
         steps = 0
+        nabla[0] = 0
+        nabla[-1] = 0
         while numpy.linalg.norm(nabla) > tol and steps < max_steps:
             for i in range(1, len(P) - 1):
                 nabla[i] = w1 * (2 * P[i] - P[i-1] - P[i+1]) + w2 * (P[i] - Q[i])
