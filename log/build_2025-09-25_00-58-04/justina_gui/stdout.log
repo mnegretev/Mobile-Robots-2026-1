@@ -1,5 +1,0 @@
-[  0%] Built target justina_gui_node_autogen_timestamp_deps
-[  7%] Built target justina_gui_node_autogen
-[ 14%] [32mBuilding CXX object CMakeFiles/justina_gui_node.dir/src/rclcomm.cpp.o[0m
-[32m[1mLinking CXX executable justina_gui_node[0m
-Built target justina_gui_node

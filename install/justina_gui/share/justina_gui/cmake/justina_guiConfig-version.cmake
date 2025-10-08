@@ -1,1 +1,0 @@
-/home/catcyber02/Mobile-Robots-2026-1/build/justina_gui/ament_cmake_core/justina_guiConfig-version.cmake

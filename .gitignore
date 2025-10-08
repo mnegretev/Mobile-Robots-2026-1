@@ -3,5 +3,28 @@
 *.user
 #*#
 *.bkp
+build/
+install/
+log/
 PushAllChanges.py
-PullAllChanges.py
+
+# ROS2 build / install / log folders
+/build/
+/install/
+/log/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Otros archivos temporales del sistema
+.DS_Store
+Thumbs.db
