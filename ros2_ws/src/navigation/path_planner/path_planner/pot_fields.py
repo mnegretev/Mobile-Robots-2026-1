@@ -24,7 +24,7 @@ import math
 import numpy
 import time
 
-NAME = "FULL NAME"
+NAME = "Dania Melissa Belmonte González"
 
 SM_INIT = 0
 SM_WAIT_FOR_NEW_GOAL = 10
@@ -43,7 +43,10 @@ class PotFieldsNode(Node):
         # Set v and w same as simple_move:path_follower
         # Return v and w as a tuble [v,w]
         #
-        
+        [error_x,error_y]=[goal_x,goal_y]
+        error_a=math.atan2(error_y,error_x)
+        v=v_max*math.exp((-error_a*error_a/alpha))
+        w=w_max*(2/(1+math.exp(-error_a/beta))-1)        
         return [v,w]
     
     def attraction_force(self, goal_x, goal_y, eta):
@@ -55,7 +58,13 @@ class PotFieldsNode(Node):
         # where force_x and force_y are the X and Y components
         # of the resulting attraction force
         #
-        
+        q_g=numpy.array([goal_x,goal_y])
+        mag=numpy.linalg.norm(q_g)
+        if mag != 0:
+            force_x=-eta*(goal_x/mag)
+            force_y=-eta*(goal_y/mag)
+        else:
+            force_x,force_y=0.0,0.0
         return numpy.asarray([force_x, force_y])
 
     def rejection_force(self, laser_readings, zeta, d0):
@@ -74,7 +83,16 @@ class PotFieldsNode(Node):
         # where force_x and force_y are the X and Y components
         # of the resulting rejection force
         #
-        
+        for d, theta in laser_readings:
+             if d < d0:
+                 rho=zeta*math.sqrt((1/d)-(1/d0))
+             else:
+                 rho=0
+             force_x +=rho*math.cos(theta)
+             force_y +=rho*math.sin(theta)
+
+        force_x /=N
+        force_y /=N
         return numpy.asarray([force_x, force_y])
 
     def move_by_pot_fields(self, global_goal_x, global_goal_y, epsilon, tol, eta, zeta, d0, alpha, beta):
@@ -93,7 +111,15 @@ class PotFieldsNode(Node):
         #    Call the publish_speed_and_forces(...) function
         #    get goal point wrt robot
         #
-        
+        p_g=self.get_goal_point_wrt_robot(global_goal_x,global_goal_y)
+        while numpy.linalg.norm(p_g) > tol and rclpy.ok():
+            Fa=self.attraction_force(p_g[0], p_g[1], eta)
+            Fr=self.rejection_force(self.laser_readings, zeta, d0)
+            F=Fa+Fr
+            P=-epsilon*F
+            v,w=self.calculate_control(P[0], P[1], alpha, beta)
+            self.publish_speed_and_forces(v,w,Fa,Fr,F)
+            p_g=self.get_goal_point_wrt_robot(global_goal_x,global_goal_y)
         # END 
         #
         return
