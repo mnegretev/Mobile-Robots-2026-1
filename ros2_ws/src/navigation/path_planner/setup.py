@@ -28,6 +28,8 @@ setup(
             'a_start_solved = path_planner.a_star_solved:main',
             'path_smoothing = path_planner.path_smoothing:main',
             'path_smoothing_solved = path_planner.path_smoothing_solved:main',
+            'pot_fields = path_planner.pot_fields:main',
+            'pot_fields_solved = path_planner.pot_fields_solved:main',
         ],
     },
 )
