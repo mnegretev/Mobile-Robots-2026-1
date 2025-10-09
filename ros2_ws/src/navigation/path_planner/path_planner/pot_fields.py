@@ -72,8 +72,8 @@ class PotFieldsNode(Node):
             force_x = eta * (goal_x / norm)
             force_y = eta * (goal_y / norm)
         else:
-        force_x, force_y = 0.0, 0.0
-        # Mantener el tipo de retorno como arreglo de numpy
+           force_x, force_y = 0.0, 0.0
+           # Mantener el tipo de retorno como arreglo de numpy
         return numpy.asarray([force_x, force_y])
 
     
