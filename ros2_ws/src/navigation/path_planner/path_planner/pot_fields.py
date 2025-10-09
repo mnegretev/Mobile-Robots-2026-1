@@ -69,8 +69,8 @@ class PotFieldsNode(Node):
         # q_g es la meta respecto al robot: q_g = [goal_x, goal_y]
         norm = math.hypot(goal_x, goal_y)
         if norm > 1e-6:
-            force_x = -eta * (goal_x / norm)
-            force_y = -eta * (goal_y / norm)
+            force_x = eta * (goal_x / norm)
+            force_y = eta * (goal_y / norm)
         # Mantener el tipo de retorno como arreglo de numpy
         return numpy.asarray([force_x, force_y])
 
@@ -79,26 +79,21 @@ class PotFieldsNode(Node):
             
 
     def rejection_force(self, laser_readings, zeta, d0):
-        N = len(laser_readings)
-        if N == 0:
-            return [0, 0]
+        if len(laser_readings) == 0:
+            return numpy.asarray([0, 0])
+
         force_x, force_y = 0, 0
-        #
-        # TODO:
-      
+
         for d, theta in laser_readings:
             if d > 1e-6 and d < d0:
-                rho = zeta * (1.0 / d - 1.0 / d0)
-            else:
-                rho = 0.0
+               # Multiplicar por 1/d^2 para fuerza repulsiva correcta
+               rho = zeta * (1.0 / d - 1.0 / d0) / (d * d)
+               force_x += rho * math.cos(theta)
+               force_y += rho * math.sin(theta)
 
-            force_x += rho * math.cos(theta)
-            force_y += rho * math.sin(theta)
+        # No dividir entre N para mantener fuerza repulsiva suficiente
 
-        force_x /= N
-        force_y /= N
-
-        return numpy.asarray([force_x, force_y])
+        
         
         return numpy.asarray([force_x, force_y])
 
@@ -146,7 +141,7 @@ class PotFieldsNode(Node):
         mrks = MarkerArray()
         mrks.markers.append(self.get_force_marker(Fa[0], Fa[1], [0.0, 0.0, 1.0, 1.0], 0))
         mrks.markers.append(self.get_force_marker(Fr[0], Fr[1], [1.0, 0.0, 0.0, 1.0], 1))
-        mrks.markers.append(self.get_force_marker(F [0], F [1], [0.0, 0.6, 0.0, 1.0], 2))
+        mrks.markers.append(self.get_force_marker(F[0], F[1], [0.0, 0.6, 0.0, 1.0], 2))
         self.pub_markers.publish(mrks)
         rclpy.spin_once(self)
         time.sleep(0.001)
