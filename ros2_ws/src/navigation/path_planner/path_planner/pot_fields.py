@@ -131,7 +131,7 @@ class PotFieldsNode(Node):
             # Actualizar meta relativa y distancia a la meta global
             Pg = self.get_goal_point_wrt_robot(global_goal_x, global_goal_y)
             dist_to_goal = math.hypot(Pg[0], Pg[1])
-            return
+            
 
     def get_goal_point_wrt_robot(self, goal_x, goal_y):
         self.robot_p, self.robot_a = self.get_robot_pose()
