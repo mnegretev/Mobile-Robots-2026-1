@@ -24,79 +24,76 @@ import math
 import numpy
 import time
 
-NAME = "FULL NAME"
+NAME = "Axel Jovani Ruiz Martinez"
 
 SM_INIT = 0
 SM_WAIT_FOR_NEW_GOAL = 10
 SM_POT_FIELDS = 40
 
 class PotFieldsNode(Node):
-    def calculate_control(self, goal_x, goal_y, alpha, beta):
-        v,w = 0,0
+    def _wrap_to_pi(self, a: float) -> float:
+        # Envuelve a (-pi, pi]
+        return (a + math.pi) % (2.0 * math.pi) - math.pi
+
+    def calculate_control(self, goal_x, goal_y, alpha=0.5, beta=0.9):
         v_max = 0.5
         w_max = 0.8
-        #
-        # TODO:
-        # Implement the control law given by:
-        # v = v_max*math.exp(-error_a*error_a/alpha)
-        # w = w_max*(2/(1 + math.exp(-error_a/beta)) - 1)
-        # Set v and w same as simple_move:path_follower
-        # Return v and w as a tuble [v,w]
-        #
-        
-        return [v,w]
+
+        # En base_link: el robot está en el origen y con orientación 0 rad
+        desired_a = math.atan2(goal_y, goal_x)       # ángulo hacia el punto deseado
+        error_a   = self._wrap_to_pi(desired_a)      # - 0.0
+
+        # Ley de control
+        v = v_max * math.exp(-(error_a * error_a) / max(alpha, 1e-6))
+        w = w_max * (2.0 / (1.0 + math.exp(-error_a / max(beta, 1e-6))) - 1.0)
+
+        return [v, w]
+
     
     def attraction_force(self, goal_x, goal_y, eta):
-        force_x, force_y = 0,0
-        #
-        # TODO:
-        # Calculate the attraction force, given the robot and goal positions.
-        # Return a tuple of the form [force_x, force_y]
-        # where force_x and force_y are the X and Y components
-        # of the resulting attraction force
-        #
-        
-        return numpy.asarray([force_x, force_y])
+        qg = numpy.asarray([goal_x, goal_y], dtype=float)
+        norm_qg = numpy.linalg.norm(qg)
+        if norm_qg < 1e-6:
+            return numpy.asarray([0.0, 0.0])
+        # Fuerza atractiva: +η · q_g / ||q_g|| (hacia la meta)
+        F_att = eta * qg / norm_qg
+        return F_att
+
 
     def rejection_force(self, laser_readings, zeta, d0):
         N = len(laser_readings)
         if N == 0:
-            return [0, 0]
-        force_x, force_y = 0, 0
-        #
-        # TODO:
-        # Calculate the total rejection force given by the average
-        # of the rejection forces caused by each laser reading.
-        # laser_readings is an array where each element is a tuple [distance, angle]
-        # both measured w.r.t. robot's frame.
-        # See lecture notes for equations to calculate rejection forces.
-        # Return a tuple of the form [force_x, force_y]
-        # where force_x and force_y are the X and Y components
-        # of the resulting rejection force
-        #
-        
-        return numpy.asarray([force_x, force_y])
+            return numpy.asarray([0.0, 0.0])
+        fx, fy = 0.0, 0.0
+        for d, th in laser_readings:
+            if not math.isfinite(d) or d <= 0.0:
+                continue
+            if d < d0:
+                # Magnitud estándar: ζ (1/d - 1/d0) / d²
+                rho = zeta * max(0.0, (1.0 / d - 1.0 / d0)) / (d * d)
+                # Dirección: alejando del obstáculo
+                fx += -rho * math.cos(th)
+                fy += -rho * math.sin(th)
+        fx /= N
+        fy /= N
+        return numpy.asarray([fx, fy])
+
+
 
     def move_by_pot_fields(self, global_goal_x, global_goal_y, epsilon, tol, eta, zeta, d0, alpha, beta):
-        #
-        # TODO
-        # Implement potential fields given a goal point and tunning constants
-        # You can follow these steps:
-        #
-        # get goal wrt robot (call the corresponding function)
-        # WHILE dist_to_goal > tol and rclpy.ok():
-        #    Calculate attraction force
-        #    Calculate rejection force
-        #    Calculate resulting force
-        #    Calculate the next desired position by gradient descend ( P = -epsilon*F)
-        #    Calculate control signals
-        #    Call the publish_speed_and_forces(...) function
-        #    get goal point wrt robot
-        #
-        
-        # END 
-        #
-        return
+        Pg = numpy.asarray(self.get_goal_point_wrt_robot(global_goal_x, global_goal_y), dtype=float)
+        while rclpy.ok() and numpy.linalg.norm(Pg) > tol:
+            Fa = self.attraction_force(Pg[0], Pg[1], eta)
+            Fr = self.rejection_force(self.laser_readings, zeta, d0)
+            F = Fa + Fr
+            # Paso: +epsilon * F (dirección de menor potencial)
+            P = epsilon * F
+            v, w = self.calculate_control(P[0], P[1], alpha, beta)
+            self.publish_speed_and_forces(v, w, Fa, Fr, F)
+            Pg = numpy.asarray(self.get_goal_point_wrt_robot(global_goal_x, global_goal_y), dtype=float)
+        self.pub_cmd_vel.publish(Twist())
+
+
 
     def get_goal_point_wrt_robot(self, goal_x, goal_y):
         self.robot_p, self.robot_a = self.get_robot_pose()
@@ -129,7 +126,8 @@ class PotFieldsNode(Node):
         mrk.color.r, mrk.color.g, mrk.color.b, mrk.color.a = color
         mrk.scale.x, mrk.scale.y, mrk.scale.z = [0.07, 0.1, 0.15]
         mrk.points.append(Point(x=0.0, y=0.0))
-        mrk.points.append(Point(x=-force_x, y=-force_y))
+        #En Rviz salian las flechas en sentido contrario entonces cambiamos signo aqui
+        mrk.points.append(Point(x=force_x, y=force_y))
         return mrk
 
     def get_robot_pose(self):
