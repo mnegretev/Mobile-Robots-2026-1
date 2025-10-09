@@ -24,7 +24,7 @@ import math
 import numpy
 import time
 
-NAME = "FULL NAME"
+NAME = "SAN JUAN FLORES CHRISTOPHER"
 
 SM_INIT = 0
 SM_WAIT_FOR_NEW_GOAL = 10
@@ -43,7 +43,11 @@ class PotFieldsNode(Node):
         # Set v and w same as simple_move:path_follower
         # Return v and w as a tuble [v,w]
         #
-        
+        error_a = math.atan2(goal_y, goal_x)
+        error_a = (error_a + math.pi) % (2 * math.pi) - math.pi
+
+        v = v_max*math.exp(-error_a*error_a/alpha)
+        w = w_max*(2/(1 + math.exp(-error_a/beta)) - 1)
         return [v,w]
     
     def attraction_force(self, goal_x, goal_y, eta):
@@ -55,7 +59,13 @@ class PotFieldsNode(Node):
         # where force_x and force_y are the X and Y components
         # of the resulting attraction force
         #
-        
+        q_g = numpy.asarray([goal_x, goal_y])
+        norm_q_g = numpy.linalg.norm(q_g)
+        if norm_q_g != 0:
+            force_x = -eta * (q_g[0]/norm_q_g)
+            force_y = -eta * (q_g[1]/norm_q_g)
+        else:
+            force_x, force_y = 0, 0
         return numpy.asarray([force_x, force_y])
 
     def rejection_force(self, laser_readings, zeta, d0):
@@ -74,7 +84,15 @@ class PotFieldsNode(Node):
         # where force_x and force_y are the X and Y components
         # of the resulting rejection force
         #
-        
+        for d, theta in laser_readings:
+            if d < d0:
+                rho = zeta * (numpy.sqrt(1/d)-(1/d0))
+            else:
+                rho = 0
+            force_x += rho * numpy.cos(theta)
+            force_y += rho * numpy.sin(theta)
+        force_x = (force_x/N)
+        force_y = (force_y/N)
         return numpy.asarray([force_x, force_y])
 
     def move_by_pot_fields(self, global_goal_x, global_goal_y, epsilon, tol, eta, zeta, d0, alpha, beta):
@@ -93,7 +111,17 @@ class PotFieldsNode(Node):
         #    Call the publish_speed_and_forces(...) function
         #    get goal point wrt robot
         #
-        
+        p_g = self.get_goal_point_wrt_robot(global_goal_x, global_goal_y)
+        dist_to_goal = numpy.linalg.norm(p_g)
+        while dist_to_goal > tol and rclpy.ok():
+            Fa = self.attraction_force(p_g[0], p_g[1], eta)
+            Fr = self.rejection_force(self.laser_readings, zeta, d0)
+            F = Fa + Fr
+            P =  -epsilon * F
+            v, w = self.calculate_control (P[0], P[1], alpha, beta)
+            self.publish_speed_and_forces(v, w, Fa, Fr, F)
+            p_g = self.get_goal_point_wrt_robot(global_goal_x, global_goal_y)
+            dist_to_goal = numpy.linalg.norm(p_g)
         # END 
         #
         return
@@ -111,7 +139,7 @@ class PotFieldsNode(Node):
         mrks = MarkerArray()
         mrks.markers.append(self.get_force_marker(Fa[0], Fa[1], [0.0, 0.0, 1.0, 1.0], 0))
         mrks.markers.append(self.get_force_marker(Fr[0], Fr[1], [1.0, 0.0, 0.0, 1.0], 1))
-        mrks.markers.append(self.get_force_marker(F [0], F [1], [0.0, 0.6, 0.0, 1.0], 2))
+        mrks.markers.append(self.get_force_marker(F[0], F[1], [0.0, 0.6, 0.0, 1.0], 2))
         self.pub_markers.publish(mrks)
         rclpy.spin_once(self)
         time.sleep(0.001)
