@@ -43,12 +43,12 @@ class PotFieldsNode(Node):
         # Set v and w same as simple_move:path_follower
         # Return v and w as a tuble [v,w]
         #
-        dx = goal_x - robot_x
-        dy = goal_y - robot_y
+        dx = goal_x - self.robot_p[0]
+        dy = goal_y - self.robot_p[1]
         desired_a = math.atan2(dy, dx)
 
-        # Error de ángulo envuelto a (-pi, pi]
-        error_a = self._wrap_to_pi(desired_a - robot_a)
+        error_a = self._wrap_to_pi(desired_a -  self.robot_a)
+
 
         # Ley de control 
         v = v_max * math.exp(-(error_a * error_a) / max(alpha, 1e-6))
