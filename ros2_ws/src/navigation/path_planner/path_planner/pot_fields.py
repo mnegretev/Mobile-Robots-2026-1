@@ -49,11 +49,11 @@ class PotFieldsNode(Node):
         # Set v and w same as simple_move:path_follower
         # Return v and w as a tuble [v,w]
         #
-        dx = goal_x - self.robot_p[0]
-        dy = goal_y - self.robot_p[1]
+        dx = goal_x 
+        dy = goal_y 
         desired_a = math.atan2(dy, dx)
 
-        error_a = self._wrap_to_pi(desired_a -  self.robot_a)
+        error_a = self._wrap_to_pi(desired_a)
 
 
         # Ley de control 
@@ -63,7 +63,7 @@ class PotFieldsNode(Node):
         return [v,w]
     
     def attraction_force(self, goal_x, goal_y, eta):
-        force_x, force_y = 0,0
+        
         #
         # TODO:
         # q_g es la meta respecto al robot: q_g = [goal_x, goal_y]
@@ -71,6 +71,8 @@ class PotFieldsNode(Node):
         if norm > 1e-6:
             force_x = eta * (goal_x / norm)
             force_y = eta * (goal_y / norm)
+        else:
+        force_x, force_y = 0.0, 0.0
         # Mantener el tipo de retorno como arreglo de numpy
         return numpy.asarray([force_x, force_y])
 
@@ -79,9 +81,6 @@ class PotFieldsNode(Node):
             
 
     def rejection_force(self, laser_readings, zeta, d0):
-        if len(laser_readings) == 0:
-            return numpy.asarray([0, 0])
-
         force_x, force_y = 0, 0
 
         for d, theta in laser_readings:
