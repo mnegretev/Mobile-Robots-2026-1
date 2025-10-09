@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'pot_fields = path_planner.pot_fields:main', 
             'rrt = path_planner.rrt:main',
             'rrt_solved = path_planner.rrt_solved:main',
             'cost_map = path_planner.cost_map:main',

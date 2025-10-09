@@ -24,7 +24,7 @@ import math
 import numpy
 import time
 
-NAME = "FULL NAME"
+NAME = "Daniel Ixbalanque Popoca Zuñiga"
 
 SM_INIT = 0
 SM_WAIT_FOR_NEW_GOAL = 10
@@ -44,6 +44,12 @@ class PotFieldsNode(Node):
         # Return v and w as a tuble [v,w]
         #
         
+        error_a = math.atan2(goal_y, goal_x)
+        
+        # Implementation of the control laws
+        v = v_max * math.exp(-error_a * error_a / alpha)
+        w = w_max * (2 / (1 + math.exp(-error_a / beta)) - 1)
+
         return [v,w]
     
     def attraction_force(self, goal_x, goal_y, eta):
@@ -55,6 +61,17 @@ class PotFieldsNode(Node):
         # where force_x and force_y are the X and Y components
         # of the resulting attraction force
         #
+
+        # Calculate the distance to the goal
+        dist_to_goal = math.sqrt(goal_x**2 + goal_y**2)
+        
+        # Avoid division by zero when at the goal
+        if dist_to_goal == 0:
+            return numpy.asarray([0.0, 0.0])
+        
+        # Calculate the attractive force components
+        force_x = -eta * goal_x / dist_to_goal
+        force_y = -eta * goal_y / dist_to_goal
         
         return numpy.asarray([force_x, force_y])
 
@@ -74,28 +91,64 @@ class PotFieldsNode(Node):
         # where force_x and force_y are the X and Y components
         # of the resulting rejection force
         #
+
+
+        for d, theta in laser_readings:
+            rho = 0.0
+            if d < d0 and d > 0.0: # Check d>0.0 to avoid division by zero or negative sqrt input
+                rho = zeta * math.sqrt(1.0/d - 1.0/d0) * (1.0/d)
+                # The term (1.0/d) is due to the force formula: F_rej_i = rho * (q_o_i / d_i) where q_o_i is distance*unit_vector
+                # Correcting the algorithm's simplification based on the given force formula: 
+                # F_rej_i = zeta * sqrt(1/d_i - 1/d0) * (q_o_i / d_i) 
+                # This formula seems to be slightly different from the provided algorithm steps[cite: 24, 25, 26]. 
+                # Sticking to the algorithm which uses:
+                # rho = zeta * sqrt(1/d - 1/d0)
+                # force_x += rho * cos(theta)
+                # force_y += rho * sin(theta)
+
+                rho_alg = zeta * math.sqrt(1.0/d - 1.0/d0)
+                force_x += rho_alg * math.cos(theta)
+                force_y += rho_alg * math.sin(theta)
+            
+        # Average the forces
+        force_x /= N
+        force_y /= N
         
         return numpy.asarray([force_x, force_y])
-
+    
     def move_by_pot_fields(self, global_goal_x, global_goal_y, epsilon, tol, eta, zeta, d0, alpha, beta):
-        #
-        # TODO
-        # Implement potential fields given a goal point and tunning constants
-        # You can follow these steps:
-        #
-        # get goal wrt robot (call the corresponding function)
-        # WHILE dist_to_goal > tol and rclpy.ok():
-        #    Calculate attraction force
-        #    Calculate rejection force
-        #    Calculate resulting force
-        #    Calculate the next desired position by gradient descend ( P = -epsilon*F)
-        #    Calculate control signals
-        #    Call the publish_speed_and_forces(...) function
-        #    get goal point wrt robot
-        #
         
-        # END 
-        #
+        # 1. Get initial goal wrt robot (relative goal point)
+        P_g_x, P_g_y = self.get_goal_point_wrt_robot(global_goal_x, global_goal_y)
+        dist_to_goal = math.sqrt(P_g_x**2 + P_g_y**2)
+        
+        # 2. WHILE dist_to_goal > tol and rclpy.ok():
+        while dist_to_goal > tol and rclpy.ok():
+            
+            # a. Calculate attraction force
+            Fa = self.attraction_force(P_g_x, P_g_y, eta)
+            
+            # b. Calculate rejection force
+            Fr = self.rejection_force(self.laser_readings, zeta, d0)
+            
+            # c. Calculate resulting force
+            F = Fa + Fr
+            
+            # d. Calculate the next desired position by gradient descend ( P = -epsilon*F)
+            P_x = -epsilon * F[0]
+            P_y = -epsilon * F[1]
+            
+            # e. Calculate control signals
+            v, w = self.calculate_control(P_x, P_y, alpha, beta)
+            
+            # f. Call the publish_speed_and_forces(...) function
+            self.publish_speed_and_forces(v, w, Fa, Fr, F)
+            
+            # g. get goal point wrt robot
+            P_g_x, P_g_y = self.get_goal_point_wrt_robot(global_goal_x, global_goal_y)
+            dist_to_goal = math.sqrt(P_g_x**2 + P_g_y**2)
+            
+        # END
         return
 
     def get_goal_point_wrt_robot(self, goal_x, goal_y):
