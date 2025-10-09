@@ -31,6 +31,12 @@ SM_WAIT_FOR_NEW_GOAL = 10
 SM_POT_FIELDS = 40
 
 class PotFieldsNode(Node):
+    def _wrap_to_pi(self, angle):
+        while angle > math.pi:
+            angle -= 2 * math.pi
+        while angle <= -math.pi:
+            angle += 2 * math.pi
+        return angle
     def calculate_control(self, goal_x, goal_y, alpha, beta):
         v,w = 0,0
         v_max = 0.5
