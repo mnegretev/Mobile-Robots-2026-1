@@ -225,5 +225,5 @@ def main(args=None):
     path_follower_node.destroy_node()
     rclpy.shutdown()
 
-if __name__ == '__main__':
+if __name__ == 'Sara Barrios Santillan':
     main()
