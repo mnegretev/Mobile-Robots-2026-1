@@ -24,7 +24,7 @@ import math
 import numpy
 import time
 
-NAME = "FULL NAME"
+NAME = "Barrios Santillan Sara"
 
 SM_INIT = 0
 SM_WAIT_FOR_NEW_GOAL = 10
@@ -67,12 +67,25 @@ class PathFollowerNode(Node):
         #     Get robot position
         #     If dist to goal point is less than 0.3 (you can change this constant)
         #         Change goal point to the next point in the path
-        #
-            
-        #
-        # END OF WHILE
-        #
-        return
+        # Calculate desired angle to goal
+        desired_angle = math.atan2(goal_y - robot_y, goal_x - robot_x)
+        
+        # Calculate angle error and normalize to (-pi, pi]
+        error_a = desired_angle - robot_a
+        while error_a > math.pi:
+            error_a -= 2 * math.pi
+        while error_a <= -math.pi:
+            error_a += 2 * math.pi
+        
+        # Calculate control signals
+        v = v_max * math.exp(-error_a * error_a / alpha)
+        w = w_max * (2 / (1 + math.exp(-error_a / beta)) - 1)
+        
+        # Limit angular velocity to avoid overshooting
+        if abs(w) > w_max:
+            w = math.copysign(w_max, w)
+        
+        return [v, w]
 
     def publish_and_save_data(self, robot_x, robot_y, robot_a, goal_x, goal_y, v,w):
         self.nav_data.append([robot_x, robot_y, robot_a, goal_x, goal_y, v, w])
