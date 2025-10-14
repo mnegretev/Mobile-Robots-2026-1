@@ -58,7 +58,7 @@ class PotFieldsNode(Node):
         # where force_x and force_y are the X and Y components
         # of the resulting attraction force
         #
-        q_g = numpy.array([goal_x, goal_y])
+        q_g = numpy.asarray([goal_x, goal_y])
         module = numpy.linalg.norm(q_g)
 
         if module != 0:
@@ -86,11 +86,11 @@ class PotFieldsNode(Node):
         #
         for d, angle in laser_readings:
             if d < d0:
-                rho = zeta * numpy.sqrt(1/d - 1/d0)
-                force_x += rho * numpy.cos(angle)
-                force_y += rho * numpy.sin(angle)
+                rho = zeta * (numpy.sqrt(1/d - 1/d0))
             else:
                 rho = 0
+            force_x += rho * numpy.cos(angle)
+            force_y += rho * numpy.sin(angle)
         force_x /= N
         force_y /= N
         return numpy.asarray([force_x, force_y])
@@ -115,11 +115,10 @@ class PotFieldsNode(Node):
         p_g = self.get_goal_point_wrt_robot(global_goal_x, global_goal_y)
         while numpy.linalg.norm(p_g) > tol and rclpy.ok():
             f_a = self.attraction_force(p_g[0], p_g[1], eta)
-            f_r = self.rejection_force(p_g[0], p_g[1], eta)
+            f_r = self.rejection_force(self.laser_readings, zeta, d0)
             f = f_a + f_r
-            P = -epsilon*F
-            v, w = self.calculate_control(goal_x, goal_y, alpha, beta)
-
+            P = -epsilon*f
+            v, w = self.calculate_control(P[0], P[1], alpha, beta)
             self.publish_speed_and_forces(v, w, f_a, f_r, f)
             p_g = self.get_goal_point_wrt_robot(global_goal_x, global_goal_y)
         # END 
