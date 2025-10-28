@@ -24,7 +24,12 @@ public:
 	 * with positions uniformly distributed within bounding box given by min_x, ..., max_a.
 	 * To generate uniformly distributed random numbers, you can use the funcion rnd.uniformReal(min, max)
 	 */
-	
+	for (size_t i=0; i<particles.size(); i++)
+	{
+		particles[i].x = rnd.uniformReal(min_x, max_x);
+		particles[i].y = rnd.uniformReal(min_y, max_y);
+		particles[i].theta = rnd.uniformReal(min_a, max_a);
+	}
 	/*
 	 */
 	return particles;
@@ -46,7 +51,12 @@ public:
 	 * Add gaussian noise to each new position. Use sigma2 as variance.
 	 * You can use the function rnd.gaussian(mean, variance)
 	 */
-
+	for (size_t i=0; i<particles.size(); i++)
+	{
+		particles[i].x += delta_x*cos(particles[i].theta) - delta_y*sin(particles[i].theta) + rnd.gaussian(0, sigma2);
+		particles[i].y += delta_x*sin(particles[i].theta) + delta_y*cos(particles[i].theta) + rnd.gaussian(0, sigma2);
+		particles[i].theta += delta_t + rnd.gaussian(0,sigma2);
+	}
 	/*
 	 */
     }
@@ -61,7 +71,7 @@ public:
 	 * Review the code to simulate a laser scan for each particle given the set of particles and a static map. 
 	 */
 	std::vector<sensor_msgs::msg::LaserScan> simulated_scans(particles.size());
-	for(size_t i=0; i < particles.size(); i++)
+	for(size_t i=0; i<particles.size(); i++)
 	{
 	    geometry_msgs::msg::Pose sensor_pose;
 	    sensor_pose.position.x    = particles[i].x;
@@ -106,6 +116,33 @@ public:
 	 *    Normalize all similarities
 	 */
 	
+	for(size_t i=0; i < simulated_scans.size(); i++)
+	{
+	    double delta = 0;
+		for(size_t j=0; j<simulated_scans[i].ranges.size(); j++)
+		{
+			if(real_scan.ranges[j*downsampling] < real_scan.range_max && simulated_scans[i].ranges[j] < real_scan.range_max)
+			{
+				delta += fabs(simulated_scans[i].ranges[j] - real_scan.ranges[j*downsampling]);
+			}
+			else
+			{
+				delta += real_scan.range_max;
+			}
+			delta /= simulated_scans[i].ranges.size();
+			similarities[i] = exp(-delta/sigma2);
+		}
+	}
+	double total = 0;
+	for(size_t i=0; i<similarities.size(); i++)
+	{
+		total += similarities[i];
+	}
+	for(size_t i=0; i<similarities.size(); i++)
+	{
+		similarities[i] /= total;
+	}
+		return similarities;
 	/*
 	 */
 	return similarities;
@@ -128,7 +165,18 @@ public:
 	 *        x -= probabilities[i]
 	 * return -1
 	 */
-	
+	float x = rnd.uniformReal(0,1);
+	for(size_t i=0; i<probabilities.size(); i++)
+	{
+	    if(x < probabilities[i])
+		{
+			return i;
+		}
+		else
+		{
+			x -= probabilities[i];
+		}	    
+	}
 	
 	return -1;
     }
@@ -146,7 +194,14 @@ public:
 	 * Use the random_choice function to pick a particle with the correct probability.
 	 * Add gaussian noise to each sampled particle (add noise to x,y and theta). Use sigma2 as noise variance.
 	 */
-	
+	for (size_t i=0; i<particles.size(); i++)
+	{
+		int idx = random_choice(probabilities);
+		resampled_particles[i] = particles[idx];
+		resampled_particles[i].x += rnd.gaussian(0,sigma2);
+		resampled_particles[i].y += rnd.gaussian(0,sigma2);
+		resampled_particles[i].theta += rnd.gaussian(0,sigma2);
+	}
 	/*
 	 */
 	return resampled_particles;
