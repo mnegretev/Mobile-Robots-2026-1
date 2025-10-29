@@ -20,7 +20,7 @@
 #include "tf2_ros/buffer.h"
 #include "ParticleFilter.h"
 
-#define FULL_NAME "FULL NAME"
+#define FULL_NAME "Diego Cruz Oviedo"
 
 class ParticleFilterNode : public rclcpp::Node
 {
