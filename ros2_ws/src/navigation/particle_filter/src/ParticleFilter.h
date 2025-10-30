@@ -6,6 +6,9 @@
  * Write the code necessary to implement localization by particle filters.
  * Modify only the sections marked with the TODO comment. 
  */
+ 
+ // Nombre: OSCAR CORTES CALDERON
+ 
 #include "particle_filter/ray_tracer.h"
 
 class ParticleFilter
@@ -27,6 +30,21 @@ public:
 	
 	/*
 	 */
+
+        // Generar N partículas con distribución uniforme en la caja [min_x,max_x]x[min_y,max_y] y ángulo [min_a,max_a]
+        for (int i = 0; i < N; ++i)
+        {
+            geometry_msgs::msg::Pose2D p;
+            p.x     = rnd.uniformReal(min_x, max_x);
+            p.y     = rnd.uniformReal(min_y, max_y);
+            p.theta = rnd.uniformReal(min_a, max_a);
+
+            // Normalizar ángulo a (-pi, pi]
+            // p.theta = std::atan2(std::sin(p.theta), std::cos(p.theta));
+
+            particles[i] = p;
+        }
+	
 	return particles;
     }
 
@@ -49,6 +67,22 @@ public:
 
 	/*
 	 */
+	 
+	// Para cada partícula, aplica el desplazamiento (en el marco de la partícula)
+        // y agrega ruido gaussiano con varianza sigma2.
+        for (auto& p : particles)
+        {
+            const double c = std::cos(p.theta);
+            const double s = std::sin(p.theta);
+
+            // Transformación del desplazamiento del marco de la partícula al mundo
+            p.x     +=  delta_x * c - delta_y * s + rnd.gaussian(0.0, sigma2);
+            p.y     +=  delta_x * s + delta_y * c + rnd.gaussian(0.0, sigma2);
+            p.theta +=  delta_t + rnd.gaussian(0.0, sigma2);
+
+            // Normalizar el ángulo a (-pi, pi]
+            p.theta = std::atan2(std::sin(p.theta), std::cos(p.theta));
+        }
     }
 
     static std::vector<sensor_msgs::msg::LaserScan> simulate_particle_scans(
@@ -108,6 +142,55 @@ public:
 	
 	/*
 	 */
+	 
+	const double eps = 1e-9;  
+        const double max_range = std::isfinite(real_scan.range_max) ? real_scan.range_max : 10.0;
+
+        for (size_t i = 0; i < simulated_scans.size(); ++i)
+        {
+            const auto& sim_ranges = simulated_scans[i].ranges;
+            double delta = 0.0;
+            int count = 0;
+
+            for (size_t j = 0; j < sim_ranges.size(); ++j)
+            {
+                size_t idx_real = j * static_cast<size_t>(downsampling);
+                if (idx_real >= real_scan.ranges.size()) break;
+
+                const double s = sim_ranges[j];
+                const double r = real_scan.ranges[idx_real];
+
+                if (std::isfinite(s) && std::isfinite(r))
+                    delta += std::abs(s - r);
+                else
+                    delta += max_range;
+
+                ++count;
+            }
+
+            if (count > 0) delta /= static_cast<double>(count);
+
+            double like = std::exp(-delta / std::max<double>(sigma2, eps));
+            if (!std::isfinite(like)) like = 0.0;
+
+            similarities[i] = like;
+        }
+
+        // Normalización a distribución de probabilidad (suma = 1)
+        double sum = 0.0;
+        for (double v : similarities) sum += v;
+
+        if (sum <= eps || !std::isfinite(sum))
+        {
+            // fallback uniforme si todo quedó ~0 o NaN
+            const double uni = 1.0 / std::max<size_t>(1, similarities.size());
+            for (double& v : similarities) v = uni;
+        }
+        else
+        {
+            for (double& v : similarities) v /= sum;
+        }
+	
 	return similarities;
     }
     
@@ -129,7 +212,33 @@ public:
 	 * return -1
 	 */
 	
-	
+	// Suma total (por si no viene exactamente normalizado a 1.0)
+        double sum = 0.0;
+        for (double p : probabilities)
+            if (std::isfinite(p) && p > 0.0) sum += p;
+
+        if (sum <= 0.0) 
+        {
+            // Si algo salió mal (todas 0/NaN/inf), no hay forma de elegir con peso;
+            // regresamos -1 como indica el esqueleto.
+            return -1;
+        }
+
+        // x en [0, sum) garantiza correcto muestreo aun si no está normalizado a 1
+        double x = rnd.uniformReal(0.0, sum);
+
+        // Algoritmo sugerido por el profe (versión con resta acumulada)
+        for (size_t i = 0; i < probabilities.size(); ++i) 
+        {
+            const double p = (std::isfinite(probabilities[i]) && probabilities[i] > 0.0)
+                               ? probabilities[i] : 0.0;
+
+            if (x < p)
+                return static_cast<int>(i);
+            else
+                x -= p;
+        }
+
 	return -1;
     }
 
@@ -149,6 +258,31 @@ public:
 	
 	/*
 	 */
+	 
+	const size_t N = particles.size();
+        for (size_t k = 0; k < N; ++k)
+        {
+            // Elige índice según la distribución 'probabilities'
+            int idx = random_choice(probabilities);
+            if (idx < 0 || static_cast<size_t>(idx) >= N) {
+                // Fallback defensivo en caso extremo
+                idx = 0;
+            }
+
+            // Copia la partícula seleccionada (muestreo con reemplazo)
+            geometry_msgs::msg::Pose2D p = particles[static_cast<size_t>(idx)];
+
+            // Agrega ruido gaussiano con varianza sigma2
+            p.x     += rnd.gaussian(0.0, sigma2);
+            p.y     += rnd.gaussian(0.0, sigma2);
+            p.theta += rnd.gaussian(0.0, sigma2);
+
+            // Normaliza ángulo a (-pi, pi]
+            p.theta = std::atan2(std::sin(p.theta), std::cos(p.theta));
+
+            resampled_particles[k] = p;
+        }
+	
 	return resampled_particles;
     }
     
