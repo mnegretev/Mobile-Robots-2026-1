@@ -7,6 +7,9 @@
  * Modify only the sections marked with the TODO comment. 
  */
 #include "particle_filter/ray_tracer.h"
+#include <cmath>
+#include <numeric>
+#include <limits>
 
 class ParticleFilter
 {
@@ -25,8 +28,13 @@ public:
 	 * To generate uniformly distributed random numbers, you can use the funcion rnd.uniformReal(min, max)
 	 */
 	
-	/*
-	 */
+	for(int i = 0; i < N; ++i)
+	{
+	    particles[i].x = rnd.uniformReal(min_x, max_x);
+	    particles[i].y = rnd.uniformReal(min_y, max_y);
+	    particles[i].theta = rnd.uniformReal(min_a, max_a);
+	}
+	
 	return particles;
     }
 
@@ -47,8 +55,20 @@ public:
 	 * You can use the function rnd.gaussian(mean, variance)
 	 */
 
-	/*
-	 */
+	for(size_t i = 0; i < particles.size(); ++i)
+	{
+	    double theta = particles[i].theta;
+	    double nx = rnd.gaussian(0.0, sigma2);
+	    double ny = rnd.gaussian(0.0, sigma2);
+	    double ntheta = rnd.gaussian(0.0, sigma2);
+
+	    double dx_world = delta_x * std::cos(theta) - delta_y * std::sin(theta);
+	    double dy_world = delta_x * std::sin(theta) + delta_y * std::cos(theta);
+
+	    particles[i].x += static_cast<float>(dx_world + nx);
+	    particles[i].y += static_cast<float>(dy_world + ny);
+	    particles[i].theta += static_cast<float>(delta_t + ntheta);
+	}
     }
 
     static std::vector<sensor_msgs::msg::LaserScan> simulate_particle_scans(
@@ -106,8 +126,59 @@ public:
 	 *    Normalize all similarities
 	 */
 	
-	/*
-	 */
+	const float max_range = real_scan.range_max > 0.0f ? real_scan.range_max : 1.0f;
+
+	for(size_t i = 0; i < simulated_scans.size(); ++i)
+	{
+	    const auto &sim = simulated_scans[i];
+	    double delta = 0.0;
+	    size_t M = sim.ranges.size();
+	    if(M == 0)
+	    {
+		similarities[i] = 0.0;
+		continue;
+	    }
+
+	    for(size_t j = 0; j < M; ++j)
+	    {
+		size_t real_idx = j * static_cast<size_t>(downsampling);
+		double sim_r = sim.ranges[j];
+		double real_r = std::numeric_limits<double>::infinity();
+		if(real_idx < real_scan.ranges.size())
+		    real_r = real_scan.ranges[real_idx];
+
+		bool sim_finite = std::isfinite(sim_r);
+		bool real_finite = std::isfinite(real_r);
+
+		if(sim_finite && real_finite)
+		{
+		    delta += std::fabs(sim_r - real_r);
+		}
+		else
+		{
+		    delta += static_cast<double>(max_range);
+		}
+	    }
+
+	    delta /= static_cast<double>(M);
+
+	    // per TODO: similarities[i] = exp(-delta/sigma2)
+	    similarities[i] = std::exp(-delta / static_cast<double>(sigma2));
+	}
+
+	// Normalize
+	double sum = std::accumulate(similarities.begin(), similarities.end(), 0.0);
+	if(sum <= 0.0)
+	{
+	    // Avoid division by zero: assign uniform small probability
+	    double uniform = 1.0 / static_cast<double>(similarities.size());
+	    for(size_t i = 0; i < similarities.size(); ++i) similarities[i] = uniform;
+	}
+	else
+	{
+	    for(size_t i = 0; i < similarities.size(); ++i) similarities[i] /= sum;
+	}
+
 	return similarities;
     }
     
@@ -129,8 +200,18 @@ public:
 	 * return -1
 	 */
 	
-	
-	return -1;
+	if(probabilities.empty()) return -1;
+
+	double x = rnd.uniformReal(0.0, 1.0);
+	// numerical safety: ensure sum may be ~1 but not exactly
+	for(size_t i = 0; i < probabilities.size(); ++i)
+	{
+	    if(x < probabilities[i]) return static_cast<int>(i);
+	    x -= probabilities[i];
+	    if(x <= 0.0) return static_cast<int>(i); // safety fallback
+	}
+	// If we get here due to rounding errors, return last index
+	return static_cast<int>(probabilities.size() - 1);
     }
 
     static std::vector<geometry_msgs::msg::Pose2D> resample_particles(
@@ -147,8 +228,26 @@ public:
 	 * Add gaussian noise to each sampled particle (add noise to x,y and theta). Use sigma2 as noise variance.
 	 */
 	
-	/*
-	 */
+	if(particles.empty() || probabilities.empty()) return resampled_particles;
+
+	for(size_t k = 0; k < resampled_particles.size(); ++k)
+	{
+	    int idx = random_choice(probabilities);
+	    if(idx < 0) idx = 0;
+	    geometry_msgs::msg::Pose2D p = particles[static_cast<size_t>(idx)];
+
+	    // Add gaussian noise (mean 0, variance sigma2)
+	    double nx = rnd.gaussian(0.0, sigma2);
+	    double ny = rnd.gaussian(0.0, sigma2);
+	    double ntheta = rnd.gaussian(0.0, sigma2);
+
+	    p.x = static_cast<float>(p.x + nx);
+	    p.y = static_cast<float>(p.y + ny);
+	    p.theta = static_cast<float>(p.theta + ntheta);
+
+	    resampled_particles[k] = p;
+	}
+	
 	return resampled_particles;
     }
     

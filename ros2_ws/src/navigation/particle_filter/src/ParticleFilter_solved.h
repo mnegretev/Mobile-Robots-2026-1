@@ -87,7 +87,7 @@ public:
     {
 	std::vector<double> similarities;
 	similarities.resize(simulated_scans.size());
-	/*
+	/* 
 	 * TODO:
 	 * For each particle, calculate the similarity between its simulated scan and the real scan.
 	 * Normalize all similarities (the sum of all values must always be 1.0)
