@@ -6,6 +6,9 @@
  * Write the code necessary to implement localization by particle filters.
  * Modify only the sections marked with the TODO comment. 
  */
+#include <cmath> 
+#include <vector>
+#include <random>
 #include "particle_filter/ray_tracer.h"
 
 class ParticleFilter
@@ -18,37 +21,27 @@ public:
     {
 	random_numbers::RandomNumberGenerator rnd;
 	std::vector<geometry_msgs::msg::Pose2D> particles(N);
-	/*
-	 * TODO:
-	 * Generate a set of N particles (each particle represented by a Pose2D message)
-	 * with positions uniformly distributed within bounding box given by min_x, ..., max_a.
-	 * To generate uniformly distributed random numbers, you can use the funcion rnd.uniformReal(min, max)
-	 */
-	
-	/*
-	 */
-	return particles;
+	for(int i = 0; i < N; i++) {
+            particles[i].x = rnd.uniformReal(min_x, max_x);
+            particles[i].y = rnd.uniformReal(min_y, max_y);
+            particles[i].theta = rnd.uniformReal(min_a, max_a);
+        }
+        return particles;
     }
 
     static void move_particles(std::vector<geometry_msgs::msg::Pose2D>& particles,
 			       float delta_x, float delta_y, float delta_t, float sigma2)
     {
 	random_numbers::RandomNumberGenerator rnd;
-	/*
-	 * TODO:
-	 * Move each particle a displacement given by delta_x, delta_y and delta_t.
-	 * Displacement is given w.r.t. particles's frame, i.e., to calculate the new position for
-	 * each particle you need to make a z-rotation of delta_x and delta_y, an angle theta_i, where theta_i
-	 * is the orientation of the i-th particle:
-	 * xi += delta_x*cos(theta_i) - delta_y*sin(theta_i) + rnd
-	 * yi += delta_x*sin(theta_i) + delta_y*cos(theta_i) + rnd
-	 * theta_i += delta_t + rnd
-	 * Add gaussian noise to each new position. Use sigma2 as variance.
-	 * You can use the function rnd.gaussian(mean, variance)
-	 */
-
-	/*
-	 */
+	for (size_t i = 0; i < particles.size(); ++i) {
+	    float theta_i = particles[i].theta;
+	    float noise_x = rnd.gaussian(0.0, sigma2);
+	    float noise_y = rnd.gaussian(0.0, sigma2);
+	    float noise_theta = rnd.gaussian(0.0, sigma2);
+	    particles[i].x += delta_x * cos(theta_i) - delta_y * sin(theta_i) + noise_x;
+	    particles[i].y += delta_x * sin(theta_i) + delta_y * cos(theta_i) + noise_y;
+	    particles[i].theta += delta_t + noise_theta;
+	}
     }
 
     static std::vector<sensor_msgs::msg::LaserScan> simulate_particle_scans(
@@ -82,32 +75,42 @@ public:
     {
 	std::vector<double> similarities;
 	similarities.resize(simulated_scans.size());
-	/*
-	 * TODO:
-	 * For each particle, calculate the similarity between its simulated scan and the real scan.
-	 * Normalize all similarities (the sum of all values must always be 1.0)
-	 * Store results in 'similarities'.
-	 * IMPORTANT NOTE 1. The real sensor scans are DOWNSAMPLED. That is, only 1 out of 'downsampling' scans is considered.
-	 * For example, if downsampling=10, then, if real sensor has 500 ranges, simulated scans will only have 50 ranges
-	 * When comparing readings, for each reading in the simulated scan, you should skip 'downsampling' readings
-	 * in the real sensor.
-	 * IMPORTANT NOTE 2. Both, simulated an real scans, can have infinite distances. Thus, when comparing readings,
-	 * ensure both simulated and real ranges are finite values.
-	 * Steps:
-	 * FOR i=[0... simulated_scans.size())
-	 *    delta = 0
-	 *    FOR j=[0... simulated_scans[i].ranges.size())
-	 *       IF real_scan.ranges[j*downsampling] in valid range AND simulated_scans[i].ranges[j] in valid range:
-	 *          delta += |simulated_scans[i].ranges[j] - real_scan.ranges[j*downsampling]|
-	 *       ELSE
-	 *          delta += max_range
-	 *    delta /= simulated_scans[i].ranges.size()
-	 *    similarities[i] = exp(-delta/sigma2)
-	 *    Normalize all similarities
-	 */
+      	
+	float max_range = real_scan.range_max;  // Rango máximo para penalizaciones en lecturas inválidas.
+	double total_delta_sum = 0.0;  // Para calcular pesos antes de normalizar.
+	int num_ranges = simulated_scans[0].ranges.size();  // Asumiendo todas las simuladas tienen el mismo tamaño.
+	for (size_t i = 0; i < simulated_scans.size(); ++i) {
+	    double delta = 0.0;
+	    for (size_t j = 0; j < num_ranges; ++j) {
+		float sim_range = simulated_scans[i].ranges[j];
+		size_t real_idx = j * downsampling;
+		if (real_idx < real_scan.ranges.size()) {
+		    float real_range = real_scan.ranges[real_idx];
+		    if (std::isfinite(sim_range) && std::isfinite(real_range) && sim_range < max_range && real_range < max_range) {
+			delta += std::fabs(sim_range - real_range);  // Diferencia absoluta solo si ambos válidos.
+		    } else {
+			delta += max_range;  // Penalización por lecturas inválidas (inf o out-of-range).
+		    }
+		} else {
+		    delta += max_range;  // Si downsampling excede el tamaño del real, penalizar.
+		}
+	    }
+	    delta /= num_ranges;  // Error medio absoluto (MAE).
+	    similarities[i] = std::exp(-delta / sigma2);  // Similitud gaussiana como peso.
+	    total_delta_sum += similarities[i];
+	}
+	// Normalización: pesos suman 1.0 para distribución de probabilidad.
+	if (total_delta_sum > 0.0) {
+	    for (size_t i = 0; i < similarities.size(); ++i) {
+		similarities[i] /= total_delta_sum;
+	    }
+	} else {
+	    // Caso degenerado: asignar uniformemente si todas similitudes son 0.
+	    for (size_t i = 0; i < similarities.size(); ++i) {
+		similarities[i] = 1.0 / similarities.size();
+	    }
+	}
 	
-	/*
-	 */
 	return similarities;
     }
     
@@ -128,7 +131,13 @@ public:
 	 *        x -= probabilities[i]
 	 * return -1
 	 */
-	
+	double x = rnd.uniformReal(0.0, 1.0);
+	for (size_t i = 0; i < probabilities.size(); ++i) {
+	    if (x < probabilities[i]) {
+		return static_cast<int>(i);  // Retorna el índice seleccionado.
+	    }
+	    x -= probabilities[i];  // Acumula: método de rueda para distribución discreta.
+	}
 	
 	return -1;
     }
@@ -147,8 +156,24 @@ public:
 	 * Add gaussian noise to each sampled particle (add noise to x,y and theta). Use sigma2 as noise variance.
 	 */
 	
-	/*
-	 */
+	for (size_t j = 0; j < particles.size(); ++j) {
+	    int idx = random_choice(probabilities);  // Selecciona índice con P(i) = probabilities[i].
+	    if (idx >= 0) {  // Verifica selección válida.
+		resampled_particles[j] = particles[idx];  // Copia la partícula seleccionada.
+		// Agrega ruido gaussiano a x, y, theta para diversificar.
+		resampled_particles[j].x += rnd.gaussian(0.0, sigma2);
+		resampled_particles[j].y += rnd.gaussian(0.0, sigma2);
+		resampled_particles[j].theta += rnd.gaussian(0.0, sigma2);
+	    } else {
+		// Fallback raro: copia una partícula aleatoria si random_choice falla.
+		resampled_particles[j] = particles[j % particles.size()];
+		resampled_particles[j].x += rnd.gaussian(0.0, sigma2);
+		resampled_particles[j].y += rnd.gaussian(0.0, sigma2);
+		resampled_particles[j].theta += rnd.gaussian(0.0, sigma2);
+	    }
+	}
+	
+	
 	return resampled_particles;
     }
     
