@@ -20,7 +20,7 @@
 #include "tf2_ros/buffer.h"
 #include "ParticleFilter.h"
 
-#define FULL_NAME "FULL NAME"
+#define FULL_NAME "LEONARDO BARILLAS GONZALEZ"
 
 class ParticleFilterNode : public rclcpp::Node
 {
@@ -35,7 +35,7 @@ public:
 	min_a = this->declare_parameter<double>("min_a", -3.14);
 	max_x = this->declare_parameter<double>("max_x",  5.0);
 	max_y = this->declare_parameter<double>("max_y",  5.5);
-	max_a = this->declare_parameter<double>("max_z",  3.14);
+	max_a = this->declare_parameter<double>("max_a",  3.14);
 	laser_downsampling = this->declare_parameter<int>("ds", 10);
 	sigma2_sensor     = this->declare_parameter<double>("s2s", 1.0);
 	sigma2_movement   = this->declare_parameter<double>("s2m", 1.0);

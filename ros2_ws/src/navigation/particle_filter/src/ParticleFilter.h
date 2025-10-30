@@ -24,10 +24,14 @@ public:
 	 * with positions uniformly distributed within bounding box given by min_x, ..., max_a.
 	 * To generate uniformly distributed random numbers, you can use the funcion rnd.uniformReal(min, max)
 	 */
-	
-	/*
-	 */
-	return particles;
+		for (size_t i = 0; i < particles.size(); i++){
+				particles[i].x = rnd.uniformReal(min_x, max_x);
+				particles[i].y = rnd.uniformReal(min_y, max_y);
+				particles[i].theta = rnd.uniformReal(min_a, max_a);
+			}
+		/*
+		*/
+		return particles;
     }
 
     static void move_particles(std::vector<geometry_msgs::msg::Pose2D>& particles,
@@ -46,7 +50,21 @@ public:
 	 * Add gaussian noise to each new position. Use sigma2 as variance.
 	 * You can use the function rnd.gaussian(mean, variance)
 	 */
+		for (size_t i = 0; i < particles.size(); i++){
+        float noise_x = rnd.gaussian(0.0, sigma2);
+        float noise_y = rnd.gaussian(0.0, sigma2);
+        float noise_theta = rnd.gaussian(0.0, sigma2);
 
+        float theta = particles[i].theta;
+
+        float x_new = particles[i].x + delta_x * cos(theta) - delta_y * sin(theta) + noise_x;
+        float y_new = particles[i].y + delta_x * sin(theta) + delta_y * cos(theta) + noise_y;
+        float t_new = theta + delta_t + noise_theta;
+
+        particles[i].x = x_new;
+        particles[i].y = y_new;
+        particles[i].theta = t_new;
+    	}
 	/*
 	 */
     }
@@ -61,18 +79,17 @@ public:
 	 * Review the code to simulate a laser scan for each particle given the set of particles and a static map. 
 	 */
 	std::vector<sensor_msgs::msg::LaserScan> simulated_scans(particles.size());
-	for(size_t i=0; i < particles.size(); i++)
-	{
-	    geometry_msgs::msg::Pose sensor_pose;
-	    sensor_pose.position.x    = particles[i].x;
-	    sensor_pose.position.y    = particles[i].y;
-	    sensor_pose.orientation.w = cos(particles[i].theta/2);
-	    sensor_pose.orientation.z = sin(particles[i].theta/2);
-	    
-	    simulated_scans[i] = ray_tracer::simulateRangeScan(map, sensor_pose, sensor_specs);
-	    
-	}
-	return simulated_scans;
+		for(size_t i=0; i < particles.size(); i++){
+			geometry_msgs::msg::Pose sensor_pose;
+			sensor_pose.position.x    = particles[i].x;
+			sensor_pose.position.y    = particles[i].y;
+			sensor_pose.orientation.w = cos(particles[i].theta/2);
+			sensor_pose.orientation.z = sin(particles[i].theta/2);
+			
+			simulated_scans[i] = ray_tracer::simulateRangeScan(map, sensor_pose, sensor_specs);
+			
+		}
+		return simulated_scans;
     }
 
     static std::vector<double> get_particle_similarities(
@@ -105,10 +122,23 @@ public:
 	 *    similarities[i] = exp(-delta/sigma2)
 	 *    Normalize all similarities
 	 */
-	
-	/*
-	 */
-	return similarities;
+		for (size_t i = 0; i < simulated_scans.size(); i++){
+			double delta = 0.0;
+			for(size_t j=0; j < simulated_scans[i].ranges.size(); j++)
+			if(real_scan.ranges[j*downsampling] < real_scan.range_max && simulated_scans[i].ranges[j] < real_scan.range_max)
+				delta += fabs(simulated_scans[i].ranges[j] - real_scan.ranges[j*downsampling]);
+			else
+				delta += real_scan.range_max;
+			delta /= simulated_scans[i].ranges.size();
+			similarities[i] = exp(-delta/sigma2);
+		}
+
+		double sum = 0.0;
+		for (size_t i = 0; i < similarities.size(); i++)
+			sum += similarities[i];
+		for (size_t i = 0; i < similarities.size(); i++)
+			similarities[i] /= sum;
+		return similarities;
     }
     
     static int random_choice(std::vector<double>& probabilities)
@@ -128,9 +158,16 @@ public:
 	 *        x -= probabilities[i]
 	 * return -1
 	 */
-	
-	
-	return -1;
+		float x = rnd.uniformReal(0, 1);
+
+        for (size_t i = 0; i < probabilities.size(); i++){
+            if (x < probabilities[i])
+                return i;
+			else{
+            x -= probabilities[i];
+			}
+        }
+        return -1;
     }
 
     static std::vector<geometry_msgs::msg::Pose2D> resample_particles(
@@ -146,7 +183,18 @@ public:
 	 * Use the random_choice function to pick a particle with the correct probability.
 	 * Add gaussian noise to each sampled particle (add noise to x,y and theta). Use sigma2 as noise variance.
 	 */
-	
+		for (size_t i = 0; i < particles.size(); i++){
+            int idx = ParticleFilter::random_choice(probabilities);
+
+			float noise_x = rnd.gaussian(0.0, sigma2);
+			float noise_y = rnd.gaussian(0.0, sigma2);
+			float noise_theta = rnd.gaussian(0.0, sigma2);
+
+			resampled_particles[i].x = particles[idx].x + noise_x;
+			resampled_particles[i].y = particles[idx].y + noise_y;
+			resampled_particles[i].theta = particles[idx].theta + noise_theta;
+            
+        }
 	/*
 	 */
 	return resampled_particles;
