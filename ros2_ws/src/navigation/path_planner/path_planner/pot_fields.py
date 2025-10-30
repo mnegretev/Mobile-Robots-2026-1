@@ -31,100 +31,155 @@ SM_WAIT_FOR_NEW_GOAL = 10
 SM_POT_FIELDS = 40
 
 class PotFieldsNode(Node):
+
     def _wrap_to_pi(self, angle):
+        """
+        Wraps the angle to the interval (-pi, pi].
+        """
         while angle > math.pi:
             angle -= 2 * math.pi
         while angle <= -math.pi:
             angle += 2 * math.pi
         return angle
+        
     def calculate_control(self, goal_x, goal_y, alpha, beta):
-        v,w = 0,0
+        v, w = 0.0, 0.0
         v_max = 0.5
         w_max = 0.8
-        #
-        # TODO:
-        # Implement the control law given by:
-        # v = v_max*math.exp(-error_a*error_a/alpha)
-        # w = w_max*(2/(1 + math.exp(-error_a/beta)) - 1)
-        # Set v and w same as simple_move:path_follower
-        # Return v and w as a tuble [v,w]
-        #
-        dx = goal_x 
-        dy = goal_y 
-        desired_a = math.atan2(dy, dx)
-
+        
+        # Compute desired angle in robot frame (robot at origin, angle 0)
+        desired_a = math.atan2(goal_y, goal_x)
+        
+        # Angle error wrapped to (-pi, pi]
         error_a = self._wrap_to_pi(desired_a)
-
-
-        # Ley de control 
+        
+        # Control law for linear velocity (exponential decay with squared error)
         v = v_max * math.exp(-(error_a * error_a) / max(alpha, 1e-6))
+        
+        # Control law for angular velocity (sigmoid mapping)
         w = w_max * (2.0 / (1.0 + math.exp(-(error_a) / max(beta, 1e-6))) - 1.0)
-
-        return [v,w]
+        
+        return [v, w]
     
     def attraction_force(self, goal_x, goal_y, eta):
-        
+        force_x, force_y = 0, 0
         #
         # TODO:
-        # q_g es la meta respecto al robot: q_g = [goal_x, goal_y]
-        norm = math.hypot(goal_x, goal_y)
-        if norm > 1e-6:
-            force_x = eta * (goal_x / norm)
-            force_y = eta * (goal_y / norm)
-        else:
-           force_x, force_y = 0.0, 0.0
-           # Mantener el tipo de retorno como arreglo de numpy
+        # Calculate the attraction force, given the robot and goal positions.
+        # Return a tuple of the form [force_x, force_y]
+        # where force_x and force_y are the X and Y components
+        # of the resulting attraction force
+        #
+        # Fuerza atractiva: eta * [goal_x, goal_y] (robot en [0,0])
+        force_x = eta * goal_x
+        force_y = eta * goal_y
+        
         return numpy.asarray([force_x, force_y])
 
-    
-        
             
 
     def rejection_force(self, laser_readings, zeta, d0):
-        force_x, force_y = 0, 0
-
-        for d, theta in laser_readings:
-            if d > 1e-6 and d < d0:
-               # Multiplicar por 1/d^2 para fuerza repulsiva correcta
-               rho = zeta * (1.0 / d - 1.0 / d0) / (d * d)
-               force_x += rho * math.cos(theta)
-               force_y += rho * math.sin(theta)
-
-        # No dividir entre N para mantener fuerza repulsiva suficiente
-
-        
+        N = len(laser_readings)
+        if N == 0:
+            return numpy.asarray([0.0, 0.0])
+        force_x, force_y = 0.0, 0.0
+        #
+        # TODO:
+        # Calculate the total rejection force given by the average
+        # of the rejection forces caused by each laser reading.
+        # laser_readings is an array where each element is a tuple [distance, angle]
+        # both measured w.r.t. robot's frame.
+        # See lecture notes for equations to calculate rejection forces.
+        # Return a tuple of the form [force_x, force_y]
+        # where force_x and force_y are the X and Y components
+        # of the resulting rejection force
+        #
+        for reading in laser_readings:
+            dist, angle = reading
+            if dist >= d0 or math.isinf(dist):
+                continue  # F_{r,i} = 0 si d_i >= d0 o infinito
+            
+            # Posición del obstáculo en marco local del robot
+            p_x = dist * math.cos(angle)
+            p_y = dist * math.sin(angle)
+            
+            # Norma (distancia al obstáculo)
+            norm = math.hypot(p_x, p_y)
+            if norm > 0:
+                # Dirección unitaria alejándose del obstáculo: (q - p_i) / ||q - p_i|| = -p_i / norm
+                dir_x = -p_x / norm
+                dir_y = -p_y / norm
+                
+                # Magnitud de la fuerza repulsiva
+                denom = (dist - d0) ** 2
+                if denom > 0:  # Evitar división por cero, aunque d_i < d0 garantiza positivo
+                    magnitude = zeta / denom
+                else:
+                    magnitude = 0.0
+                
+                # Componentes de F_{r,i}
+                f_i_x = magnitude * dir_x
+                f_i_y = magnitude * dir_y
+                
+                # Acumular para el promedio (suma / N)
+                force_x += f_i_x / N
+                force_y += f_i_y / N
+            else:
+                # Ignorar lecturas con dist=0 (obstáculo en el robot)
+                pass
         
         return numpy.asarray([force_x, force_y])
 
-    def move_by_pot_fields(self, global_goal_x, global_goal_y, epsilon, tol, eta, zeta, d0, alpha, beta):
+        
+    def move_by_pot_fields(self, global_goal_x, global_goal_y, epsilon, tol, eta, zeta, d0, alpha=0.1, beta=0.9):
         #
         # TODO
-        # Meta relativa al robot
-        Pg = self.get_goal_point_wrt_robot(global_goal_x, global_goal_y)
-        dist_to_goal = math.hypot(Pg[0], Pg[1])
-
+        # Implement potential fields given a goal point and tunning constants
+        # You can follow these steps:
+        #
+        # get goal wrt robot (call the corresponding function)
+        # WHILE dist_to_goal > tol and rclpy.ok():
+        #    Calculate attraction force
+        #    Calculate rejection force
+        #    Calculate resulting force
+        #    Calculate the next desired position by gradient descend ( P = epsilon*F )  # Corregido: signo positivo
+        #    Calculate control signals
+        #    Call the publish_speed_and_forces(...) function
+        #    get goal point wrt robot
+        #
+        
+        # Obtener meta inicial relativa al robot
+        goal_local = self.get_goal_point_wrt_robot(global_goal_x, global_goal_y)
+        dist_to_goal = math.hypot(goal_local[0], goal_local[1])
+        
         while dist_to_goal > tol and rclpy.ok():
-            # Fuerza atractiva con respecto a la meta relativa actual
-            Fa = self.attraction_force(Pg[0], Pg[1], eta)
-
-            # Fuerza repulsiva promedio a partir de las lecturas del lidar
+            # Calcular fuerza atractiva (hacia la meta local)
+            Fa = self.attraction_force(goal_local[0], goal_local[1], eta)
+            
+            # Calcular fuerza repulsiva (de obstáculos en laser)
             Fr = self.rejection_force(self.laser_readings, zeta, d0)
-
-            # Fuerza resultante
+            
+            # Fuerza resultante (suma vectorial)
             F = Fa + Fr
-
-            # Paso de descenso del gradiente: objetivo local en el marco del robot
-            P = -epsilon * F
-
-            # Ley de control hacia el objetivo local P
-            v, w = self.calculate_control(P[0], P[1], alpha, beta)
-
-            # Publicar velocidades y vectores de fuerza para visualización
+            
+            # Siguiente posición deseada por descenso de gradiente (dirección en sentido de F)
+            P_x = epsilon * F[0]  # Corregido: signo positivo
+            P_y = epsilon * F[1]  # Corregido: signo positivo
+            
+            # Calcular señales de control (v, w) basadas en la dirección P
+            v, w = self.calculate_control(P_x, P_y, alpha, beta)
+            
+            # Publicar velocidades y fuerzas (incluye visualización y sleep)
             self.publish_speed_and_forces(v, w, Fa, Fr, F)
+            
+            # Actualizar meta relativa al robot (refleja movimiento)
+            goal_local = self.get_goal_point_wrt_robot(global_goal_x, global_goal_y)
+            dist_to_goal = math.hypot(goal_local[0], goal_local[1])
+        
+        # END 
+        #
+        return
 
-            # Actualizar meta relativa y distancia a la meta global
-            Pg = self.get_goal_point_wrt_robot(global_goal_x, global_goal_y)
-            dist_to_goal = math.hypot(Pg[0], Pg[1])
             
 
     def get_goal_point_wrt_robot(self, goal_x, goal_y):
@@ -158,7 +213,7 @@ class PotFieldsNode(Node):
         mrk.color.r, mrk.color.g, mrk.color.b, mrk.color.a = color
         mrk.scale.x, mrk.scale.y, mrk.scale.z = [0.07, 0.1, 0.15]
         mrk.points.append(Point(x=0.0, y=0.0))
-        mrk.points.append(Point(x=-force_x, y=-force_y))
+        mrk.points.append(Point(x=force_x, y=force_y))
         return mrk
 
     def get_robot_pose(self):
