@@ -1,11 +1,12 @@
 /*
- * MOBILE ROBOTS - UNAM, FI, 2026-1
+ * MOBILE ROBOTS - PPINEDA DE LA CRUZ CHRISTIAN, 2026-1
  * LOCALIZATION BY PARTICLE FILTERS
  *
  * Instructions:
  * Write the code necessary to implement localization by particle filters.
  * Modify only the sections marked with the TODO comment. 
  */
+
 #include "particle_filter/ray_tracer.h"
 
 class ParticleFilter
@@ -24,7 +25,12 @@ public:
 	 * with positions uniformly distributed within bounding box given by min_x, ..., max_a.
 	 * To generate uniformly distributed random numbers, you can use the funcion rnd.uniformReal(min, max)
 	 */
-	
+	for(size_t i=0; i < particles.size(); i++)
+	{
+	    particles[i].x = rnd.uniformReal(min_x, max_x);
+	    particles[i].y = rnd.uniformReal(min_y, max_y);
+	    particles[i].theta = rnd.uniformReal(min_a, max_a);
+	}
 	/*
 	 */
 	return particles;
@@ -38,17 +44,17 @@ public:
 	 * TODO:
 	 * Move each particle a displacement given by delta_x, delta_y and delta_t.
 	 * Displacement is given w.r.t. particles's frame, i.e., to calculate the new position for
-	 * each particle you need to make a z-rotation of delta_x and delta_y, an angle theta_i, where theta_i
-	 * is the orientation of the i-th particle:
-	 * xi += delta_x*cos(theta_i) - delta_y*sin(theta_i) + rnd
-	 * yi += delta_x*sin(theta_i) + delta_y*cos(theta_i) + rnd
-	 * theta_i += delta_t + rnd
+	 * each particle you need to rotate delta_x and delta_y, on Z axis, an angle theta_i, where theta_i
+	 * is the orientation of the i-th particle.
 	 * Add gaussian noise to each new position. Use sigma2 as variance.
 	 * You can use the function rnd.gaussian(mean, variance)
 	 */
-
-	/*
-	 */
+	for(size_t i=0; i < particles.size(); i++)
+	{
+	    particles[i].x += delta_x*cos(particles[i].theta) - delta_y*sin(particles[i].theta) + rnd.gaussian(0, sigma2);
+	    particles[i].y += delta_x*sin(particles[i].theta) + delta_y*cos(particles[i].theta) + rnd.gaussian(0, sigma2);
+	    particles[i].theta += delta_t + rnd.gaussian(0, sigma2);
+	}
     }
 
     static std::vector<sensor_msgs::msg::LaserScan> simulate_particle_scans(
@@ -87,27 +93,30 @@ public:
 	 * For each particle, calculate the similarity between its simulated scan and the real scan.
 	 * Normalize all similarities (the sum of all values must always be 1.0)
 	 * Store results in 'similarities'.
-	 * IMPORTANT NOTE 1. The real sensor scans are DOWNSAMPLED. That is, only 1 out of 'downsampling' scans is considered.
+	 * IMPORTANT NOTE 1. The real sensor scans are DOWNSAMPLED. That is, only 1 out of 'downsampling' scans is considered, i.e.,
 	 * For example, if downsampling=10, then, if real sensor has 500 ranges, simulated scans will only have 50 ranges
 	 * When comparing readings, for each reading in the simulated scan, you should skip 'downsampling' readings
 	 * in the real sensor.
 	 * IMPORTANT NOTE 2. Both, simulated an real scans, can have infinite distances. Thus, when comparing readings,
-	 * ensure both simulated and real ranges are finite values.
-	 * Steps:
-	 * FOR i=[0... simulated_scans.size())
-	 *    delta = 0
-	 *    FOR j=[0... simulated_scans[i].ranges.size())
-	 *       IF real_scan.ranges[j*downsampling] in valid range AND simulated_scans[i].ranges[j] in valid range:
-	 *          delta += |simulated_scans[i].ranges[j] - real_scan.ranges[j*downsampling]|
-	 *       ELSE
-	 *          delta += max_range
-	 *    delta /= simulated_scans[i].ranges.size()
-	 *    similarities[i] = exp(-delta/sigma2)
-	 *    Normalize all similarities
+	 * ensure both simulated and real ranges are finite values. 
 	 */
 	
-	/*
-	 */
+	for(size_t i=0; i < simulated_scans.size(); i++)
+	{
+	    double mean_diff = 0;
+	    for(size_t j=0; j < simulated_scans[i].ranges.size(); j++)
+		if(real_scan.ranges[j*downsampling] < real_scan.range_max && simulated_scans[i].ranges[j] < real_scan.range_max)
+		    mean_diff += fabs(simulated_scans[i].ranges[j] - real_scan.ranges[j*downsampling]);
+		else
+		    mean_diff += real_scan.range_max;
+	    mean_diff /= simulated_scans[i].ranges.size();
+	    similarities[i] = exp(-mean_diff/sigma2);
+	}
+	double sum = 0;
+	for(size_t i=0; i<similarities.size(); i++)
+	    sum += similarities[i];
+	for(size_t i=0; i<similarities.size(); i++)
+	    similarities[i] /= sum;
 	return similarities;
     }
     
@@ -119,17 +128,15 @@ public:
 	 *
 	 * Write an algorithm to choice an integer in the range [0, N-1], with N, the length of 'probabilities'.
 	 * Probability of picking an integer 'i' is given by the corresponding probabilities[i] value.
-	 * Return the chosen integer.
-	 * x = rnd.uniformReal(0,1)
-	 * FOR i=[0...probabilities.size())
-	 *    IF x < probabilities[i]
-	 *        return i
-	 *    ELSE
-	 *        x -= probabilities[i]
-	 * return -1
+	 * Return the chosen integer. 
 	 */
 	
-	
+	float beta = rnd.uniformReal(0, 1);
+	for(size_t i=0; i < probabilities.size(); i++)
+	    if(beta < probabilities[i])
+		return i;
+	    else
+		beta -= probabilities[i];
 	return -1;
     }
 
@@ -146,7 +153,13 @@ public:
 	 * Use the random_choice function to pick a particle with the correct probability.
 	 * Add gaussian noise to each sampled particle (add noise to x,y and theta). Use sigma2 as noise variance.
 	 */
-	
+	for(size_t i=0; i<particles.size(); i++)
+	{
+	    int idx = ParticleFilter::random_choice(probabilities);
+	    resampled_particles[i].x     = particles[idx].x     + rnd.gaussian(0, sigma2);
+	    resampled_particles[i].y     = particles[idx].y     + rnd.gaussian(0, sigma2);
+	    resampled_particles[i].theta = particles[idx].theta + rnd.gaussian(0, sigma2);
+	}
 	/*
 	 */
 	return resampled_particles;
