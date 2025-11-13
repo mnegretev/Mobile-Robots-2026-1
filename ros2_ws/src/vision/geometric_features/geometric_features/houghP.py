@@ -15,7 +15,7 @@ import numpy
 import cv2
 import math
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "LEONARDO BARILLAS GONZALEZ"
 
 class HoughPNode(Node):
     def callback_img(self, msg):
@@ -36,7 +36,33 @@ class HoughPNode(Node):
         # Use the parameters self.canny_lower, self.canny_upper, self.rho, self.theta,
         # self.hough_threshold, self.min_length and self.max_gap
         #
-        
+        # Convertir a escala de grises
+        img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
+        # Detectar bordes con Canny
+        edges = cv2.Canny(img_gray, self.canny_lower, self.canny_upper)
+        # Medir tiempo de detección de líneas
+        t_start = self.get_clock().now()
+        lines = cv2.HoughLinesP(
+            edges,
+            rho=self.rho,
+            theta=self.theta,
+            threshold=self.hough_threshold,
+            minLineLength=self.min_length,
+            maxLineGap=self.max_gap
+        )
+        t_end = self.get_clock().now()
+        # Calcular tiempo transcurrido en milisegundos
+        elapsed_time = (t_end - t_start).nanoseconds / 1e6
+        # Dibujar las líneas detectadas
+        if lines is not None:
+            for line in lines:
+                x1, y1, x2, y2 = line[0]
+                cv2.line(img_houghP, (x1, y1), (x2, y2), (0, 0, 255), 2)
+        # Mostrar el tiempo de procesamiento en la imagen
+        text = f"Time [ms] = {elapsed_time:.2f}"
+        cv2.putText(img_houghP, text, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
+        #
+        #
         cv2.imshow("BGR Original", img_bgr)
         cv2.imshow("Houhgh P", img_houghP)
         cv2.waitKey(1)
