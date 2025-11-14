@@ -15,7 +15,7 @@ import numpy
 import cv2
 import math
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "Diego Cruz Oviedo"
 
 class HoughPNode(Node):
     def callback_img(self, msg):
@@ -36,9 +36,20 @@ class HoughPNode(Node):
         # Use the parameters self.canny_lower, self.canny_upper, self.rho, self.theta,
         # self.hough_threshold, self.min_length and self.max_gap
         #
-        
+        img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
+        img_bin = cv2.Canny(img_gray, self.canny_lower, self.canny_upper)
+        start_time = self.get_clock().now()
+        linesP = cv2.HoughLinesP(img_bin, self.rho, self.theta, self.hough_threshold, self.min_length, self.max_gap)
+        end_time   = self.get_clock().now()
+        delta_ms = round((end_time.nanoseconds - start_time.nanoseconds)/1e6,2)
+        if linesP is not None:
+            for i in range(0, len(linesP)):
+                l = linesP[i][0]
+                cv2.line(img_houghP, (l[0], l[1]), (l[2], l[3]), (0,0,255), 3, cv2.LINE_AA)
+        cv2.rectangle(img_houghP, (0,0), (310,40), (200,230,255), -1)
+        cv2.putText(img_houghP, "Tiempo: " +  str(delta_ms) + " [ms]", (10,30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,0), 2)
         cv2.imshow("BGR Original", img_bgr)
-        cv2.imshow("Houhgh P", img_houghP)
+        cv2.imshow("HouhghP", img_houghP)
         cv2.waitKey(1)
     
     def __init__(self):
