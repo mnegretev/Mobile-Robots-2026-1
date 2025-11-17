@@ -14,7 +14,7 @@ from cv_bridge import CvBridge
 import numpy
 import cv2
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "Rocio Fabiola Romero Bernal"
 
 class CannyNode(Node):
     def callback_img(self, msg):
@@ -22,14 +22,35 @@ class CannyNode(Node):
         img_bgr = self.br.imgmsg_to_cv2(msg, desired_encoding='bgr8')
         #
         # TODO:
-        # Change the color space of the image 'img_bgr' to grayscale
-        # Get edges using the cv2.Canny function, use as parameters
-        # the variables self.canny_lower and self.canny_upper
-        # Store the resulting binary image in img_bin
-        #
+        # Convierte la imagen a escala de grises
+        img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
+        # Detecta los bordes usando el detector de Canny
+        img_bin = cv2.Canny(img_gray, self.canny_lower, self.canny_upper)
         
-        #
-        #
+        # Calcular EPR (Edge Pixel Ratio)
+        epr = numpy.sum(img_bin > 0) / img_bin.size
+
+        # Calcular Edge Contrast Index
+        contrast_sum = 0
+        count = 0
+        # Usar un padding para evitar indices fuera de rango
+        padded = numpy.pad(img_gray, ((1, 1), (1, 1)), mode='edge')
+
+        for x in range(img_bin.shape[0]):
+            for y in range(img_bin.shape[1]):
+                if img_bin[x, y] != 0:
+                   center = padded[x+1, y+1]
+                   neighbors = padded[x:x+3, y:y+3]
+                   neighbors = neighbors.flatten()
+                   neighbors = neighbors[neighbors!=center]
+                   local_contrast = numpy.mean(numpy.abs(neighbors - center))
+                   contrast_sum += local_contrast
+                   count += 1
+
+        edge_contrast_index = (contrast_sum / count) if count > 0 else 0
+
+        print(f"EPR: {epr:.4f}, Edge Contrast Index: {edge_contrast_index:.2f}")
+
         cv2.imshow("BGR Original", img_bgr)
         cv2.imshow("Canny", img_bin)
         cv2.waitKey(1)

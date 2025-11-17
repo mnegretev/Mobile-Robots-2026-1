@@ -15,27 +15,34 @@ import numpy
 import cv2
 import math
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "Rocio Fabiola Romero Bernal"
 
 class HoughPNode(Node):
     def callback_img(self, msg):
         img_bgr = self.br.imgmsg_to_cv2(msg, desired_encoding='bgr8')
         img_houghP = img_bgr.copy()
-        #
-        # TODO:
-        # Change the color space of the image 'img_bgr' to grayscale
-        # Get borders using the Canny edge detector.
-        # From boders, get lines using the cv2.HoughLinesP function
-        # Draw the resulting lines over the image img_houghP
-        # Check the online tutorials for OpenCV documentation
-        # https://docs.opencv.org/3.4/d9/db0/tutorial_hough_lines.html
-        # https://docs.opencv.org/4.x/d6/d6e/group__imgproc__draw.html
-        # Measure the time used to detect lines (only line detection)
-        # Check the use of node.get_clock().now() function.
-        # Display the processing time on the img_houghP image
-        # Use the parameters self.canny_lower, self.canny_upper, self.rho, self.theta,
-        # self.hough_threshold, self.min_length and self.max_gap
-        #
+         # Convertir a escala de grises
+        img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
+         # Detectar bordes con el detector de Canny usando los parámetros self.canny_lower y self.canny_upper
+        edges = cv2.Canny(img_gray, self.canny_lower, self.canny_upper)
+
+         # Medir tiempo de detección con el reloj del nodo
+        start_time = self.get_clock().now()
+         # Detectar líneas con la transformada de Hough probabilística usando los parámetros declarados
+        lines = cv2.HoughLinesP(edges, self.rho, self.theta, self.hough_threshold, 
+                            minLineLength=self.min_length, maxLineGap=self.max_gap)
+        end_time = self.get_clock().now()
+        elapsed_time = (end_time - start_time).nanoseconds / 1e6  # ms
+
+        # Dibujar líneas detectadas sobre la copia de la imagen original
+        if lines is not None:
+            for line in lines:
+                x1, y1, x2, y2 = line[0]
+                cv2.line(img_houghP, (x1, y1), (x2, y2), (0, 255, 0), 2)
+
+        # Mostrar tiempo de procesamiento en la imagen resultante
+        cv2.putText(img_houghP, f"Detection time: {elapsed_time:.2f} ms", (10, 30),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
         
         cv2.imshow("BGR Original", img_bgr)
         cv2.imshow("Houhgh P", img_houghP)

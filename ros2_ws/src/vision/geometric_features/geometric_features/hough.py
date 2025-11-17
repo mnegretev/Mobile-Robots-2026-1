@@ -15,29 +15,47 @@ import numpy
 import cv2
 import math
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "Rocio Fabiola Romero Bernal"
 
 class HoughNode(Node):
     def callback_img(self, msg):
         img_bgr = self.br.imgmsg_to_cv2(msg, desired_encoding='bgr8')
         img_hough  = img_bgr.copy()
-        #
-        # TODO:
-        # Change the color space of the image 'img_bgr' to grayscale
-        # Get borders using the Canny edge detector.
-        # From boders, get lines using the cv2.HoughLines function
-        # Draw the resulting lines over the image img_hough
-        # Check the online tutorials for OpenCV documentation
-        # https://docs.opencv.org/3.4/d9/db0/tutorial_hough_lines.html
-        # https://docs.opencv.org/4.x/d6/d6e/group__imgproc__draw.html
-        # Measure the time used to detect lines (only line detection)
-        # Check the use of node.get_clock().now() function.
-        # Display the processing time on the img_houghP image
-        # Use the parameters self.canny_lower, self.canny_upper, self.rho, self.theta,
-        # and self.hough_threshold
-        #
+        # Convertir a escala de grises
+        img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
+        img_gray = cv2.GaussianBlur(img_gray, (5, 5), 1)
+
         
+        # Detectar bordes con Canny usando los parámetros canny_lower y canny_upper
+        edges = cv2.Canny(img_gray, self.canny_lower, self.canny_upper)
+
+        # Medir tiempo
+        start_time = self.get_clock().now()
+
+        # Detectar líneas con la transformada de Hough clásica
+        lines = cv2.HoughLines(edges, self.rho, self.theta, self.hough_threshold)
+
+        end_time = self.get_clock().now()
+        elapsed_time = (end_time - start_time).nanoseconds / 1e6
+
+        # Dibujar líneas (convertir coordenadas polares a cartesianas)
+        if lines is not None:
+            for line in lines:
+                rho, theta = line[0]
+                a = math.cos(theta)
+                b = math.sin(theta)
+                x0 = a * rho
+                y0 = b * rho
+                x1 = int(x0 + 1000 * (-b))
+                y1 = int(y0 + 1000 * (a))
+                x2 = int(x0 - 1000 * (-b))
+                y2 = int(y0 - 1000 * (a))
+                cv2.line(img_hough, (x1, y1), (x2, y2), (0, 0, 255), 2)
         
+         # Mostrar tiempo en la imagen
+        cv2.putText(img_hough, f"Detection time: {elapsed_time:.2f} ms", (10, 30),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 0, 0), 2)
+
         cv2.imshow("BGR Original", img_bgr)
         cv2.imshow("Houhgh", img_hough)
         cv2.waitKey(1)
