@@ -15,31 +15,62 @@ import numpy
 import cv2
 import math
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "Axel Jovani Ruiz Martinez"
 
 class HoughPNode(Node):
     def callback_img(self, msg):
+        # Convertir de ROS Image a OpenCV BGR
         img_bgr = self.br.imgmsg_to_cv2(msg, desired_encoding='bgr8')
         img_houghP = img_bgr.copy()
-        #
-        # TODO:
-        # Change the color space of the image 'img_bgr' to grayscale
-        # Get borders using the Canny edge detector.
-        # From boders, get lines using the cv2.HoughLinesP function
-        # Draw the resulting lines over the image img_houghP
-        # Check the online tutorials for OpenCV documentation
-        # https://docs.opencv.org/3.4/d9/db0/tutorial_hough_lines.html
-        # https://docs.opencv.org/4.x/d6/d6e/group__imgproc__draw.html
-        # Measure the time used to detect lines (only line detection)
-        # Check the use of node.get_clock().now() function.
-        # Display the processing time on the img_houghP image
-        # Use the parameters self.canny_lower, self.canny_upper, self.rho, self.theta,
-        # self.hough_threshold, self.min_length and self.max_gap
-        #
-        
+
+        # 1) Pasar a escala de grises
+        img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
+
+        # 2) Detectar bordes con Canny
+        edges = cv2.Canny(img_gray, self.canny_lower, self.canny_upper)
+
+        # 3) Medir tiempo de detección de líneas
+        t_start = self.get_clock().now()
+        linesP = cv2.HoughLinesP(
+            edges,
+            rho=self.rho,
+            theta=self.theta,
+            threshold=self.hough_threshold,
+            minLineLength=self.min_length,
+            maxLineGap=self.max_gap
+        )
+        t_end = self.get_clock().now()
+
+        # Duración en segundos
+        dt = (t_end - t_start).nanoseconds / 1e9
+
+        # 4) Dibujar líneas detectadas sobre img_houghP
+        num_lines = 0
+        if linesP is not None:
+            num_lines = len(linesP)
+            for line in linesP:
+                x1, y1, x2, y2 = line[0]
+                cv2.line(img_houghP, (x1, y1), (x2, y2), (0, 0, 255), 2, cv2.LINE_AA)
+
+        # 5) Escribir el tiempo de procesamiento y número de líneas en la imagen
+        text = f"t = {dt*1000:.2f} ms  lines = {num_lines}"
+        cv2.putText(
+            img_houghP,
+            text,
+            (10, 30),
+            cv2.FONT_HERSHEY_SIMPLEX,
+            0.7,
+            (0, 255, 0),
+            2,
+            cv2.LINE_AA
+        )
+
+        # Mostrar ventanas
         cv2.imshow("BGR Original", img_bgr)
-        cv2.imshow("Houhgh P", img_houghP)
+        cv2.imshow("Edges", edges)
+        cv2.imshow("Hough P", img_houghP)
         cv2.waitKey(1)
+
     
     def __init__(self):
         print("INITIALIZING PROBABILISTIC HOUGH NODE - ", FULL_NAME)

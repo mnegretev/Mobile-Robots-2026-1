@@ -14,7 +14,7 @@ from cv_bridge import CvBridge
 import numpy
 import cv2
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "Ruiz Martínez Axel Jovani"
 
 class CannyNode(Node):
     def callback_img(self, msg):
@@ -27,9 +27,23 @@ class CannyNode(Node):
         # the variables self.canny_lower and self.canny_upper
         # Store the resulting binary image in img_bin
         #
-        
+        # 1) Convertir a escala de grises
+        img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
+
+        # 2) Detectar bordes con Canny usando los parámetros del nodo
+        #    self.canny_lower y self.canny_upper
+        img_bin = cv2.Canny(img_gray, self.canny_lower, self.canny_upper)
         #
         #
+
+        # Computar Edge Pixel Ratio (EPR)
+        edge_pixels = numpy.count_nonzero(img_bin)
+        total_pixels = img_bin.size
+        epr = edge_pixels / total_pixels
+
+        # Mostrar en consola
+        self.get_logger().info(f"EPR: {epr:.4f}  (edge_pixels={edge_pixels})")
+
         cv2.imshow("BGR Original", img_bgr)
         cv2.imshow("Canny", img_bin)
         cv2.waitKey(1)
