@@ -15,7 +15,7 @@ import numpy
 import cv2
 import math
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "OSCAR CORTES CALDERON"
 
 class HoughPNode(Node):
     def callback_img(self, msg):
@@ -37,9 +37,42 @@ class HoughPNode(Node):
         # self.hough_threshold, self.min_length and self.max_gap
         #
         
+        
+        # Escala de grises
+        img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
+
+        # Bordes con Canny
+        edges = cv2.Canny(img_gray, self.canny_lower, self.canny_upper)
+
+        # Medir tiempo sólo de la detección de líneas (HoughP)
+        t0 = self.get_clock().now()
+        linesP = cv2.HoughLinesP(
+            edges,
+            self.rho,
+            self.theta,
+            self.hough_threshold,
+            minLineLength=self.min_length,
+            maxLineGap=self.max_gap
+        )
+        t1 = self.get_clock().now()
+        dt_ms = (t1 - t0).nanoseconds / 1e6  # milisegundos
+
+        # Dibujar líneas sobre img_houghP
+        if linesP is not None:
+            for l in linesP:
+                x1, y1, x2, y2 = l[0]
+                cv2.line(img_houghP, (x1, y1), (x2, y2), (0, 0, 255), 2)
+
+        # Mostrar tiempo en la imagen
+        text = f"{dt_ms:.2f} ms"
+        cv2.putText(img_houghP, text, (10, 30),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2, cv2.LINE_AA)
+        
+        
         cv2.imshow("BGR Original", img_bgr)
         cv2.imshow("Houhgh P", img_houghP)
         cv2.waitKey(1)
+    
     
     def __init__(self):
         print("INITIALIZING PROBABILISTIC HOUGH NODE - ", FULL_NAME)

@@ -14,7 +14,7 @@ from cv_bridge import CvBridge
 import numpy
 import cv2
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "OSCAR CORTES CALDERON"
 
 class CannyNode(Node):
     def callback_img(self, msg):
@@ -28,8 +28,16 @@ class CannyNode(Node):
         # Store the resulting binary image in img_bin
         #
         
-        #
-        #
+        # Conversión a escala de grises
+        img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
+        
+        # Detector de bordes de Canny
+        # usa los umbrales self.canny_lower y self.canny_upper
+        edges = cv2.Canny(img_gray, self.canny_lower, self.canny_upper)
+
+        # Guardar el resultado binario en img_bin
+        img_bin[:, :] = edges
+        
         cv2.imshow("BGR Original", img_bgr)
         cv2.imshow("Canny", img_bin)
         cv2.waitKey(1)

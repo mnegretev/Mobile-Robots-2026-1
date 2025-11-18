@@ -15,7 +15,7 @@ import numpy
 import cv2
 import math
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "OSCAR CORTES CALDERON"
 
 class HoughNode(Node):
     def callback_img(self, msg):
@@ -37,6 +37,36 @@ class HoughNode(Node):
         # and self.hough_threshold
         #
         
+        # Escala de grises
+        img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
+
+        # Bordes con Canny
+        edges = cv2.Canny(img_gray, self.canny_lower, self.canny_upper)
+
+        # Medir tiempo de detección de líneas (sólo Hough)
+        t0 = self.get_clock().now()
+        lines = cv2.HoughLines(edges, self.rho, self.theta, self.hough_threshold)
+        t1 = self.get_clock().now()
+        dt_ms = (t1 - t0).nanoseconds / 1e6  # milisegundos
+
+        # Dibujar líneas sobre img_hough
+        if lines is not None:
+            for l in lines:
+                rho, theta = l[0]
+                a = numpy.cos(theta)
+                b = numpy.sin(theta)
+                x0 = a * rho
+                y0 = b * rho
+                x1 = int(x0 + 1000 * (-b))
+                y1 = int(y0 + 1000 * (a))
+                x2 = int(x0 - 1000 * (-b))
+                y2 = int(y0 - 1000 * (a))
+                cv2.line(img_hough, (x1, y1), (x2, y2), (0, 0, 255), 2)
+
+        # Escribir tiempo en la imagen resultante
+        text = f"{dt_ms:.2f} ms"
+        cv2.putText(img_hough, text, (10, 30),
+                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 0), 2, cv2.LINE_AA)
         
         cv2.imshow("BGR Original", img_bgr)
         cv2.imshow("Houhgh", img_hough)
