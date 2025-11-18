@@ -7,14 +7,14 @@
 # using the function provided by OpenCV
 #
 
-import rclpy
-from rclpy.node import Node
-from sensor_msgs.msg import Image
-from cv_bridge import CvBridge
-import numpy
-import cv2
+import  rclpy
+from    rclpy.node import Node
+from    sensor_msgs.msg import Image
+from    cv_bridge import CvBridge
+import  numpy
+import  cv2
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "Popoca Zuñiga Daniel Ixbalanque"
 
 class CannyNode(Node):
     def callback_img(self, msg):
@@ -27,7 +27,9 @@ class CannyNode(Node):
         # the variables self.canny_lower and self.canny_upper
         # Store the resulting binary image in img_bin
         #
-        
+        img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
+        edges = cv2.Canny(img_gray, self.canny_lower, self.canny_upper)
+        img_bin = edges
         #
         #
         cv2.imshow("BGR Original", img_bgr)
