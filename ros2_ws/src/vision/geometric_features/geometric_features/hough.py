@@ -15,7 +15,7 @@ import numpy
 import cv2
 import math
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "PINEDA DE LA CRUZ CHRISTIAN"
 
 class HoughNode(Node):
     def callback_img(self, msg):
@@ -36,8 +36,25 @@ class HoughNode(Node):
         # Use the parameters self.canny_lower, self.canny_upper, self.rho, self.theta,
         # and self.hough_threshold
         #
-        
-        
+        img_gray=cv2.cvtColor(img_bgr,cv2.COLOR_BGR2GRAY)
+        img_bin=cv2.Canny(img_gray,self.canny_lower,self.canny_upper)
+        start_time=self.get_clock().now()
+        lines=cv2.HoughLines(img_bin,self.rho,self.theta,self.hough_threshold)
+        end_time=self.get_clock().now()
+        delta_ms=round((end_time.nanoseconds-start_time.nanoseconds)/1e6,2)
+        if lines is not None:
+            for i in range(0, len(lines)):
+                rho=lines[i][0][0]
+                theta=lines[i][0][1]
+                a=math.cos(theta)
+                b=math.sin(theta)
+                x0=a*rho
+                y0=b*rho
+                pt1=(int(x0+1000*(-b)),int(y0+1000*(a)))
+                pt2=(int(x0-1000*(-b)),int(y0-1000*(a)))
+                cv2.line(img_hough,pt1,pt2,(0,0,255),3,cv2.LINE_AA)
+        cv2.rectangle(img_hough,(0,0),(310,40),(0,0,0),-1)
+        cv2.putText(img_hough,"Tiempo: "+str(delta_ms)+"[ms]",(10,30),cv2.FONT_HERSHEY_SIMPLEX,1,(255,255,255),2)        
         cv2.imshow("BGR Original", img_bgr)
         cv2.imshow("Houhgh", img_hough)
         cv2.waitKey(1)
