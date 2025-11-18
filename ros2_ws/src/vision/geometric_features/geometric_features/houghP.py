@@ -15,7 +15,7 @@ import numpy
 import cv2
 import math
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "Juan Mancera Lopez"
 
 class HoughPNode(Node):
     def callback_img(self, msg):
@@ -36,6 +36,42 @@ class HoughPNode(Node):
         # Use the parameters self.canny_lower, self.canny_upper, self.rho, self.theta,
         # self.hough_threshold, self.min_length and self.max_gap
         #
+
+        img_gry = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
+        img_bin = cv2.Canny(img_gry, self.canny_lower, self.canny_upper)
+
+        start_time = self.get_clock().now()
+        lines = cv2.HoughLinesP(img_bin, self.rho, self.theta, self.hough_threshold)
+        end_time = self.get_clock().now()
+        
+        #duracion = t_fin - t_inicio
+        delta_ms = (end_time.nanoseconds - start_time.nanoseconds)/1e6
+
+        if lines is not None:
+            for line in lines:
+                x1, y1, x2, y2 = line[0]
+
+                cv2.line(img_houghP, (x1,y1), (x2,y2), (0,0,255), 2)
+
+        tiempo_txt = f"Tiempo: {delta_ms:.2f} ms"
+
+        self.i+=1
+
+        if(self.i>=5):
+            self.delta_ms_avg += delta_ms
+            self.delta_ms_avg /= 5
+            self.tiempo_txt = f"Tiempo: {self.delta_ms_avg:.2f} ms"            
+            self.i = 0
+        #print(self.i)
+
+        cv2.rectangle(img_houghP, (0,0), (250,50), (0,0,0), -1)
+
+        cv2.putText(img_houghP, tiempo_txt,
+                    (10, 30), # Posición (x, y) desde esquina superior izquierda
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    0.8, # Tamaño de la fuente
+                    (0, 255, 0), # Color (Verde)
+                    2) # Grosor de la fuente
         
         cv2.imshow("BGR Original", img_bgr)
         cv2.imshow("Houhgh P", img_houghP)
@@ -64,6 +100,10 @@ class HoughPNode(Node):
         print("[Canny lower, Canny upper]=", [self.canny_lower, self.canny_upper])
         print("[rho, theta, Hough threshold]=", [self.rho, self.theta, self.hough_threshold])
         print("[min length, max gap]=",[self.min_length, self.max_gap])
+
+        self.i = 5
+        self.delta_ms_avg = 0
+        self.tiempo_txt = "Tiempo: - ms"
 
 def main(args=None):
     rclpy.init(args=args)

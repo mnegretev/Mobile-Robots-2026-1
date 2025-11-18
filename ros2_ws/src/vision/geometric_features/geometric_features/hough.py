@@ -9,13 +9,14 @@
 
 import rclpy
 from rclpy.node import Node
+from rclpy.time import Time, Duration
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 import numpy
 import cv2
 import math
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "Juan Mancera Lopez"
 
 class HoughNode(Node):
     def callback_img(self, msg):
@@ -36,8 +37,48 @@ class HoughNode(Node):
         # Use the parameters self.canny_lower, self.canny_upper, self.rho, self.theta,
         # and self.hough_threshold
         #
+        img_gry = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
+        img_bin = cv2.Canny(img_gry, self.canny_lower, self.canny_upper)
+
+        start_time = self.get_clock().now()
+        lines = cv2.HoughLines(img_bin, self.rho, self.theta, self.hough_threshold)
+        end_time = self.get_clock().now()
         
-        
+        #duracion = t_fin - t_inicio
+        delta_ms = (end_time.nanoseconds - start_time.nanoseconds)/1e6
+
+        if lines is not None:
+            for line in lines:
+                rho, theta = line[0]
+
+                a = numpy.cos(theta)
+                b = numpy.sin(theta)
+                x0 = a*rho
+                y0 = b*rho
+
+                pt1 = (int(x0 + 1000*(-b)), int(y0 + 1000*(a)))
+                pt2 = (int(x0 - 1000*(-b)), int(y0 - 1000*(a)))
+
+                cv2.line(img_hough, pt1, pt2, (0,0,255), 2)
+
+        self.i+=1
+
+        if(self.i>=5):
+            self.delta_ms_avg += delta_ms
+            self.delta_ms_avg /= 5
+            self.tiempo_txt = f"Tiempo: {self.delta_ms_avg:.2f} ms"            
+            self.i = 0
+        #print(self.i)
+
+        cv2.rectangle(img_hough, (0,0), (250,50), (0,0,0), -1)
+
+        cv2.putText(img_hough, self.tiempo_txt,
+                    (15, 35), # Posición (x, y) desde esquina superior izquierda
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    0.8, # Tamaño de la fuente
+                    (255, 0, 0), # Color (Verde)
+                    2) # Grosor de la fuente
+
         cv2.imshow("BGR Original", img_bgr)
         cv2.imshow("Houhgh", img_hough)
         cv2.waitKey(1)
@@ -60,6 +101,10 @@ class HoughNode(Node):
         print("Starting line detection with parameters: ")
         print("[Canny lower, Canny upper]=", [self.canny_lower, self.canny_upper])
         print("[rho, theta, Hough threshold]=", [self.rho, self.theta, self.hough_threshold])
+
+        self.i = 5
+        self.delta_ms_avg = 0
+        self.tiempo_txt = "Tiempo: - ms"
 
 def main(args=None):
     rclpy.init(args=args)
