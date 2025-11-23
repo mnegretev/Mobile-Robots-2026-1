@@ -122,7 +122,7 @@ def main(args=None):
     package_path = get_package_share_directory("neural_networks")
     dataset_folder = os.path.join(package_path, "dataset")
     
-    epochs        = 50
+    epochs        = 100
     batch_size    = 5
     learning_rate = 0.5
     training_dataset, testing_dataset = load_dataset(dataset_folder)
