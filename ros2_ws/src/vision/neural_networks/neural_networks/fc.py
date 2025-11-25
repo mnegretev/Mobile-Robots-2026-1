@@ -14,7 +14,7 @@ import rclpy
 from ament_index_python.packages import get_package_share_directory
 import os
 
-NAME = "FULL NAME"
+NAME = "Belmonte González Dania Melissa"
 
 class FCNeuralNetwork(object):
     def __init__(self, layers, weights=None, biases=None):
@@ -45,7 +45,11 @@ class FCNeuralNetwork(object):
         #   x = 1.0 / (1.0 + exp(-u)) The output of the i-th layer is the input of the next one
         #   append x to y
         #
-        
+        y.append(x)
+        for i in range(self.num_layers-1):
+            u=numpy.dot(self.weights[i],x)+self.biases[i]
+            x=1.0/(1.0+numpy.exp(-u))
+            y.append(x)        
         return y
 
     def backpropagate(self, x, t):
@@ -69,7 +73,13 @@ class FCNeuralNetwork(object):
         #     nabla_b[-i] = delta
         #     nabla_w[-i] = delta*y[-i-1].T  
         #        
-        
+        delta=(y[-1]-t)*y[-1]*(1-y[-1])
+        nabla_b[-1]=delta
+        nabla_w[-1]=numpy.dot(delta,y[-2].T)
+        for l in range(2,self.num_layers):
+            delta=numpy.dot(self.weights[-l+1].T,delta)*y[-l]*(1-y[-l])
+            nabla_b[-l]=delta
+            nabla_w[-l]=numpy.dot(delta,y[-l-1].T)
         return nabla_w, nabla_b
 
     def update_with_batch(self, batch, eta):
@@ -133,9 +143,9 @@ def main(args=None):
     package_path = get_package_share_directory("neural_networks")
     dataset_folder = os.path.join(package_path, "dataset")
     
-    epochs        = 3
-    batch_size    = 10
-    learning_rate = 0.5
+    epochs        = 10
+    batch_size    = 50
+    learning_rate = 3
     training_dataset, testing_dataset = load_dataset(dataset_folder)
     nn = FCNeuralNetwork([784,30,10])
     nn.train_by_SGD(training_dataset, epochs, batch_size, learning_rate)
