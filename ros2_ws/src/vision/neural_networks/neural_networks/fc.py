@@ -146,7 +146,7 @@ def main(args=None):
     while cmd != 27 and rclpy.ok():
         img,label = testing_dataset[numpy.random.randint(0, 4999)]
         y = nn.feedforward(img)[-1].T
-        print("\nPerceptron output: " + str(y))
+        print("\nNeural network output: " + str(y))
         print("Expected output  : "   + str(label.T))
         print("Recognized digit : "   + str(numpy.argmax(y)))
         cv2.imshow("Digit", numpy.reshape(numpy.asarray(img, dtype="float32"), (28,28,1)))
