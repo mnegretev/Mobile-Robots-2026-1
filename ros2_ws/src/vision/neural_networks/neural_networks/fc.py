@@ -14,7 +14,7 @@ import rclpy
 from ament_index_python.packages import get_package_share_directory
 import os
 
-NAME = "FULL NAME"
+NAME = "Cruz Oviedo Diego"
 
 class FCNeuralNetwork(object):
     def __init__(self, layers, weights=None, biases=None):
@@ -45,7 +45,11 @@ class FCNeuralNetwork(object):
         #   x = 1.0 / (1.0 + exp(-u)) The output of the i-th layer is the input of the next one
         #   append x to y
         #
-        
+        y.append(x)
+        for i in range(len(self.biases)):
+            u = numpy.dot(self.weights[i], x) + self.biases[i]
+            x = 1.0 / (1.0 + numpy.exp(-u))
+            y.append(x)
         return y
 
     def backpropagate(self, x, t):
@@ -69,7 +73,14 @@ class FCNeuralNetwork(object):
         #     nabla_b[-i] = delta
         #     nabla_w[-i] = delta*y[-i-1].T  
         #        
-        
+        delta = (y[-1]-t) * y[-1] * (1-y[-1])
+        nabla_b [-1] = delta
+        nabla_w [-1] = numpy.dot(delta, y[-2].T)  
+
+        for i in range (2, self.num_layers):
+            delta = numpy.dot(self.weights[-i+1].T, delta) * y[-i] * (1 - y[-i])
+            nabla_b [-i] = delta 
+            nabla_w [-i] = numpy.dot(delta, y[-i-1].T)
         return nabla_w, nabla_b
 
     def update_with_batch(self, batch, eta):
