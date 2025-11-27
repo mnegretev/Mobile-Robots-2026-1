@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "xarm_msgs/srv/detail/ft_impedance__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "xarm_msgs/srv/detail/ft_impedance__functions.h"
+#include "xarm_msgs/srv/detail/ft_impedance__type_support.h"
 #include "xarm_msgs/srv/detail/ft_impedance__struct.h"
 
 #ifdef __cplusplus

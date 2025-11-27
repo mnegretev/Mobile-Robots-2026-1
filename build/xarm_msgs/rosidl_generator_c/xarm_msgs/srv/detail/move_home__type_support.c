@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "xarm_msgs/srv/detail/move_home__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "xarm_msgs/srv/detail/move_home__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "xarm_msgs/srv/detail/move_home__struct.h"
 #include "xarm_msgs/srv/detail/move_home__functions.h"
 
 #ifdef __cplusplus

@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "xarm_msgs/srv/detail/move_cartesian__functions.h"
-#include "xarm_msgs/srv/detail/move_cartesian__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "xarm_msgs/srv/detail/move_cartesian__struct.h"
 #include "xarm_msgs/srv/detail/move_cartesian__type_support.h"
+#include "xarm_msgs/srv/detail/move_cartesian__functions.h"
 
 #ifdef __cplusplus
 extern "C"

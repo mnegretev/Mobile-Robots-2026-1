@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "xarm_msgs/srv/detail/robotiq_get_status__type_support.h"
 #include "xarm_msgs/srv/detail/robotiq_get_status__functions.h"
-#include "xarm_msgs/srv/detail/robotiq_get_status__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "xarm_msgs/srv/detail/robotiq_get_status__type_support.h"
+#include "xarm_msgs/srv/detail/robotiq_get_status__struct.h"
 
 #ifdef __cplusplus
 extern "C"

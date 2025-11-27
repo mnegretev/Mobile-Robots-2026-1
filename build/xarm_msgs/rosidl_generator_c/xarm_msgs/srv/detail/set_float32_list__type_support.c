@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "xarm_msgs/srv/detail/set_float32_list__struct.h"
-#include "xarm_msgs/srv/detail/set_float32_list__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "xarm_msgs/srv/detail/set_float32_list__type_support.h"
 #include "xarm_msgs/srv/detail/set_float32_list__functions.h"
 
 #ifdef __cplusplus

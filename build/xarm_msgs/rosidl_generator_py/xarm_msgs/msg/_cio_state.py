@@ -130,33 +130,27 @@ class CIOState(metaclass=Metaclass_CIOState):
         if 'input_digitals' not in kwargs:
             self.input_digitals = numpy.zeros(2, dtype=numpy.uint16)
         else:
-            self.input_digitals = numpy.array(kwargs.get('input_digitals'), dtype=numpy.uint16)
-            assert self.input_digitals.shape == (2, )
+            self.input_digitals = kwargs.get('input_digitals')
         if 'output_digitals' not in kwargs:
             self.output_digitals = numpy.zeros(2, dtype=numpy.uint16)
         else:
-            self.output_digitals = numpy.array(kwargs.get('output_digitals'), dtype=numpy.uint16)
-            assert self.output_digitals.shape == (2, )
+            self.output_digitals = kwargs.get('output_digitals')
         if 'input_analogs' not in kwargs:
             self.input_analogs = numpy.zeros(2, dtype=numpy.float32)
         else:
-            self.input_analogs = numpy.array(kwargs.get('input_analogs'), dtype=numpy.float32)
-            assert self.input_analogs.shape == (2, )
+            self.input_analogs = kwargs.get('input_analogs')
         if 'output_analogs' not in kwargs:
             self.output_analogs = numpy.zeros(2, dtype=numpy.float32)
         else:
-            self.output_analogs = numpy.array(kwargs.get('output_analogs'), dtype=numpy.float32)
-            assert self.output_analogs.shape == (2, )
+            self.output_analogs = kwargs.get('output_analogs')
         if 'input_conf' not in kwargs:
             self.input_conf = numpy.zeros(16, dtype=numpy.uint8)
         else:
-            self.input_conf = numpy.array(kwargs.get('input_conf'), dtype=numpy.uint8)
-            assert self.input_conf.shape == (16, )
+            self.input_conf = kwargs.get('input_conf')
         if 'output_conf' not in kwargs:
             self.output_conf = numpy.zeros(16, dtype=numpy.uint8)
         else:
-            self.output_conf = numpy.array(kwargs.get('output_conf'), dtype=numpy.uint8)
-            assert self.output_conf.shape == (16, )
+            self.output_conf = kwargs.get('output_conf')
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')

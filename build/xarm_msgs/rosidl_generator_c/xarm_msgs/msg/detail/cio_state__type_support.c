@@ -4,10 +4,10 @@
 
 #include <string.h>
 
+#include "xarm_msgs/msg/detail/cio_state__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "xarm_msgs/msg/detail/cio_state__functions.h"
 #include "xarm_msgs/msg/detail/cio_state__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
-#include "xarm_msgs/msg/detail/cio_state__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

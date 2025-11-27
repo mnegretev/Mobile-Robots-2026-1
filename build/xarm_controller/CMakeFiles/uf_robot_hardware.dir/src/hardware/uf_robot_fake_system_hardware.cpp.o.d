@@ -227,9 +227,19 @@ CMakeFiles/uf_robot_hardware.dir/src/hardware/uf_robot_fake_system_hardware.cpp.
  /usr/include/c++/13/bits/istream.tcc \
  /usr/include/c++/13/bits/sstream.tcc \
  /opt/ros/jazzy/include/hardware_interface/hardware_interface/introspection.hpp \
- /opt/ros/jazzy/include/pal_statistics/pal_statistics_macros.hpp \
- /opt/ros/jazzy/include/pal_statistics/pal_statistics.hpp \
- /opt/ros/jazzy/include/pal_statistics/pal_statistics_utils.hpp \
+ /opt/ros/jazzy/include/hardware_interface/hardware_interface/types/statistics_types.hpp \
+ /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/moving_average.hpp \
+ /usr/include/c++/13/numeric /usr/include/c++/13/bits/stl_numeric.h \
+ /usr/include/c++/13/pstl/glue_numeric_defs.h \
+ /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp \
+ /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/visibility_control.hpp \
+ /opt/ros/jazzy/include/rcpputils/rcpputils/thread_safety_annotations.hpp \
+ /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp \
+ /opt/ros/jazzy/include/realtime_tools/realtime_tools/mutex.hpp \
+ /usr/include/c++/13/iostream \
+ /opt/ros/jazzy/include/pal_statistics/pal_statistics/pal_statistics_macros.hpp \
+ /opt/ros/jazzy/include/pal_statistics/pal_statistics/pal_statistics.hpp \
+ /opt/ros/jazzy/include/pal_statistics/pal_statistics/pal_statistics_utils.hpp \
  /usr/include/c++/13/map /usr/include/c++/13/bits/stl_tree.h \
  /usr/include/c++/13/bits/stl_map.h \
  /usr/include/c++/13/bits/stl_multimap.h \
@@ -286,7 +296,7 @@ CMakeFiles/uf_robot_hardware.dir/src/hardware/uf_robot_fake_system_hardware.cpp.
  /opt/ros/jazzy/include/pal_statistics_msgs/pal_statistics_msgs/msg/detail/statistics_values__builder.hpp \
  /opt/ros/jazzy/include/pal_statistics_msgs/pal_statistics_msgs/msg/detail/statistics_values__traits.hpp \
  /opt/ros/jazzy/include/pal_statistics_msgs/pal_statistics_msgs/msg/detail/statistics_values__type_support.hpp \
- /opt/ros/jazzy/include/pal_statistics/static_circular_buffer.hpp \
+ /opt/ros/jazzy/include/pal_statistics/pal_statistics/static_circular_buffer.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp \
  /usr/include/c++/13/csignal /usr/include/signal.h \
  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
@@ -345,7 +355,6 @@ CMakeFiles/uf_robot_hardware.dir/src/hardware/uf_robot_fake_system_hardware.cpp.
  /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__traits.hpp \
  /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__type_support.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/parameter.hpp \
- /usr/include/c++/13/iostream \
  /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/parameter.hpp \
  /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__struct.hpp \
  /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__struct.hpp \
@@ -590,18 +599,11 @@ CMakeFiles/uf_robot_hardware.dir/src/hardware/uf_robot_fake_system_hardware.cpp.
  /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__traits.hpp \
  /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__type_support.hpp \
  /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
- /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/visibility_control.hpp \
- /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp \
  /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/constants.hpp \
  /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_age.hpp \
  /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/constants.hpp \
  /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp \
  /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/collector.hpp \
- /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/moving_average.hpp \
- /usr/include/c++/13/numeric /usr/include/c++/13/bits/stl_numeric.h \
- /usr/include/c++/13/pstl/glue_numeric_defs.h \
- /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp \
- /opt/ros/jazzy/include/rcpputils/rcpputils/thread_safety_annotations.hpp \
  /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/metric_details_interface.hpp \
  /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/received_message_period.hpp \
  /opt/ros/jazzy/include/rclcpp/rclcpp/publisher.hpp \
@@ -743,7 +745,7 @@ CMakeFiles/uf_robot_hardware.dir/src/hardware/uf_robot_fake_system_hardware.cpp.
  /opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/managed_entity.hpp \
  /opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/transition.hpp \
  /opt/ros/jazzy/include/rclcpp_lifecycle/rclcpp_lifecycle/lifecycle_node_impl.hpp \
- /opt/ros/jazzy/include/pal_statistics/registration_utils.hpp \
+ /opt/ros/jazzy/include/pal_statistics/pal_statistics/registration_utils.hpp \
  /opt/ros/jazzy/include/hardware_interface/hardware_interface/lexical_casts.hpp \
  /usr/include/c++/13/regex /usr/include/c++/13/bitset \
  /usr/include/c++/13/stack /usr/include/c++/13/bits/stl_stack.h \
@@ -760,6 +762,7 @@ CMakeFiles/uf_robot_hardware.dir/src/hardware/uf_robot_fake_system_hardware.cpp.
  /usr/include/c++/13/bits/regex_executor.tcc \
  /opt/ros/jazzy/include/hardware_interface/hardware_interface/macros.hpp \
  /opt/ros/jazzy/include/hardware_interface/hardware_interface/system_interface.hpp \
+ /opt/ros/jazzy/include/hardware_interface/hardware_interface/hardware_component_interface.hpp \
  /opt/ros/jazzy/include/hardware_interface/hardware_interface/component_parser.hpp \
  /opt/ros/jazzy/include/hardware_interface/hardware_interface/types/hardware_component_interface_params.hpp \
  /opt/ros/jazzy/include/hardware_interface/hardware_interface/types/hardware_component_params.hpp \

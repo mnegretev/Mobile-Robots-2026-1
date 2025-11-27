@@ -1,4 +1,6 @@
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/rviz/localization.rviz
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/rviz/simple_house.rviz
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/rviz/pot_fields.rviz
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation/simple_house.pgm
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation/mapper_params.yaml
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/config_files/share/config_files/navigation/simple_house.yaml

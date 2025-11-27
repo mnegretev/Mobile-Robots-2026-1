@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "xarm_msgs/srv/detail/linear_motor_back_origin__type_support.h"
-#include "rosidl_typesupport_interface/macros.h"
-#include "xarm_msgs/srv/detail/linear_motor_back_origin__struct.h"
 #include "xarm_msgs/srv/detail/linear_motor_back_origin__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "xarm_msgs/srv/detail/linear_motor_back_origin__type_support.h"
+#include "xarm_msgs/srv/detail/linear_motor_back_origin__struct.h"
 
 #ifdef __cplusplus
 extern "C"

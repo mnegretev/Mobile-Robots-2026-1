@@ -12,6 +12,8 @@ setup.py
 path_planner/__init__.py
 path_planner/a_star.py
 path_planner/cost_map.py
+path_planner/path_smoothing.py
+path_planner/pot_fields.py
 path_planner/rrt.py
 resource/path_planner
 test/test_copyright.py

@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "xarm_msgs/srv/detail/set_int16_by_id__struct.h"
-#include "xarm_msgs/srv/detail/set_int16_by_id__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "xarm_msgs/srv/detail/set_int16_by_id__type_support.h"
+#include "xarm_msgs/srv/detail/set_int16_by_id__struct.h"
 #include "xarm_msgs/srv/detail/set_int16_by_id__functions.h"
 
 #ifdef __cplusplus

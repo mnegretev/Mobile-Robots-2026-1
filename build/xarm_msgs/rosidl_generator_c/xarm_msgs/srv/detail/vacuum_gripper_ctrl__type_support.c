@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "xarm_msgs/srv/detail/vacuum_gripper_ctrl__struct.h"
 #include "xarm_msgs/srv/detail/vacuum_gripper_ctrl__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "xarm_msgs/srv/detail/vacuum_gripper_ctrl__struct.h"
 #include "xarm_msgs/srv/detail/vacuum_gripper_ctrl__type_support.h"
 
 #ifdef __cplusplus

@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "xarm_msgs/srv/detail/linear_track_set_pos__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "xarm_msgs/srv/detail/linear_track_set_pos__struct.h"
 #include "xarm_msgs/srv/detail/linear_track_set_pos__functions.h"
-#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

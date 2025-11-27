@@ -4,10 +4,10 @@
 
 #include <string.h>
 
+#include "xarm_msgs/srv/detail/plan_single_straight__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "xarm_msgs/srv/detail/plan_single_straight__type_support.h"
 #include "xarm_msgs/srv/detail/plan_single_straight__functions.h"
-#include "rosidl_typesupport_interface/macros.h"
-#include "xarm_msgs/srv/detail/plan_single_straight__struct.h"
 
 #ifdef __cplusplus
 extern "C"

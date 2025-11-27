@@ -6,8 +6,8 @@
 
 #include "xarm_msgs/srv/detail/get_float32__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
-#include "xarm_msgs/srv/detail/get_float32__type_support.h"
 #include "xarm_msgs/srv/detail/get_float32__functions.h"
+#include "xarm_msgs/srv/detail/get_float32__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

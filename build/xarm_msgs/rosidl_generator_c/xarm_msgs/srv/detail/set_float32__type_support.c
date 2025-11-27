@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "xarm_msgs/srv/detail/set_float32__struct.h"
-#include "xarm_msgs/srv/detail/set_float32__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "xarm_msgs/srv/detail/set_float32__type_support.h"
+#include "xarm_msgs/srv/detail/set_float32__struct.h"
 #include "xarm_msgs/srv/detail/set_float32__functions.h"
 
 #ifdef __cplusplus

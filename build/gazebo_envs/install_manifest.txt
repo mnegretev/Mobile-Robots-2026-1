@@ -1,3 +1,4 @@
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/launch/localization.launch.py
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/launch/house_simul.launch.py
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/models/cardboard_box/meshes/cardboard_box.dae
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/gazebo_envs/share/gazebo_envs/models/cardboard_box/meshes/cardboard_box.png

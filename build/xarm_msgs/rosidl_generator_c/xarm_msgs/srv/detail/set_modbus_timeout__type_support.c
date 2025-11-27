@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "xarm_msgs/srv/detail/set_modbus_timeout__functions.h"
 #include "xarm_msgs/srv/detail/set_modbus_timeout__type_support.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "xarm_msgs/srv/detail/set_modbus_timeout__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "xarm_msgs/srv/detail/set_modbus_timeout__functions.h"
 
 #ifdef __cplusplus
 extern "C"

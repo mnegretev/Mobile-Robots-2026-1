@@ -4,10 +4,10 @@
 
 #include <string.h>
 
+#include "xarm_msgs/srv/detail/ft_force_config__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "xarm_msgs/srv/detail/ft_force_config__struct.h"
 #include "xarm_msgs/srv/detail/ft_force_config__type_support.h"
-#include "rosidl_typesupport_interface/macros.h"
-#include "xarm_msgs/srv/detail/ft_force_config__functions.h"
 
 #ifdef __cplusplus
 extern "C"

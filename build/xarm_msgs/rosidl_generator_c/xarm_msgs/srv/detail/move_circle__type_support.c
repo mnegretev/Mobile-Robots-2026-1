@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "xarm_msgs/srv/detail/move_circle__functions.h"
-#include "xarm_msgs/srv/detail/move_circle__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "xarm_msgs/srv/detail/move_circle__type_support.h"
 #include "xarm_msgs/srv/detail/move_circle__struct.h"
+#include "xarm_msgs/srv/detail/move_circle__functions.h"
 
 #ifdef __cplusplus
 extern "C"

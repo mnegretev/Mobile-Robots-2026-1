@@ -5,8 +5,8 @@
 #include <string.h>
 
 #include "xarm_msgs/srv/detail/robotiq_reset__type_support.h"
-#include "xarm_msgs/srv/detail/robotiq_reset__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "xarm_msgs/srv/detail/robotiq_reset__functions.h"
 #include "xarm_msgs/srv/detail/robotiq_reset__struct.h"
 
 #ifdef __cplusplus

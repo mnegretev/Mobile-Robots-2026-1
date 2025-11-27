@@ -15,7 +15,7 @@ import numpy
 import cv2
 import math
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "Melissa Maruuati Matias Zavala"
 
 class HoughPNode(Node):
     def callback_img(self, msg):
@@ -35,6 +35,23 @@ class HoughPNode(Node):
         # Display the processing time on the img_houghP image
         # Use the parameters self.canny_lower, self.canny_upper, self.rho, self.theta,
         # self.hough_threshold, self.min_length and self.max_gap
+        img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
+
+        edges = cv2.Canny(img_gray, self.canny_lower, self.canny_upper)
+
+        start_time = self.get_clock().now()
+
+        lines = cv2.HoughLinesP(edges, self.rho, self.theta, self.hough_threshold, 
+                            minLineLength=self.min_length, maxLineGap=self.max_gap)
+        end_time = self.get_clock().now()
+        elapsed_time = (end_time - start_time).nanoseconds / 1e6  # ms
+
+        if lines is not None:
+            for line in lines:
+                x1, y1, x2, y2 = line[0]
+                cv2.line(img_houghP, (x1, y1), (x2, y2), (0, 255, 0), 2)
+
+        cv2.putText(img_houghP, f"Detection time: {elapsed_time:.2f} ms", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 0, 0), 2)
         #
         
         cv2.imshow("BGR Original", img_bgr)

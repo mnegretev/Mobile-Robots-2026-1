@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "xarm_msgs/srv/detail/robotiq_move__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
 #include "xarm_msgs/srv/detail/robotiq_move__struct.h"
 #include "xarm_msgs/srv/detail/robotiq_move__functions.h"
-#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

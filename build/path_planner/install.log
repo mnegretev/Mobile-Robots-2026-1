@@ -2,10 +2,14 @@
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/python3.12/site-packages/path_planner/rrt.py
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/python3.12/site-packages/path_planner/cost_map.py
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/python3.12/site-packages/path_planner/a_star.py
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/python3.12/site-packages/path_planner/pot_fields.py
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/python3.12/site-packages/path_planner/path_smoothing.py
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/python3.12/site-packages/path_planner/__pycache__/__init__.cpython-312.pyc
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/python3.12/site-packages/path_planner/__pycache__/rrt.cpython-312.pyc
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/python3.12/site-packages/path_planner/__pycache__/cost_map.cpython-312.pyc
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/python3.12/site-packages/path_planner/__pycache__/a_star.cpython-312.pyc
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/python3.12/site-packages/path_planner/__pycache__/pot_fields.cpython-312.pyc
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/python3.12/site-packages/path_planner/__pycache__/path_smoothing.cpython-312.pyc
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/share/ament_index/resource_index/packages/path_planner
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/share/path_planner/package.xml
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/python3.12/site-packages/path_planner-0.0.0-py3.12.egg-info/SOURCES.txt
@@ -19,5 +23,8 @@
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/path_planner/a_start_solved
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/path_planner/cost_map
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/path_planner/cost_map_solved
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/path_planner/path_smoothing
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/path_planner/path_smoothing_solved
+/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/path_planner/pot_fields
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/path_planner/rrt
 /home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/path_planner/lib/path_planner/rrt_solved

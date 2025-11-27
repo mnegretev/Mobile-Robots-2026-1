@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "xarm_msgs/msg/detail/move_velocity__functions.h"
-#include "xarm_msgs/msg/detail/move_velocity__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "xarm_msgs/msg/detail/move_velocity__functions.h"
 #include "xarm_msgs/msg/detail/move_velocity__struct.h"
+#include "xarm_msgs/msg/detail/move_velocity__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

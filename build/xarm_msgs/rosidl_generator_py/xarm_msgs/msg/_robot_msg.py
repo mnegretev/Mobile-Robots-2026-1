@@ -141,13 +141,11 @@ class RobotMsg(metaclass=Metaclass_RobotMsg):
         if 'pose' not in kwargs:
             self.pose = numpy.zeros(6, dtype=numpy.float32)
         else:
-            self.pose = numpy.array(kwargs.get('pose'), dtype=numpy.float32)
-            assert self.pose.shape == (6, )
+            self.pose = kwargs.get('pose')
         if 'offset' not in kwargs:
             self.offset = numpy.zeros(6, dtype=numpy.float32)
         else:
-            self.offset = numpy.array(kwargs.get('offset'), dtype=numpy.float32)
-            assert self.offset.shape == (6, )
+            self.offset = kwargs.get('offset')
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')

@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "xarm_msgs/srv/detail/plan_exec__struct.h"
-#include "xarm_msgs/srv/detail/plan_exec__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "xarm_msgs/srv/detail/plan_exec__type_support.h"
+#include "xarm_msgs/srv/detail/plan_exec__functions.h"
 
 #ifdef __cplusplus
 extern "C"

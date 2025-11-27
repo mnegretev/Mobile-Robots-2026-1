@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "xarm_msgs/srv/detail/set_int32_by_type__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
-#include "xarm_msgs/srv/detail/set_int32_by_type__type_support.h"
 #include "xarm_msgs/srv/detail/set_int32_by_type__functions.h"
+#include "xarm_msgs/srv/detail/set_int32_by_type__type_support.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "xarm_msgs/srv/detail/set_int32_by_type__struct.h"
 
 #ifdef __cplusplus
 extern "C"

@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "xarm_msgs/srv/detail/set_int16__functions.h"
-#include "xarm_msgs/srv/detail/set_int16__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "xarm_msgs/srv/detail/set_int16__struct.h"
+#include "xarm_msgs/srv/detail/set_int16__type_support.h"
+#include "xarm_msgs/srv/detail/set_int16__functions.h"
 
 #ifdef __cplusplus
 extern "C"

@@ -15,7 +15,7 @@ import numpy
 import cv2
 import math
 
-FULL_NAME = "FULL NAME"
+FULL_NAME = "Melissa Maruuati Matias Zavala"
 
 class HoughNode(Node):
     def callback_img(self, msg):
@@ -35,6 +35,32 @@ class HoughNode(Node):
         # Display the processing time on the img_houghP image
         # Use the parameters self.canny_lower, self.canny_upper, self.rho, self.theta,
         # and self.hough_threshold
+        img_gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
+        img_gray = cv2.GaussianBlur(img_gray, (5, 5), 1)
+
+        edges = cv2.Canny(img_gray, self.canny_lower, self.canny_upper)
+
+        start_time = self.get_clock().now()
+
+        lines = cv2.HoughLines(edges, self.rho, self.theta, self.hough_threshold)
+
+        end_time = self.get_clock().now()
+        elapsed_time = (end_time - start_time).nanoseconds / 1e6
+
+        if lines is not None:
+            for line in lines:
+                rho, theta = line[0]
+                a = math.cos(theta)
+                b = math.sin(theta)
+                x0 = a * rho
+                y0 = b * rho
+                x1 = int(x0 + 1000 * (-b))
+                y1 = int(y0 + 1000 * (a))
+                x2 = int(x0 - 1000 * (-b))
+                y2 = int(y0 - 1000 * (a))
+                cv2.line(img_hough, (x1, y1), (x2, y2), (0, 0, 255), 2)
+
+        cv2.putText(img_hough, f"Detection time: {elapsed_time:.2f} ms", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 0, 0), 2)
         #
         
         

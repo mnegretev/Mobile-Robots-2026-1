@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "xarm_msgs/srv/detail/move_joint__functions.h"
-#include "xarm_msgs/srv/detail/move_joint__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "xarm_msgs/srv/detail/move_joint__struct.h"
+#include "xarm_msgs/srv/detail/move_joint__functions.h"
 #include "xarm_msgs/srv/detail/move_joint__type_support.h"
 
 #ifdef __cplusplus
