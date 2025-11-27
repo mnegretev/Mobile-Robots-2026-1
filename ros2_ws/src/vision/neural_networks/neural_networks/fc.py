@@ -13,8 +13,10 @@ import numpy
 import rclpy
 from ament_index_python.packages import get_package_share_directory
 import os
+import time
+import csv
 
-NAME = "FULL NAME"
+NAME = "SAN JUAN FLORES CHRISTOPHER"
 
 class FCNeuralNetwork(object):
     def __init__(self, layers, weights=None, biases=None):
@@ -45,7 +47,11 @@ class FCNeuralNetwork(object):
         #   x = 1.0 / (1.0 + exp(-u)) The output of the i-th layer is the input of the next one
         #   append x to y
         #
-        
+        y.append(x)
+        for i in range(len(self.biases)):
+            u = numpy.dot(self.weights[i], x) + self.biases[i]
+            x = 1.0 / (1.0 + numpy.exp(-u))
+            y.append(x)
         return y
 
     def backpropagate(self, x, t):
@@ -69,7 +75,14 @@ class FCNeuralNetwork(object):
         #     nabla_b[-i] = delta
         #     nabla_w[-i] = delta*y[-i-1].T  
         #        
-        
+        delta = (y[-1]-t) * y[-1] * (1-y[-1])
+        nabla_b [-1] = delta
+        nabla_w [-1] = numpy.dot(delta, y[-2].T)  
+
+        for i in range (2, self.num_layers):
+            delta = numpy.dot(self.weights[-i+1].T, delta) * y[-i] * (1 - y[-i])
+            nabla_b [-i] = delta 
+            nabla_w [-i] = numpy.dot(delta, y[-i-1].T)
         return nabla_w, nabla_b
 
     def update_with_batch(self, batch, eta):
@@ -97,6 +110,7 @@ class FCNeuralNetwork(object):
         return mag_w + mag_b
 
     def train_by_SGD(self, training_data, epochs, batch_size, eta):
+        start_time = time.time()
         for j in range(epochs):
             random.shuffle(training_data)
             batches = [training_data[k:k+batch_size] for k in range(0,len(training_data), batch_size)]
@@ -107,6 +121,8 @@ class FCNeuralNetwork(object):
                 sys.stdout.write("\rGradient magnitude: %f            " % (self.get_gradient_mag(nabla_w, nabla_b)))
                 sys.stdout.flush()
             print("Epoch: " + str(j))
+        TIME = time.time() - start_time
+        return TIME  
     #
     ### END OF CLASS
     #
@@ -133,24 +149,53 @@ def main(args=None):
     package_path = get_package_share_directory("neural_networks")
     dataset_folder = os.path.join(package_path, "dataset")
     
-    epochs        = 3
-    batch_size    = 10
-    learning_rate = 0.5
-    training_dataset, testing_dataset = load_dataset(dataset_folder)
-    nn = FCNeuralNetwork([784,30,10])
-    nn.train_by_SGD(training_dataset, epochs, batch_size, learning_rate)
+    epochs    = [3, 10, 50, 100]
+    batch_size    = [5, 10, 30, 100]
+    learning_rate = [0.5, 1.0, 3.0, 10.0]
 
-    print("\nPress key to test network or ESC to exit...")
-    numpy.set_printoptions(formatter={'float_kind':"{:.3f}".format})
-    cmd = cv2.waitKey(0)
-    while cmd != 27 and rclpy.ok():
-        img,label = testing_dataset[numpy.random.randint(0, 4999)]
-        y = nn.feedforward(img)[-1].T
-        print("\nPerceptron output: " + str(y))
-        print("Expected output  : "   + str(label.T))
-        print("Recognized digit : "   + str(numpy.argmax(y)))
-        cv2.imshow("Digit", numpy.reshape(numpy.asarray(img, dtype="float32"), (28,28,1)))
-        cmd = cv2.waitKey(0)
+    csv_file = open("resultados.csv", "w", newline="")
+    csv_writer = csv.writer(csv_file)
+    csv_writer.writerow(["epochs", "batch_size", "learning_rate", "tiempo", "aciertos"])
+
+    for ep in epochs:
+        for bs in batch_size:
+            for lr in learning_rate:
+                    training_dataset, testing_dataset = load_dataset(dataset_folder)
+                    nn = FCNeuralNetwork([784,30,10])
+                    TIME = nn.train_by_SGD(training_dataset, ep, bs, lr)
+
+                    #print("\nPress key to test network or ESC to exit...")
+
+                    cont = 0
+
+                    numpy.set_printoptions(formatter={'float_kind':"{:.3f}".format})
+                    #cmd = cv2.waitKey(0)
+
+
+                    #while cmd != 27 and rclpy.ok():
+                    for i in range(100):
+                        if not rclpy.ok():
+                            break
+                        img,label = testing_dataset[numpy.random.randint(0, 4999)]
+                        y = nn.feedforward(img)[-1].T
+
+                        digit_real = numpy.argmax(label)
+                        digit_pred = numpy.argmax(y)
+                        if digit_real == digit_pred: cont += 1
+
+                        csv_writer.writerow([ep, bs, lr, TIME, cont])
+                        csv_file.flush()
+
+                        print("\nPerceptron output: " + str(y))
+                        print("Expected output  : "   + str(label.T))
+                        print("Recognized digit : "   + str(numpy.argmax(y)))
+                        cv2.imshow("Digit", numpy.reshape(numpy.asarray(img, dtype="float32"), (28,28,1)))
+                        #cmd = #
+                        cv2.waitKey(300)
+                    print ("Tiempo de entrenamiento:", TIME)
+                    print("Clasificaciones correctas:", cont)
+                    csv_writer.writerow([ep, bs, lr, TIME, cont])
+    csv_file.close()
     rclpy.shutdown()
 
 
