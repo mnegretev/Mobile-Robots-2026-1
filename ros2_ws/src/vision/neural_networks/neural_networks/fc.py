@@ -13,8 +13,9 @@ import numpy
 import rclpy
 from ament_index_python.packages import get_package_share_directory
 import os
+import time
 
-NAME = "FULL NAME"
+NAME = "Juan Mancera López"
 
 class FCNeuralNetwork(object):
     def __init__(self, layers, weights=None, biases=None):
@@ -46,6 +47,12 @@ class FCNeuralNetwork(object):
         #   append x to y
         #
         
+        y.append(x)
+        for b, w in zip(self.biases, self.weights):
+            u = numpy.dot(w, x) + b
+            x = 1.0 / (1.0 + numpy.exp(-u))
+            y.append(x)
+
         return y
 
     def backpropagate(self, x, t):
@@ -70,6 +77,20 @@ class FCNeuralNetwork(object):
         #     nabla_w[-i] = delta*y[-i-1].T  
         #        
         
+        delta = (y[-1] - t) * y[-1] * (1 - y[-1])
+        nabla_b[-1] = delta
+        nabla_w[-1] = numpy.dot(delta, y[-2].transpose())
+        num_layers = len(self.biases) + 1
+
+        for i in range(2, num_layers):
+            z = y[-i]
+            sp = z*(1-z)
+            delta = numpy.dot(self.weights[-i+1].transpose(), delta) * sp
+
+            nabla_b[-i] = delta
+
+            nabla_w[-i] = numpy.dot(delta, y[-i-1].transpose())
+
         return nabla_w, nabla_b
 
     def update_with_batch(self, batch, eta):
@@ -132,25 +153,59 @@ def main(args=None):
     print("TRAINING A NEURAL NETWORK - " + NAME)
     package_path = get_package_share_directory("neural_networks")
     dataset_folder = os.path.join(package_path, "dataset")
-    
-    epochs        = 3
-    batch_size    = 10
-    learning_rate = 0.5
-    training_dataset, testing_dataset = load_dataset(dataset_folder)
-    nn = FCNeuralNetwork([784,30,10])
-    nn.train_by_SGD(training_dataset, epochs, batch_size, learning_rate)
 
-    print("\nPress key to test network or ESC to exit...")
-    numpy.set_printoptions(formatter={'float_kind':"{:.3f}".format})
-    cmd = cv2.waitKey(0)
-    while cmd != 27 and rclpy.ok():
-        img,label = testing_dataset[numpy.random.randint(0, 4999)]
-        y = nn.feedforward(img)[-1].T
-        print("\nNeural network output: " + str(y))
-        print("Expected output  : "   + str(label.T))
-        print("Recognized digit : "   + str(numpy.argmax(y)))
-        cv2.imshow("Digit", numpy.reshape(numpy.asarray(img, dtype="float32"), (28,28,1)))
-        cmd = cv2.waitKey(0)
+    ta_ap = [0.5, 1.0, 4.0, 10.0]
+    n_ep = [4, 10, 50, 100]
+    tam_l = [5, 10, 40, 100]
+
+    counter = 0
+
+    fichero = open("Salida_Pruebas_Vision.xls", "w")
+    salida = f"learning_rate,epochs,batch_size,hits,learning_time\n"
+
+    training_dataset, testing_dataset = load_dataset(dataset_folder)
+
+    for learning_rate in ta_ap:
+        for epochs in n_ep:
+            for batch_size in tam_l:
+                #print("C:", counter, "  -ta_ap:",learning_rate,"   -n_ep:", epochs, "   -tam_l:", batch_size)
+                
+                #counter+=1
+    
+                #epochs        = 3
+                #batch_size    = 10
+                #learning_rate = 0.5
+                nn = FCNeuralNetwork([784,30,10])
+                start_time = time.time()
+                nn.train_by_SGD(training_dataset, epochs, batch_size, learning_rate)
+                end_time = time.time()
+
+                #print("\nPress key to test network or ESC to exit...")
+                #numpy.set_printoptions(formatter={'float_kind':"{:.3f}".format})
+                #cmd = cv2.waitKey(0)
+                counter = 0
+                hits = 0
+                #while cmd != 27 and rclpy.ok() and counter < 10:
+                while rclpy.ok() and counter < 100:
+                    img,label = testing_dataset[numpy.random.randint(0, 4999)]
+                    y = nn.feedforward(img)[-1].T
+                    print(counter)
+                    print("\nNeural network output: " + str(y))
+                    print("Expected output  : "   + str(label.T))
+                    print("Recognized digit : "   + str(numpy.argmax(y)))
+                    
+                    #cv2.imshow("Digit", numpy.reshape(numpy.asarray(img, dtype="float32"), (28,28,1)))
+                    #cmd = cv2.waitKey(1)
+
+                    if numpy.argmax(y) == numpy.argmax(label.T):
+                        hits += 1
+                    counter += 1
+                print("hits: ", hits)
+                salida = f"{learning_rate},{epochs},{batch_size},{counter},{end_time-start_time},{hits}\n"
+                fichero.write(salida)
+
+
+    fichero.close()
     rclpy.shutdown()
 
 
