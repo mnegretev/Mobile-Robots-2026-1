@@ -7,6 +7,7 @@
 # handwritten digits recognition.
 #
 import cv2
+import csv
 import sys
 import random
 import numpy
@@ -14,7 +15,7 @@ import rclpy
 from ament_index_python.packages import get_package_share_directory
 import os
 
-NAME = "FULL NAME"
+NAME = "PINEDA DE LA CRUZ CHRISTIAN"
 
 class FCNeuralNetwork(object):
     def __init__(self, layers, weights=None, biases=None):
@@ -45,7 +46,11 @@ class FCNeuralNetwork(object):
         #   x = 1.0 / (1.0 + exp(-u)) The output of the i-th layer is the input of the next one
         #   append x to y
         #
-        
+        y.append(x)
+        for i in range(self.num_layers-1):
+            u=numpy.dot(self.weights[i],x)+self.biases[i]
+            x=1.0/(1.0+numpy.exp(-u))
+            y.append(x)
         return y
 
     def backpropagate(self, x, t):
@@ -69,7 +74,15 @@ class FCNeuralNetwork(object):
         #     nabla_b[-i] = delta
         #     nabla_w[-i] = delta*y[-i-1].T  
         #        
-        
+        delta=(y[-1]-t)*y[-1]*(1-y[-1])
+        nabla_b[-1]=delta
+        nabla_w[-1]=numpy.dot(delta,y[-2].T)
+
+        for l in range(2,self.num_layers):
+            delta=numpy.dot(self.weights[-l+1].T,delta)*y[-l]*(1-y[-l])
+            nabla_b[-l]=delta
+            nabla_w[-l]=numpy.dot(delta,y[-l-1].T)
+
         return nabla_w, nabla_b
 
     def update_with_batch(self, batch, eta):
@@ -133,25 +146,40 @@ def main(args=None):
     package_path = get_package_share_directory("neural_networks")
     dataset_folder = os.path.join(package_path, "dataset")
     
-    epochs        = 3
-    batch_size    = 10
-    learning_rate = 0.5
+    #epochs        = 3
+    #batch_size    = 10
+    #learning_rate = 0.5
     training_dataset, testing_dataset = load_dataset(dataset_folder)
-    nn = FCNeuralNetwork([784,30,10])
-    nn.train_by_SGD(training_dataset, epochs, batch_size, learning_rate)
+    with open('/home/cpineda/status.csv','w', newline='') as archivo:
+        writer=csv.writer(archivo)
+        writer.writerow(["epoch","batch_size","learning_rate","hits"])
+        for epochs in [3,10,20,30]:
+            for batch_size in [5,10,30,100]:
+                for learning_rate in [0.5,1.0,3.0,10.0]:
+                    nn = FCNeuralNetwork([784,50,30,10])
+                    nn.train_by_SGD(training_dataset, epochs, batch_size, learning_rate)
 
-    print("\nPress key to test network or ESC to exit...")
-    numpy.set_printoptions(formatter={'float_kind':"{:.3f}".format})
-    cmd = cv2.waitKey(0)
-    while cmd != 27 and rclpy.ok():
-        img,label = testing_dataset[numpy.random.randint(0, 4999)]
-        y = nn.feedforward(img)[-1].T
-        print("\nPerceptron output: " + str(y))
-        print("Expected output  : "   + str(label.T))
-        print("Recognized digit : "   + str(numpy.argmax(y)))
-        cv2.imshow("Digit", numpy.reshape(numpy.asarray(img, dtype="float32"), (28,28,1)))
-        cmd = cv2.waitKey(0)
+                    print("\nPress key to test network or ESC to exit...")
+                    numpy.set_printoptions(formatter={'float_kind':"{:.3f}".format})
+                    cmd = cv2.waitKey(1)
+                    counter=0
+                    hits=0
+                    while cmd != 27 and rclpy.ok() and counter<100:
+                        img,label = testing_dataset[numpy.random.randint(0, 4999)]
+                        y = nn.feedforward(img)[-1].T
+                        print("\nPerceptron output: " + str(y))
+                        print("Expected output  : "   + str(label.T))
+                        print("Recognized digit : "   + str(numpy.argmax(y)))
+                        cv2.imshow("Digit", numpy.reshape(numpy.asarray(img, dtype="float32"), (28,28,1)))
+                        if numpy.argmax(y)== numpy.argmax(label):
+                            hits+=1
+                        cmd = cv2.waitKey(1)
+                        counter+=1
+                    print("hits",hits)
+                    writer.writerow([epochs,batch_size,learning_rate,hits])
+
     rclpy.shutdown()
+
 
 
 if __name__ == '__main__':
