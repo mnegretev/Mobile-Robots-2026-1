@@ -14,7 +14,7 @@ import rclpy
 from ament_index_python.packages import get_package_share_directory
 import os
 
-NAME = "FULL NAME"
+NAME = "Axel Jovani Ruiz Martínez"
 
 class FCNeuralNetwork(object):
     def __init__(self, layers, weights=None, biases=None):
@@ -33,43 +33,49 @@ class FCNeuralNetwork(object):
         
     def feedforward(self, x):
         y = []
-        #
-        # TODO:
-        # Calculate the output of each layer given the input x
-        # Return an array y containg the output of each layer
-        # You can do the following steps:
-        # 
-        # append x to y
-        # FOR i = [0,..,L):
-        #   u = dot product (W[i], x) + B[i]
-        #   x = 1.0 / (1.0 + exp(-u)) The output of the i-th layer is the input of the next one
-        #   append x to y
-        #
-        
+        # x es el vector de entrada de dimensión (n_entrada, 1)
+        a = x
+        y.append(a)  # salida de la "capa 0", la entrada
+
+        # Recorremos cada capa oculta y la de salida
+        for w, b in zip(self.weights, self.biases):
+            # u = W * a + b
+            u = numpy.dot(w, a) + b
+            # activación sigmoide
+            a = 1.0 / (1.0 + numpy.exp(-u))
+            # guardamos la salida de esta capa
+            y.append(a)
+
         return y
 
+
     def backpropagate(self, x, t):
+        # y[k] es la salida de la capa k (y[0] = entrada, y[-1] = salida final)
         y = self.feedforward(x)
+
+        # Inicializamos gradientes con ceros, mismas dimensiones que pesos y biases
         nabla_b = [numpy.zeros(b.shape) for b in self.biases]
         nabla_w = [numpy.zeros(w.shape) for w in self.weights]
-        # TODO:
-        # Return a tuple [nabla_w, nabla_b] containing the gradient of cost function J with respect to
-        # each weight and bias of all the network. The gradient is calculated assuming only one training
-        # example: the input 'x' and the corresponding target 't'.
-        # nabla_w and nabla_b should have the same dimensions as the corresponding
-        # self.weights and self.biases
-        # You can calculate the gradient following these steps:
-        #
-        # Calculate delta for the output layer L: delta=(y[-1]-t)*y[-1]*(1-y[-1])
-        # nabla_b of output layer = delta      
-        # nabla_w of output layer = delta*y[-2].T where y[-2].T is the transpose of the ouput vector of layer L-1
-        # FOR all layers i=[2,L): 
-        #     delta = (W[-i+1].T * delta)*y[-i]*(1 - y[-i])
-        #     where 'W[-i+1].T' is the transpose of the matrix of weights of layer -i+1 and 'y[-i]' is the output of layer -i
-        #     nabla_b[-i] = delta
-        #     nabla_w[-i] = delta*y[-i-1].T  
-        #        
-        
+
+        # ---- Capa de salida ----
+        # delta_L = (y_L - t) * y_L * (1 - y_L)
+        delta = (y[-1] - t) * y[-1] * (1.0 - y[-1])
+
+        # Gradientes en la última capa
+        nabla_b[-1] = delta
+        nabla_w[-1] = numpy.dot(delta, y[-2].T)  # y[-2] = salida de la capa anterior
+
+        # ---- Capas ocultas hacia atrás ----
+        # Recorremos desde la penúltima capa oculta hasta la primera capa oculta
+        # self.num_layers incluye la capa de entrada, por eso usamos range(2, self.num_layers)
+        for i in range(2, self.num_layers):
+            # weights[-i+1] es la matriz de pesos de la capa siguiente
+            # y[-i] es la salida de la capa actual
+            delta = numpy.dot(self.weights[-i+1].T, delta) * y[-i] * (1.0 - y[-i])
+
+            nabla_b[-i] = delta
+            nabla_w[-i] = numpy.dot(delta, y[-i-1].T)  # y[-i-1] = salida de la capa anterior
+
         return nabla_w, nabla_b
 
     def update_with_batch(self, batch, eta):
@@ -135,7 +141,7 @@ def main(args=None):
     
     epochs        = 3
     batch_size    = 10
-    learning_rate = 0.5
+    learning_rate = 10
     training_dataset, testing_dataset = load_dataset(dataset_folder)
     nn = FCNeuralNetwork([784,30,10])
     nn.train_by_SGD(training_dataset, epochs, batch_size, learning_rate)
