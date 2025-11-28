@@ -14,7 +14,7 @@ import rclpy
 from ament_index_python.packages import get_package_share_directory
 import os
 
-NAME = "FULL NAME"
+NAME = "LEONARDO BARILLAS GONZALEZ"
 
 class FCNeuralNetwork(object):
     def __init__(self, layers, weights=None, biases=None):
@@ -45,7 +45,14 @@ class FCNeuralNetwork(object):
         #   x = 1.0 / (1.0 + exp(-u)) The output of the i-th layer is the input of the next one
         #   append x to y
         #
-        
+        y.append(x)  # salida de la capa de entrada
+
+        a = x
+        for w, b in zip(self.weights, self.biases):
+            u = numpy.dot(w, a) + b
+            a = 1.0 / (1.0 + numpy.exp(-u))  # activación sigmoide
+            y.append(a)
+
         return y
 
     def backpropagate(self, x, t):
@@ -69,7 +76,27 @@ class FCNeuralNetwork(object):
         #     nabla_b[-i] = delta
         #     nabla_w[-i] = delta*y[-i-1].T  
         #        
-        
+        # Forward
+        y = self.feedforward(x)
+
+        # Inicializar gradientes
+        nabla_b = [numpy.zeros(b.shape) for b in self.biases]
+        nabla_w = [numpy.zeros(w.shape) for w in self.weights]
+
+        # --- Delta capa salida ---
+        delta = (y[-1] - t) * y[-1] * (1 - y[-1])
+        nabla_b[-1] = delta
+        nabla_w[-1] = numpy.dot(delta, y[-2].T)
+
+        # --- Retropropagación capas previas ---
+        for i in range(2, self.num_layers):
+            z = y[-i]
+            sp = z * (1 - z)
+            delta = numpy.dot(self.weights[-i + 1].T, delta) * sp
+
+            nabla_b[-i] = delta
+            nabla_w[-i] = numpy.dot(delta, y[-i - 1].T)
+            
         return nabla_w, nabla_b
 
     def update_with_batch(self, batch, eta):
