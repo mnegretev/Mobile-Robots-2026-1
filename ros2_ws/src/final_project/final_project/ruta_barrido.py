@@ -12,8 +12,12 @@ import time
 
 NAME = "Juan Mancera Lopez"
 
-Ruta = [[0.0,3.0], [0.0,4.0], [0.0,5.0], [-3.0,5.0]]
-Punt_Control = [[0,3], [-3.5,3], [2.5, -5], [-2.5, -5], [3, -10]]
+Ruta = [[-1.5,-8.5],	[-4.0,-8.5],	[-4.0,-9.5], 	    [-1.5,-9.5],	[-1.5,-10.5],	[-4.0,-10.5],
+        [-2.0,-3.7],	[-4.0,-3.7],    [-4.0,-2.6], 	    [-2.0,-2.6],
+        [-2.6,0.5],	    [-2.6,3.5],	    [-3.0,3.5], 	    [-3.0,0.5],	    [-3.6,0.5],	[-3.6,3.5],
+        [0.4,2.5],	    [0.4,3.7],	    [-0.4,3.7], 	    [-0.4,2.5],
+        [3.0,-2.5],	    [3.0,-7.0],	   	[3.8,-7.0], 	    [3.8,-2.5]]
+Punt_Control = [[-1.5,-8.5], [-2,-3.7], [-2.6,0.5], [0.4,2.5], [3.0,-2.5]]
 
 class RutaBarridoNode(Node):
 
@@ -76,17 +80,17 @@ class RutaBarridoNode(Node):
 
         print("Iniciando seguimiento de ruta...") # 0-4
         if (Punt_Control.index(pnt_cerc) == 0):
-            self.num_destino = 0
-        elif (Punt_Control.index(pnt_cerc) == 1):
-            self.num_destino = 3
-        elif (Punt_Control.index(pnt_cerc) == 2):
             self.num_destino = 5
+        elif (Punt_Control.index(pnt_cerc) == 1):
+            self.num_destino = 6
+        elif (Punt_Control.index(pnt_cerc) == 2):
+            self.num_destino = 10
         elif (Punt_Control.index(pnt_cerc) == 3):
-            self.num_destino = 7
+            self.num_destino = 16
         elif (Punt_Control.index(pnt_cerc) == 4):
-            self.num_destino = 9
+            self.num_destino = 20
         print(f"El punto a empezar debe ser: {self.num_destino}") 
-        #self.timer = self.create_timer(1.0, self.seguimiento_metas)
+        self.timer = self.create_timer(1.0, self.seguimiento_metas)
 
     def callback_llegada(self, msg):
         # Cuando path follower avisa que llegó, enviar al siguiente punto de la ruta

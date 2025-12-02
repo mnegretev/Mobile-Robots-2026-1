@@ -83,7 +83,7 @@ class CostMapNode(Node):
         response = future.result()
         self.map_static = response.map
         print("Got static map.")
-        self.declare_parameter('cost_radius', 0.05)
+        self.declare_parameter('cost_radius', 0.5)
         self.srv_cost_map  = self.create_service(GetMap, '/get_cost_map', self.callback_cost_map)
         self.pub_cost_map = self.create_publisher(OccupancyGrid, '/cost_map', 10)
         self.timer = self.create_timer(1.0, self.callback_timer)

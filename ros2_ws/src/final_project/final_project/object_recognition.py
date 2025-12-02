@@ -147,7 +147,7 @@ class ObjectDetectorNode(Node):
         # Nombres desde el dataset COCO
         self.target_object = ["cup", "book", "bottle"]  # cup = Cesto / book = caja de cereal / bottle = lata de refresco (no siempre lo detecta)
         self.cumplidos = [0,0,0]
-        self.confidence_threshold = 0.2 # Mínimo 20% de seguridad
+        self.confidence_threshold = 0.3 # Mínimo 20% de seguridad
 
         # Parámetros para guardar la información
         self.output_folder = 'salida_ubicaciones'
