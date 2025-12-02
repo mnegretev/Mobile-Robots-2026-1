@@ -24,7 +24,7 @@ import math
 import numpy
 import time
 
-NAME = "Romero Bernal Rocio Fabiola"
+NAME = "Rocio Fabiola Romero Bernal"
 
 SM_INIT = 0
 SM_WAIT_FOR_NEW_GOAL = 10
@@ -90,11 +90,10 @@ class PathFollowerNode(Node):
         #
 
         if path is None or len(path) == 0:
-            self.get_logger().warn("Ruta vacía; no hay nada que seguir.")
+            self.get_logger().warn("Ruta vacía")
             return
 
-        # Umbral para avanzar al siguiente punto
-        switch_dist = max(0.1, min(0.6, 0.3))  # 0.3 por defecto, acotado
+        switch_dist = max(0.1, min(0.6, 0.3))  
         goal_idx = 0
         goal_x, goal_y = float(path[goal_idx][0]), float(path[goal_idx][1])
 
@@ -108,24 +107,19 @@ class PathFollowerNode(Node):
 
         last_point = (float(path[-1][0]), float(path[-1][1]))
 
-        # Bucle principal de seguimiento
         while rclpy.ok() and dist((robot_x, robot_y), last_point) > tol:
             # Control
             v, w = self.calculate_control(robot_x, robot_y, robot_a, goal_x, goal_y, alpha, beta, v_max, w_max)
 
-            # Publica y guarda
             self.publish_and_save_data(robot_x, robot_y, robot_a, goal_x, goal_y, v, w)
 
-            # Actualiza pose
             rp, robot_a = self.get_robot_pose()
             robot_x, robot_y = float(rp[0]), float(rp[1])
 
-            # ¿Cambiamos al siguiente punto?
             if dist((robot_x, robot_y), (goal_x, goal_y)) < switch_dist and goal_idx < len(path) - 1:
                 goal_idx += 1
                 goal_x, goal_y = float(path[goal_idx][0]), float(path[goal_idx][1])
 
-        # Al llegar a la meta, detener
         self.publish_and_save_data(robot_x, robot_y, robot_a, last_point[0], last_point[1], 0.0, 0.0)
         return
 
@@ -135,7 +129,7 @@ class PathFollowerNode(Node):
         msg.linear.x = v
         msg.angular.z = w
         self.pub_cmd_vel.publish(msg)
-        #rclpy.spin_once(self)
+        rclpy.spin_once(self)
         time.sleep(0.001)
 
     def get_robot_pose(self):
@@ -154,9 +148,16 @@ class PathFollowerNode(Node):
         return robot_pose, robot_a
 
     def callback_goal_pose(self, msg):
+        self.nav_data = []
         self.goal_pose = numpy.asarray([msg.pose.position.x, msg.pose.position.y])
         print("Received new goal pose: ", self.goal_pose)
         self.new_goal_pose = True
+    
+    def callback_object_detected(self, msg: Bool):
+        if msg.data:
+            self.get_logger().warn("🟥 OBJETO DETECTADO — Deteniendo navegación")
+            self.object_detected = True
+
     
     def __init__(self):
         print("INITIALIZING PATH FOLLOWER NODE ...")
@@ -173,12 +174,22 @@ class PathFollowerNode(Node):
         self.declare_parameter('w_max', 0.5)
         self.declare_parameter('alpha', 1.0)
         self.declare_parameter('beta',  1.0)
-        self.declare_parameter('tol',  0.7)
+        self.declare_parameter('tol',  0.3)
         self.clt_plan_path = self.create_client(GetPlan, '/path_planning/plan_path')
         self.clt_smooth_path = self.create_client(ProcessPath, '/path_planning/smooth_path')
         self.pub_cmd_vel = self.create_publisher(Twist, '/cmd_vel', 1)
         self.pub_goal_reached = self.create_publisher(Bool, '/navigation/goal_reached', 1)
         self.sub_goal_pose = self.create_subscription(PoseStamped, '/goal_pose', self.callback_goal_pose, 1)
+        # ---- DETECCIÓN DE OBJETOS (YOLO) ----
+        self.object_detected = False
+
+        self.sub_object_detected = self.create_subscription(
+            Bool,
+            '/object_detected',
+            self.callback_object_detected,
+            1
+        )
+
 
     def spin(self):
         robot_pose_tf_ready = False
@@ -270,13 +281,11 @@ class PathFollowerNode(Node):
             rclpy.spin_once(self)
             time.sleep(0.001)
     
-
-
 def main(args=None):
     rclpy.init(args=args)
     path_follower_node = PathFollowerNode()
     path_follower_node.spin()
-    rclpy.spin(path_follower_node)
+    #rclpy.spin(path_follower_node)
     path_follower_node.destroy_node()
     rclpy.shutdown()
 

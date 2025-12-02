@@ -24,15 +24,6 @@ NAME = "Rocio Fabiola Romero Bernal"
 class AStarNode(Node):
     def a_star(self, start_r, start_c, goal_r, goal_c, grid_map, cost_map, use_diagonals):
         [height, width] = grid_map.shape
-        if not (0 <= start_r < height and 0 <= start_c < width):
-            print("Start INDEX out of bounds!")
-            return []
-        if not (0 <= goal_r < height and 0 <= goal_c < width):
-            print("Goal INDEX out of bounds!")
-            return []
-        if grid_map[goal_r, goal_c] != 0:
-            print("Goal is not in a free cell!")
-            return []
         in_open_list   = numpy.full(grid_map.shape, False)
         in_closed_list = numpy.full(grid_map.shape, False)
         g_values       = numpy.full(grid_map.shape, float("inf"))
@@ -49,50 +40,93 @@ class AStarNode(Node):
         g_values    [start_r, start_c] = 0
         [row, col]= [start_r, start_c]   #Current node
         #
-        while open_list:
-            
-            _, current = heapq.heappop(open_list)
-            row, col = current
+        # TODO:
+        # Implement the A* algorithm for path planning
+        # Map is considered to be a 2D array and start and goal positions
+        # are given as row-col pairs. You can follow these steps:
+        #
+        # WHILE open list is not empty and current is different from goal:
+        #     Get current node [row,col] from open list (see heapq.heappop function)
+        #     Mark current node as 'in_closed_list'
+        #     For [r,c,cost] in adjacent nodes:
+        #         Get r,c indices of neighbours of current node (check content of adjacents)
+        #         Discard if r,c is out of map, occupied, unknonw or in closed list, and continue
+        #         get a g-value g as: g-value of current node + dist + cost of neighbour r,c
+        #         Calculate heuristic 
+        #         Calculate f-value
+        #         IF g < g_value of neighbour r,c:
+        #             set g as g_value of neighbour r,c
+        #             set f as f_value of neighbour r,c
+        #             SET current node row,col as parent of neighbour r,c
+        #         If neighbour r,c is not in open list:
+        #             mark r,c as 'in_open_list'
+        #             add r,c to open list (check heapq.heappush)
+        #
+        # WHILE open list is not empty and current is different from goal:
+        while len(open_list) > 0:
+            # Get current node [row,col] from open list (min f-value)
+            f_curr, [row, col] = heapq.heappop(open_list)
 
-            
+            # If this node was already expanded, skip
+            if in_closed_list[row, col]:
+                continue
+
+            # Goal check
             if row == goal_r and col == goal_c:
                 break
 
-            in_open_list[row, col] = False
+            # Mark current node as 'in_closed_list'
             in_closed_list[row, col] = True
 
-            
-            for dr, dc, cost in adjacents:
-                r, c = row + dr, col + dc
+            # For [r,c,cost] in adjacent nodes:
+            for dr, dc, move_cost in adjacents:
+                nr = row + dr
+                nc = col + dc
 
-                
-                if r < 0 or r >= height or c < 0 or c >= width:
-                    continue
-                
-                if grid_map[r, c] != 0:
-                    continue
-                
-                if in_closed_list[r, c]:
+                # Discard if r,c is out of map
+                if nr < 0 or nr >= height or nc < 0 or nc >= width:
                     continue
 
-                move_cost = math.sqrt(dr**2 + dc**2) * cost_map[r, c]
-                g = g_values[row, col] + move_cost
-                # Heurística
+                # Discard if occupied or unknown or in closed list
+                # OccupancyGrid convention: -1 unknown, 0 free, 100 occupied (general convention) -> keep only 0
+                if grid_map[nr, nc] != 0:
+                    continue
+                if in_closed_list[nr, nc]:
+                    continue
+
+                # get a g-value g as: g-value of current node + dist + cost of neighbour r,c
+                # cost_map is additive traversal cost; move_cost is 1 or 1.414 for diagonals
+                g_new = g_values[row, col] + move_cost + float(cost_map[nr, nc])
+
+                # Calculate heuristic
+                dc_abs = abs(goal_c - nc)
+                dr_abs = abs(goal_r - nr)
                 if use_diagonals:
-                    h = max(abs(r - goal_r), abs(c - goal_c))
+                    # Octile distance heuristic (D=1, D2=sqrt(2))
+                    D = 1.0
+                    D2 = math.sqrt(2.0)
+                    h = D * max(dc_abs, dr_abs) + (D2 - D) * min(dc_abs, dr_abs)
                 else:
-                    h = abs(r - goal_r) + abs(c - goal_c)
-                f = g + h
-                if g < g_values[r, c]:
-                    g_values[r, c] = g
-                    f_values[r, c] = f
-                    parent_nodes[r, c] = [row, col]
-                    if not in_open_list[r, c]:
-                        heapq.heappush(open_list, (f, [r, c]))
-                        in_open_list[r, c] = True
+                    # Manhattan distance
+                    h = dc_abs + dr_abs
 
-    
-        
+                # Calculate f-value
+                f_new = g_new + h
+
+                # IF g < g_value of neighbour r,c: update parent and scores
+                if g_new < g_values[nr, nc]:
+                    g_values[nr, nc] = g_new
+                    f_values[nr, nc] = f_new
+                    parent_nodes[nr, nc] = [row, col]
+
+                    # If neighbour r,c is not in open list: mark and push
+                    # Push anyway to update priority; closed-list check will discard stale entries
+                    if not in_open_list[nr, nc]:
+                        in_open_list[nr, nc] = True
+                    heapq.heappush(open_list, (f_new, [nr, nc]))
+        #
+        # END OF WHILE
+        #
         path = []
         while parent_nodes[goal_r, goal_c][0] != -1:
             path.insert(0, [goal_r, goal_c])
