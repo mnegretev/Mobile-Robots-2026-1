@@ -1,95 +1,131 @@
+#!/usr/bin/env python3
 #
 # MOBILE ROBOTS - FI-UNAM, 2026-1
-# COST MAPS
+# COST MAPS (non-blocking init, robust)
 #
-# Instructions:
-# Write the code necesary to get a cost map given
-# an occupancy grid map and a cost radius.
-#
-
 import rclpy
 from rclpy.node import Node
 from nav_msgs.msg import OccupancyGrid
 from nav_msgs.srv import GetMap
-import numpy
+import numpy as np
 
 FULL_NAME = "Daniel Ixbalanque Popoca Zuñiga"
 
 class CostMapNode(Node):
     def get_cost_map(self, static_map, cost_radius):
-        print("Getting cost map with " + str(cost_radius) + " cells")
-        cost_map = numpy.copy(static_map)
-        [height, width] = static_map.shape
-        #
-        # TODO:
-        # Write the code necessary to calculate a cost map for the given map.
-        # To calculate cost, consider as example the following map:    
-        # [[ 0 0 0 0 0 0]
-        #  [ 0 X 0 0 0 0]
-        #  [ 0 X X 0 0 0]
-        #  [ 0 X X 0 0 0]
-        #  [ 0 X 0 0 0 0]
-        #  [ 0 0 0 X 0 0]]
-        # Where occupied cells 'X' have a value of 100 and free cells have a value of 0.
-        # Cost is an integer indicating how near cells and obstacles are:
-        # [[ 3 3 3 2 2 1]
-        #  [ 3 X 3 3 2 1]
-        #  [ 3 X X 3 2 1]
-        #  [ 3 X X 3 2 2]
-        #  [ 3 X 3 3 3 2]
-        #  [ 3 3 3 X 3 2]]
-        # Cost_radius indicate the number of cells around obstacles with costs greater than zero.
-        
+        """Calcula el cost map a partir del mapa estático (numpy 2D) y un radio en celdas."""
+        self.get_logger().info("Getting cost map with " + str(cost_radius) + " cells")
+        # Inicializamos con ceros (zona libre). Mantendremos 100 para ocupados.
+        cost_map = np.zeros_like(static_map, dtype=int)
+
+        height, width = static_map.shape
+
+        # Marca ocupados en 100 y luego propaga costos
+        occupied_mask = (static_map > 50)
+        cost_map[occupied_mask] = 100
+
+        if cost_radius <= 0:
+            return cost_map
+
+        # Para cada celda ocupada inflamos y asignamos costos según la distancia en Chebyshev
+        # (cost = cost_radius - max(|dx|,|dy|) + 1)
         for i in range(height):
             for j in range(width):
                 if static_map[i, j] > 50:
-                    for k1 in range(-cost_radius, cost_radius + 1):
-                        for k2 in range(-cost_radius, cost_radius + 1):
-                            if (i + k1) < 0 or (i + k1) >= height or (j + k2) < 0 or (j + k2) >= width:
+                    # recorrer vecinos incluyendo el límite (±cost_radius)
+                    for dx in range(-cost_radius, cost_radius + 1):
+                        for dy in range(-cost_radius, cost_radius + 1):
+                            ni = i + dx
+                            nj = j + dy
+                            if ni < 0 or ni >= height or nj < 0 or nj >= width:
                                 continue
-                            cost = cost_radius - max(abs(k1), abs(k2)) + 1
-                            cost_map[i + k1, j + k2] = max(cost, cost_map[i + k1, j + k2])
-
+                            # si es ocupado lo dejamos como 100
+                            if cost_map[ni, nj] == 100:
+                                continue
+                            # calcular costo (mayor cerca del obstáculo)
+                            c = cost_radius - max(abs(dx), abs(dy)) + 1
+                            # conservar el costo mayor (más conservador)
+                            if c > cost_map[ni, nj]:
+                                cost_map[ni, nj] = int(c)
         return cost_map
-        
+
+    # callback del servicio que devuelve el cost_map
     def callback_cost_map(self, request, response):
         response.map = self.cost_map
         return response
 
+    # timer que publica el cost_map periódicamente (solo si ya está calculado)
     def callback_timer(self):
-        self.map_info   = self.map_static.info
-        self.map_width  = self.map_info.width
-        self.map_height = self.map_info.height
-        self.map_res    = self.map_info.resolution
-        self.map_data = numpy.reshape(numpy.asarray(self.map_static.data, dtype='int'), (self.map_height, self.map_width))
-        cost_radius  = self.get_parameter('cost_radius').get_parameter_value().double_value
-        cost_map_data = self.get_cost_map(self.map_data, round(cost_radius/self.map_res))
-        cost_map_data = numpy.ravel(numpy.reshape(cost_map_data, (self.map_width*self.map_height, 1)))
-        self.cost_map = OccupancyGrid(info=self.map_info, data=cost_map_data)
+        if not hasattr(self, 'map_static') or self.map_static is None:
+            return
+
+        info = self.map_static.info
+        height = info.height
+        width = info.width
+        res = info.resolution
+
+        # reshape seguro del mapa estático
+        try:
+            static_arr = np.reshape(np.asarray(self.map_static.data, dtype='int8'), (height, width))
+        except Exception as e:
+            self.get_logger().error("Error reshaping static map: " + str(e))
+            return
+
+        cost_radius_m = float(self.get_parameter('cost_radius').get_parameter_value().double_value)
+        # convierte metros a celdas (redondeo)
+        cost_radius_cells = max(0, int(round(cost_radius_m / res)))
+
+        cost_map_arr = self.get_cost_map(static_arr, cost_radius_cells)
+
+        # Armar OccupancyGrid.data (lista de ints)
+        flat = np.ravel(cost_map_arr).astype(int).tolist()
+        self.cost_map = OccupancyGrid(info=info, data=flat)
         self.cost_map.header.frame_id = "map"
         self.cost_map.header.stamp = self.get_clock().now().to_msg()
         self.pub_cost_map.publish(self.cost_map)
-        return
+
+    # callback asíncrono para recibir el mapa del servidor
+    def _map_srv_cb(self, future):
+        try:
+            result = future.result()
+            self.map_static = result.map
+            self.get_logger().info("Received static map (async). Size: %dx%d" % (self.map_static.info.width, self.map_static.info.height))
+            # Si no hemos creado el servicio/publisher, crearlos
+            if not getattr(self, '_ready', False):
+                self.srv_cost_map  = self.create_service(GetMap, '/get_cost_map', self.callback_cost_map)
+                self.pub_cost_map = self.create_publisher(OccupancyGrid, '/cost_map', 10)
+                self.timer = self.create_timer(1.0, self.callback_timer)
+                self._ready = True
+        except Exception as e:
+            self.get_logger().error("Failed to get static map: %s" % (e,))
 
     def __init__(self):
         print("INITIALIZING COST MAP NODE - ", FULL_NAME)
         super().__init__("cost_map_node")
-        self.clt_static_map = self.create_client(GetMap, '/map_server/map')
-        print("Waiting for static map service...")
-        while not self.clt_static_map.wait_for_service(timeout_sec=1.0):
-            print('Waiting for static map service...')
-        print("Static map service is now available...")
-        print("Trying to get first static map...")
-        future = self.clt_static_map.call_async(GetMap.Request())
-        rclpy.spin_until_future_complete(self, future)
-        response = future.result()
-        self.map_static = response.map
-        print("Got static map.")
-        self.declare_parameter('cost_radius', 0.05)
-        self.srv_cost_map  = self.create_service(GetMap, '/get_cost_map', self.callback_cost_map)
-        self.pub_cost_map = self.create_publisher(OccupancyGrid, '/cost_map', 10)
-        self.timer = self.create_timer(1.0, self.callback_timer)
 
+        # Client asíncrono (no bloqueante)
+        self.clt_static_map = self.create_client(GetMap, '/map_server/map')
+        self.declare_parameter('cost_radius', 0.05)
+
+        # flags
+        self._requested_map = False
+        self._ready = False
+        self.map_static = None
+        self.cost_map = None
+
+        # Timer para comprobar disponibilidad del servicio y solicitar el mapa asíncronamente
+        self.check_timer = self.create_timer(0.5, self._try_request_map)
+
+    def _try_request_map(self):
+        if self._requested_map:
+            return
+        if self.clt_static_map.service_is_ready():
+            fut = self.clt_static_map.call_async(GetMap.Request())
+            fut.add_done_callback(self._map_srv_cb)
+            self._requested_map = True
+            self.get_logger().info("Requested static map (async).")
+        else:
+            self.get_logger().debug("Waiting for static map service...")
 
 def main(args=None):
     rclpy.init(args=args)

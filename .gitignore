@@ -28,3 +28,30 @@ __pycache__/
 # Otros archivos temporales del sistema
 .DS_Store
 Thumbs.db
+
+# Virtual environments
+yolo_venv/
+venv/
+
+# Modelos grandes YOLO
+*.pt
+*.onnx
+
+# Datasets
+dataset_yolo/
+
+# Resultados YOLO
+runs/
+
+# ROS2 build system
+build/
+install/
+log/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Archivos temporales
+*.csv~
+*.temp

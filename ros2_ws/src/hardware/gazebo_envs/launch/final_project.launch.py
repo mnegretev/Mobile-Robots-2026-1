@@ -1,9 +1,9 @@
+# final_project.launch.py
 from launch import LaunchDescription
 from launch_ros.actions import Node
 from launch.actions import SetEnvironmentVariable, IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import PathJoinSubstitution
-from launch_ros.substitutions import FindPackageShare
 from ament_index_python.packages import get_package_share_directory
 import xacro
 import os
@@ -48,18 +48,21 @@ def generate_launch_description():
     map_config_file = os.path.join(config_files_pkg_path, 'navigation', 'simple_house.yaml')
 
     xarm_descrip_pkg_path = get_package_share_directory('xarm_description')
-    xarm_controller_pkg_path = get_package_share_directory('xarm_controller')
-    xarm_controller_file = PathJoinSubstitution([xarm_controller_pkg_path, 'config', 'xarm6_controllers.yaml'])
 
+    # random initial pose
     robot_init_x = -3.5 + 10*(numpy.random.rand() - 0.5)
     robot_init_y = numpy.random.rand() - 0.5
     robot_init_a = 6.28*(numpy.random.rand() - 0.5)
 
     return LaunchDescription([
+
+        # ensure gz resources path
         SetEnvironmentVariable(
             'GZ_SIM_RESOURCE_PATH',
             os.path.join(gazebo_envs_pkg_path, 'models') + ":" + os.path.join(xarm_descrip_pkg_path, "..")
         ),
+
+        # --- GAZEBO SIM ---
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(gz_sim_launch_path),
             launch_arguments={
@@ -67,6 +70,8 @@ def generate_launch_description():
                 'on_exit_shutdown':'True',
             }.items(),
         ),
+
+        # --- spawn robot ---
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(gz_spawn_launch_path),
             launch_arguments={
@@ -79,6 +84,8 @@ def generate_launch_description():
                 'Y': str(robot_init_a)
             }.items(),
         ),
+
+        # --- spawn some objects (optional) ---
         IncludeLaunchDescription(
             PythonLaunchDescriptionSource(gz_spawn_launch_path),
             launch_arguments=generate_object_random_pose('coke_can')
@@ -91,6 +98,8 @@ def generate_launch_description():
             PythonLaunchDescriptionSource(gz_spawn_launch_path),
             launch_arguments=generate_object_random_pose('aws_robomaker_residential_Trash_01')
         ),
+
+        # --- robot_state_publisher & ros_gz_bridge ---
         Node(
             package='robot_state_publisher',
             executable='robot_state_publisher',
@@ -113,13 +122,16 @@ def generate_launch_description():
             package='justina_gui',
             executable='justina_gui_node'
         ),
+        # --- RVIZ (launch early so user sees map later) ---
         Node(
             package='rviz2',
             executable='rviz2',
             name='rviz2',
-            arguments=['-d', rviz_config_file,'--ros-args', '-p', 'use_sim_time:=True',],
+            arguments=['-d', rviz_config_file,'--ros-args', '-p', 'use_sim_time:=True'],
+            output='screen'
         ),
-        
+
+        # --- map_server + amcl (can take some seconds) ---
         Node(
             package='nav2_map_server',
             executable='map_server',
@@ -143,8 +155,10 @@ def generate_launch_description():
                 {'initial_pose':{'x':robot_init_y, 'y':-robot_init_x-3.5, 'yaw':robot_init_a-1.5708}}
             ]
         ),
+
+        # --- bring up lifecycle (after map & amcl have started) ---
         TimerAction(
-            period=5.0,
+            period=6.0,
             actions=[
                 Node(
                     package='nav2_util',
@@ -154,5 +168,96 @@ def generate_launch_description():
                     arguments=['map_server', 'amcl']
                 )
             ]
-        )
+        ),
+
+        # --- map inflater (start after map_server is ready) ---
+        TimerAction(
+            period=8.0,
+            actions=[
+                Node(
+                    package='map_augmenter',
+                    executable='map_inflater',
+                    name='map_inflater',
+                    output='screen',
+                    parameters=[{'inflation_radius': 0.2, 'use_sim_time': True}]
+                )
+            ]
+        ),
+
+        # --- cost_map (needs inflated map) ---
+        TimerAction(
+            period=10.0,
+            actions=[
+                Node(
+                    package='path_planner',
+                    executable='cost_map',
+                    name='cost_map',
+                    output='screen',
+                    parameters=[
+                        {'cost_radius': 0.50},
+                        {'use_sim_time': True}
+                    ]
+                )
+            ]
+        ),
+
+        # --- a_star planner (needs cost_map & inflated_map) ---
+        TimerAction(
+            period=12.0,
+            actions=[
+                Node(
+                    package='path_planner',
+                    executable='a_star',
+                    name='a_star',
+                    output='screen',
+                    parameters=[{'use_sim_time': True}]
+                )
+            ]
+        ),
+
+        # --- Path Smoothing Node ---
+        TimerAction(
+            period=14.0,
+            actions=[
+                Node(
+                    package='path_planner',
+                    executable='path_smoothing',
+                    name='path_smoothing_node',
+                    output='screen',
+                    parameters=[
+                        {'w1': 0.9},
+                        {'w2': 0.1},
+                        {'steps': 1000}
+                    ]
+                ),
+            ]
+        ),
+
+        # --- Path Follower Node ---
+        TimerAction(
+            period=16.0,
+            actions=[
+                Node(
+                    package='simple_move',
+                    executable='path_follower',
+                    name='path_follower_node',
+                    output='screen',
+                ),
+            ]
+        ),
+
+        # --- cell_marker (publishes exploration points) ---
+        TimerAction(
+            period=18.0,
+            actions=[
+                Node(
+                    package='exploration_planner',
+                    executable='cell_marker',
+                    name='cell_marker',
+                    output='screen',
+                    parameters=[{'use_sim_time': True, 'k': 35}]
+                )
+            ]
+        ),
+
     ])

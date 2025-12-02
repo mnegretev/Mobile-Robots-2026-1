@@ -125,6 +125,23 @@ class PathFollowerNode(Node):
             robot_pose, robot_a = self.get_robot_pose()
             robot_x, robot_y = robot_pose
             
+
+            # Get current robot position
+            robot_pose, robot_a = self.get_robot_pose()
+            robot_x, robot_y = robot_pose
+
+            # --- NUEVO: imprimir valores actual vs deseado ---
+            print(f"\n--- Seguimiento ---")
+            print(f"Robot actual  -> x: {robot_x:.3f},  y: {robot_y:.3f},  a: {robot_a:.3f}")
+            print(f"Objetivo      -> x: {goal_x:.3f},  y: {goal_y:.3f}")
+            dist = math.sqrt((goal_x - robot_x)**2 + (goal_y - robot_y)**2)
+            print(f"Distancia al objetivo: {dist:.3f} m")
+            print(f"Waypoint objetivo índice: {current_goal_index}")
+            print("---------------------\n")
+
+
+
+
             # Calculate control signals
             v, w = self.calculate_control(robot_x, robot_y, robot_a, goal_x, goal_y, alpha, beta, v_max, w_max)
             
@@ -191,11 +208,11 @@ class PathFollowerNode(Node):
         self.goal_pose = numpy.asarray([0.0,0.0])
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
-        self.declare_parameter('v_max', 0.5)
+        self.declare_parameter('v_max', 1.0)
         self.declare_parameter('w_max', 0.5)
-        self.declare_parameter('alpha', 1.0)
-        self.declare_parameter('beta',  1.0)
-        self.declare_parameter('tol',  0.3)
+        self.declare_parameter('alpha', 0.05)
+        self.declare_parameter('beta',  0.9)
+        self.declare_parameter('tol',  0.5)
         self.clt_plan_path = self.create_client(GetPlan, '/path_planning/plan_path')
         self.clt_smooth_path = self.create_client(ProcessPath, '/path_planning/smooth_path')
         self.pub_cmd_vel = self.create_publisher(Twist, '/cmd_vel', 1)

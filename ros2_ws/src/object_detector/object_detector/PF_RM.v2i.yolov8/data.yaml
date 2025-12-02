@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 3
+names: ['BOX_R', 'COCA', 'Trash']
+
+roboflow:
+  workspace: p1-pvhue
+  project: pf_rm-0wlvk
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/p1-pvhue/pf_rm-0wlvk/dataset/2
