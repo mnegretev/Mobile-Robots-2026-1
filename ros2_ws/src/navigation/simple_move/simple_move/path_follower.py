@@ -239,10 +239,10 @@ class PathFollowerNode(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    path_follower_node = PathFollowerNode()
-    path_follower_node.spin()
+    path_follower = PathFollowerNode()
+    path_follower.spin()
     #rclpy.spin(path_follower_node)
-    path_follower_node.destroy_node()
+    path_follower.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':

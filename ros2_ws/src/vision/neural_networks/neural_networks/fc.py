@@ -158,6 +158,10 @@ def main(args=None):
     n_ep = [4, 10, 50, 100]
     tam_l = [5, 10, 40, 100]
 
+    ta_ap = [0.5]
+    n_ep = [4]
+    tam_l = [5]
+
     counter = 0
 
     fichero = open("Salida_Pruebas_Vision.xls", "w")

@@ -1,0 +1,34 @@
+Codigos para activar
+1.- Entorno
+-- juan@Alfred:~/Mobile-Robots-2026-1/ros2_ws$ 
+ros2 launch gazebo_envs final_project.launch.py
+
+2.- Inflado de mapa
+-- juan@Alfred:~/Mobile-Robots-2026-1/ros2_ws$ 
+ros2 run map_augmenter map_inflater −−ros−args −p inflation_radius:=2.0
+
+3.- Mapa de costo
+-- juan@Alfred:~/Mobile-Robots-2026-1/ros2_ws$
+ros2 run path_planner cost_map −−ros−args −p cost_radius:=0.05
+
+4.- A*
+-- juan@Alfred:~/Mobile-Robots-2026-1/ros2_ws/src/navigation/path_planner/path_planner$
+python3 a_star.py
+
+5.- Path following
+-- juan@Alfred:~/Mobile-Robots-2026-1/ros2_ws/src/navigation/simple_move/simple_move$ 
+python3 path_follower.py
+
+6.- Reconocimiento de imágenes
+-- (vision_YOLO_env) juan@Alfred:~/Mobile-Robots-2026-1/ros2_ws/src$ 
+python3 ProyectoCamaraDeteccion.py
+
+export USE_NNPACK=0
+
+7- Acá debería ser el seguimiento de rutas :)
+-- juan@Alfred:~/Mobile-Robots-2026-1/ros2_ws/src$
+python3 RutaBarrido.py 
+
+
+Revisión de camara
+ros2 run rqt_image_view rqt_image_view 

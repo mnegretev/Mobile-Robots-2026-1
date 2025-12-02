@@ -1,0 +1,74 @@
+
+
+Busqueda 2025-12-01 15:04:57
+
+Objeto: cup en la ubicación: (x=None, y=None)
+Objeto: book en la ubicación: (x=None, y=None)
+
+Busqueda 2025-12-01 15:20:03
+
+Objeto: cup en la ubicación: (x=-0.033241923270408646, y=2.8397844189115933)
+Objeto: book en la ubicación: (x=-0.033241923270408646, y=2.8397844189115933)
+
+Busqueda 2025-12-01 15:21:25
+
+Objeto: cup en la ubicación: (x=-0.033241923270408646, y=2.8397844189115933)
+Objeto: book en la ubicación: (x=-0.033241923270408646, y=2.8397844189115933)
+
+Busqueda 2025-12-01 15:26:28
+
+Objeto: cup en la ubicación: (x=-0.033241923270408646, y=2.8397844189115933)
+
+Busqueda 2025-12-01 15:27:05
+
+Objeto: cup en la ubicación: (x=-0.033241923270408646, y=2.8397844189115933)
+Objeto: book en la ubicación: (x=-0.033241923270408646, y=2.8397844189115933)
+
+Busqueda 2025-12-01 15:35:37
+
+Objeto: cup en la ubicación: (x=-0.033241923270408646, y=2.8397844189115933)
+
+Busqueda 2025-12-01 15:36:46
+
+Objeto: cup en la ubicación: (x=-0.033241923270408646, y=2.8397844189115933)
+Objeto: book en la ubicación: (x=-0.033241923270408646, y=2.8397844189115933)
+
+Busqueda 2025-12-01 15:38:19
+
+Objeto: cup en la ubicación: (x=-0.033241923270408646, y=2.8397844189115933)
+Objeto: book en la ubicación: (x=-0.033241923270408646, y=2.8397844189115933)
+
+Busqueda 2025-12-01 15:40:30
+
+Objeto: cup en la ubicación: (x=-0.033241923270408646, y=2.8397844189115933)
+Objeto: book en la ubicación: (x=-0.033241923270408646, y=2.8397844189115933)
+
+
+Busqueda 2025-12-01 15:46:35
+
+
+Objeto: cup en la ubicación: (x=-0.03, y=2.84)
+Objeto: book en la ubicación: (x=-0.03, y=2.84)
+
+Busqueda 2025-12-01 15:48:41
+
+Objeto: cup en la ubicación: (x=-0.033, y=2.840)
+Objeto: book en la ubicación: (x=-0.033, y=2.840)
+
+
+Busqueda 2025-12-01 15:49:48
+
+Objeto: cup en la ubicación: (x=-0.033, y=2.840)
+Objeto: book en la ubicación: (x=-0.033, y=2.840)
+
+
+Busqueda 2025-12-01 17:14:27
+
+Objeto: cup en la ubicación: (x=-0.033, y=2.840)
+Objeto: book en la ubicación: (x=-0.033, y=2.840)
+
+
+Busqueda 2025-12-01 17:16:39
+
+Objeto: cup en la ubicación: (x=-0.033, y=2.840)
+Objeto: book en la ubicación: (x=-0.033, y=2.840)

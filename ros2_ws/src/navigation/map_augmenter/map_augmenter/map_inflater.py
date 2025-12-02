@@ -70,7 +70,7 @@ class MapInflaterNode(Node):
         response = future.result()
         self.map_static = response.map
         print("Got static map.")
-        self.declare_parameter('inflation_radius', 0.05)
+        self.declare_parameter('inflation_radius', 0.2) #0.05
         self.srv_inflate_map  = self.create_service(GetMap, '/get_inflated_map', self.callback_inflated_map)
         self.pub_inflated_map = self.create_publisher(OccupancyGrid, '/inflated_map', 10)
         self.timer = self.create_timer(1.0, self.callback_timer)
