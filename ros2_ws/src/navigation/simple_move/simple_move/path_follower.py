@@ -153,6 +153,12 @@ class PathFollowerNode(Node):
         print("Received new goal pose: ", self.goal_pose)
         self.new_goal_pose = True
     
+    def callback_object_detected(self, msg: Bool):
+        if msg.data:
+            self.get_logger().warn("🟥 OBJETO DETECTADO — Deteniendo navegación")
+            self.object_detected = True
+
+    
     def __init__(self):
         print("INITIALIZING PATH FOLLOWER NODE ...")
         super().__init__("path_follower_node")
@@ -174,6 +180,16 @@ class PathFollowerNode(Node):
         self.pub_cmd_vel = self.create_publisher(Twist, '/cmd_vel', 1)
         self.pub_goal_reached = self.create_publisher(Bool, '/navigation/goal_reached', 1)
         self.sub_goal_pose = self.create_subscription(PoseStamped, '/goal_pose', self.callback_goal_pose, 1)
+        # ---- DETECCIÓN DE OBJETOS (YOLO) ----
+        self.object_detected = False
+
+        self.sub_object_detected = self.create_subscription(
+            Bool,
+            '/object_detected',
+            self.callback_object_detected,
+            1
+        )
+
 
     def spin(self):
         robot_pose_tf_ready = False
