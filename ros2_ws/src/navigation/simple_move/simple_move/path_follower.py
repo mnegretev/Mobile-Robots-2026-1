@@ -135,7 +135,7 @@ class PathFollowerNode(Node):
         msg.linear.x = v
         msg.angular.z = w
         self.pub_cmd_vel.publish(msg)
-        rclpy.spin_once(self)
+        #rclpy.spin_once(self)
         time.sleep(0.001)
 
     def get_robot_pose(self):
@@ -173,7 +173,7 @@ class PathFollowerNode(Node):
         self.declare_parameter('w_max', 0.5)
         self.declare_parameter('alpha', 1.0)
         self.declare_parameter('beta',  1.0)
-        self.declare_parameter('tol',  0.3)
+        self.declare_parameter('tol',  0.7)
         self.clt_plan_path = self.create_client(GetPlan, '/path_planning/plan_path')
         self.clt_smooth_path = self.create_client(ProcessPath, '/path_planning/smooth_path')
         self.pub_cmd_vel = self.create_publisher(Twist, '/cmd_vel', 1)
@@ -276,7 +276,7 @@ def main(args=None):
     rclpy.init(args=args)
     path_follower_node = PathFollowerNode()
     path_follower_node.spin()
-    #rclpy.spin(path_follower_node)
+    rclpy.spin(path_follower_node)
     path_follower_node.destroy_node()
     rclpy.shutdown()
 

@@ -24,6 +24,15 @@ NAME = "Rocio Fabiola Romero Bernal"
 class AStarNode(Node):
     def a_star(self, start_r, start_c, goal_r, goal_c, grid_map, cost_map, use_diagonals):
         [height, width] = grid_map.shape
+        if not (0 <= start_r < height and 0 <= start_c < width):
+            print("Start INDEX out of bounds!")
+            return []
+        if not (0 <= goal_r < height and 0 <= goal_c < width):
+            print("Goal INDEX out of bounds!")
+            return []
+        if grid_map[goal_r, goal_c] != 0:
+            print("Goal is not in a free cell!")
+            return []
         in_open_list   = numpy.full(grid_map.shape, False)
         in_closed_list = numpy.full(grid_map.shape, False)
         g_values       = numpy.full(grid_map.shape, float("inf"))
@@ -66,15 +75,14 @@ class AStarNode(Node):
                 if in_closed_list[r, c]:
                     continue
 
-                
-                dist = math.sqrt((dr)**2 + (dc)**2)
-                g = g_values[row, col] + dist * cost_map[r, c]
-
-                
-                h = abs(r - goal_r) + abs(c - goal_c)
+                move_cost = math.sqrt(dr**2 + dc**2) * cost_map[r, c]
+                g = g_values[row, col] + move_cost
+                # Heurística
+                if use_diagonals:
+                    h = max(abs(r - goal_r), abs(c - goal_c))
+                else:
+                    h = abs(r - goal_r) + abs(c - goal_c)
                 f = g + h
-
-                
                 if g < g_values[r, c]:
                     g_values[r, c] = g
                     f_values[r, c] = f
