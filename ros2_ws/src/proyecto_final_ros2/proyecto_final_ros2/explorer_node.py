@@ -1,4 +1,5 @@
 import rclpy
+import random
 from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped
 from std_msgs.msg import Bool
@@ -21,33 +22,18 @@ class ExplorerNode(Node):
 
         # Estado de llegada al goal (status 3 = SUCCEEDED)
         self.arrived = True
-        self.status_sub = self.create_subscription(
-            GoalStatusArray, '/goal_status', self.status_callback, 10
+        self.goal_reached_sub = self.create_subscription(Bool, '/navigation/goal_reached', self.goal_reached_callback, 10)
+
+        self.goal_timeout = 10.0
+        self.goal_start_time = None
+        # Número de waypoints aleatorios a generar (puedes ajustar este valor)
+        self.NUM_WAYPOINTS = 50  #Numero de  puntos
+
+        self.WAYPOINTS = self.generate_waypoints(
+            x_min=-4.0, x_max=6.0, y_min=-12.0, y_max=4.0, num_points=self.NUM_WAYPOINTS
         )
-
-        # Mapa para conocer límites (pero sin mirar valores de celdas)
-        self.map_info = None
-        self.map_sub = self.create_subscription(
-            OccupancyGrid, '/map', self.map_callback, 10
-        )
-
-        # Paso de la rejilla
-        self.STEP = 0.5  # m
-
-        self.WAYPOINTS = []
         self.current_idx = 0
-
-        # Esperar a tener /map
-        self.get_logger().info("Esperando /map para calcular límites de la rejilla...")
-        while rclpy.ok() and self.map_info is None:
-            rclpy.spin_once(self, timeout_sec=0.5)
-
-        # Configurar rejilla sobre TODO el mapa
-        self.setup_grid_from_map()
-
-        self.get_logger().info(
-            f"Explorer (grid desde OccupancyGrid): generados {len(self.WAYPOINTS)} waypoints."
-        )
+        self.get_logger().info(f"Explorer (random): generados {len(self.WAYPOINTS)} waypoints aleatorios.")
 
         # Bucle principal
         self.timer = self.create_timer(0.5, self.main_loop)
@@ -57,61 +43,21 @@ class ExplorerNode(Node):
     def flags_callback(self, msg: Bool):
         self.all_found = msg.data
 
-    def status_callback(self, msg: GoalStatusArray):
-        if msg.status_list:
-            last_status = msg.status_list[-1]
-            if last_status.status == 3:
-                self.arrived = True
+    def goal_reached_callback(self, msg: Bool):
+        if msg.data:
+            self.arrived = True
+            self.goal_start_time = None
+       
 
-    def map_callback(self, msg: OccupancyGrid):
-        self.map_info = msg.info
+    # ---------- Generación de waypoints aleatorios ----------
 
-    # ---------- Configurar rejilla desde OccupancyGrid ----------
-
-    def setup_grid_from_map(self):
-        ox = self.map_info.origin.position.x
-        oy = self.map_info.origin.position.y
-        res = self.map_info.resolution
-        w   = self.map_info.width
-        h   = self.map_info.height
-
-        self.X_MIN = ox
-        self.X_MAX = ox + w * res
-        self.Y_MIN = oy
-        self.Y_MAX = oy + h * res
-
-        self.get_logger().info(
-            f"Límites mapa: X[{self.X_MIN:.2f}, {self.X_MAX:.2f}], "
-            f"Y[{self.Y_MIN:.2f}, {self.Y_MAX:.2f}] (res={res:.3f})"
-        )
-
-        self.WAYPOINTS = self.generate_grid_waypoints(
-            self.X_MIN, self.X_MAX, self.Y_MIN, self.Y_MAX, self.STEP
-        )
-
-    # ---------- Generación de rejilla ----------
-
-    def generate_grid_waypoints(self, x_min, x_max, y_min, y_max, step):
-        """
-        Rejilla serpentina sobre todo el mapa:
-        y = y_min .. y_max
-        x = x_min .. x_max, alternando izq→der y der→izq.
-        """
+    def generate_waypoints(self, x_min, x_max, y_min, y_max, num_points):
+        """Genera waypoints aleatorios dentro de los límites especificados"""
         waypoints = []
-        y = y_min
-        flip = False
-        while y <= y_max:
-            xs = []
-            x = x_min
-            while x <= x_max:
-                xs.append(x)
-                x += step
-            if flip:
-                xs.reverse()
-            for xg in xs:
-                waypoints.append((xg, y))
-            flip = not flip
-            y += step
+        for _ in range(num_points):
+            x = random.uniform(x_min, x_max)
+            y = random.uniform(y_min, y_max)
+            waypoints.append((x, y))
         return waypoints
 
     def publish_goal(self, x, y):
@@ -124,6 +70,7 @@ class ExplorerNode(Node):
         self.goal_pub.publish(msg)
         self.get_logger().info(f"Nuevo goal publicado: ({x:.2f}, {y:.2f})")
         self.arrived = False
+        self.goal_start_time = self.get_clock().now()
 
     # ---------- Bucle principal ----------
 
@@ -136,6 +83,18 @@ class ExplorerNode(Node):
 
         # Esperar a que el robot llegue al goal actual
         if not self.arrived:
+            if self.goal_start_time is not None:
+                now = self.get_clock().now()
+                # Tiempo en segundos
+                elapsed = (now.nanoseconds - self.goal_start_time.nanoseconds) / 1e9
+                if elapsed > self.goal_timeout:
+                    self.get_logger().warn(
+                        f"Timeout ({elapsed:.1f}s) en waypoint {self.current_idx - 1}. "
+                        "Saltando al siguiente waypoint.")
+                    # Marcamos como 'llegado' para poder avanzar
+                    self.arrived = True
+                    self.goal_start_time = None
+            # No publicamos un nuevo goal todavía
             return
 
         # Sin waypoints restantes
@@ -160,3 +119,4 @@ def main(args=None):
 
 if __name__ == '__main__':
     main()
+
