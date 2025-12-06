@@ -1,4 +1,0 @@
-# generated from colcon_core/shell/template/command_prefix.sh.em
-. "/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_description/share/xarm_description/package.sh"
-. "/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_msgs/share/xarm_msgs/package.sh"
-. "/home/melissa/Documentos/Robots_Mobiles/Mobile-Robots-2026-1/install/xarm_sdk/share/xarm_sdk/package.sh"
